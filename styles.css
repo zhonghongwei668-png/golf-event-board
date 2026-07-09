@@ -93,33 +93,6 @@ a {
   font-size: 10px;
 }
 
-.quick-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 6px;
-  margin: 16px 0;
-}
-
-.quick-stats div {
-  padding: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.quick-stats strong {
-  display: block;
-  font-size: 18px;
-  line-height: 1;
-}
-
-.quick-stats span {
-  display: block;
-  margin-top: 4px;
-  color: #b9c1c8;
-  font-size: 10px;
-}
-
 .filter-block {
   margin-top: 14px;
 }
@@ -895,25 +868,6 @@ select {
   .brand-mark {
     width: 34px;
     height: 34px;
-  }
-
-  .quick-stats {
-    grid-template-columns: 1fr;
-    gap: 5px;
-    margin: 12px 0;
-  }
-
-  .quick-stats div {
-    padding: 6px 4px;
-    text-align: center;
-  }
-
-  .quick-stats strong {
-    font-size: 15px;
-  }
-
-  .quick-stats span {
-    font-size: 9px;
   }
 
   .filter-block {

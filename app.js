@@ -15,7 +15,6 @@ const state = {
 
 const els = {
   updatedAt: document.querySelector("#updatedAt"),
-  stats: document.querySelector("#stats"),
   categoryFilters: document.querySelector("#categoryFilters"),
   statusFilters: document.querySelector("#statusFilters"),
   searchInput: document.querySelector("#searchInput"),
@@ -197,7 +196,6 @@ async function loadData() {
   state.events = state.data.events || [];
   renderMonths();
   applyFilters();
-  renderStats();
   renderAlerts();
   renderWatchPanel();
   const generated = state.data.generatedAt ? new Date(state.data.generatedAt) : null;
@@ -313,24 +311,6 @@ function renderMonths() {
   els.monthSelect.innerHTML = `<option value="all">全年</option>` + months.map((key) => (
     `<option value="${escapeHtml(key)}">${escapeHtml(monthLabel(key))}</option>`
   )).join("");
-}
-
-function renderStats() {
-  const counts = state.events.reduce((memo, event) => {
-    memo.total += 1;
-    memo[event.category] = (memo[event.category] || 0) + 1;
-    if (isFuture(event)) memo.future += 1;
-    if (isRegistrationOpen(event)) memo.open += 1;
-    return memo;
-  }, { total: 0, future: 0, open: 0 });
-
-  els.stats.innerHTML = [
-    ["全部", counts.total],
-    ["未来", counts.future],
-    ["女子", counts.women || 0],
-    ["业余", counts.amateur || 0],
-    ["青少年", counts.junior || 0]
-  ].map(([label, value]) => `<div><strong>${value}</strong><span>${label}</span></div>`).join("");
 }
 
 function applyFilters() {
