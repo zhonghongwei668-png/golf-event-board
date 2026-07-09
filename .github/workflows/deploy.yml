@@ -35,6 +35,7 @@ jobs:
         run: npm run build
 
       - name: Commit updated data
+        id: commit_updates
         run: |
           if ! git diff --quiet data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json; then
             git config user.name "github-actions[bot]"
@@ -42,4 +43,17 @@ jobs:
             git add data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json
             git commit -m "Update golf event data"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Notify event changes
+        if: steps.commit_updates.outputs.changed == 'true'
+        continue-on-error: true
+        run: npm run notify -- --base HEAD~1 --head HEAD
+        env:
+          NOTIFY_SITE_URL: https://zhonghongwei668-png.github.io/golf-event-board/
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
+          WEWORK_WEBHOOK: ${{ secrets.WEWORK_WEBHOOK }}

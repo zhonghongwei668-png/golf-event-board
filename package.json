@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "update": "node scripts/update-data.mjs",
+    "notify": "node scripts/notify-changes.mjs",
     "build": "node scripts/build-static.mjs",
     "serve": "node scripts/server.mjs"
   }

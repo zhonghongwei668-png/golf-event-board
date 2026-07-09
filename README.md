@@ -8,6 +8,18 @@
 
 工作流会在北京时间 08:00-22:00 每小时运行 `npm run update`，更新 `data/events.json`。也可以在 GitHub 的 `Actions -> Update golf event data -> Run workflow` 手动触发。
 
+## 更新提醒
+
+GitHub Actions 已接入赛事变化通知。每次自动更新后，如果发现新增赛事、报名状态变为可报名、报名截止/比赛日期/入口变化，会向已配置的机器人推送摘要。
+
+在 GitHub 仓库 `Settings -> Secrets and variables -> Actions -> New repository secret` 添加以下任一配置即可启用：
+
+- `DINGTALK_WEBHOOK`：钉钉群自定义机器人 Webhook。
+- `DINGTALK_SECRET`：钉钉机器人加签密钥，若机器人安全设置启用了“加签”则必填。
+- `WEWORK_WEBHOOK`：企业微信群机器人 Webhook。
+
+普通个人微信没有稳定的官方群机器人 Webhook。微信侧建议优先使用企业微信群机器人；如果要走公众号/服务号模板或订阅消息，需要另做公众号后台和用户授权流程。
+
 本项目没有前端依赖，`npm run build` 会把公开网站需要的文件输出到 `dist/`。
 
 `data/sources.json` 维护青少年热门赛事的一手资讯源，包括中高协、CJGT、朝向集团高尔夫赛事、格林体育、华高体育、巡回赛系列赛官方号、汇丰青少年、斐乐青少年、如歌高尔夫等。公众号/小程序类渠道无法由静态网页直接抓取全文，需要在微信内关注；网站会把这些渠道作为人工核验和抢名额提醒清单展示。
