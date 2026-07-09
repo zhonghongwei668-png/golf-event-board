@@ -196,18 +196,15 @@ select {
 }
 
 .top-search-bar {
-  position: sticky;
-  top: 0;
-  z-index: 3;
   display: grid;
   grid-template-columns: minmax(220px, 1fr) auto;
   gap: 12px;
   align-items: end;
-  margin: -28px -28px 20px;
-  padding: 14px 28px;
-  border-bottom: 1px solid var(--line);
-  background: rgba(244, 242, 237, 0.95);
-  backdrop-filter: blur(10px);
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .search-box {
@@ -910,8 +907,8 @@ select {
   .top-search-bar {
     grid-template-columns: 1fr;
     gap: 9px;
-    margin: -14px -14px 16px;
-    padding: 10px 12px;
+    margin-bottom: 16px;
+    padding: 10px;
   }
 
   .top-source-links {
