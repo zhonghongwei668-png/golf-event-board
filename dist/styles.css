@@ -40,7 +40,7 @@ a {
 
 .app-shell {
   display: grid;
-  grid-template-columns: 300px minmax(420px, 1fr) 430px;
+  grid-template-columns: 176px minmax(420px, 1fr) 430px;
   min-height: 100vh;
 }
 
@@ -49,21 +49,21 @@ a {
   top: 0;
   height: 100vh;
   overflow: auto;
-  padding: 24px;
+  padding: 14px 12px;
   background: #20252b;
   color: #f8fafb;
 }
 
 .brand {
   display: flex;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
 }
 
 .brand-mark {
   display: grid;
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   place-items: center;
   border-radius: 8px;
   background: #f7c85f;
@@ -83,25 +83,25 @@ a {
 }
 
 .brand h1 {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 1.2;
 }
 
 .brand p {
-  margin-top: 5px;
+  margin-top: 4px;
   color: #b9c1c8;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .quick-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin: 26px 0;
+  gap: 6px;
+  margin: 16px 0;
 }
 
 .quick-stats div {
-  padding: 12px;
+  padding: 8px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.06);
@@ -109,36 +109,36 @@ a {
 
 .quick-stats strong {
   display: block;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1;
 }
 
 .quick-stats span {
   display: block;
-  margin-top: 6px;
+  margin-top: 4px;
   color: #b9c1c8;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .filter-block {
-  margin-top: 22px;
+  margin-top: 14px;
 }
 
 .filter-block h2 {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   color: #d7dde1;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
 }
 
 .segmented {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  grid-template-columns: 1fr;
+  gap: 6px;
 }
 
 .segmented.compact {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .segmented button,
@@ -149,11 +149,12 @@ a {
 }
 
 .segmented button {
-  min-height: 38px;
-  padding: 0 10px;
+  min-height: 32px;
+  padding: 0 8px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.08);
   color: #eef3f6;
+  font-size: 12px;
 }
 
 .segmented button.is-active {
@@ -173,28 +174,14 @@ select {
   color: var(--ink);
 }
 
-.source-list {
-  display: grid;
-  gap: 9px;
-}
-
-.source-list a {
-  color: #dce7ee;
-  font-size: 13px;
-  text-decoration: none;
-}
-
-.source-list a:hover {
-  text-decoration: underline;
-}
-
 .refresh-button {
   width: 100%;
-  min-height: 42px;
-  margin-top: 28px;
+  min-height: 34px;
+  margin-top: 16px;
   border-radius: 8px;
   background: #6cc3b2;
   color: #14201f;
+  font-size: 12px;
   font-weight: 800;
 }
 
@@ -206,6 +193,55 @@ select {
 .main-panel {
   padding: 28px;
   overflow: auto;
+}
+
+.top-search-bar {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  gap: 12px;
+  align-items: end;
+  margin: -28px -28px 20px;
+  padding: 14px 28px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(244, 242, 237, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.search-box {
+  display: grid;
+  gap: 6px;
+}
+
+.search-box label,
+.top-source-links span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.top-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.top-source-links a {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 10px;
+  background: #fff;
+  color: #27323c;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .toolbar {
@@ -768,7 +804,7 @@ select {
 
 @media (max-width: 1180px) {
   .app-shell {
-    grid-template-columns: 270px minmax(0, 1fr);
+    grid-template-columns: 156px minmax(0, 1fr);
   }
 
   .detail-panel {
@@ -799,12 +835,96 @@ select {
   }
 
   .sidebar {
-    position: static;
-    height: auto;
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 4;
+    width: 82px;
+    height: 100vh;
+    padding: 10px 7px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .brand > div:not(.brand-mark) {
+    display: none;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .quick-stats {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin: 12px 0;
+  }
+
+  .quick-stats div {
+    padding: 6px 4px;
+    text-align: center;
+  }
+
+  .quick-stats strong {
+    font-size: 15px;
+  }
+
+  .quick-stats span {
+    font-size: 9px;
+  }
+
+  .filter-block {
+    margin-top: 12px;
+  }
+
+  .filter-block h2 {
+    text-align: center;
+    font-size: 10px;
+  }
+
+  .segmented {
+    gap: 5px;
+  }
+
+  .segmented button {
+    min-height: 30px;
+    padding: 0 3px;
+    font-size: 11px;
+  }
+
+  .refresh-button {
+    min-height: 30px;
+    padding: 0 2px;
+    font-size: 10px;
   }
 
   .main-panel {
-    padding: 18px;
+    margin-left: 82px;
+    padding: 14px;
+  }
+
+  .top-search-bar {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    margin: -14px -14px 16px;
+    padding: 10px 12px;
+  }
+
+  .top-source-links {
+    justify-content: flex-start;
+  }
+
+  .top-source-links a {
+    min-height: 30px;
+    padding: 0 8px;
+  }
+
+  .toolbar h2 {
+    font-size: 24px;
   }
 
   .toolbar {
