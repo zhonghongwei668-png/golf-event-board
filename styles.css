@@ -783,6 +783,11 @@ select {
   text-decoration: none;
 }
 
+.app-link-actions a.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
 .web-preview {
   margin-top: 22px;
   border: 1px solid var(--line);

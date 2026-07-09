@@ -9,6 +9,8 @@
       "type": "App",
       "iosUrl": "https://apps.apple.com/cn/app/%E5%A4%A7%E6%AD%A3%E9%AB%98%E5%B0%94%E5%A4%AB/id642016024",
       "androidUrl": "https://sj.qq.com/appdetail/com.dazheng",
+      "directSignupDomains": ["bwvip.com"],
+      "directSignupLabel": "大正报名",
       "instruction": "安装/打开大正高尔夫 App 后，在赛事或报名栏目搜索赛事名称。"
     },
     {

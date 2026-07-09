@@ -487,6 +487,24 @@ function getEventAppLinks(event) {
   });
 }
 
+function domainMatches(hostname, domains = []) {
+  return domains.some((domain) => {
+    const normalized = String(domain).toLowerCase().replace(/^www\./, "");
+    return hostname === normalized || hostname.endsWith(`.${normalized}`);
+  });
+}
+
+function directSignupButton(app, event) {
+  const href = safeUrl(event.signupUrl);
+  if (!href || !app.directSignupDomains?.length) return "";
+
+  const hostname = new URL(href).hostname.toLowerCase().replace(/^www\./, "");
+  if (!domainMatches(hostname, app.directSignupDomains)) return "";
+
+  const label = app.directSignupLabel || "直接报名";
+  return `<a class="primary" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
+}
+
 function renderDetailAppLinks(event) {
   const matches = getEventAppLinks(event);
   if (!matches.length) {
@@ -508,6 +526,7 @@ function renderDetailAppLinks(event) {
           <p>${escapeHtml(app.instruction)}</p>
           ${app.wechat ? `<p class="wechat-path">微信搜索：${escapeHtml(app.wechat)}</p>` : ""}
           <div class="app-link-actions">
+            ${directSignupButton(app, event)}
             ${safeUrl(app.openUrl, ["weixin:"]) ? `<a href="${escapeHtml(safeUrl(app.openUrl, ["weixin:"]))}">打开微信</a>` : ""}
             ${safeUrl(app.webUrl) ? `<a href="${escapeHtml(safeUrl(app.webUrl))}" target="_blank" rel="noreferrer">官网</a>` : ""}
             ${safeUrl(app.iosUrl, ["http:", "https:", "itms-apps:"]) ? `<a href="${escapeHtml(safeUrl(app.iosUrl, ["http:", "https:", "itms-apps:"]))}" target="_blank" rel="noreferrer">iPhone</a>` : ""}
