@@ -1,0 +1,70 @@
+{
+  "updatedAt": "2026-07-09",
+  "note": "直达报名页需要平台提供 Universal Link、URL Scheme 或微信小程序 URL Link。未公开深链的平台只能提供打开 App/微信和搜索路径。",
+  "apps": [
+    {
+      "id": "dazheng",
+      "name": "大正高尔夫",
+      "match": ["大正高尔夫", "大正"],
+      "type": "App",
+      "iosUrl": "https://apps.apple.com/cn/app/%E5%A4%A7%E6%AD%A3%E9%AB%98%E5%B0%94%E5%A4%AB/id642016024",
+      "androidUrl": "https://sj.qq.com/appdetail/com.dazheng",
+      "instruction": "安装/打开大正高尔夫 App 后，在赛事或报名栏目搜索赛事名称。"
+    },
+    {
+      "id": "handicap",
+      "name": "差点高尔夫",
+      "match": ["差点高尔夫", "WHS", "差点"],
+      "type": "App",
+      "iosUrl": "https://apps.apple.com/cn/app/%E5%B7%AE%E7%82%B9%E9%AB%98%E5%B0%94%E5%A4%AB/id973007105",
+      "instruction": "用于差点、会员和资格证明；报名仍以赛事指定入口为准。"
+    },
+    {
+      "id": "wechat-rugolf",
+      "name": "如歌高尔夫赛事",
+      "match": ["如歌高尔夫", "如歌高尔夫赛事", "如歌"],
+      "type": "微信小程序/公众号",
+      "openUrl": "weixin://",
+      "wechat": "如歌高尔夫 / 如歌高尔夫赛事",
+      "instruction": "打开微信后搜索“如歌高尔夫赛事”，进入小程序查找报名。"
+    },
+    {
+      "id": "wechat-cjgt",
+      "name": "CJGT",
+      "match": ["CJGT", "cjgc.org", "中国青少年高尔夫球队际巡回赛"],
+      "type": "官网/公众号",
+      "webUrl": "http://www.cjgc.org/",
+      "openUrl": "weixin://",
+      "wechat": "CJGT",
+      "instruction": "优先查看 CJGT 官网；微信搜索“CJGT”关注报名通知。"
+    },
+    {
+      "id": "wechat-forward",
+      "name": "朝向集团高尔夫赛事",
+      "match": ["朝向", "朝向集团"],
+      "type": "公众号/赛事平台",
+      "webUrl": "https://www.forwardgolf.com/",
+      "openUrl": "weixin://",
+      "wechat": "朝向高尔夫赛事 / 朝向集团高尔夫赛事",
+      "instruction": "微信搜索官方赛事号，关注报名、补录和名单公告。"
+    },
+    {
+      "id": "wechat-greensport",
+      "name": "格林体育",
+      "match": ["格林体育"],
+      "type": "公众号/赛事平台",
+      "openUrl": "weixin://",
+      "wechat": "格林体育",
+      "instruction": "微信搜索“格林体育”，关注青少年赛事报名通知。"
+    },
+    {
+      "id": "wechat-huagao",
+      "name": "华高体育",
+      "match": ["华高体育"],
+      "type": "公众号/赛事平台",
+      "openUrl": "weixin://",
+      "wechat": "华高体育",
+      "instruction": "微信搜索“华高体育”，关注赛事报名与录取名单。"
+    }
+  ]
+}

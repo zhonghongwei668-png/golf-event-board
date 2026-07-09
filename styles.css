@@ -667,6 +667,50 @@ select {
   line-height: 1.65;
 }
 
+.app-link-list {
+  display: grid;
+  gap: 8px;
+}
+
+.app-link-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+}
+
+.app-link-card strong {
+  display: block;
+  font-size: 14px;
+}
+
+.app-link-card span,
+.wechat-path {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.app-link-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.app-link-actions a {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: #eef2f3;
+  color: #1f4058;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .web-preview {
   margin-top: 22px;
   border: 1px solid var(--line);

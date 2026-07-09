@@ -12,6 +12,8 @@
 
 `data/sources.json` 维护青少年热门赛事的一手资讯源，包括中高协、CJGT、朝向集团高尔夫赛事、格林体育、华高体育、巡回赛系列赛官方号、汇丰青少年、斐乐青少年、如歌高尔夫等。公众号/小程序类渠道无法由静态网页直接抓取全文，需要在微信内关注；网站会把这些渠道作为人工核验和抢名额提醒清单展示。
 
+`data/app-links.json` 维护 App/小程序入口。只有平台公开 Universal Link、URL Scheme 或微信 URL Link 时，网页才能直达报名页；否则页面提供安装入口、打开微信和 App 内搜索路径。
+
 ## 启动
 
 ```bash
@@ -28,7 +30,7 @@
 
 本地服务运行时会在启动时检查 `data/events.json` 是否超过 23 小时未更新；如果过期会自动刷新。服务保持运行时也会每 24 小时刷新一次，并且网页左侧有“更新官方数据”按钮。
 
-公网静态版没有本地 `/api/update`，网页会直接读取 `data/events.json` 和 `data/sources.json`，由 GitHub Actions 定时更新。
+公网静态版没有本地 `/api/update`，网页会直接读取 `data/events.json`、`data/sources.json` 和 `data/app-links.json`，由 GitHub Actions 定时更新。
 
 ## 数据源
 

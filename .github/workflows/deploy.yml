@@ -36,10 +36,10 @@ jobs:
 
       - name: Commit updated data
         run: |
-          if ! git diff --quiet data/events.json dist/data/events.json dist/data/sources.json; then
+          if ! git diff --quiet data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/events.json dist/data/events.json dist/data/sources.json
+            git add data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json
             git commit -m "Update golf event data"
             git push
           fi

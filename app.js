@@ -1,6 +1,7 @@
 const state = {
   data: null,
   sources: [],
+  appLinks: [],
   events: [],
   filtered: [],
   selected: null,
@@ -32,6 +33,7 @@ const els = {
   detailName: document.querySelector("#detailName"),
   detailMeta: document.querySelector("#detailMeta"),
   detailActions: document.querySelector("#detailActions"),
+  detailAppLinks: document.querySelector("#detailAppLinks"),
   detailSignup: document.querySelector("#detailSignup"),
   detailRequirement: document.querySelector("#detailRequirement"),
   sourceFrame: document.querySelector("#sourceFrame"),
@@ -129,11 +131,23 @@ async function fetchSources() {
   }
 }
 
+async function fetchAppLinks() {
+  try {
+    const response = await fetch("./data/app-links.json", { cache: "no-store" });
+    if (!response.ok) return [];
+    const payload = await response.json();
+    return payload.apps || [];
+  } catch {
+    return [];
+  }
+}
+
 async function loadData() {
   const response = await fetchData();
   if (!response.ok) throw new Error("赛事数据读取失败");
   state.data = await response.json();
   state.sources = await fetchSources();
+  state.appLinks = await fetchAppLinks();
   state.events = state.data.events || [];
   renderMonths();
   applyFilters();
@@ -383,12 +397,52 @@ function renderDetail(event) {
     sourceLinks,
     linkButton("报名入口", event.signupUrl, "primary")
   ].join("");
+  renderDetailAppLinks(event);
 
   els.detailSignup.textContent = event.signupMethod || event.registrationText || "以官方报名入口实时显示为准。";
   els.detailRequirement.textContent = event.requirement || "以赛事单项规程和补充通知为准。";
   const previewUrl = event.sourceUrl || event.sourceLinks?.[0]?.url || event.signupUrl;
   els.previewOpen.href = previewUrl;
   els.sourceFrame.src = previewUrl;
+}
+
+function getEventAppLinks(event) {
+  const haystack = `${event.name} ${event.signupMethod} ${event.requirement} ${event.registrationText}`.toLowerCase();
+  return state.appLinks.filter((app) => {
+    return (app.match || []).some((term) => haystack.includes(String(term).toLowerCase()));
+  });
+}
+
+function renderDetailAppLinks(event) {
+  const matches = getEventAppLinks(event);
+  if (!matches.length) {
+    els.detailAppLinks.hidden = true;
+    els.detailAppLinks.innerHTML = "";
+    return;
+  }
+
+  els.detailAppLinks.hidden = false;
+  els.detailAppLinks.innerHTML = `
+    <h3>App / 小程序入口</h3>
+    <div class="app-link-list">
+      ${matches.map((app) => `
+        <article class="app-link-card">
+          <div>
+            <strong>${app.name}</strong>
+            <span>${app.type}</span>
+          </div>
+          <p>${app.instruction}</p>
+          ${app.wechat ? `<p class="wechat-path">微信搜索：${app.wechat}</p>` : ""}
+          <div class="app-link-actions">
+            ${app.openUrl ? `<a href="${app.openUrl}">打开微信</a>` : ""}
+            ${app.webUrl ? `<a href="${app.webUrl}" target="_blank" rel="noreferrer">官网</a>` : ""}
+            ${app.iosUrl ? `<a href="${app.iosUrl}" target="_blank" rel="noreferrer">iPhone</a>` : ""}
+            ${app.androidUrl ? `<a href="${app.androidUrl}" target="_blank" rel="noreferrer">安卓</a>` : ""}
+          </div>
+        </article>
+      `).join("")}
+    </div>
+  `;
 }
 
 function bindFilters(container, dataName, setter) {
