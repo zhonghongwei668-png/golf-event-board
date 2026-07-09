@@ -53,9 +53,19 @@ function formatEvent(event) {
   return `- ${label}｜${event.name}｜${formatDateRange(event)}${deadline}`;
 }
 
+function formatPriorityOpenEvent(event) {
+  const deadline = event.registrationEnd ? `，报名截止 ${event.registrationEnd}` : "";
+  const signup = event.signupUrl ? `，[报名入口](${event.signupUrl})` : "";
+  return `- **【重点】新开放报名｜${formatDateRange(event)}｜${event.name}${deadline}${signup}**`;
+}
+
 function formatOpenDigestEvent(event) {
   const deadline = event.registrationEnd ? `，报名截止 ${event.registrationEnd}` : "";
   return `- ${formatDateRange(event)}｜${event.name}${deadline}`;
+}
+
+function isOpenRegistration(event) {
+  return event.statusCode === "open";
 }
 
 function changedFields(before, after) {
@@ -80,6 +90,7 @@ function diffEvents(previousPayload, currentPayload) {
 
   const added = [];
   const opened = [];
+  const priorityOpen = [];
   const changed = [];
   const removed = [];
 
@@ -87,6 +98,7 @@ function diffEvents(previousPayload, currentPayload) {
     const previous = previousByKey.get(key);
     if (!previous) {
       added.push(event);
+      if (isOpenRegistration(event)) priorityOpen.push(event);
       continue;
     }
 
@@ -94,8 +106,9 @@ function diffEvents(previousPayload, currentPayload) {
     if (fields.length) {
       changed.push({ event, fields });
     }
-    if (previous.statusCode !== "open" && event.statusCode === "open") {
+    if (!isOpenRegistration(previous) && isOpenRegistration(event)) {
       opened.push(event);
+      priorityOpen.push(event);
     }
   }
 
@@ -105,7 +118,7 @@ function diffEvents(previousPayload, currentPayload) {
     }
   }
 
-  return { added, opened, changed, removed };
+  return { added, opened, priorityOpen, changed, removed };
 }
 
 function topItems(items, formatter, limit = 8) {
@@ -116,14 +129,18 @@ function topItems(items, formatter, limit = 8) {
 
 function buildMarkdown(diff, currentPayload) {
   const sections = [];
-  if (diff.added.length) {
-    sections.push(`**新增赛事 ${diff.added.length} 场**\n${topItems(diff.added, formatEvent)}`);
+  const priorityOpenKeys = new Set((diff.priorityOpen || []).map(eventKey));
+  const regularAdded = diff.added.filter((event) => !priorityOpenKeys.has(eventKey(event)));
+  const regularChanged = diff.changed.filter(({ event }) => !priorityOpenKeys.has(eventKey(event)));
+
+  if (diff.priorityOpen?.length) {
+    sections.push(`**【重点】新开放报名 ${diff.priorityOpen.length} 场**\n${topItems(diff.priorityOpen, formatPriorityOpenEvent, 10)}`);
   }
-  if (diff.opened.length) {
-    sections.push(`**新变为可报名 ${diff.opened.length} 场**\n${topItems(diff.opened, formatEvent)}`);
+  if (regularAdded.length) {
+    sections.push(`**新增赛事 ${regularAdded.length} 场**\n${topItems(regularAdded, formatEvent)}`);
   }
-  if (diff.changed.length) {
-    sections.push(`**报名/日期/入口变化 ${diff.changed.length} 条**\n${topItems(diff.changed, ({ event, fields }) => `${formatEvent(event)}，变化：${fields.join("、")}`)}`);
+  if (regularChanged.length) {
+    sections.push(`**报名/日期/入口变化 ${regularChanged.length} 条**\n${topItems(regularChanged, ({ event, fields }) => `${formatEvent(event)}，变化：${fields.join("、")}`)}`);
   }
   if (diff.removed.length) {
     sections.push(`**赛事下架/消失 ${diff.removed.length} 条**\n${topItems(diff.removed, formatEvent)}\n需人工核验是否取消、改名或官方接口暂时缺失。`);
