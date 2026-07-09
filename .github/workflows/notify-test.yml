@@ -1,0 +1,25 @@
+name: Test DingTalk notification
+
+on:
+  workflow_dispatch:
+
+jobs:
+  notify-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Send test notification
+        run: npm run notify -- --test
+        env:
+          NOTIFY_STRICT: "1"
+          NOTIFY_REQUIRE_WEBHOOK: "1"
+          NOTIFY_SITE_URL: https://zhonghongwei668-png.github.io/golf-event-board/
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}

@@ -18,6 +18,13 @@ GitHub Actions 已接入赛事变化通知。每次自动更新后，如果发�
 - `DINGTALK_SECRET`：钉钉机器人加签密钥，若机器人安全设置启用了“加签”则必填。
 - `WEWORK_WEBHOOK`：企业微信群机器人 Webhook。
 
+钉钉推荐配置：
+
+1. 在钉钉群里进入 `群设置 -> 机器人 -> 添加机器人 -> 自定义`。
+2. 安全设置选择“加签”，复制 Webhook 和加签密钥。
+3. 在 GitHub 仓库添加 `DINGTALK_WEBHOOK` 和 `DINGTALK_SECRET` 两个 Secret。
+4. 到 `Actions -> Test DingTalk notification -> Run workflow` 手动发送测试消息。
+
 普通个人微信没有稳定的官方群机器人 Webhook。微信侧建议优先使用企业微信群机器人；如果要走公众号/服务号模板或订阅消息，需要另做公众号后台和用户授权流程。
 
 本项目没有前端依赖，`npm run build` 会把公开网站需要的文件输出到 `dist/`。

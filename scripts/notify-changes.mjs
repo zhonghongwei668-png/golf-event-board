@@ -11,6 +11,7 @@ const rootDir = path.resolve(__dirname, "..");
 const eventDataPath = "data/events.json";
 const siteUrl = process.env.NOTIFY_SITE_URL || "https://zhonghongwei668-png.github.io/golf-event-board/";
 const strictFailure = process.env.NOTIFY_STRICT === "1";
+const requireWebhook = process.env.NOTIFY_REQUIRE_WEBHOOK === "1";
 
 function argValue(name) {
   const arg = process.argv.find((item) => item.startsWith(`${name}=`));
@@ -198,6 +199,42 @@ async function notifyWeWork(markdown) {
 }
 
 async function main() {
+  if (process.argv.includes("--test") || process.env.NOTIFY_TEST === "1") {
+    const markdown = [
+      "### 高尔夫赛事报名提醒测试",
+      `测试时间：${new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" })}`,
+      "",
+      "- 钉钉机器人已接入赛事报名日历。",
+      "- 后续发现新增赛事、可报名、报名截止/入口变化、赛事下架时，会自动推送摘要。",
+      "",
+      `[打开赛事日历](${siteUrl})`,
+    ].join("\n");
+
+    if (process.env.NOTIFY_DRY_RUN === "1") {
+      console.log(markdown);
+      return;
+    }
+
+    const results = await Promise.allSettled([
+      notifyDingTalk(markdown),
+      notifyWeWork(markdown),
+    ]);
+    const sent = results.some((result) => result.status === "fulfilled" && result.value);
+    const failures = results.filter((result) => result.status === "rejected");
+
+    for (const failure of failures) {
+      console.warn(`Notification failed: ${failure.reason.message}`);
+    }
+    if (!sent && !failures.length) {
+      console.log("Notification skipped: no webhook secrets configured.");
+      if (requireWebhook || strictFailure) process.exitCode = 1;
+    }
+    if (strictFailure && failures.length) {
+      process.exitCode = 1;
+    }
+    return;
+  }
+
   const baseRef = argValue("--base") || process.env.NOTIFY_BASE_REF || "HEAD~1";
   const headRef = argValue("--head") || process.env.NOTIFY_HEAD_REF || "working";
   const previousPayload = await readPayload(baseRef);
@@ -232,6 +269,7 @@ async function main() {
   }
   if (!sent && !failures.length) {
     console.log("Notification skipped: no webhook secrets configured.");
+    if (requireWebhook) process.exitCode = 1;
   }
   if (strictFailure && failures.length) {
     process.exitCode = 1;
