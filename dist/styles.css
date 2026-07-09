@@ -306,7 +306,7 @@ select {
 }
 
 .source-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .source-card {
@@ -323,6 +323,11 @@ select {
 
 .source-card p {
   margin: 0;
+}
+
+.source-coverage {
+  color: var(--ink) !important;
+  font-weight: 700;
 }
 
 .source-actions {

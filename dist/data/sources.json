@@ -1,90 +1,260 @@
 {
   "updatedAt": "2026-07-09",
-  "note": "公众号/小程序类入口无法被静态网页直接抓取全文，需在微信内搜索并关注；本清单用于提醒一手渠道优先级。",
+  "note": "A档为已确认可公开访问的官网、协会页面、品牌赛事页面或公开PDF。B/C档暂未写入网页，等待微信/小程序或主办方确认。",
   "sources": [
     {
-      "name": "中高协青少年赛事公告",
-      "type": "官方网页",
+      "name": "中高协青少年赛事年历",
+      "tier": "A",
+      "type": "协会官网",
       "priority": "高",
       "url": "https://www.cgagolf.org.cn/game_young.html",
-      "watch": "青少年年历、单站规程、补充通知、报名截止。",
-      "keywords": ["青少年", "公开赛", "锦标赛", "报名"]
+      "coverage": "全国一级/二级/政策性青少年赛事总入口",
+      "watch": "年历、级别、比赛时间、地点；后续追单项规程、补充通知和报名截止。",
+      "status": "已确认",
+      "keywords": ["中高协", "青少年", "公开赛", "锦标赛", "报名"]
+    },
+    {
+      "name": "中高协青少年栏目",
+      "tier": "A",
+      "type": "协会官网",
+      "priority": "高",
+      "url": "https://www.cgagolf.org.cn/young.html",
+      "coverage": "汇丰体系、青少年发展、品牌赛线索",
+      "watch": "汇丰、劳力士、冯珊珊杯等青少年公告和新闻。",
+      "status": "已确认",
+      "keywords": ["汇丰", "劳力士", "冯珊珊杯", "青少年"]
     },
     {
       "name": "中高协会员系统",
+      "tier": "A",
       "type": "官方系统",
       "priority": "高",
       "url": "https://member.cgagolf.org.cn/index",
-      "watch": "会员卡、参赛资格、身份认证。",
-      "keywords": ["会员", "资格", "注册"]
+      "coverage": "会员卡、注册、资格认证",
+      "watch": "有效中高协电子会员卡、身份认证、资格核验。",
+      "status": "已确认",
+      "keywords": ["会员", "资格", "注册", "认证"]
     },
     {
-      "name": "CJGT 中国青少年高尔夫球队际巡回赛",
-      "type": "官网/公众号",
+      "name": "大正体育青少年页",
+      "tier": "A",
+      "type": "赛事平台",
       "priority": "高",
-      "url": "http://www.cjgc.org/",
-      "wechat": "CJGT",
-      "watch": "精英赛、球队际巡回赛、报名通道、名单公布。",
-      "keywords": ["CJGT", "精英赛", "球队际", "巡回赛"]
+      "url": "https://www.bwvip.com/youth.php",
+      "coverage": "大正体系、青少年注册、热门赛事",
+      "watch": "大正高尔夫 App 相关报名入口、注册、赛事更新。",
+      "status": "已确认",
+      "keywords": ["大正", "大正高尔夫", "青少年", "报名"]
     },
     {
-      "name": "朝向集团高尔夫赛事",
-      "type": "赛事平台/公众号",
+      "name": "如歌高尔夫赛事公告",
+      "tier": "A",
+      "type": "赛事官网",
       "priority": "高",
-      "url": "https://www.forwardgolf.com/",
-      "wechat": "朝向高尔夫赛事 / 朝向集团高尔夫赛事",
-      "watch": "青少年赛事、邀请赛、热门名额释放、补录。",
-      "keywords": ["朝向", "青少年", "邀请赛", "报名"]
-    },
-    {
-      "name": "格林体育",
-      "type": "赛事平台/公众号",
-      "priority": "中",
-      "wechat": "格林体育",
-      "watch": "青少年赛事发布、报名通知、名单确认。",
-      "keywords": ["格林体育", "青少年", "报名"]
-    },
-    {
-      "name": "华高体育",
-      "type": "赛事平台/公众号",
-      "priority": "中",
-      "wechat": "华高体育",
-      "watch": "青少年赛事发布、资格说明、报名通道。",
-      "keywords": ["华高体育", "青少年", "报名"]
-    },
-    {
-      "name": "巡回赛系列赛官方号",
-      "type": "公众号",
-      "priority": "中",
-      "wechat": "巡回赛系列赛官方号",
-      "watch": "系列赛开报名、补充通知、录取名单。",
-      "keywords": ["巡回赛", "系列赛", "报名", "名单"]
-    },
-    {
-      "name": "汇丰全国青少年高尔夫球冠军赛",
-      "type": "品牌赛事/官方渠道",
-      "priority": "高",
-      "url": "https://www.hsbc.com.cn/",
-      "wechat": "汇丰中国 / 汇丰青少年高尔夫相关官方发布",
-      "watch": "分站赛、总决赛、参赛资格、报名开始。",
-      "keywords": ["汇丰", "青少年", "冠军赛", "公开赛"]
-    },
-    {
-      "name": "斐乐全国青少年高尔夫球精英挑战赛",
-      "type": "品牌赛事/官方渠道",
-      "priority": "高",
-      "url": "https://www.fila.cn/",
-      "wechat": "FILA / 斐乐青少年高尔夫相关官方发布",
-      "watch": "分站赛报名、精英挑战赛名单、补录。",
-      "keywords": ["斐乐", "FILA", "青少年", "精英挑战赛"]
-    },
-    {
-      "name": "如歌高尔夫赛事",
-      "type": "公众号/小程序",
-      "priority": "高",
+      "url": "https://rungolf.com/news/info/2565",
       "wechat": "如歌高尔夫 / 如歌高尔夫赛事",
-      "watch": "如歌邀请赛、报名开始、参赛名单。",
-      "keywords": ["如歌", "邀请赛", "青少年"]
+      "coverage": "如歌中国青少年邀请赛、如歌小程序报名",
+      "watch": "报名开始、报名截止、参赛名单、如歌官方微信小程序路径。",
+      "status": "已确认",
+      "keywords": ["如歌", "邀请赛", "小程序", "青少年"]
+    },
+    {
+      "name": "观澜湖青少年赛事",
+      "tier": "A",
+      "type": "球会/赛事官网",
+      "priority": "高",
+      "url": "https://www.missionhillschina.com/sports/tournaments/junior-tournaments/",
+      "coverage": "观澜湖青少年系列赛、学院杯、费度杯、安妮卡、杰克尼克劳斯、亲子挑战赛",
+      "watch": "观澜湖高频赛事、俱乐部赛、国际品牌赛和报名通知。",
+      "status": "已确认",
+      "keywords": ["观澜湖", "学院杯", "费度杯", "安妮卡", "杰克尼克劳斯"]
+    },
+    {
+      "name": "观澜湖2026青少年赛事日历",
+      "tier": "A",
+      "type": "公开PDF",
+      "priority": "高",
+      "url": "https://www.missionhillschina.com/bookmh/downloads/MH-Junior-Schedule-cn.pdf",
+      "coverage": "观澜湖全年多站青少年赛程",
+      "watch": "2026观澜湖青少年系列赛、杰克尼克劳斯、亲子挑战赛、费度杯、总决赛等。",
+      "status": "已确认",
+      "keywords": ["观澜湖", "2026", "赛程", "青少年"]
+    },
+    {
+      "name": "汇丰中国青少年高尔夫",
+      "tier": "A",
+      "type": "品牌赛事官网",
+      "priority": "高",
+      "url": "https://www.business.hsbc.com.cn/zh-cn/campaigns/hsbc-golf/hsbc-china-junior-golf",
+      "coverage": "汇丰全国青少年冠军赛、公开赛、发展计划",
+      "watch": "分站赛、总决赛、公开赛、冬/夏令营、报名和资格。",
+      "status": "已确认",
+      "keywords": ["汇丰", "HSBC", "冠军赛", "公开赛"]
+    },
+    {
+      "name": "U.S. Kids Golf China Championship",
+      "tier": "A",
+      "type": "国际赛事官网",
+      "priority": "中",
+      "url": "https://tournaments.uskidsgolf.com/tournaments/international/find-tournament/516952/china-championship-2026",
+      "coverage": "USKG 中国锦标赛/亲子赛",
+      "watch": "2026中国锦标赛报名、赛事负责人邮箱、参赛资格。",
+      "status": "已确认",
+      "keywords": ["US Kids", "U.S. Kids", "China Championship", "亲子"]
+    },
+    {
+      "name": "U.S. Kids Golf 中国站",
+      "tier": "A",
+      "type": "赛事官网",
+      "priority": "中",
+      "url": "https://www.uskidsgolf.cn/",
+      "coverage": "USKG 中国/南部青少年赛历史公告",
+      "watch": "小型/区域赛线索；需核验当前活跃度和报名入口。",
+      "status": "已确认，活跃度待查",
+      "keywords": ["USKG", "南部", "青少年", "中国站"]
+    },
+    {
+      "name": "沃尔沃全国青少年比洞锦标赛",
+      "tier": "A",
+      "type": "品牌赛事官网",
+      "priority": "高",
+      "url": "https://www.volvoingolf.com/junior-championship/media/article/tewpsja",
+      "coverage": "沃尔沃青少年系列/比洞锦标赛",
+      "watch": "赛事体系、选拔赛、比洞锦标赛、官方公告。",
+      "status": "已确认",
+      "keywords": ["沃尔沃", "Volvo", "比洞", "选拔赛"]
+    },
+    {
+      "name": "劳力士中国青少年冠军锦标赛",
+      "tier": "A",
+      "type": "中高协公告",
+      "priority": "高",
+      "url": "https://www.cgagolf.org.cn/xnews_details/2121.html",
+      "coverage": "顶级青少年赛规程线索",
+      "watch": "2026单站需追中高协、IMG高尔夫、观澜湖官方发布。",
+      "status": "已确认",
+      "keywords": ["劳力士", "Rolex", "冠军锦标赛", "IMG"]
+    },
+    {
+      "name": "劳力士/观澜湖报名线索",
+      "tier": "A",
+      "type": "球会公告",
+      "priority": "高",
+      "url": "https://www.missionhillschina.com/news/20251112/",
+      "coverage": "劳力士赛事报名渠道线索",
+      "watch": "观澜湖提示关注中高协官网和 IMG 高尔夫官方微信公众号。",
+      "status": "已确认",
+      "keywords": ["劳力士", "观澜湖", "IMG", "报名"]
+    },
+    {
+      "name": "BMW青少年/观澜湖线索",
+      "tier": "A",
+      "type": "球会公告",
+      "priority": "高",
+      "url": "https://www.missionhillschina.com/news/20251201/",
+      "coverage": "BMW中国青少年大师赛、冯珊珊杯相关",
+      "watch": "观澜湖承办/报道高价值赛事；报名仍需中高协或官方号确认。",
+      "status": "已确认",
+      "keywords": ["BMW", "冯珊珊杯", "大师赛", "观澜湖"]
+    },
+    {
+      "name": "北京青少年公开赛",
+      "tier": "A",
+      "type": "中高协公告",
+      "priority": "中",
+      "url": "https://www.cgagolf.org.cn/xnews_details/2413.html",
+      "coverage": "北京青少年公开赛/锦标赛",
+      "watch": "2026北京青少年公开赛规程、报名方式和截止时间。",
+      "status": "已确认",
+      "keywords": ["北京", "公开赛", "青少年"]
+    },
+    {
+      "name": "北京市青少年锦标赛",
+      "tier": "A",
+      "type": "政府/体育局",
+      "priority": "中",
+      "url": "https://tyj.beijing.gov.cn/bjsports/ztzl/qsnty/qsntyzc/743759508/index.html",
+      "coverage": "市级青少年锦标赛",
+      "watch": "北京市体育局/教委主办，按区组队报名。",
+      "status": "已确认",
+      "keywords": ["北京", "体育局", "锦标赛", "区队"]
+    },
+    {
+      "name": "上海市高尔夫球协会",
+      "tier": "A",
+      "type": "地方协会",
+      "priority": "中",
+      "url": "https://www.shanghaigolf.cn/",
+      "coverage": "上海青少年巡回赛、锦标赛、积分榜",
+      "watch": "青少年报名表、积分榜、市级赛事通知。",
+      "status": "已确认",
+      "keywords": ["上海", "青少年", "巡回赛", "积分榜"]
+    },
+    {
+      "name": "海南省高尔夫球协会",
+      "tier": "A",
+      "type": "地方协会",
+      "priority": "中",
+      "url": "https://www.hngagolf.org.cn/",
+      "coverage": "海南省青少年巡回赛",
+      "watch": "海南省青少年巡回赛、海南公开赛/青巡赛线索。",
+      "status": "已确认",
+      "keywords": ["海南", "青少年", "巡回赛"]
+    },
+    {
+      "name": "福建省青少委/省高协",
+      "tier": "A",
+      "type": "政府/地方协会线索",
+      "priority": "中",
+      "url": "https://tyj.fujian.gov.cn/zwgk/gsgg/202212/t20221220_6081879.htm",
+      "coverage": "福建省青少年赛事体系",
+      "watch": "福建省青（少）年高尔夫球委员会、省级赛事线索。",
+      "status": "已确认",
+      "keywords": ["福建", "青少委", "省高协", "青少年"]
+    },
+    {
+      "name": "深圳市体育局/市运会规程",
+      "tier": "A",
+      "type": "政府PDF",
+      "priority": "中",
+      "url": "https://wtl.sz.gov.cn/attachment/1/1450/1450000/11347717.pdf",
+      "coverage": "深圳市青少年体育组高尔夫",
+      "watch": "政务PDF、注册系统报名、截止时间和参赛材料。",
+      "status": "已确认",
+      "keywords": ["深圳", "市运会", "注册系统", "青少年"]
+    },
+    {
+      "name": "广东省青少年冠军巡回赛线索",
+      "tier": "A",
+      "type": "公开线索/待回查",
+      "priority": "中",
+      "url": "https://www.golf998.com/?a=show&c=News&id=148414&m=Mobile",
+      "coverage": "广东省青少年冠军巡回赛、GolfFlow 小程序",
+      "watch": "唐高网转载显示报名通过 GolfFlow 小程序；需回查官方/公众号。",
+      "status": "待微信/官方确认",
+      "keywords": ["广东", "冠军巡回赛", "GolfFlow", "小程序"]
+    },
+    {
+      "name": "江苏省青少年巡回赛线索",
+      "tier": "A",
+      "type": "中高协行业新闻",
+      "priority": "中",
+      "url": "https://www.cgagolf.org.cn/hnews_details/1574358843417694208.html",
+      "coverage": "江苏省青少年巡回赛、锦标赛",
+      "watch": "江苏省青少年巡回赛体系；报名入口需追省高协/承办方。",
+      "status": "已确认体系，报名入口待查",
+      "keywords": ["江苏", "青少年", "巡回赛", "锦标赛"]
+    },
+    {
+      "name": "浙江省青少年巡回赛/校际挑战赛线索",
+      "tier": "A",
+      "type": "赛事平台线索",
+      "priority": "中",
+      "url": "https://overview.wifigolf.com/home/mobile/index.php/Home/Share/index.html?device=web&lang=cn&mtid=36391&type=match",
+      "coverage": "浙江省级/校际赛",
+      "watch": "wifiGOLF赛事页；需查浙江省高协或承办方官方发布。",
+      "status": "待官方确认",
+      "keywords": ["浙江", "校际", "挑战赛", "wifiGOLF"]
     }
   ]
 }

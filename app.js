@@ -202,8 +202,8 @@ function renderAlerts() {
 }
 
 function renderWatchPanel() {
-  const high = state.sources.filter((source) => source.priority === "高").slice(0, 8);
-  if (!high.length) {
+  const aTierSources = state.sources.filter((source) => source.tier === "A");
+  if (!aTierSources.length) {
     els.watchPanel.innerHTML = "";
     return;
   }
@@ -211,21 +211,22 @@ function renderWatchPanel() {
   els.watchPanel.innerHTML = `
     <div class="panel-heading">
       <div>
-        <p class="eyebrow">一手资讯源</p>
-        <h3>青少年热门赛事发布平台</h3>
+        <p class="eyebrow">A档公开来源</p>
+        <h3>已确认可访问的信息源</h3>
       </div>
-      <span>${state.sources.length} 个渠道</span>
+      <span>${aTierSources.length} 个渠道</span>
     </div>
     <div class="source-grid">
-      ${high.map((source) => `
+      ${aTierSources.map((source) => `
         <article class="source-card">
           <div>
             <strong>${source.name}</strong>
-            <span>${source.type} · ${source.priority}优先级</span>
+            <span>${source.type} · ${source.priority}优先级 · ${source.status || "已确认"}</span>
           </div>
+          ${source.coverage ? `<p class="source-coverage">${source.coverage}</p>` : ""}
           <p>${source.watch}</p>
           <div class="source-actions">
-            ${source.url ? `<a href="${source.url}" target="_blank" rel="noreferrer">官网</a>` : ""}
+            ${source.url ? `<a href="${source.url}" target="_blank" rel="noreferrer">打开来源</a>` : ""}
             ${source.wechat ? `<span>微信：${source.wechat}</span>` : ""}
           </div>
         </article>
