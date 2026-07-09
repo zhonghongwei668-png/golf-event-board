@@ -4,9 +4,9 @@
 
 ## 公开网站部署
 
-推荐部署到 GitHub Pages。推送到 GitHub 仓库后，在仓库 `Settings -> Pages` 中把 `Source` 设为 `GitHub Actions`，之后 `.github/workflows/deploy.yml` 会自动发布网站。
+推荐部署到 GitHub Pages。推送到 GitHub 仓库后，在仓库 `Settings -> Pages` 中把 `Source` 设为 `Deploy from a branch`，`Branch` 选择 `main`，目录选择 `/ (root)`。
 
-工作流会在每天北京时间 08:30 运行 `npm run update`，更新 `data/events.json` 后重新发布。也可以在 GitHub 的 `Actions -> Deploy golf event board -> Run workflow` 手动触发。
+工作流会在每天北京时间 08:30 运行 `npm run update`，更新 `data/events.json`。也可以在 GitHub 的 `Actions -> Update golf event data -> Run workflow` 手动触发。
 
 本项目没有前端依赖，`npm run build` 会把公开网站需要的文件输出到 `dist/`。
 

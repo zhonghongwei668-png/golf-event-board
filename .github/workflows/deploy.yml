@@ -1,4 +1,4 @@
-name: Deploy golf event board
+name: Update golf event data
 
 on:
   push:
@@ -11,19 +11,14 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: update-data
   cancel-in-progress: false
 
 jobs:
-  update-and-deploy:
+  update-data:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -41,22 +36,10 @@ jobs:
 
       - name: Commit updated data
         run: |
-          if ! git diff --quiet data/events.json; then
+          if ! git diff --quiet data/events.json dist/data/events.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/events.json
+            git add data/events.json dist/data/events.json
             git commit -m "Update golf event data"
             git push
           fi
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
