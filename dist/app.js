@@ -87,6 +87,13 @@ function hasDeadline(event) {
   return Boolean(event.registrationEnd);
 }
 
+function isRegistrationOpen(event) {
+  if (event.statusCode === "open") return true;
+  if (!event.registrationEnd) return false;
+  const end = new Date(`${event.registrationEnd.replace(" ", "T")}+08:00`);
+  return end >= new Date();
+}
+
 function daysUntil(dateText) {
   if (!dateText) return null;
   const date = new Date(`${dateText.slice(0, 10)}T23:59:59+08:00`);
@@ -247,7 +254,7 @@ function renderStats() {
     memo.total += 1;
     memo[event.category] = (memo[event.category] || 0) + 1;
     if (isFuture(event)) memo.future += 1;
-    if (event.statusCode === "open") memo.open += 1;
+    if (isRegistrationOpen(event)) memo.open += 1;
     return memo;
   }, { total: 0, future: 0, open: 0 });
 
@@ -269,7 +276,7 @@ function applyFilters() {
     const matchesSearch = !q || haystack.includes(q);
     let matchesStatus = true;
     if (state.status === "future") matchesStatus = isFuture(event);
-    if (state.status === "open") matchesStatus = event.statusCode === "open";
+    if (state.status === "open") matchesStatus = isRegistrationOpen(event);
     if (state.status === "deadline") matchesStatus = hasDeadline(event);
     return matchesCategory && matchesMonth && matchesSearch && matchesStatus;
   });

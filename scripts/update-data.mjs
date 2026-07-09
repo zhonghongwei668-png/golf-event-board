@@ -110,6 +110,7 @@ function statusFor(event, now = new Date()) {
   if (end && end < today) return { code: "past", label: "已结束" };
   if (start && start <= today && end && end >= today) return { code: "running", label: "比赛中" };
   if (regEnd && regEnd < now) return { code: "closed", label: "报名截止" };
+  if (regEnd && regEnd >= now) return { code: "open", label: "可报名" };
   if (event.registrationOpen === true) return { code: "open", label: "可报名" };
   if (event.registrationOpen === false) return { code: "pending", label: "待开放" };
   return { code: "watch", label: "关注公告" };

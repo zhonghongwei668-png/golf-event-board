@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T05:33:33.610Z",
+  "generatedAt": "2026-07-09T06:27:27.521Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1139,8 +1139,8 @@
       "registrationStart": "",
       "registrationEnd": "2026-07-31 17:00",
       "registrationText": "入口：大正高尔夫App；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
+      "statusCode": "open",
+      "statusLabel": "可报名",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
@@ -1223,8 +1223,8 @@
       "registrationStart": "",
       "registrationEnd": "2026-07-15 12:00",
       "registrationText": "入口：大正高尔夫App；即日起至 2026-07-15 12:00；6-18岁；名单公众号“大连高协球友会”。",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
+      "statusCode": "open",
+      "statusLabel": "可报名",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
@@ -1419,8 +1419,8 @@
       "registrationStart": "",
       "registrationEnd": "2026-08-02 17:00",
       "registrationText": "入口：大正高尔夫；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
+      "statusCode": "open",
+      "statusLabel": "可报名",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
