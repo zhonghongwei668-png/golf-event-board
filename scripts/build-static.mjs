@@ -14,5 +14,6 @@ for (const file of ["index.html", "app.js", "styles.css", "manifest.webmanifest"
 }
 
 await cp(path.join(rootDir, "data", "events.json"), path.join(distDir, "data", "events.json"));
+await cp(path.join(rootDir, "data", "sources.json"), path.join(distDir, "data", "sources.json"));
 await writeFile(path.join(distDir, ".nojekyll"), "", "utf8");
 console.log(`Built static site -> ${path.relative(rootDir, distDir)}`);

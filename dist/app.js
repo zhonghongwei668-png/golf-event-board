@@ -1,5 +1,6 @@
 const state = {
   data: null,
+  sources: [],
   events: [],
   filtered: [],
   selected: null,
@@ -19,6 +20,8 @@ const els = {
   searchInput: document.querySelector("#searchInput"),
   monthSelect: document.querySelector("#monthSelect"),
   sortSelect: document.querySelector("#sortSelect"),
+  alertsPanel: document.querySelector("#alertsPanel"),
+  watchPanel: document.querySelector("#watchPanel"),
   timeline: document.querySelector("#timeline"),
   resultTitle: document.querySelector("#resultTitle"),
   refreshButton: document.querySelector("#refreshButton"),
@@ -82,6 +85,17 @@ function hasDeadline(event) {
   return Boolean(event.registrationEnd);
 }
 
+function daysUntil(dateText) {
+  if (!dateText) return null;
+  const date = new Date(`${dateText.slice(0, 10)}T23:59:59+08:00`);
+  const diff = date.getTime() - todayInShanghai().getTime();
+  return Math.ceil(diff / 86400000);
+}
+
+function isHotEvent(event) {
+  return /汇丰|斐乐|CJGT|精英|锦标赛|公开赛|如歌|宝马|BMW|劳力士|沃尔沃|冯珊珊|朝向/i.test(event.name);
+}
+
 function linkButton(label, url, tone = "") {
   if (!url) return "";
   return `<a class="action-link ${tone}" href="${url}" target="_blank" rel="noreferrer">${label}</a>`;
@@ -104,18 +118,106 @@ async function fetchData() {
   return fetch("./data/events.json", { cache: "no-store" });
 }
 
+async function fetchSources() {
+  try {
+    const response = await fetch("./data/sources.json", { cache: "no-store" });
+    if (!response.ok) return [];
+    const payload = await response.json();
+    return payload.sources || [];
+  } catch {
+    return [];
+  }
+}
+
 async function loadData() {
   const response = await fetchData();
   if (!response.ok) throw new Error("赛事数据读取失败");
   state.data = await response.json();
+  state.sources = await fetchSources();
   state.events = state.data.events || [];
   renderMonths();
   applyFilters();
   renderStats();
+  renderAlerts();
+  renderWatchPanel();
   const generated = state.data.generatedAt ? new Date(state.data.generatedAt) : null;
   els.updatedAt.textContent = generated ? `最近更新 ${generated.toLocaleString("zh-CN", { hour12: false })}` : "已读取本地数据";
   els.refreshButton.textContent = state.hasLiveApi ? "更新官方数据" : "每日自动更新";
   els.refreshButton.title = state.hasLiveApi ? "立即从官方来源刷新" : "公网静态版由定时任务每日自动更新";
+}
+
+function renderAlerts() {
+  const candidates = state.events
+    .filter((event) => isFuture(event) && (event.registrationEnd || isHotEvent(event)))
+    .map((event) => ({ event, deadlineDays: daysUntil(event.registrationEnd) }))
+    .filter((item) => item.deadlineDays === null || item.deadlineDays >= -1)
+    .sort((a, b) => {
+      const ad = a.deadlineDays ?? 999;
+      const bd = b.deadlineDays ?? 999;
+      return ad - bd || a.event.startDate.localeCompare(b.event.startDate);
+    })
+    .slice(0, 5);
+
+  if (!candidates.length) {
+    els.alertsPanel.innerHTML = "";
+    return;
+  }
+
+  els.alertsPanel.innerHTML = `
+    <div class="panel-heading">
+      <div>
+        <p class="eyebrow">抢手名额提醒</p>
+        <h3>优先盯报名开始、截止和补录</h3>
+      </div>
+      <span>白天每小时检查</span>
+    </div>
+    <div class="alert-grid">
+      ${candidates.map(({ event, deadlineDays }) => `
+        <button class="alert-card" data-id="${event.id}" style="--accent:${event.color}">
+          <strong>${event.name}</strong>
+          <span>${event.registrationEnd ? `报名截止：${event.registrationEnd}` : "热门赛事，关注官方首发"}</span>
+          <em>${deadlineDays === null ? event.categoryLabel : deadlineDays <= 0 ? "今天/已临近" : `${deadlineDays} 天内`}</em>
+        </button>
+      `).join("")}
+    </div>
+  `;
+
+  els.alertsPanel.querySelectorAll(".alert-card").forEach((card) => {
+    card.addEventListener("click", () => selectEvent(card.dataset.id));
+  });
+}
+
+function renderWatchPanel() {
+  const high = state.sources.filter((source) => source.priority === "高").slice(0, 8);
+  if (!high.length) {
+    els.watchPanel.innerHTML = "";
+    return;
+  }
+
+  els.watchPanel.innerHTML = `
+    <div class="panel-heading">
+      <div>
+        <p class="eyebrow">一手资讯源</p>
+        <h3>青少年热门赛事发布平台</h3>
+      </div>
+      <span>${state.sources.length} 个渠道</span>
+    </div>
+    <div class="source-grid">
+      ${high.map((source) => `
+        <article class="source-card">
+          <div>
+            <strong>${source.name}</strong>
+            <span>${source.type} · ${source.priority}优先级</span>
+          </div>
+          <p>${source.watch}</p>
+          <div class="source-actions">
+            ${source.url ? `<a href="${source.url}" target="_blank" rel="noreferrer">官网</a>` : ""}
+            ${source.wechat ? `<span>微信：${source.wechat}</span>` : ""}
+          </div>
+        </article>
+      `).join("")}
+    </div>
+  `;
 }
 
 function renderMonths() {
@@ -164,6 +266,7 @@ function applyFilters() {
   });
 
   renderTimeline();
+  renderAlerts();
 }
 
 function renderTimeline() {
