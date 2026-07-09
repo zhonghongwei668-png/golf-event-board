@@ -209,8 +209,24 @@ function renderAlerts() {
 }
 
 function renderWatchPanel() {
-  const aTierSources = state.sources.filter((source) => source.tier === "A");
-  if (!aTierSources.length) {
+  const sourceGroups = [
+    {
+      tier: "A",
+      eyebrow: "A档公开来源",
+      title: "已确认可访问的信息源",
+      note: "公开网页/PDF",
+      sources: state.sources.filter((source) => source.tier === "A"),
+    },
+    {
+      tier: "B",
+      eyebrow: "B档微信/小程序",
+      title: "高价值待确认渠道",
+      note: "需人工回查",
+      sources: state.sources.filter((source) => source.tier === "B"),
+    },
+  ].filter((group) => group.sources.length);
+
+  if (!sourceGroups.length) {
     els.watchPanel.innerHTML = "";
     return;
   }
@@ -218,27 +234,38 @@ function renderWatchPanel() {
   els.watchPanel.innerHTML = `
     <div class="panel-heading">
       <div>
-        <p class="eyebrow">A档公开来源</p>
-        <h3>已确认可访问的信息源</h3>
+        <p class="eyebrow">信息源矩阵</p>
+        <h3>公开来源 + 微信待确认渠道</h3>
       </div>
-      <span>${aTierSources.length} 个渠道</span>
+      <span>${state.sources.length} 个渠道</span>
     </div>
-    <div class="source-grid">
-      ${aTierSources.map((source) => `
-        <article class="source-card">
+    ${sourceGroups.map((group) => `
+      <section class="source-tier-group source-tier-${group.tier.toLowerCase()}">
+        <div class="source-tier-heading">
           <div>
-            <strong>${source.name}</strong>
-            <span>${source.type} · ${source.priority}优先级 · ${source.status || "已确认"}</span>
+            <p class="eyebrow">${group.eyebrow}</p>
+            <h4>${group.title}</h4>
           </div>
-          ${source.coverage ? `<p class="source-coverage">${source.coverage}</p>` : ""}
-          <p>${source.watch}</p>
-          <div class="source-actions">
-            ${source.url ? `<a href="${source.url}" target="_blank" rel="noreferrer">打开来源</a>` : ""}
-            ${source.wechat ? `<span>微信：${source.wechat}</span>` : ""}
-          </div>
-        </article>
+          <span>${group.sources.length} 个 · ${group.note}</span>
+        </div>
+        <div class="source-grid">
+          ${group.sources.map((source) => `
+            <article class="source-card" data-tier="${source.tier}">
+              <div>
+                <strong>${source.name}</strong>
+                <span>${source.type} · ${source.priority}优先级 · ${source.status || "已确认"}</span>
+              </div>
+              ${source.coverage ? `<p class="source-coverage">${source.coverage}</p>` : ""}
+              <p>${source.watch}</p>
+              <div class="source-actions">
+                ${source.url ? `<a href="${source.url}" target="_blank" rel="noreferrer">打开来源</a>` : ""}
+                ${source.wechat ? `<span>微信：${source.wechat}</span>` : ""}
+              </div>
+            </article>
+          `).join("")}
+        </div>
+      </section>
       `).join("")}
-    </div>
   `;
 }
 

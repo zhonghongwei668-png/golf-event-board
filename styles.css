@@ -342,6 +342,30 @@ select {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.source-tier-group {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.source-tier-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.source-tier-heading h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.source-tier-heading span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .source-card {
   display: grid;
   align-content: space-between;
@@ -352,6 +376,11 @@ select {
   padding: 13px;
   background: #fff;
   box-shadow: 0 8px 22px rgba(28, 35, 42, 0.05);
+}
+
+.source-card[data-tier="B"] {
+  border-style: dashed;
+  background: #fffaf1;
 }
 
 .source-card p {
@@ -381,6 +410,11 @@ select {
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.source-card[data-tier="B"] .source-actions span {
+  background: #fff1d7;
+  color: #7b4b09;
 }
 
 .timeline {
