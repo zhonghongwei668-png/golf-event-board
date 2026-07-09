@@ -373,6 +373,60 @@ select {
   margin-top: 12px;
 }
 
+.past-events {
+  border: 1px solid rgba(33, 38, 44, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  overflow: hidden;
+}
+
+.past-events summary {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 16px;
+  color: var(--muted);
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.past-events summary::-webkit-details-marker {
+  display: none;
+}
+
+.past-events summary::before {
+  content: "+";
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ece8df;
+  color: var(--ink);
+}
+
+.past-events[open] summary::before {
+  content: "-";
+}
+
+.past-events summary span {
+  flex: 1;
+}
+
+.past-events summary strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.past-events-body {
+  display: grid;
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+
 .event-card {
   display: grid;
   grid-template-columns: 116px 1fr;
@@ -474,6 +528,21 @@ select {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.45;
+}
+
+.past-compact {
+  grid-template-columns: 1fr;
+  min-height: 0;
+  box-shadow: none;
+}
+
+.past-compact .card-body {
+  gap: 7px;
+  padding: 12px;
+}
+
+.past-compact h4 {
+  font-size: 14px;
 }
 
 .card-footer {

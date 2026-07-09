@@ -276,14 +276,16 @@ function renderTimeline() {
     return;
   }
 
+  const activeEvents = state.filtered.filter((event) => isFuture(event));
+  const pastEvents = state.filtered.filter((event) => !isFuture(event));
   const groups = new Map();
-  for (const event of state.filtered) {
+  for (const event of activeEvents) {
     const key = monthKey(event);
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(event);
   }
 
-  els.timeline.innerHTML = [...groups.entries()].map(([key, events]) => `
+  const activeHtml = activeEvents.length ? [...groups.entries()].map(([key, events]) => `
     <section class="month-group">
       <div class="month-heading">
         <h3>${monthLabel(key)}</h3>
@@ -293,7 +295,21 @@ function renderTimeline() {
         ${events.map(renderCard).join("")}
       </div>
     </section>
-  `).join("");
+  `).join("") : `<div class="empty-list">当前筛选下没有未结束赛事</div>`;
+
+  const pastHtml = pastEvents.length ? `
+    <details class="past-events">
+      <summary>
+        <span>已结束赛事</span>
+        <strong>${pastEvents.length} 场</strong>
+      </summary>
+      <div class="past-events-body">
+        ${pastEvents.map(renderCompactPastCard).join("")}
+      </div>
+    </details>
+  ` : "";
+
+  els.timeline.innerHTML = activeHtml + pastHtml;
 
   els.timeline.querySelectorAll(".event-card").forEach((card) => {
     card.addEventListener("click", () => selectEvent(card.dataset.id));
@@ -320,6 +336,21 @@ function renderCard(event) {
           ${deadline}
           <span>${event.sourceSystem || "官方信息源"}</span>
         </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderCompactPastCard(event) {
+  return `
+    <article class="event-card past-compact" data-id="${event.id}" style="--accent:${event.color}">
+      <div class="card-body">
+        <div class="card-topline">
+          <span class="category-tag">${event.categoryLabel}</span>
+          <span class="status ${event.statusCode}">${event.statusLabel}</span>
+        </div>
+        <h4>${event.name}</h4>
+        <p>${eventRange(event)} · ${event.location}</p>
       </div>
     </article>
   `;
