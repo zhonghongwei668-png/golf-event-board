@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T07:04:12.720Z",
+  "generatedAt": "2026-07-09T10:04:24.760Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1133,12 +1133,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2417.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
-      "requirement": "入口：大正高尔夫App；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&source=event&source_id=5043&event_id=5043&areaFrom=beijing",
+      "signupMethod": "入口：大正报名入口；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
+      "requirement": "入口：大正报名入口；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
       "registrationStart": "",
       "registrationEnd": "2026-07-31 17:00",
-      "registrationText": "入口：大正高尔夫App；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
+      "registrationText": "入口：大正报名入口；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
       "statusCode": "open",
       "statusLabel": "可报名",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",

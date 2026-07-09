@@ -56,6 +56,7 @@ const KNOWN_SOURCE_OVERRIDES = [
 
 function clean(text = "") {
   return String(text)
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, "$1")
     .replace(/<[^>]+>/g, "")
     .replace(/\s+/g, " ")
     .trim();
@@ -123,7 +124,7 @@ function parseRegistrationWindow(text = "") {
   return {
     registrationStart: range ? range[1] : "",
     registrationEnd: range ? range[2] : (deadlineOnly ? deadlineOnly[1] : ""),
-    registrationText: normalized
+    registrationText: clean(normalized)
   };
 }
 
@@ -235,6 +236,9 @@ function parseMarkdownEvents(markdown) {
       const [name, time, location, sourceCell, info] = cells;
       const { startDate, endDate } = splitDateRange(time);
       const window = parseRegistrationWindow(info);
+      const infoText = clean(info);
+      const infoLinks = allLinks(info);
+      const signupLink = infoLinks.find((link) => link.label.includes("报名") || link.url.includes("baoming_detail"));
       events.push(normalizeEvent({
         category: "amateur",
         name,
@@ -243,8 +247,9 @@ function parseMarkdownEvents(markdown) {
         location,
         sourceUrl: firstUrl(sourceCell) || CATEGORY_META.amateur.defaultSource,
         sourceLinks: allLinks(sourceCell),
-        signupMethod: info,
-        requirement: info,
+        signupUrl: signupLink?.url || "",
+        signupMethod: infoText,
+        requirement: infoText,
         ...window,
         sourceSystem: "中高协年历/规程"
       }));
@@ -254,6 +259,9 @@ function parseMarkdownEvents(markdown) {
       const [name, time, location, sourceCell, info] = cells;
       const { startDate, endDate } = splitDateRange(time);
       const window = parseRegistrationWindow(info);
+      const infoText = clean(info);
+      const infoLinks = allLinks(info);
+      const signupLink = infoLinks.find((link) => link.label.includes("报名") || link.url.includes("baoming_detail"));
       events.push(normalizeEvent({
         category: "junior",
         name,
@@ -262,8 +270,9 @@ function parseMarkdownEvents(markdown) {
         location,
         sourceUrl: firstUrl(sourceCell) || CATEGORY_META.junior.defaultSource,
         sourceLinks: allLinks(sourceCell),
-        signupMethod: info,
-        requirement: info,
+        signupUrl: signupLink?.url || "",
+        signupMethod: infoText,
+        requirement: infoText,
         ...window,
         sourceSystem: "中高协年历/规程"
       }));
