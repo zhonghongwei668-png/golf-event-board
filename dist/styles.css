@@ -143,7 +143,7 @@ a {
 
 .segmented button,
 .refresh-button,
-.icon-button {
+.detail-back-button {
   border: 0;
   cursor: pointer;
 }
@@ -660,14 +660,17 @@ select {
   color: #fff;
 }
 
-.icon-button {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
+.detail-back-button {
+  flex: 0 0 auto;
+  min-height: 36px;
+  border-radius: 8px;
+  padding: 0 12px;
   background: #ece8df;
   color: var(--ink);
-  font-size: 22px;
+  font-size: 13px;
+  font-weight: 800;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .detail-meta {
@@ -990,5 +993,23 @@ select {
   .card-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .detail-content {
+    padding: 18px;
+  }
+
+  .detail-header {
+    gap: 12px;
+  }
+
+  .detail-header h2 {
+    font-size: 20px;
+  }
+
+  .detail-back-button {
+    min-height: 34px;
+    padding: 0 10px;
+    font-size: 12px;
   }
 }
