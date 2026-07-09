@@ -1,0 +1,18 @@
+{
+  "name": "国内高尔夫赛事报名日历",
+  "short_name": "赛事报名",
+  "description": "国内女子、青少年、业余高尔夫赛事报名入口与比赛日历。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f2ed",
+  "theme_color": "#20252b",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="国内女子、青少年、业余高尔夫赛事报名日历，按日期展示报名入口、比赛时间、报名时间和官方信息源。">
+    <meta name="theme-color" content="#20252b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="赛事报名日历">
+    <title>国内高尔夫赛事报名日历</title>
+    <link rel="icon" href="./icon.svg">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="赛事筛选">
+        <div class="brand">
+          <div class="brand-mark">G</div>
+          <div>
+            <h1>赛事报名日历</h1>
+            <p id="updatedAt">正在读取数据</p>
+          </div>
+        </div>
+
+        <div class="quick-stats" id="stats"></div>
+
+        <section class="filter-block">
+          <h2>分类</h2>
+          <div class="segmented" id="categoryFilters">
+            <button class="is-active" data-category="all">全部</button>
+            <button data-category="women">女子</button>
+            <button data-category="women_development">起点</button>
+            <button data-category="amateur">业余</button>
+            <button data-category="junior">青少年</button>
+          </div>
+        </section>
+
+        <section class="filter-block">
+          <h2>状态</h2>
+          <div class="segmented compact" id="statusFilters">
+            <button class="is-active" data-status="all">全部</button>
+            <button data-status="future">未来</button>
+            <button data-status="open">可报名</button>
+            <button data-status="deadline">有截止</button>
+          </div>
+        </section>
+
+        <section class="filter-block">
+          <h2>检索</h2>
+          <input id="searchInput" type="search" placeholder="赛事、地点、入口">
+        </section>
+
+        <section class="filter-block source-list">
+          <h2>官方入口</h2>
+          <a href="https://www.clpga.org/MatchList?lang=cn" target="_blank" rel="noreferrer">CLPGA 女子中巡</a>
+          <a href="https://www.cgagolf.org.cn/game_spare.html" target="_blank" rel="noreferrer">中高协业余赛事</a>
+          <a href="https://www.cgagolf.org.cn/game_young.html" target="_blank" rel="noreferrer">中高协青少年赛事</a>
+          <a href="https://member.cgagolf.org.cn/index" target="_blank" rel="noreferrer">中高协会员系统</a>
+        </section>
+
+        <button id="refreshButton" class="refresh-button">更新官方数据</button>
+      </aside>
+
+      <main class="main-panel">
+        <div class="toolbar">
+          <div>
+            <p class="eyebrow">2026 国内女子 / 青少年 / 业余</p>
+            <h2 id="resultTitle">按比赛日期排序</h2>
+          </div>
+          <div class="toolbar-actions">
+            <select id="monthSelect" aria-label="月份筛选">
+              <option value="all">全年</option>
+            </select>
+            <select id="sortSelect" aria-label="排序">
+              <option value="asc">日期从早到晚</option>
+              <option value="desc">日期从晚到早</option>
+            </select>
+          </div>
+        </div>
+        <div id="timeline" class="timeline" aria-live="polite"></div>
+      </main>
+
+      <aside class="detail-panel" id="detailPanel" aria-label="赛事详情">
+        <div class="empty-detail" id="emptyDetail">
+          <span>选择一张赛事卡片</span>
+        </div>
+        <div class="detail-content" id="detailContent" hidden>
+          <div class="detail-header">
+            <div>
+              <span class="pill" id="detailCategory"></span>
+              <h2 id="detailName"></h2>
+            </div>
+            <button id="closeDetail" class="icon-button" aria-label="关闭详情">×</button>
+          </div>
+          <dl class="detail-meta" id="detailMeta"></dl>
+          <div class="detail-actions" id="detailActions"></div>
+          <div class="detail-section">
+            <h3>报名信息</h3>
+            <p id="detailSignup"></p>
+          </div>
+          <div class="detail-section">
+            <h3>资格要求</h3>
+            <p id="detailRequirement"></p>
+          </div>
+          <div class="web-preview">
+            <div class="preview-bar">
+              <span>官方网页预览</span>
+              <a id="previewOpen" target="_blank" rel="noreferrer">新窗口打开</a>
+            </div>
+            <iframe id="sourceFrame" title="官方信息源网页"></iframe>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

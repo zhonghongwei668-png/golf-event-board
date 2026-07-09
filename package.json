@@ -1,0 +1,11 @@
+{
+  "name": "china-golf-entry-board",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/update-data.mjs",
+    "build": "node scripts/build-static.mjs",
+    "serve": "node scripts/server.mjs"
+  }
+}
