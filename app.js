@@ -36,8 +36,8 @@ const els = {
   detailAppLinks: document.querySelector("#detailAppLinks"),
   detailSignup: document.querySelector("#detailSignup"),
   detailRequirement: document.querySelector("#detailRequirement"),
-  sourceFrame: document.querySelector("#sourceFrame"),
   previewOpen: document.querySelector("#previewOpen"),
+  previewDomain: document.querySelector("#previewDomain"),
   closeDetail: document.querySelector("#closeDetail")
 };
 
@@ -402,8 +402,8 @@ function renderDetail(event) {
   els.detailSignup.textContent = event.signupMethod || event.registrationText || "以官方报名入口实时显示为准。";
   els.detailRequirement.textContent = event.requirement || "以赛事单项规程和补充通知为准。";
   const previewUrl = event.sourceUrl || event.sourceLinks?.[0]?.url || event.signupUrl;
-  els.previewOpen.href = previewUrl;
-  els.sourceFrame.src = previewUrl;
+  els.previewOpen.href = previewUrl || "#";
+  els.previewDomain.textContent = previewUrl ? new URL(previewUrl).hostname : "官方网页";
 }
 
 function getEventAppLinks(event) {
@@ -479,7 +479,6 @@ els.closeDetail.addEventListener("click", () => {
   els.detailPanel.classList.remove("is-open");
   els.emptyDetail.hidden = false;
   els.detailContent.hidden = true;
-  els.sourceFrame.src = "about:blank";
   renderTimeline();
 });
 

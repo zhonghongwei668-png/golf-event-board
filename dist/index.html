@@ -106,12 +106,15 @@
             <h3>资格要求</h3>
             <p id="detailRequirement"></p>
           </div>
-          <div class="web-preview">
+          <div class="web-preview" id="sourcePreview">
             <div class="preview-bar">
-              <span>官方网页预览</span>
-              <a id="previewOpen" target="_blank" rel="noreferrer">新窗口打开</a>
+              <span>官方信息源</span>
+              <a id="previewOpen" target="_blank" rel="noreferrer">打开网页</a>
             </div>
-            <iframe id="sourceFrame" title="官方信息源网页"></iframe>
+            <div class="preview-fallback">
+              <strong id="previewDomain">官方网页</strong>
+              <p>部分官网、公众号页面和报名平台会禁止网页内嵌预览。请用上方按钮在新窗口打开官方信息源。</p>
+            </div>
           </div>
         </div>
       </aside>
