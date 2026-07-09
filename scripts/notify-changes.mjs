@@ -53,6 +53,11 @@ function formatEvent(event) {
   return `- ${label}｜${event.name}｜${formatDateRange(event)}${deadline}`;
 }
 
+function formatOpenDigestEvent(event) {
+  const deadline = event.registrationEnd ? `，报名截止 ${event.registrationEnd}` : "";
+  return `- ${formatDateRange(event)}｜${event.name}${deadline}`;
+}
+
 function changedFields(before, after) {
   return [
     ["statusLabel", "状态"],
@@ -140,6 +145,36 @@ function buildMarkdown(diff, currentPayload) {
   ].join("\n");
 }
 
+function buildOpenRegistrationDigest(currentPayload) {
+  const events = (currentPayload?.events || [])
+    .filter((event) => event.statusCode === "open")
+    .sort((a, b) => {
+      const ad = a.registrationEnd || a.startDate || "9999-12-31";
+      const bd = b.registrationEnd || b.startDate || "9999-12-31";
+      return ad.localeCompare(bd) || (a.startDate || "").localeCompare(b.startDate || "") || a.name.localeCompare(b.name, "zh-CN");
+    });
+
+  const generatedAt = currentPayload?.generatedAt
+    ? new Date(currentPayload.generatedAt).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" })
+    : new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" });
+  const checkedAt = new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" });
+
+  const eventLines = events.length
+    ? events.map(formatOpenDigestEvent).join("\n")
+    : "- 当前没有状态为“可报名”的赛事。";
+
+  return [
+    "### 当前可报名赛事清单",
+    `检测时间：${checkedAt}`,
+    `数据更新时间：${generatedAt}`,
+    `可报名赛事：${events.length} 场`,
+    "",
+    eventLines,
+    "",
+    `[打开赛事日历](${siteUrl})`,
+  ].join("\n");
+}
+
 async function postJson(url, payload) {
   const response = await fetch(url, {
     method: "POST",
@@ -199,6 +234,35 @@ async function notifyWeWork(markdown) {
 }
 
 async function main() {
+  if (process.argv.includes("--open-digest") || process.env.NOTIFY_OPEN_DIGEST === "1") {
+    const currentPayload = await readPayload(argValue("--head") || process.env.NOTIFY_HEAD_REF || "working");
+    const markdown = buildOpenRegistrationDigest(currentPayload);
+
+    if (process.env.NOTIFY_DRY_RUN === "1") {
+      console.log(markdown);
+      return;
+    }
+
+    const results = await Promise.allSettled([
+      notifyDingTalk(markdown),
+      notifyWeWork(markdown),
+    ]);
+    const sent = results.some((result) => result.status === "fulfilled" && result.value);
+    const failures = results.filter((result) => result.status === "rejected");
+
+    for (const failure of failures) {
+      console.warn(`Notification failed: ${failure.reason.message}`);
+    }
+    if (!sent && !failures.length) {
+      console.log("Notification skipped: no webhook secrets configured.");
+      if (requireWebhook || strictFailure) process.exitCode = 1;
+    }
+    if (strictFailure && failures.length) {
+      process.exitCode = 1;
+    }
+    return;
+  }
+
   if (process.argv.includes("--test") || process.env.NOTIFY_TEST === "1") {
     const markdown = [
       "### 高尔夫赛事报名提醒测试",
