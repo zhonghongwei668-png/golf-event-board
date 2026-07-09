@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T06:50:40.001Z",
+  "generatedAt": "2026-07-09T07:04:12.720Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -93,7 +93,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -154,7 +154,7 @@
       "registrationText": "入口：www.cjgc.org 或官方公众号“CJGT”；报名 2025-12-30 12:00 至 2026-01-16 18:00；6-18岁，需中高协会员卡/有效身份证明。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -182,7 +182,7 @@
       "registrationText": "入口：大正高尔夫App；报名 2026-01-21 15:00 至 2026-02-13 12:00；6-18岁；中高协会员免300元服务费，非会员另收。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -210,7 +210,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -255,7 +255,7 @@
       "name": "2026年全国业余高尔夫球精英赛系列赛第一场",
       "startDate": "2026-03-25",
       "endDate": "2026-03-28",
-      "location": "2026年全国业余高尔夫球精英赛系列赛第一场",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/game_spare.html",
       "sourceLinks": [
         {
@@ -271,7 +271,7 @@
       "registrationText": "入口/要求：以中高协单项规程或补充通知为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -316,7 +316,7 @@
       "name": "汇丰全国青少年高尔夫球冠军赛第一站",
       "startDate": "2026-03-29",
       "endDate": "2026-04-02",
-      "location": "汇丰全国青少年高尔夫球冠军赛第一站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -332,7 +332,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -360,7 +360,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -388,7 +388,7 @@
       "registrationText": "入口：“如歌高尔夫”公众号/“如歌高尔夫赛事”小程序；报名 2026-03-04 10:00 至 2026-03-18 18:00；10-18岁。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -400,7 +400,7 @@
       "name": "2026年全国业余高尔夫球巡回赛第一站",
       "startDate": "2026-04-12",
       "endDate": "2026-04-15",
-      "location": "2026年全国业余高尔夫球巡回赛第一站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2329.html",
       "sourceLinks": [
         {
@@ -416,7 +416,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -461,7 +461,7 @@
       "name": "汇丰全国青少年高尔夫球冠军赛第二站",
       "startDate": "2026-04-21",
       "endDate": "2026-04-23",
-      "location": "汇丰全国青少年高尔夫球冠军赛第二站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -477,7 +477,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -538,7 +538,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13周岁以上业余，男子差点10含以下、女子15含以下；名单按冠军/选拔赛/排名榜/公开/外卡排序。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -599,7 +599,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -627,7 +627,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -655,7 +655,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -683,7 +683,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -711,7 +711,7 @@
       "registrationText": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -723,7 +723,7 @@
       "name": "汇丰全国青少年高尔夫球冠军赛第三站",
       "startDate": "2026-05-19",
       "endDate": "2026-05-21",
-      "location": "汇丰全国青少年高尔夫球冠军赛第三站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -739,7 +739,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -784,7 +784,7 @@
       "name": "2026年全国业余高尔夫球巡回赛第二站",
       "startDate": "2026-05-24",
       "endDate": "2026-05-27",
-      "location": "2026年全国业余高尔夫球巡回赛第二站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2329.html",
       "sourceLinks": [
         {
@@ -800,7 +800,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -828,7 +828,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -856,7 +856,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -884,7 +884,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -912,7 +912,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -935,12 +935,12 @@
       "signupUrl": "",
       "signupMethod": "入口：单位邮件报名；2026-05-29 17:00 前发 junior@cgagolf.org.cn 并抄 hgajuniorgolf@vip.qq.com；2026-12-31前未满16岁，代表团报名。",
       "requirement": "入口：单位邮件报名；2026-05-29 17:00 前发 junior@cgagolf.org.cn 并抄 hgajuniorgolf@vip.qq.com；2026-12-31前未满16岁，代表团报名。",
-      "registrationStart": "2026-05-29 17:00",
-      "registrationEnd": "2026-12-31",
+      "registrationStart": "",
+      "registrationEnd": "2026-05-29 17:00",
       "registrationText": "入口：单位邮件报名；2026-05-29 17:00 前发 junior@cgagolf.org.cn 并抄 hgajuniorgolf@vip.qq.com；2026-12-31前未满16岁，代表团报名。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -952,7 +952,7 @@
       "name": "汇丰全国青少年高尔夫球冠军赛第四站",
       "startDate": "2026-06-15",
       "endDate": "2026-06-18",
-      "location": "汇丰全国青少年高尔夫球冠军赛第四站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -968,7 +968,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1013,7 +1013,7 @@
       "name": "2026年全国业余高尔夫球精英赛系列赛第二场",
       "startDate": "2026-07-05",
       "endDate": "2026-07-08",
-      "location": "2026年全国业余高尔夫球精英赛系列赛第二场",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/game_spare.html",
       "sourceLinks": [
         {
@@ -1029,7 +1029,7 @@
       "registrationText": "入口/要求：以中高协单项规程或补充通知为准；年历仅公开比赛时间。",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1041,7 +1041,7 @@
       "name": "2026斐乐全国青少年高尔夫球精英挑战赛第四站",
       "startDate": "2026-07-06",
       "endDate": "2026-07-09",
-      "location": "2026斐乐全国青少年高尔夫球精英挑战赛第四站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1057,7 +1057,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "running",
       "statusLabel": "比赛中",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1085,7 +1085,7 @@
       "registrationText": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1097,7 +1097,7 @@
       "name": "汇丰全国青少年高尔夫球冠军锦标赛",
       "startDate": "2026-07-12",
       "endDate": "2026-07-16",
-      "location": "汇丰全国青少年高尔夫球冠军锦标赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1113,7 +1113,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1125,7 +1125,7 @@
       "name": "2026全国青少年高尔夫球公开赛·中部地区",
       "startDate": "2026-07-16",
       "endDate": "2026-07-18",
-      "location": "2026全国青少年高尔夫球公开赛·中部地区",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2417.html",
       "sourceLinks": [
         {
@@ -1141,7 +1141,7 @@
       "registrationText": "入口：大正高尔夫App；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
       "statusCode": "open",
       "statusLabel": "可报名",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1153,7 +1153,7 @@
       "name": "2026年全国业余高尔夫球巡回赛第三站",
       "startDate": "2026-07-19",
       "endDate": "2026-07-22",
-      "location": "2026年全国业余高尔夫球巡回赛第三站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2329.html",
       "sourceLinks": [
         {
@@ -1169,7 +1169,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1181,7 +1181,7 @@
       "name": "第二十六届尤尼克斯“张连伟”杯国际青少年高尔夫球邀请赛",
       "startDate": "2026-07-19",
       "endDate": "2026-07-25",
-      "location": "第二十六届尤尼克斯“张连伟”杯国际青少年高尔夫球邀请赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1197,7 +1197,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1209,7 +1209,7 @@
       "name": "2026第九届大连全国青少年高尔夫球公开赛",
       "startDate": "2026-07-20",
       "endDate": "2026-07-22",
-      "location": "2026第九届大连全国青少年高尔夫球公开赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2411.html",
       "sourceLinks": [
         {
@@ -1225,7 +1225,7 @@
       "registrationText": "入口：大正高尔夫App；即日起至 2026-07-15 12:00；6-18岁；名单公众号“大连高协球友会”。",
       "statusCode": "open",
       "statusLabel": "可报名",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1253,7 +1253,7 @@
       "registrationText": "入口：大正高尔夫App；报名 2026-06-22 10:00 至 2026-07-05 18:00；6-18岁。",
       "statusCode": "closed",
       "statusLabel": "报名截止",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1265,7 +1265,7 @@
       "name": "2026海峡杯·青少年厦门公开赛",
       "startDate": "2026-07-26",
       "endDate": "2026-07-30",
-      "location": "2026海峡杯·青少年厦门公开赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1281,7 +1281,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1309,7 +1309,7 @@
       "registrationText": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1337,7 +1337,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1365,7 +1365,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1377,7 +1377,7 @@
       "name": "汇丰全国青少年高尔夫球冠军赛第五站",
       "startDate": "2026-08-11",
       "endDate": "2026-08-13",
-      "location": "汇丰全国青少年高尔夫球冠军赛第五站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1393,7 +1393,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1405,7 +1405,7 @@
       "name": "2026九鹤岩茶杯武夷山全国青少年公开赛",
       "startDate": "2026-08-16",
       "endDate": "2026-08-22",
-      "location": "2026九鹤岩茶杯武夷山全国青少年公开赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2412.html",
       "sourceLinks": [
         {
@@ -1417,11 +1417,11 @@
       "signupMethod": "入口：大正高尔夫；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
       "requirement": "入口：大正高尔夫；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
       "registrationStart": "",
-      "registrationEnd": "2026-08-02 17:00",
+      "registrationEnd": "",
       "registrationText": "入口：大正高尔夫；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
-      "statusCode": "open",
-      "statusLabel": "可报名",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "statusCode": "watch",
+      "statusLabel": "关注公告",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1433,7 +1433,7 @@
       "name": "2026北京青少年高尔夫球公开赛",
       "startDate": "2026-08-17",
       "endDate": "2026-08-20",
-      "location": "2026北京青少年高尔夫球公开赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1449,7 +1449,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1461,7 +1461,7 @@
       "name": "2026全国青少年高尔夫球队际锦标赛南方赛区",
       "startDate": "2026-08-23",
       "endDate": "2026-08-26",
-      "location": "2026全国青少年高尔夫球队际锦标赛南方赛区",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1477,7 +1477,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1505,7 +1505,7 @@
       "registrationText": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1517,7 +1517,7 @@
       "name": "2026年沃尔沃全国青少年比洞锦标赛选拔赛第一站",
       "startDate": "2026-08-30",
       "endDate": "2026-09-02",
-      "location": "2026年沃尔沃全国青少年比洞锦标赛选拔赛第一站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1533,7 +1533,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1545,7 +1545,7 @@
       "name": "2026年全国业余高尔夫球巡回赛第四站",
       "startDate": "2026-09-06",
       "endDate": "2026-09-09",
-      "location": "2026年全国业余高尔夫球巡回赛第四站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2329.html",
       "sourceLinks": [
         {
@@ -1561,7 +1561,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1573,7 +1573,7 @@
       "name": "汇丰全国青少年高尔夫球冠军赛总决赛",
       "startDate": "2026-09-08",
       "endDate": "2026-09-10",
-      "location": "汇丰全国青少年高尔夫球冠军赛总决赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1589,7 +1589,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1601,7 +1601,7 @@
       "name": "2026年全国业余高尔夫球精英赛系列赛第三场",
       "startDate": "2026-09-16",
       "endDate": "2026-09-19",
-      "location": "2026年全国业余高尔夫球精英赛系列赛第三场",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/game_spare.html",
       "sourceLinks": [
         {
@@ -1617,7 +1617,7 @@
       "registrationText": "入口/要求：以中高协单项规程或补充通知为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1629,7 +1629,7 @@
       "name": "2026斐乐中国青少年高尔夫球精英赛",
       "startDate": "2026-09-21",
       "endDate": "2026-09-26",
-      "location": "2026斐乐中国青少年高尔夫球精英赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1645,7 +1645,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1690,7 +1690,7 @@
       "name": "2026年沃尔沃全国青少年比洞锦标赛选拔赛第二站",
       "startDate": "2026-09-27",
       "endDate": "2026-09-30",
-      "location": "2026年沃尔沃全国青少年比洞锦标赛选拔赛第二站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1706,7 +1706,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1734,7 +1734,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1746,7 +1746,7 @@
       "name": "2026全国青少年高尔夫球队际锦标赛总决赛",
       "startDate": "2026-10-03",
       "endDate": "2026-10-06",
-      "location": "2026全国青少年高尔夫球队际锦标赛总决赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1762,7 +1762,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1774,7 +1774,7 @@
       "name": "2026年全国业余高尔夫球巡回赛总决赛",
       "startDate": "2026-10-11",
       "endDate": "2026-10-14",
-      "location": "2026年全国业余高尔夫球巡回赛总决赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2329.html",
       "sourceLinks": [
         {
@@ -1790,7 +1790,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1851,7 +1851,7 @@
       "registrationText": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1863,7 +1863,7 @@
       "name": "2026年BMW青少年高尔夫中国青少年高尔夫球大师赛",
       "startDate": "2026-10-19",
       "endDate": "2026-10-23",
-      "location": "2026年BMW青少年高尔夫中国青少年高尔夫球大师赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1879,7 +1879,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1924,7 +1924,7 @@
       "name": "2026年沃尔沃全国青少年比洞锦标赛选拔赛第三站",
       "startDate": "2026-10-25",
       "endDate": "2026-10-28",
-      "location": "2026年沃尔沃全国青少年比洞锦标赛选拔赛第三站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1940,7 +1940,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1952,7 +1952,7 @@
       "name": "2026年全国业余高尔夫球精英赛系列赛第四站",
       "startDate": "2026-10-28",
       "endDate": "2026-10-31",
-      "location": "2026年全国业余高尔夫球精英赛系列赛第四站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/game_spare.html",
       "sourceLinks": [
         {
@@ -1968,7 +1968,7 @@
       "registrationText": "入口/要求：以中高协单项规程或补充通知为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -1996,7 +1996,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2008,7 +2008,7 @@
       "name": "2026年全国业余高尔夫球希望赛第五站",
       "startDate": "2026-11-04",
       "endDate": "2026-11-07",
-      "location": "2026年全国业余高尔夫球希望赛第五站",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2246.html",
       "sourceLinks": [
         {
@@ -2024,7 +2024,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2069,7 +2069,7 @@
       "name": "GCCT全国青少年高尔夫球技能等级一级赛",
       "startDate": "2026-11-08",
       "endDate": "2026-11-14",
-      "location": "GCCT全国青少年高尔夫球技能等级一级赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -2085,7 +2085,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2097,7 +2097,7 @@
       "name": "汇丰中国青少年高尔夫球公开赛",
       "startDate": "2026-11-10",
       "endDate": "2026-11-12",
-      "location": "汇丰中国青少年高尔夫球公开赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -2113,7 +2113,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2174,7 +2174,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2186,7 +2186,7 @@
       "name": "2026年沃尔沃全国青少年比洞锦标赛",
       "startDate": "2026-11-22",
       "endDate": "2026-11-26",
-      "location": "2026年沃尔沃全国青少年比洞锦标赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -2202,7 +2202,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2230,7 +2230,7 @@
       "registrationText": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2242,7 +2242,7 @@
       "name": "2026年中国业余高尔夫球公开赛",
       "startDate": "2026-11-30",
       "endDate": "2026-12-05",
-      "location": "2026年中国业余高尔夫球公开赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/game_spare.html",
       "sourceLinks": [
         {
@@ -2258,7 +2258,7 @@
       "registrationText": "入口/要求：以中高协单项规程或补充通知为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2270,7 +2270,7 @@
       "name": "2026“冯珊珊杯”国际青少年高尔夫球锦标赛",
       "startDate": "2026-12-06",
       "endDate": "2026-12-10",
-      "location": "2026“冯珊珊杯”国际青少年高尔夫球锦标赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -2286,7 +2286,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2331,7 +2331,7 @@
       "name": "2026劳力士中国青少年冠军锦标赛",
       "startDate": "2026-12-13",
       "endDate": "2026-12-17",
-      "location": "2026劳力士中国青少年冠军锦标赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -2347,7 +2347,7 @@
       "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -2359,7 +2359,7 @@
       "name": "2026年全国业余高尔夫球精英赛",
       "startDate": "2026-12-20",
       "endDate": "2026-12-25",
-      "location": "2026年全国业余高尔夫球精英赛",
+      "location": "待定/年历未列",
       "sourceUrl": "https://www.cgagolf.org.cn/game_spare.html",
       "sourceLinks": [
         {
@@ -2375,7 +2375,7 @@
       "registrationText": "入口/要求：以中高协单项规程或补充通知为准；年历仅公开比赛时间。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 中高协年历接口",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
     },

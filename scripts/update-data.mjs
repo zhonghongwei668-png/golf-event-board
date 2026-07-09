@@ -90,26 +90,54 @@ function splitDateRange(range = "") {
   return { startDate: dates[0] || "", endDate: dates[1] || dates[0] || "" };
 }
 
+function datePattern() {
+  return String.raw`(\d{4}-\d{2}-\d{2}(?:\s+\d{1,2}:\d{2})?)`;
+}
+
+function shanghaiDateString(now = new Date()) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(now);
+}
+
+function parseShanghaiDateTime(value, endOfDay = false) {
+  if (!value) return null;
+  const text = String(value).trim().replace(" ", "T");
+  const hasTime = /T\d{1,2}:\d{2}/.test(text);
+  const normalized = hasTime ? text : `${text}T${endOfDay ? "23:59:59" : "00:00:00"}`;
+  const date = new Date(`${normalized}+08:00`);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
 function parseRegistrationWindow(text = "") {
   const normalized = clean(text);
-  const dates = normalized.match(/\d{4}-\d{2}-\d{2}(?:\s+\d{1,2}:\d{2})?/g) || [];
-  const deadlineOnly = normalized.match(/(?:前|截止|至)\s*(\d{4}-\d{2}-\d{2}(?:\s+\d{1,2}:\d{2})?)/);
+  const date = datePattern();
+  const range = normalized.match(new RegExp(`(?:报名|报送|提交|缴费)[^。；;]*?${date}\\s*(?:至|到|-|—|－)\\s*${date}`));
+  const deadlineOnly =
+    normalized.match(new RegExp(`(?:报名|报送|提交|缴费|即日起)[^。；;]*?(?:截止|截至|至|到)\\s*${date}`)) ||
+    normalized.match(new RegExp(`${date}\\s*前(?:发|发送|提交|完成|报名|缴费|确认)`));
+
   return {
-    registrationStart: dates.length > 1 ? dates[0] : "",
-    registrationEnd: dates.length > 1 ? dates[1] : (deadlineOnly ? deadlineOnly[1] : ""),
+    registrationStart: range ? range[1] : "",
+    registrationEnd: range ? range[2] : (deadlineOnly ? deadlineOnly[1] : ""),
     registrationText: normalized
   };
 }
 
 function statusFor(event, now = new Date()) {
-  const today = new Date(now.toISOString().slice(0, 10) + "T00:00:00+08:00");
-  const start = event.startDate ? new Date(event.startDate + "T00:00:00+08:00") : null;
-  const end = event.endDate ? new Date(event.endDate + "T23:59:59+08:00") : start;
-  const regEnd = event.registrationEnd ? new Date(event.registrationEnd.replace(" ", "T") + "+08:00") : null;
+  const today = parseShanghaiDateTime(shanghaiDateString(now));
+  const start = parseShanghaiDateTime(event.startDate);
+  const end = parseShanghaiDateTime(event.endDate, true) || start;
+  const regStart = parseShanghaiDateTime(event.registrationStart);
+  const regEnd = parseShanghaiDateTime(event.registrationEnd, true);
 
   if (end && end < today) return { code: "past", label: "已结束" };
   if (start && start <= today && end && end >= today) return { code: "running", label: "比赛中" };
   if (regEnd && regEnd < now) return { code: "closed", label: "报名截止" };
+  if (regStart && regStart > now) return { code: "pending", label: "待开放" };
   if (regEnd && regEnd >= now) return { code: "open", label: "可报名" };
   if (event.registrationOpen === true) return { code: "open", label: "可报名" };
   if (event.registrationOpen === false) return { code: "pending", label: "待开放" };
@@ -146,6 +174,14 @@ function normalizeEvent(event) {
     updatedFromOfficial: Boolean(event.updatedFromOfficial),
     notes: clean(event.notes || "")
   };
+}
+
+function appendSourceSystem(existing = "", incoming = "") {
+  const parts = `${existing} + ${incoming}`
+    .split("+")
+    .map((part) => clean(part))
+    .filter(Boolean);
+  return [...new Set(parts)].join(" + ");
 }
 
 function parseMarkdownEvents(markdown) {
@@ -276,7 +312,7 @@ async function fetchCgaEvents(category, kindCode) {
     name: item.fieldName || item.eventsName,
     startDate: msToDate(item.fieldTime),
     endDate: msToDate(item.fieldEndtime),
-    location: item.fieldCourt || item.fieldName || "待定/年历未列",
+    location: item.fieldCourt || "待定/年历未列",
     sourceUrl: resolveKnownSource(item.fieldName || item.eventsName || "", category),
     signupMethod: CATEGORY_META[category].defaultRequirement,
     requirement: CATEGORY_META[category].defaultRequirement,
@@ -343,7 +379,7 @@ function mergeEvents(baseEvents, officialEvents) {
       sourceLinks: existing.sourceLinks?.length ? existing.sourceLinks : incoming.sourceLinks,
       signupUrl: existing.signupUrl || incoming.signupUrl,
       registrationOpen: incoming.registrationOpen ?? existing.registrationOpen,
-      sourceSystem: `${existing.sourceSystem || "本地"} + ${incoming.sourceSystem}`,
+      sourceSystem: appendSourceSystem(existing.sourceSystem || "本地", incoming.sourceSystem),
       updatedFromOfficial: true
     }));
   }
@@ -355,8 +391,27 @@ function mergeEvents(baseEvents, officialEvents) {
   });
 }
 
+async function readPreviousPayload() {
+  try {
+    return JSON.parse(await readFile(outPath, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+function semanticPayload(payload) {
+  const { generatedAt, ...rest } = payload;
+  return rest;
+}
+
+function hasSemanticChanges(previous, next) {
+  if (!previous) return true;
+  return JSON.stringify(semanticPayload(previous)) !== JSON.stringify(semanticPayload(next));
+}
+
 async function main() {
   await mkdir(dataDir, { recursive: true });
+  const previousPayload = await readPreviousPayload();
   const markdown = await readFile(reportPath, "utf8");
   const parsedEvents = parseMarkdownEvents(markdown);
 
@@ -374,9 +429,12 @@ async function main() {
     }
   }
 
-  const events = mergeEvents(parsedEvents, official);
-  const payload = {
-    generatedAt: new Date().toISOString(),
+  const events = errors.length && previousPayload?.events?.length
+    ? previousPayload.events
+    : mergeEvents(parsedEvents, official);
+
+  const nextPayload = {
+    generatedAt: "",
     year: YEAR,
     sources: {
       clpga: "https://www.clpga.org/MatchList?lang=cn",
@@ -388,6 +446,13 @@ async function main() {
     warnings: errors,
     categories: CATEGORY_META,
     events
+  };
+
+  const payload = {
+    ...nextPayload,
+    generatedAt: hasSemanticChanges(previousPayload, nextPayload)
+      ? new Date().toISOString()
+      : previousPayload.generatedAt
   };
 
   await writeFile(outPath, JSON.stringify(payload, null, 2), "utf8");

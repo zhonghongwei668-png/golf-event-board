@@ -75,6 +75,7 @@ function diffEvents(previousPayload, currentPayload) {
   const added = [];
   const opened = [];
   const changed = [];
+  const removed = [];
 
   for (const [key, event] of currentByKey) {
     const previous = previousByKey.get(key);
@@ -92,7 +93,13 @@ function diffEvents(previousPayload, currentPayload) {
     }
   }
 
-  return { added, opened, changed };
+  for (const [key, event] of previousByKey) {
+    if (!currentByKey.has(key)) {
+      removed.push(event);
+    }
+  }
+
+  return { added, opened, changed, removed };
 }
 
 function topItems(items, formatter, limit = 8) {
@@ -111,6 +118,9 @@ function buildMarkdown(diff, currentPayload) {
   }
   if (diff.changed.length) {
     sections.push(`**报名/日期/入口变化 ${diff.changed.length} 条**\n${topItems(diff.changed, ({ event, fields }) => `${formatEvent(event)}，变化：${fields.join("、")}`)}`);
+  }
+  if (diff.removed.length) {
+    sections.push(`**赛事下架/消失 ${diff.removed.length} 条**\n${topItems(diff.removed, formatEvent)}\n需人工核验是否取消、改名或官方接口暂时缺失。`);
   }
 
   if (!sections.length) return "";

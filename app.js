@@ -41,6 +41,42 @@ const els = {
   closeDetail: document.querySelector("#closeDetail")
 };
 
+function escapeHtml(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function safeClassToken(value = "") {
+  return /^[a-z0-9_-]+$/i.test(String(value)) ? String(value) : "";
+}
+
+function safeColor(value = "") {
+  return /^#[0-9a-f]{3,8}$/i.test(String(value)) ? String(value) : "#333";
+}
+
+function safeUrl(value = "", allowedProtocols = ["http:", "https:"]) {
+  if (!value) return "";
+  try {
+    const url = new URL(String(value), window.location.href);
+    return allowedProtocols.includes(url.protocol) ? url.href : "";
+  } catch {
+    return "";
+  }
+}
+
+function parseShanghaiDateTime(value, endOfDay = false) {
+  if (!value) return null;
+  const text = String(value).trim().replace(" ", "T");
+  const hasTime = /T\d{1,2}:\d{2}/.test(text);
+  const normalized = hasTime ? text : `${text}T${endOfDay ? "23:59:59" : "00:00:00"}`;
+  const date = new Date(`${normalized}+08:00`);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
 function todayInShanghai() {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Shanghai",
@@ -80,7 +116,8 @@ function monthLabel(key) {
 
 function isFuture(event) {
   if (!event.endDate) return true;
-  return new Date(`${event.endDate}T23:59:59+08:00`) >= todayInShanghai();
+  const end = parseShanghaiDateTime(event.endDate, true);
+  return !end || end >= todayInShanghai();
 }
 
 function hasDeadline(event) {
@@ -90,8 +127,8 @@ function hasDeadline(event) {
 function isRegistrationOpen(event) {
   if (event.statusCode === "open") return true;
   if (!event.registrationEnd) return false;
-  const end = new Date(`${event.registrationEnd.replace(" ", "T")}+08:00`);
-  return end >= new Date();
+  const end = parseShanghaiDateTime(event.registrationEnd, true);
+  return Boolean(end && end >= new Date());
 }
 
 function daysUntil(dateText) {
@@ -106,8 +143,10 @@ function isHotEvent(event) {
 }
 
 function linkButton(label, url, tone = "") {
-  if (!url) return "";
-  return `<a class="action-link ${tone}" href="${url}" target="_blank" rel="noreferrer">${label}</a>`;
+  const href = safeUrl(url);
+  if (!href) return "";
+  const className = safeClassToken(tone);
+  return `<a class="action-link ${className}" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
 }
 
 async function fetchData() {
@@ -194,10 +233,10 @@ function renderAlerts() {
     </div>
     <div class="alert-grid">
       ${candidates.map(({ event, deadlineDays }) => `
-        <button class="alert-card" data-id="${event.id}" style="--accent:${event.color}">
-          <strong>${event.name}</strong>
-          <span>${event.registrationEnd ? `报名截止：${event.registrationEnd}` : "热门赛事，关注官方首发"}</span>
-          <em>${deadlineDays === null ? event.categoryLabel : deadlineDays <= 0 ? "今天/已临近" : `${deadlineDays} 天内`}</em>
+        <button class="alert-card" data-id="${escapeHtml(event.id)}" style="--accent:${safeColor(event.color)}">
+          <strong>${escapeHtml(event.name)}</strong>
+          <span>${event.registrationEnd ? `报名截止：${escapeHtml(event.registrationEnd)}` : "热门赛事，关注官方首发"}</span>
+          <em>${deadlineDays === null ? escapeHtml(event.categoryLabel) : deadlineDays <= 0 ? "今天/已临近" : `${deadlineDays} 天内`}</em>
         </button>
       `).join("")}
     </div>
@@ -237,29 +276,29 @@ function renderWatchPanel() {
         <p class="eyebrow">信息源矩阵</p>
         <h3>公开来源 + 微信待确认渠道</h3>
       </div>
-      <span>${state.sources.length} 个渠道</span>
+      <span>${escapeHtml(state.sources.length)} 个渠道</span>
     </div>
     ${sourceGroups.map((group) => `
-      <section class="source-tier-group source-tier-${group.tier.toLowerCase()}">
+      <section class="source-tier-group source-tier-${safeClassToken(group.tier.toLowerCase())}">
         <div class="source-tier-heading">
           <div>
-            <p class="eyebrow">${group.eyebrow}</p>
-            <h4>${group.title}</h4>
+            <p class="eyebrow">${escapeHtml(group.eyebrow)}</p>
+            <h4>${escapeHtml(group.title)}</h4>
           </div>
-          <span>${group.sources.length} 个 · ${group.note}</span>
+          <span>${escapeHtml(group.sources.length)} 个 · ${escapeHtml(group.note)}</span>
         </div>
         <div class="source-grid">
           ${group.sources.map((source) => `
-            <article class="source-card" data-tier="${source.tier}">
+            <article class="source-card" data-tier="${escapeHtml(source.tier)}">
               <div>
-                <strong>${source.name}</strong>
-                <span>${source.type} · ${source.priority}优先级 · ${source.status || "已确认"}</span>
+                <strong>${escapeHtml(source.name)}</strong>
+                <span>${escapeHtml(source.type)} · ${escapeHtml(source.priority)}优先级 · ${escapeHtml(source.status || "已确认")}</span>
               </div>
-              ${source.coverage ? `<p class="source-coverage">${source.coverage}</p>` : ""}
-              <p>${source.watch}</p>
+              ${source.coverage ? `<p class="source-coverage">${escapeHtml(source.coverage)}</p>` : ""}
+              <p>${escapeHtml(source.watch)}</p>
               <div class="source-actions">
-                ${source.url ? `<a href="${source.url}" target="_blank" rel="noreferrer">打开来源</a>` : ""}
-                ${source.wechat ? `<span>微信：${source.wechat}</span>` : ""}
+                ${safeUrl(source.url) ? `<a href="${escapeHtml(safeUrl(source.url))}" target="_blank" rel="noreferrer">打开来源</a>` : ""}
+                ${source.wechat ? `<span>微信：${escapeHtml(source.wechat)}</span>` : ""}
               </div>
             </article>
           `).join("")}
@@ -272,7 +311,7 @@ function renderWatchPanel() {
 function renderMonths() {
   const months = [...new Set(state.events.map(monthKey))].sort();
   els.monthSelect.innerHTML = `<option value="all">全年</option>` + months.map((key) => (
-    `<option value="${key}">${monthLabel(key)}</option>`
+    `<option value="${escapeHtml(key)}">${escapeHtml(monthLabel(key))}</option>`
   )).join("");
 }
 
@@ -337,8 +376,8 @@ function renderTimeline() {
   const activeHtml = activeEvents.length ? [...groups.entries()].map(([key, events]) => `
     <section class="month-group">
       <div class="month-heading">
-        <h3>${monthLabel(key)}</h3>
-        <span>${events.length} 场</span>
+        <h3>${escapeHtml(monthLabel(key))}</h3>
+        <span>${escapeHtml(events.length)} 场</span>
       </div>
       <div class="event-grid">
         ${events.map(renderCard).join("")}
@@ -350,7 +389,7 @@ function renderTimeline() {
     <details class="past-events">
       <summary>
         <span>已结束赛事</span>
-        <strong>${pastEvents.length} 场</strong>
+        <strong>${escapeHtml(pastEvents.length)} 场</strong>
       </summary>
       <div class="past-events-body">
         ${pastEvents.map(renderCompactPastCard).join("")}
@@ -366,24 +405,24 @@ function renderTimeline() {
 }
 
 function renderCard(event) {
-  const deadline = event.registrationEnd ? `<span>报名至 ${event.registrationEnd}</span>` : `<span>${event.statusLabel}</span>`;
+  const deadline = event.registrationEnd ? `<span>报名至 ${escapeHtml(event.registrationEnd)}</span>` : `<span>${escapeHtml(event.statusLabel)}</span>`;
   const selectedClass = state.selected?.id === event.id ? " is-selected" : "";
   return `
-    <article class="event-card${selectedClass}" data-id="${event.id}" style="--accent:${event.color}">
+    <article class="event-card${selectedClass}" data-id="${escapeHtml(event.id)}" style="--accent:${safeColor(event.color)}">
       <div class="date-box">
-        <strong>${cnDate(event.startDate)}</strong>
-        <span>${event.endDate && event.endDate !== event.startDate ? `至 ${cnDate(event.endDate)}` : event.categoryLabel}</span>
+        <strong>${escapeHtml(cnDate(event.startDate))}</strong>
+        <span>${event.endDate && event.endDate !== event.startDate ? `至 ${escapeHtml(cnDate(event.endDate))}` : escapeHtml(event.categoryLabel)}</span>
       </div>
       <div class="card-body">
         <div class="card-topline">
-          <span class="category-tag">${event.categoryLabel}</span>
-          <span class="status ${event.statusCode}">${event.statusLabel}</span>
+          <span class="category-tag">${escapeHtml(event.categoryLabel)}</span>
+          <span class="status ${safeClassToken(event.statusCode)}">${escapeHtml(event.statusLabel)}</span>
         </div>
-        <h4>${event.name}</h4>
-        <p>${event.location}</p>
+        <h4>${escapeHtml(event.name)}</h4>
+        <p>${escapeHtml(event.location)}</p>
         <div class="card-footer">
           ${deadline}
-          <span>${event.sourceSystem || "官方信息源"}</span>
+          <span>${escapeHtml(event.sourceSystem || "官方信息源")}</span>
         </div>
       </div>
     </article>
@@ -392,14 +431,14 @@ function renderCard(event) {
 
 function renderCompactPastCard(event) {
   return `
-    <article class="event-card past-compact" data-id="${event.id}" style="--accent:${event.color}">
+    <article class="event-card past-compact" data-id="${escapeHtml(event.id)}" style="--accent:${safeColor(event.color)}">
       <div class="card-body">
         <div class="card-topline">
-          <span class="category-tag">${event.categoryLabel}</span>
-          <span class="status ${event.statusCode}">${event.statusLabel}</span>
+          <span class="category-tag">${escapeHtml(event.categoryLabel)}</span>
+          <span class="status ${safeClassToken(event.statusCode)}">${escapeHtml(event.statusLabel)}</span>
         </div>
-        <h4>${event.name}</h4>
-        <p>${eventRange(event)} · ${event.location}</p>
+        <h4>${escapeHtml(event.name)}</h4>
+        <p>${escapeHtml(eventRange(event))} · ${escapeHtml(event.location)}</p>
       </div>
     </article>
   `;
@@ -418,14 +457,14 @@ function renderDetail(event) {
   els.emptyDetail.hidden = true;
   els.detailContent.hidden = false;
   els.detailCategory.textContent = event.categoryLabel;
-  els.detailCategory.style.backgroundColor = event.color;
+  els.detailCategory.style.backgroundColor = safeColor(event.color);
   els.detailName.textContent = event.name;
   els.detailMeta.innerHTML = [
     ["比赛时间", eventRange(event)],
     ["报名时间", event.registrationStart || event.registrationEnd ? `${event.registrationStart || "即日起"} - ${event.registrationEnd || "以公告为准"}` : "以单项公告/报名平台为准"],
     ["比赛地点", event.location],
     ["数据来源", event.sourceSystem || "官方网页"]
-  ].map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join("");
+  ].map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("");
 
   const sourceLinks = (event.sourceLinks || []).map((link) => linkButton(link.label || "官方信息", link.url)).join("");
   els.detailActions.innerHTML = [
@@ -436,7 +475,7 @@ function renderDetail(event) {
 
   els.detailSignup.textContent = event.signupMethod || event.registrationText || "以官方报名入口实时显示为准。";
   els.detailRequirement.textContent = event.requirement || "以赛事单项规程和补充通知为准。";
-  const previewUrl = event.sourceUrl || event.sourceLinks?.[0]?.url || event.signupUrl;
+  const previewUrl = safeUrl(event.sourceUrl || event.sourceLinks?.[0]?.url || event.signupUrl);
   els.previewOpen.href = previewUrl || "#";
   els.previewDomain.textContent = previewUrl ? new URL(previewUrl).hostname : "官方网页";
 }
@@ -463,16 +502,16 @@ function renderDetailAppLinks(event) {
       ${matches.map((app) => `
         <article class="app-link-card">
           <div>
-            <strong>${app.name}</strong>
-            <span>${app.type}</span>
+            <strong>${escapeHtml(app.name)}</strong>
+            <span>${escapeHtml(app.type)}</span>
           </div>
-          <p>${app.instruction}</p>
-          ${app.wechat ? `<p class="wechat-path">微信搜索：${app.wechat}</p>` : ""}
+          <p>${escapeHtml(app.instruction)}</p>
+          ${app.wechat ? `<p class="wechat-path">微信搜索：${escapeHtml(app.wechat)}</p>` : ""}
           <div class="app-link-actions">
-            ${app.openUrl ? `<a href="${app.openUrl}">打开微信</a>` : ""}
-            ${app.webUrl ? `<a href="${app.webUrl}" target="_blank" rel="noreferrer">官网</a>` : ""}
-            ${app.iosUrl ? `<a href="${app.iosUrl}" target="_blank" rel="noreferrer">iPhone</a>` : ""}
-            ${app.androidUrl ? `<a href="${app.androidUrl}" target="_blank" rel="noreferrer">安卓</a>` : ""}
+            ${safeUrl(app.openUrl, ["weixin:"]) ? `<a href="${escapeHtml(safeUrl(app.openUrl, ["weixin:"]))}">打开微信</a>` : ""}
+            ${safeUrl(app.webUrl) ? `<a href="${escapeHtml(safeUrl(app.webUrl))}" target="_blank" rel="noreferrer">官网</a>` : ""}
+            ${safeUrl(app.iosUrl, ["http:", "https:", "itms-apps:"]) ? `<a href="${escapeHtml(safeUrl(app.iosUrl, ["http:", "https:", "itms-apps:"]))}" target="_blank" rel="noreferrer">iPhone</a>` : ""}
+            ${safeUrl(app.androidUrl, ["http:", "https:", "market:"]) ? `<a href="${escapeHtml(safeUrl(app.androidUrl, ["http:", "https:", "market:"]))}" target="_blank" rel="noreferrer">安卓</a>` : ""}
           </div>
         </article>
       `).join("")}

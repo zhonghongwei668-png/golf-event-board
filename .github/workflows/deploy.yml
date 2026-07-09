@@ -50,9 +50,9 @@ jobs:
 
       - name: Notify event changes
         if: steps.commit_updates.outputs.changed == 'true'
-        continue-on-error: true
         run: npm run notify -- --base HEAD~1 --head HEAD
         env:
+          NOTIFY_STRICT: "1"
           NOTIFY_SITE_URL: https://zhonghongwei668-png.github.io/golf-event-board/
           DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}

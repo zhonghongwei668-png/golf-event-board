@@ -8,7 +8,19 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const nodeBin = process.execPath;
 const port = Number(process.env.PORT || 4173);
+const host = process.env.HOST || "127.0.0.1";
 const staleMs = 23 * 60 * 60 * 1000;
+
+const publicPaths = new Set([
+  "/index.html",
+  "/app.js",
+  "/styles.css",
+  "/manifest.webmanifest",
+  "/icon.svg",
+  "/data/events.json",
+  "/data/sources.json",
+  "/data/app-links.json"
+]);
 
 const mime = {
   ".html": "text/html; charset=utf-8",
@@ -54,14 +66,22 @@ async function sendJson(res, data, status = 200) {
 
 async function serveStatic(req, res) {
   const url = new URL(req.url, `http://localhost:${port}`);
-  const pathname = decodeURIComponent(url.pathname === "/" ? "/index.html" : url.pathname);
-  const safePath = path.normalize(pathname).replace(/^(\.\.[/\\])+/, "");
-  const filePath = path.join(rootDir, safePath);
-  if (!filePath.startsWith(rootDir)) {
-    res.writeHead(403);
-    res.end("Forbidden");
+  let pathname;
+  try {
+    pathname = decodeURIComponent(url.pathname === "/" ? "/index.html" : url.pathname);
+  } catch {
+    res.writeHead(400, { "content-type": "text/plain; charset=utf-8" });
+    res.end("Bad request");
     return;
   }
+
+  if (!publicPaths.has(pathname)) {
+    res.writeHead(404, { "content-type": "text/plain; charset=utf-8" });
+    res.end("Not found");
+    return;
+  }
+
+  const filePath = path.join(rootDir, pathname.slice(1));
   try {
     const body = await readFile(filePath);
     res.writeHead(200, {
@@ -96,8 +116,8 @@ const server = createServer(async (req, res) => {
   await serveStatic(req, res);
 });
 
-server.listen(port, async () => {
-  console.log(`Golf event board: http://localhost:${port}`);
+server.listen(port, host, async () => {
+  console.log(`Golf event board: http://${host}:${port}`);
   if (await isDataStale()) await runUpdate();
 });
 
