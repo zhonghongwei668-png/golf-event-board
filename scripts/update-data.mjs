@@ -185,6 +185,16 @@ function appendSourceSystem(existing = "", incoming = "") {
   return [...new Set(parts)].join(" + ");
 }
 
+function chooseLocation(existing = "", incoming = "") {
+  const current = clean(existing);
+  const next = clean(incoming);
+  if (!next) return current;
+  if (!current || current === "待定/年历未列") return next;
+  if (next === "待定/年历未列") return current;
+  if (current.length > next.length && current.includes(next)) return current;
+  return next;
+}
+
 function parseMarkdownEvents(markdown) {
   const events = [];
   let section = "";
@@ -383,7 +393,7 @@ function mergeEvents(baseEvents, officialEvents) {
       ...existing,
       startDate: incoming.startDate || existing.startDate,
       endDate: incoming.endDate || existing.endDate,
-      location: incoming.location || existing.location,
+      location: chooseLocation(existing.location, incoming.location),
       sourceUrl: existing.sourceUrl && !existing.sourceUrl.includes("game_") ? existing.sourceUrl : incoming.sourceUrl,
       sourceLinks: existing.sourceLinks?.length ? existing.sourceLinks : incoming.sourceLinks,
       signupUrl: existing.signupUrl || incoming.signupUrl,

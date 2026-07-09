@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-09T10:04:24.760Z",
+  "generatedAt": "2026-07-09T10:28:27.893Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -85,12 +85,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2246.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
-      "requirement": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4710",
+      "signupMethod": "入口：大正报名入口；要求：13岁以上男女业余，WHS中国区差点18.0含以下；报名截止 2026-01-13 12:00，或额满即止。",
+      "requirement": "入口：大正报名入口；要求：13岁以上男女业余，WHS中国区差点18.0含以下；报名截止 2026-01-13 12:00，或额满即止。",
       "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
+      "registrationEnd": "2026-01-13 12:00",
+      "registrationText": "入口：大正报名入口；要求：13岁以上男女业余，WHS中国区差点18.0含以下；报名截止 2026-01-13 12:00，或额满即止。",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -166,7 +166,7 @@
       "name": "2026全国青少年高尔夫球公开赛-西南地区",
       "startDate": "2026-02-24",
       "endDate": "2026-02-28",
-      "location": "广西",
+      "location": "广西柳州海雅柳江湾国际高尔夫球会",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2280.html",
       "sourceLinks": [
         {
@@ -174,12 +174,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2280.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；报名 2026-01-21 15:00 至 2026-02-13 12:00；6-18岁；中高协会员免300元服务费，非会员另收。",
-      "requirement": "入口：大正高尔夫App；报名 2026-01-21 15:00 至 2026-02-13 12:00；6-18岁；中高协会员免300元服务费，非会员另收。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4730",
+      "signupMethod": "入口：大正报名入口；报名 2026-01-21 15:00 至 2026-02-13 12:00；6-18岁；中高协会员免300元服务费，非会员另收。",
+      "requirement": "入口：大正报名入口；报名 2026-01-21 15:00 至 2026-02-13 12:00；6-18岁；中高协会员免300元服务费，非会员另收。",
       "registrationStart": "2026-01-21 15:00",
       "registrationEnd": "2026-02-13 12:00",
-      "registrationText": "入口：大正高尔夫App；报名 2026-01-21 15:00 至 2026-02-13 12:00；6-18岁；中高协会员免300元服务费，非会员另收。",
+      "registrationText": "入口：大正报名入口；报名 2026-01-21 15:00 至 2026-02-13 12:00；6-18岁；中高协会员免300元服务费，非会员另收。",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -352,12 +352,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2246.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
-      "requirement": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4753",
+      "signupMethod": "入口：大正报名入口；要求：13岁以上男女业余，WHS中国区差点18.0含以下；报名截止 2026-03-24 12:00，或额满即止。",
+      "requirement": "入口：大正报名入口；要求：13岁以上男女业余，WHS中国区差点18.0含以下；报名截止 2026-03-24 12:00，或额满即止。",
       "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
+      "registrationEnd": "2026-03-24 12:00",
+      "registrationText": "入口：大正报名入口；要求：13岁以上男女业余，WHS中国区差点18.0含以下；报名截止 2026-03-24 12:00，或额满即止。",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -400,7 +400,7 @@
       "name": "2026年全国业余高尔夫球巡回赛第一站",
       "startDate": "2026-04-12",
       "endDate": "2026-04-15",
-      "location": "待定/年历未列",
+      "location": "海南清水湾高尔夫球场",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2329.html",
       "sourceLinks": [
         {
@@ -408,12 +408,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2329.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
-      "requirement": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4838",
+      "signupMethod": "入口：大正报名入口；要求：13周岁及以上业余，WHS中国区差点18.0含以下；报名 2026-03-30 15:00 至 2026-04-10 12:00。",
+      "requirement": "入口：大正报名入口；要求：13周岁及以上业余，WHS中国区差点18.0含以下；报名 2026-03-30 15:00 至 2026-04-10 12:00。",
+      "registrationStart": "2026-03-30 15:00",
+      "registrationEnd": "2026-04-10 12:00",
+      "registrationText": "入口：大正报名入口；要求：13周岁及以上业余，WHS中国区差点18.0含以下；报名 2026-03-30 15:00 至 2026-04-10 12:00。",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -530,12 +530,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2339.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；要求：13周岁以上业余，男子差点10含以下、女子15含以下；名单按冠军/选拔赛/排名榜/公开/外卡排序。",
-      "requirement": "入口：大正高尔夫App；要求：13周岁以上业余，男子差点10含以下、女子15含以下；名单按冠军/选拔赛/排名榜/公开/外卡排序。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4843",
+      "signupMethod": "入口：大正报名入口；要求：13周岁以上业余，男子差点10含以下、女子15含以下；名单按冠军/选拔赛/排名榜/公开/外卡排序。",
+      "requirement": "入口：大正报名入口；要求：13周岁以上业余，男子差点10含以下、女子15含以下；名单按冠军/选拔赛/排名榜/公开/外卡排序。",
       "registrationStart": "",
       "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App；要求：13周岁以上业余，男子差点10含以下、女子15含以下；名单按冠军/选拔赛/排名榜/公开/外卡排序。",
+      "registrationText": "入口：大正报名入口；要求：13周岁以上业余，男子差点10含以下、女子15含以下；名单按冠军/选拔赛/排名榜/公开/外卡排序。",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -703,12 +703,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2378.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
-      "requirement": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4885",
+      "signupMethod": "入口：大正报名入口；总规程要求业余身份，具体报名与缴费以大正详情页/单站补充通知为准。",
+      "requirement": "入口：大正报名入口；总规程要求业余身份，具体报名与缴费以大正详情页/单站补充通知为准。",
       "registrationStart": "",
       "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
+      "registrationText": "入口：大正报名入口；总规程要求业余身份，具体报名与缴费以大正详情页/单站补充通知为准。",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -784,7 +784,7 @@
       "name": "2026年全国业余高尔夫球巡回赛第二站",
       "startDate": "2026-05-24",
       "endDate": "2026-05-27",
-      "location": "待定/年历未列",
+      "location": "云南春城湖畔高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2329.html",
       "sourceLinks": [
         {
@@ -792,12 +792,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2329.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
-      "requirement": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4907",
+      "signupMethod": "入口：大正报名入口；要求：13周岁及以上业余，WHS中国区差点18.0含以下；报名 2026-04-27 14:30 至 2026-05-15 12:00。",
+      "requirement": "入口：大正报名入口；要求：13周岁及以上业余，WHS中国区差点18.0含以下；报名 2026-04-27 14:30 至 2026-05-15 12:00。",
+      "registrationStart": "2026-04-27 14:30",
+      "registrationEnd": "2026-05-15 12:00",
+      "registrationText": "入口：大正报名入口；要求：13周岁及以上业余，WHS中国区差点18.0含以下；报名 2026-04-27 14:30 至 2026-05-15 12:00。",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -820,12 +820,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2246.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
-      "requirement": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4874",
+      "signupMethod": "入口：大正报名入口；要求：13岁以上男女业余，WHS中国区差点18.0含以下；报名截止 2026-05-20 12:00，或额满即止。",
+      "requirement": "入口：大正报名入口；要求：13岁以上男女业余，WHS中国区差点18.0含以下；报名截止 2026-05-20 12:00，或额满即止。",
       "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App；要求：13岁以上男女业余，WHS中国区差点18.0含以下；固定报名截止未写入总规程，以单站补充通知为准。",
+      "registrationEnd": "2026-05-20 12:00",
+      "registrationText": "入口：大正报名入口；要求：13岁以上男女业余，WHS中国区差点18.0含以下；报名截止 2026-05-20 12:00，或额满即止。",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -1077,12 +1077,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2378.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
-      "requirement": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4984",
+      "signupMethod": "入口：大正报名入口；总规程要求业余身份，具体报名与缴费以大正详情页/单站补充通知为准。",
+      "requirement": "入口：大正报名入口；总规程要求业余身份，具体报名与缴费以大正详情页/单站补充通知为准。",
       "registrationStart": "",
       "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
+      "registrationText": "入口：大正报名入口；总规程要求业余身份，具体报名与缴费以大正详情页/单站补充通知为准。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -1125,7 +1125,7 @@
       "name": "2026全国青少年高尔夫球公开赛·中部地区",
       "startDate": "2026-07-16",
       "endDate": "2026-07-18",
-      "location": "待定/年历未列",
+      "location": "江西庐山国际高尔夫球会",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2417.html",
       "sourceLinks": [
         {
@@ -1133,7 +1133,7 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2417.html"
         }
       ],
-      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&source=event&source_id=5043&event_id=5043&areaFrom=beijing",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5065",
       "signupMethod": "入口：大正报名入口；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
       "requirement": "入口：大正报名入口；即日起至 2026-07-31 17:00；6-18岁；江西/湖南/湖北/安徽/河南/山西注册或户籍/学籍/暂住证明优先。",
       "registrationStart": "",
@@ -1153,7 +1153,7 @@
       "name": "2026年全国业余高尔夫球巡回赛第三站",
       "startDate": "2026-07-19",
       "endDate": "2026-07-22",
-      "location": "待定/年历未列",
+      "location": "广东深圳隐秀高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2329.html",
       "sourceLinks": [
         {
@@ -1161,14 +1161,14 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2329.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
-      "requirement": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App；要求：13周岁及以上业余，WHS中国区差点18.0含以下；按中高协业余积分排名/公开渠道/外卡录取；报名截止见单站补充通知。",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4999",
+      "signupMethod": "入口：大正报名入口；要求：13周岁及以上业余，WHS中国区差点18.0含以下；报名 2026-06-10 15:00 至 2026-07-08 12:00。",
+      "requirement": "入口：大正报名入口；要求：13周岁及以上业余，WHS中国区差点18.0含以下；报名 2026-06-10 15:00 至 2026-07-08 12:00。",
+      "registrationStart": "2026-06-10 15:00",
+      "registrationEnd": "2026-07-08 12:00",
+      "registrationText": "入口：大正报名入口；要求：13周岁及以上业余，WHS中国区差点18.0含以下；报名 2026-06-10 15:00 至 2026-07-08 12:00。",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
@@ -1209,7 +1209,7 @@
       "name": "2026第九届大连全国青少年高尔夫球公开赛",
       "startDate": "2026-07-20",
       "endDate": "2026-07-22",
-      "location": "待定/年历未列",
+      "location": "辽宁大连长兴岛高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2411.html",
       "sourceLinks": [
         {
@@ -1217,12 +1217,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2411.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；即日起至 2026-07-15 12:00；6-18岁；名单公众号“大连高协球友会”。",
-      "requirement": "入口：大正高尔夫App；即日起至 2026-07-15 12:00；6-18岁；名单公众号“大连高协球友会”。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5045",
+      "signupMethod": "入口：大正报名入口；即日起至 2026-07-15 12:00；6-18岁；名单公众号“大连高协球友会”。",
+      "requirement": "入口：大正报名入口；即日起至 2026-07-15 12:00；6-18岁；名单公众号“大连高协球友会”。",
       "registrationStart": "",
       "registrationEnd": "2026-07-15 12:00",
-      "registrationText": "入口：大正高尔夫App；即日起至 2026-07-15 12:00；6-18岁；名单公众号“大连高协球友会”。",
+      "registrationText": "入口：大正报名入口；即日起至 2026-07-15 12:00；6-18岁；名单公众号“大连高协球友会”。",
       "statusCode": "open",
       "statusLabel": "可报名",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -1245,12 +1245,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2410.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App；报名 2026-06-22 10:00 至 2026-07-05 18:00；6-18岁。",
-      "requirement": "入口：大正高尔夫App；报名 2026-06-22 10:00 至 2026-07-05 18:00；6-18岁。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5034",
+      "signupMethod": "入口：大正报名入口；报名 2026-06-22 10:00 至 2026-07-05 18:00；6-18岁。",
+      "requirement": "入口：大正报名入口；报名 2026-06-22 10:00 至 2026-07-05 18:00；6-18岁。",
       "registrationStart": "2026-06-22 10:00",
       "registrationEnd": "2026-07-05 18:00",
-      "registrationText": "入口：大正高尔夫App；报名 2026-06-22 10:00 至 2026-07-05 18:00；6-18岁。",
+      "registrationText": "入口：大正报名入口；报名 2026-06-22 10:00 至 2026-07-05 18:00；6-18岁。",
       "statusCode": "closed",
       "statusLabel": "报名截止",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -1265,7 +1265,7 @@
       "name": "2026海峡杯·青少年厦门公开赛",
       "startDate": "2026-07-26",
       "endDate": "2026-07-30",
-      "location": "待定/年历未列",
+      "location": "福建厦门东方高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1273,14 +1273,14 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2253.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "requirement": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5047",
+      "signupMethod": "入口：大正报名入口；报名截止 2026-07-18 17:00，组委会可提前或推迟报名截止时间。",
+      "requirement": "入口：大正报名入口；报名截止 2026-07-18 17:00，组委会可提前或推迟报名截止时间。",
       "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
+      "registrationEnd": "2026-07-18 17:00",
+      "registrationText": "入口：大正报名入口；报名截止 2026-07-18 17:00，组委会可提前或推迟报名截止时间。",
+      "statusCode": "open",
+      "statusLabel": "可报名",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
@@ -1301,12 +1301,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2378.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
-      "requirement": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5018",
+      "signupMethod": "入口：大正报名入口；总规程要求业余身份，具体报名与缴费以大正详情页/单站补充通知为准。",
+      "requirement": "入口：大正报名入口；总规程要求业余身份，具体报名与缴费以大正详情页/单站补充通知为准。",
       "registrationStart": "",
       "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫App/单站补充通知；总规程要求业余身份，具体报名截止见单站补充通知。",
+      "registrationText": "入口：大正报名入口；总规程要求业余身份，具体报名与缴费以大正详情页/单站补充通知为准。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -1349,7 +1349,7 @@
       "name": "2026全国青少年高尔夫球公开赛·西北地区",
       "startDate": "2026-08-10",
       "endDate": "2026-08-13",
-      "location": "秦岭国际高尔夫俱乐部",
+      "location": "西安秦岭国际高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -1357,14 +1357,14 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2253.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "requirement": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5070",
+      "signupMethod": "入口：大正报名入口；报名时间：即日起至 2026-08-08 12:00；以大正详情页和中高协单项规程为准。",
+      "requirement": "入口：大正报名入口；报名时间：即日起至 2026-08-08 12:00；以大正详情页和中高协单项规程为准。",
       "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
+      "registrationEnd": "2026-08-08 12:00",
+      "registrationText": "入口：大正报名入口；报名时间：即日起至 2026-08-08 12:00；以大正详情页和中高协单项规程为准。",
+      "statusCode": "open",
+      "statusLabel": "可报名",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "updatedFromOfficial": true,
       "notes": ""
@@ -1405,7 +1405,7 @@
       "name": "2026九鹤岩茶杯武夷山全国青少年公开赛",
       "startDate": "2026-08-16",
       "endDate": "2026-08-22",
-      "location": "待定/年历未列",
+      "location": "福建武夷山太伟风景高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2412.html",
       "sourceLinks": [
         {
@@ -1413,12 +1413,12 @@
           "url": "https://www.cgagolf.org.cn/xnews_details/2412.html"
         }
       ],
-      "signupUrl": "",
-      "signupMethod": "入口：大正高尔夫；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
-      "requirement": "入口：大正高尔夫；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5051",
+      "signupMethod": "入口：大正报名入口；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
+      "requirement": "入口：大正报名入口；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
       "registrationStart": "",
       "registrationEnd": "",
-      "registrationText": "入口：大正高尔夫；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
+      "registrationText": "入口：大正报名入口；截止 2026-08-02 17:00；6-18岁；名单公众号“武夷山太伟风景高尔夫俱乐部”。",
       "statusCode": "watch",
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
