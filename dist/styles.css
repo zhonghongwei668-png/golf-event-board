@@ -456,6 +456,59 @@ select {
   gap: 24px;
 }
 
+.loading-events {
+  pointer-events: none;
+}
+
+.loading-line,
+.loading-card span {
+  display: block;
+  background: #e8ebed;
+  border-radius: 4px;
+  animation: loading-pulse 1.2s ease-in-out infinite alternate;
+}
+
+.loading-heading {
+  width: 96px;
+  height: 20px;
+}
+
+.loading-card {
+  min-height: 132px;
+  padding: 22px;
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  border-left-color: #d9dddf;
+}
+
+.loading-card span:nth-child(1) {
+  width: 32%;
+  height: 12px;
+}
+
+.loading-card span:nth-child(2) {
+  width: 78%;
+  height: 20px;
+}
+
+.loading-card span:nth-child(3) {
+  width: 54%;
+  height: 12px;
+}
+
+@keyframes loading-pulse {
+  from { opacity: 0.55; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-line,
+  .loading-card span {
+    animation: none;
+  }
+}
+
 .month-heading {
   display: flex;
   align-items: baseline;

@@ -20,6 +20,8 @@ const state = {
   hasLiveApi: false
 };
 
+const EVENT_CACHE_KEY = "golf-event-board:events:v1";
+
 const els = {
   updatedAt: document.querySelector("#updatedAt"),
   categoryFilters: document.querySelector("#categoryFilters"),
@@ -169,12 +171,12 @@ async function fetchData() {
     }
   }
   state.hasLiveApi = false;
-  return fetch("./data/events.json", { cache: "no-store" });
+  return fetch("./data/events.json", { cache: "default", credentials: "omit" });
 }
 
 async function fetchSources() {
   try {
-    const response = await fetch("./data/sources.json", { cache: "no-store" });
+    const response = await fetch("./data/sources.json", { cache: "default", credentials: "omit" });
     if (!response.ok) return [];
     const payload = await response.json();
     return payload.sources || [];
@@ -185,7 +187,7 @@ async function fetchSources() {
 
 async function fetchAppLinks() {
   try {
-    const response = await fetch("./data/app-links.json", { cache: "no-store" });
+    const response = await fetch("./data/app-links.json", { cache: "default", credentials: "omit" });
     if (!response.ok) return [];
     const payload = await response.json();
     return payload.apps || [];
@@ -194,21 +196,60 @@ async function fetchAppLinks() {
   }
 }
 
-async function loadData() {
-  const response = await fetchData();
-  if (!response.ok) throw new Error("赛事数据读取失败");
-  state.data = await response.json();
-  state.sources = await fetchSources();
-  state.appLinks = await fetchAppLinks();
-  state.events = state.data.events || [];
+function readCachedEvents() {
+  try {
+    const cached = JSON.parse(localStorage.getItem(EVENT_CACHE_KEY) || "null");
+    return cached?.payload && Array.isArray(cached.payload.events) ? cached.payload : null;
+  } catch {
+    return null;
+  }
+}
+
+function cacheEvents(payload) {
+  try {
+    localStorage.setItem(EVENT_CACHE_KEY, JSON.stringify({ savedAt: Date.now(), payload }));
+  } catch {
+    // Storage can be unavailable in private browsing; network loading still works.
+  }
+}
+
+function renderPrimaryData(payload, source = "network") {
+  state.data = payload;
+  state.events = payload.events || [];
   renderMonths();
   applyFilters();
-  renderAlerts();
-  renderWatchPanel();
   const generated = state.data.generatedAt ? new Date(state.data.generatedAt) : null;
-  els.updatedAt.textContent = generated ? `最近数据变化 ${generated.toLocaleString("zh-CN", { hour12: false })}` : "已读取本地数据";
-  els.refreshButton.textContent = state.hasLiveApi ? "更新官方数据" : "每日自动更新";
-  els.refreshButton.title = state.hasLiveApi ? "立即从官方来源刷新" : "公网静态版由定时任务每日自动更新";
+  const cacheLabel = source === "cache" ? " · 正在校准最新数据" : "";
+  els.updatedAt.textContent = generated ? `最近数据变化 ${generated.toLocaleString("zh-CN", { hour12: false })}${cacheLabel}` : "已读取赛事数据";
+  els.refreshButton.textContent = state.hasLiveApi ? "更新官方数据" : "白天每小时更新";
+  els.refreshButton.title = state.hasLiveApi ? "立即从官方来源刷新" : "公网静态版每天 08:00 至 22:00 整点自动更新";
+  els.timeline.setAttribute("aria-busy", "false");
+  document.documentElement.dataset.eventsReady = source;
+}
+
+async function loadData() {
+  const supportData = Promise.all([fetchSources(), fetchAppLinks()]);
+  const cached = readCachedEvents();
+
+  if (cached) renderPrimaryData(cached, "cache");
+
+  try {
+    const response = await fetchData();
+    if (!response.ok) throw new Error("赛事数据读取失败");
+    const payload = await response.json();
+    cacheEvents(payload);
+    renderPrimaryData(payload);
+  } catch (error) {
+    if (!cached) throw error;
+    els.updatedAt.textContent = `${els.updatedAt.textContent.replace(" · 正在校准最新数据", "")} · 当前为最近缓存`;
+  }
+
+  [state.sources, state.appLinks] = await supportData;
+  renderWatchPanel();
+  if (state.selected) {
+    state.selected = state.events.find((event) => event.id === state.selected.id) || null;
+    if (state.selected) renderDetail(state.selected);
+  }
 }
 
 function renderAlerts() {
@@ -318,6 +359,8 @@ function renderMonths() {
   els.monthSelect.innerHTML = `<option value="all">全年</option>` + months.map((key) => (
     `<option value="${escapeHtml(key)}">${escapeHtml(monthLabel(key))}</option>`
   )).join("");
+  if (!months.includes(state.month)) state.month = "all";
+  els.monthSelect.value = state.month;
 }
 
 function applyFilters() {
@@ -629,8 +672,8 @@ els.statusFilters.addEventListener("click", () => {
 
 els.refreshButton.addEventListener("click", async () => {
   if (!state.hasLiveApi) {
-    els.refreshButton.textContent = "公网版每日自动更新";
-    setTimeout(() => els.refreshButton.textContent = "每日自动更新", 1800);
+    els.refreshButton.textContent = "08:00 至 22:00 整点更新";
+    setTimeout(() => els.refreshButton.textContent = "白天每小时更新", 1800);
     return;
   }
   els.refreshButton.disabled = true;
@@ -649,4 +692,9 @@ els.refreshButton.addEventListener("click", async () => {
   }
 });
 
-loadData();
+loadData().catch(() => {
+  els.updatedAt.textContent = "赛事数据暂时无法读取";
+  els.resultTitle.textContent = "加载失败";
+  els.timeline.setAttribute("aria-busy", "false");
+  els.timeline.innerHTML = `<div class="empty-list">网络连接异常，请稍后重新打开</div>`;
+});
