@@ -8,6 +8,7 @@ const distDir = path.join(rootDir, "dist");
 
 await rm(distDir, { recursive: true, force: true });
 await mkdir(path.join(distDir, "data"), { recursive: true });
+await mkdir(path.join(distDir, "server"), { recursive: true });
 
 for (const file of ["index.html", "app.js", "event-logic.js", "styles.css", "manifest.webmanifest", "icon.svg"]) {
   await cp(path.join(rootDir, file), path.join(distDir, file));
@@ -17,4 +18,9 @@ await cp(path.join(rootDir, "data", "events.json"), path.join(distDir, "data", "
 await cp(path.join(rootDir, "data", "sources.json"), path.join(distDir, "data", "sources.json"));
 await cp(path.join(rootDir, "data", "app-links.json"), path.join(distDir, "data", "app-links.json"));
 await writeFile(path.join(distDir, ".nojekyll"), "", "utf8");
+await writeFile(
+  path.join(distDir, "server", "index.js"),
+  `export default {\n  async fetch(request, env) {\n    return env.ASSETS.fetch(request);\n  },\n};\n`,
+  "utf8",
+);
 console.log(`Built static site -> ${path.relative(rootDir, distDir)}`);
