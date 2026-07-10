@@ -253,20 +253,42 @@ function signedDingTalkUrl(webhook, secret) {
   return `${webhook}${separator}timestamp=${timestamp}&sign=${encodeURIComponent(sign)}`;
 }
 
-async function notifyDingTalk(markdown) {
-  const webhook = process.env.DINGTALK_WEBHOOK;
-  if (!webhook) return false;
-
-  await postJson(signedDingTalkUrl(webhook, process.env.DINGTALK_SECRET), {
-    msgtype: "markdown",
-    markdown: {
-      title: "高尔夫赛事报名信息更新",
-      text: markdown,
-    },
-    at: { isAtAll: false },
+export function configuredDingTalkTargets(env = process.env) {
+  const candidates = [
+    { label: "主机器人", webhook: env.DINGTALK_WEBHOOK, secret: env.DINGTALK_SECRET },
+    { label: "第二机器人", webhook: env.DINGTALK_WEBHOOK_2, secret: env.DINGTALK_SECRET_2 },
+  ];
+  const seen = new Set();
+  return candidates.filter((target) => {
+    if (!target.webhook || seen.has(target.webhook)) return false;
+    seen.add(target.webhook);
+    return true;
   });
-  console.log("Sent DingTalk notification");
-  return true;
+}
+
+async function notifyDingTalk(markdown) {
+  const targets = configuredDingTalkTargets();
+  if (!targets.length) return false;
+
+  const results = await Promise.allSettled(targets.map((target) => (
+    postJson(signedDingTalkUrl(target.webhook, target.secret), {
+      msgtype: "markdown",
+      markdown: {
+        title: "高尔夫赛事报名信息更新",
+        text: markdown,
+      },
+      at: { isAtAll: false },
+    })
+  )));
+  const failures = results
+    .map((result, index) => ({ result, target: targets[index] }))
+    .filter(({ result }) => result.status === "rejected");
+  if (failures.length) {
+    throw new Error(failures.map(({ result, target }) => `${target.label}: ${result.reason.message}`).join("; "));
+  }
+
+  console.log(`Sent DingTalk notification to ${targets.length} robot(s)`);
+  return targets.length;
 }
 
 async function notifyWeWork(markdown) {

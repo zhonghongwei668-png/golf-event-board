@@ -66,6 +66,8 @@ jobs:
           NOTIFY_SITE_URL: https://zhonghongwei668-png.github.io/golf-event-board/
           DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
+          DINGTALK_WEBHOOK_2: ${{ secrets.DINGTALK_WEBHOOK_2 || secrets.DINGTALK_WEBHOOK2 || secrets.DINGTALK_WEBHOOK_SECONDARY }}
+          DINGTALK_SECRET_2: ${{ secrets.DINGTALK_SECRET_2 || secrets.DINGTALK_SECRET2 || secrets.DINGTALK_SECRET_SECONDARY }}
           WEWORK_WEBHOOK: ${{ secrets.WEWORK_WEBHOOK }}
 
       - name: Commit updated data
@@ -88,4 +90,6 @@ jobs:
           NOTIFY_SITE_URL: https://zhonghongwei668-png.github.io/golf-event-board/
           DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
+          DINGTALK_WEBHOOK_2: ${{ secrets.DINGTALK_WEBHOOK_2 || secrets.DINGTALK_WEBHOOK2 || secrets.DINGTALK_WEBHOOK_SECONDARY }}
+          DINGTALK_SECRET_2: ${{ secrets.DINGTALK_SECRET_2 || secrets.DINGTALK_SECRET2 || secrets.DINGTALK_SECRET_SECONDARY }}
           WEWORK_WEBHOOK: ${{ secrets.WEWORK_WEBHOOK }}
