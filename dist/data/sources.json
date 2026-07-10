@@ -36,14 +36,14 @@
       "keywords": ["会员", "资格", "注册", "认证"]
     },
     {
-      "name": "大正体育青少年页",
+      "name": "大正高尔夫赛事报名",
       "tier": "A",
       "type": "赛事平台",
       "priority": "高",
-      "url": "https://www.bwvip.com/youth.php",
-      "coverage": "大正体系、青少年注册、热门赛事",
-      "watch": "大正高尔夫 App 相关报名入口、注册、赛事更新。",
-      "status": "已确认",
+      "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
+      "coverage": "全国及区域青少年、业余、女子发展赛事报名",
+      "watch": "每小时读取公开报名列表；新赛事或报名区间变化时补读详情页，提取赛期、地点和直达入口。",
+      "status": "已自动接入",
       "keywords": ["大正", "大正高尔夫", "青少年", "报名"]
     },
     {

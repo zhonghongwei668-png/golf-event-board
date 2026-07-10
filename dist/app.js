@@ -325,7 +325,7 @@ function applyFilters() {
   state.filtered = state.events.filter((event) => {
     const matchesCategory = state.category === "all" || event.category === state.category;
     const matchesMonth = state.month === "all" || monthKey(event) === state.month;
-    const haystack = `${event.name} ${event.location} ${event.signupMethod} ${event.requirement}`.toLowerCase();
+    const haystack = `${event.name} ${event.location} ${event.signupMethod} ${event.requirement} ${event.seriesLabel || ""} ${event.sourceSystem || ""}`.toLowerCase();
     const matchesSearch = !q || haystack.includes(q);
     const matchesDirect = !state.directOnly || Boolean(safeUrl(event.signupUrl));
     let matchesStatus = true;
@@ -483,6 +483,7 @@ function renderDetail(event) {
     ["比赛时间", eventRange(event)],
     ["报名时间", event.registrationStart || event.registrationEnd ? `${event.registrationStart || "即日起"} - ${event.registrationEnd || "以公告为准"}` : "以单项公告/报名平台为准"],
     ["比赛地点", event.location],
+    ...(event.seriesLabel ? [["赛事系列", event.seriesLabel]] : []),
     ["数据来源", event.sourceSystem || "官方网页"]
   ].map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("");
 

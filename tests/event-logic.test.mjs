@@ -37,6 +37,18 @@ test("expired registration is closed even when cached status says open", () => {
   assert.equal(statusForEvent(event, now).code, "closed");
 });
 
+test("authoritatively removed registration is closed before its old deadline", () => {
+  const event = {
+    startDate: "2026-08-10",
+    endDate: "2026-08-13",
+    registrationEnd: "2026-08-01",
+    registrationOpen: false,
+    registrationClosed: true
+  };
+
+  assert.equal(statusForEvent(event, new Date("2026-07-10T08:00:00+08:00")).code, "closed");
+});
+
 test("future registration start remains pending", () => {
   const event = {
     startDate: "2026-08-10",

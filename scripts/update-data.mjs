@@ -8,6 +8,10 @@ import {
   statusForEvent,
   validateEvents
 } from "../event-logic.js";
+import {
+  dazhengEventIdFromEvent,
+  fetchDazhengEvents
+} from "./lib/dazheng-source.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -118,6 +122,8 @@ function parseRegistrationWindow(text = "") {
 }
 
 function eventKey(event) {
+  const dazhengId = dazhengEventIdFromEvent(event);
+  if (dazhengId) return `${event.category}:dazheng:${dazhengId}`;
   return `${event.category}:${event.id || slug(event.name)}:${event.startDate || "undated"}`;
 }
 
@@ -141,10 +147,14 @@ function normalizeEvent(event) {
     registrationEnd: event.registrationEnd || "",
     registrationText: clean(event.registrationText || event.signupMethod || ""),
     registrationOpen: event.registrationOpen,
+    registrationClosed: Boolean(event.registrationClosed),
+    registrationStatusAuthoritative: Boolean(event.registrationStatusAuthoritative),
     statusCode: status.code,
     statusLabel: status.label,
     sourceSystem: event.sourceSystem || "",
     scheduleAuthority: event.scheduleAuthority || inferScheduleAuthority(event),
+    seriesLabel: clean(event.seriesLabel || ""),
+    externalIds: event.externalIds || {},
     updatedFromOfficial: Boolean(event.updatedFromOfficial),
     notes: clean(event.notes || "")
   };
@@ -166,6 +176,21 @@ function chooseLocation(existing = "", incoming = "") {
   if (next === "待定/年历未列") return current;
   if (current.length > next.length && current.includes(next)) return current;
   return next;
+}
+
+function mergeSourceLinks(existing = [], incoming = []) {
+  const links = [];
+  for (const link of [...existing, ...incoming]) {
+    if (!link?.url || links.some((item) => item.url === link.url)) continue;
+    links.push(link);
+  }
+  return links;
+}
+
+function chooseRegistrationValue(existing = "", incoming = "") {
+  if (!incoming) return existing;
+  if (existing && existing.startsWith(incoming) && existing.length > incoming.length) return existing;
+  return incoming;
 }
 
 function parseMarkdownEvents(markdown) {
@@ -349,9 +374,12 @@ function mergeEvents(baseEvents, officialEvents) {
 
   for (const incoming of officialEvents) {
     const directKey = eventKey(incoming);
+    const incomingDazhengId = dazhengEventIdFromEvent(incoming);
     const existingKey = [...byKey.keys()].find((key) => {
       const event = byKey.get(key);
+      const existingDazhengId = dazhengEventIdFromEvent(event);
       return event.category === incoming.category && (
+        (incomingDazhengId && existingDazhengId === incomingDazhengId) ||
         event.id === incoming.id ||
         event.name === incoming.name ||
         (event.name.includes(incoming.name) || incoming.name.includes(event.name)) && event.startDate === incoming.startDate
@@ -370,17 +398,29 @@ function mergeEvents(baseEvents, officialEvents) {
     const incomingScheduleWins = incomingHasSchedule && (
       !existingHasSchedule || scheduleAuthorityRank(incoming) >= scheduleAuthorityRank(existing)
     );
+    const incomingRegistrationWins = Boolean(incoming.registrationStatusAuthoritative);
 
     byKey.set(key, normalizeEvent({
       ...existing,
       ...schedule,
       location: chooseLocation(existing.location, incoming.location),
       sourceUrl: existing.sourceUrl && !existing.sourceUrl.includes("game_") ? existing.sourceUrl : incoming.sourceUrl,
-      sourceLinks: existing.sourceLinks?.length ? existing.sourceLinks : incoming.sourceLinks,
-      signupUrl: existing.signupUrl || incoming.signupUrl,
+      sourceLinks: mergeSourceLinks(existing.sourceLinks, incoming.sourceLinks),
+      signupUrl: incomingRegistrationWins ? incoming.signupUrl || existing.signupUrl : existing.signupUrl || incoming.signupUrl,
+      registrationStart: incomingRegistrationWins
+        ? chooseRegistrationValue(existing.registrationStart, incoming.registrationStart)
+        : existing.registrationStart || incoming.registrationStart,
+      registrationEnd: incomingRegistrationWins
+        ? chooseRegistrationValue(existing.registrationEnd, incoming.registrationEnd)
+        : existing.registrationEnd || incoming.registrationEnd,
+      registrationText: incomingRegistrationWins ? incoming.registrationText || existing.registrationText : existing.registrationText || incoming.registrationText,
       registrationOpen: incoming.registrationOpen ?? existing.registrationOpen,
+      registrationClosed: incomingRegistrationWins ? incoming.registrationClosed : existing.registrationClosed,
+      registrationStatusAuthoritative: incomingRegistrationWins || existing.registrationStatusAuthoritative,
       sourceSystem: appendSourceSystem(existing.sourceSystem || "本地", incoming.sourceSystem),
       scheduleAuthority: incomingScheduleWins ? incoming.scheduleAuthority : existing.scheduleAuthority,
+      seriesLabel: incoming.seriesLabel || existing.seriesLabel,
+      externalIds: { ...(existing.externalIds || {}), ...(incoming.externalIds || {}) },
       updatedFromOfficial: true
     }));
   }
@@ -420,9 +460,10 @@ async function main() {
   const official = [];
   const fallbacks = [];
   const tasks = [
-    { name: "CLPGA", categories: ["women"], run: () => fetchClpgaEvents() },
-    { name: "中高协业余", categories: ["amateur"], run: () => fetchCgaEvents("amateur", ["3", "4"]) },
-    { name: "中高协青少年", categories: ["junior"], run: () => fetchCgaEvents("junior", ["5", "6", "7", "8", "16", "17"]) }
+    { name: "CLPGA", fallback: (event) => event.category === "women", run: () => fetchClpgaEvents() },
+    { name: "中高协业余", fallback: (event) => event.category === "amateur", run: () => fetchCgaEvents("amateur", ["3", "4"]) },
+    { name: "中高协青少年", fallback: (event) => event.category === "junior", run: () => fetchCgaEvents("junior", ["5", "6", "7", "8", "16", "17"]) },
+    { name: "大正高尔夫", fallback: (event) => Boolean(dazhengEventIdFromEvent(event)), run: () => fetchDazhengEvents(previousPayload?.events || []) }
   ];
 
   for (const task of tasks) {
@@ -431,7 +472,7 @@ async function main() {
     } catch (error) {
       errors.push(`${task.name}: ${error.message}`);
       if (previousPayload?.events?.length) {
-        fallbacks.push(...previousPayload.events.filter((event) => task.categories.includes(event.category)));
+        fallbacks.push(...previousPayload.events.filter(task.fallback));
       }
     }
   }
@@ -450,7 +491,8 @@ async function main() {
       cgaWomen: "https://www.cgagolf.org.cn/game_woman.html",
       cgaAmateur: "https://www.cgagolf.org.cn/game_spare.html",
       cgaJunior: "https://www.cgagolf.org.cn/game_young.html",
-      cgaMember: "https://member.cgagolf.org.cn/index"
+      cgaMember: "https://member.cgagolf.org.cn/index",
+      dazheng: "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list"
     },
     warnings: errors,
     categories: CATEGORY_META,
