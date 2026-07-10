@@ -68,6 +68,7 @@ jobs:
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
           DINGTALK_WEBHOOK_2: ${{ secrets.DINGTALK_WEBHOOK_2 || secrets.DINGTALK_WEBHOOK2 || secrets.DINGTALK_WEBHOOK_SECONDARY }}
           DINGTALK_SECRET_2: ${{ secrets.DINGTALK_SECRET_2 || secrets.DINGTALK_SECRET2 || secrets.DINGTALK_SECRET_SECONDARY }}
+          DINGTALK_EXPECTED_TARGETS: "2"
           WEWORK_WEBHOOK: ${{ secrets.WEWORK_WEBHOOK }}
 
       - name: Commit updated data
@@ -92,4 +93,5 @@ jobs:
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
           DINGTALK_WEBHOOK_2: ${{ secrets.DINGTALK_WEBHOOK_2 || secrets.DINGTALK_WEBHOOK2 || secrets.DINGTALK_WEBHOOK_SECONDARY }}
           DINGTALK_SECRET_2: ${{ secrets.DINGTALK_SECRET_2 || secrets.DINGTALK_SECRET2 || secrets.DINGTALK_SECRET_SECONDARY }}
+          DINGTALK_EXPECTED_TARGETS: "2"
           WEWORK_WEBHOOK: ${{ secrets.WEWORK_WEBHOOK }}

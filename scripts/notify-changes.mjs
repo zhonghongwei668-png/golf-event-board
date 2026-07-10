@@ -269,6 +269,10 @@ export function configuredDingTalkTargets(env = process.env) {
 async function notifyDingTalk(markdown) {
   const targets = configuredDingTalkTargets();
   if (!targets.length) return false;
+  const expectedTargets = Number(process.env.DINGTALK_EXPECTED_TARGETS || 0);
+  if (expectedTargets && targets.length < expectedTargets) {
+    throw new Error(`DingTalk robots configured: ${targets.length}/${expectedTargets}`);
+  }
 
   const results = await Promise.allSettled(targets.map((target) => (
     postJson(signedDingTalkUrl(target.webhook, target.secret), {
