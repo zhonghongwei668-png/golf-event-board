@@ -9,7 +9,7 @@ const distDir = path.join(rootDir, "dist");
 await rm(distDir, { recursive: true, force: true });
 await mkdir(path.join(distDir, "data"), { recursive: true });
 
-for (const file of ["index.html", "app.js", "styles.css", "manifest.webmanifest", "icon.svg"]) {
+for (const file of ["index.html", "app.js", "event-logic.js", "styles.css", "manifest.webmanifest", "icon.svg"]) {
   await cp(path.join(rootDir, file), path.join(distDir, file));
 }
 

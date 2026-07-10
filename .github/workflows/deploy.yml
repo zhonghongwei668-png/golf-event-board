@@ -37,35 +37,45 @@ jobs:
         with:
           node-version: 20
 
+      - name: Test event rules
+        run: npm test
+
       - name: Update event data
         run: npm run update
+
+      - name: Validate event data
+        run: npm run validate
 
       - name: Build static site
         run: npm run build
 
-      - name: Commit updated data
-        id: commit_updates
+      - name: Detect event changes
+        id: event_changes
         run: |
           if ! git diff --quiet data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json
-            git commit -m "Update golf event data"
-            git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Notify event changes
-        if: steps.commit_updates.outputs.changed == 'true'
-        run: npm run notify -- --base HEAD~1 --head HEAD
+        if: steps.event_changes.outputs.changed == 'true'
+        run: npm run notify -- --base HEAD --head working
         env:
           NOTIFY_STRICT: "1"
           NOTIFY_SITE_URL: https://zhonghongwei668-png.github.io/golf-event-board/
           DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
           WEWORK_WEBHOOK: ${{ secrets.WEWORK_WEBHOOK }}
+
+      - name: Commit updated data
+        if: steps.event_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json
+          git commit -m "Update golf event data"
+          git push
 
       - name: Notify open registration digest
         if: >-

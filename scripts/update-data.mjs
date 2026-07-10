@@ -1,6 +1,13 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  chooseSchedule,
+  inferScheduleAuthority,
+  scheduleAuthorityRank,
+  statusForEvent,
+  validateEvents
+} from "../event-logic.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -95,24 +102,6 @@ function datePattern() {
   return String.raw`(\d{4}-\d{2}-\d{2}(?:\s+\d{1,2}:\d{2})?)`;
 }
 
-function shanghaiDateString(now = new Date()) {
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Asia/Shanghai",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit"
-  }).format(now);
-}
-
-function parseShanghaiDateTime(value, endOfDay = false) {
-  if (!value) return null;
-  const text = String(value).trim().replace(" ", "T");
-  const hasTime = /T\d{1,2}:\d{2}/.test(text);
-  const normalized = hasTime ? text : `${text}T${endOfDay ? "23:59:59" : "00:00:00"}`;
-  const date = new Date(`${normalized}+08:00`);
-  return Number.isNaN(date.getTime()) ? null : date;
-}
-
 function parseRegistrationWindow(text = "") {
   const normalized = clean(text);
   const date = datePattern();
@@ -128,29 +117,12 @@ function parseRegistrationWindow(text = "") {
   };
 }
 
-function statusFor(event, now = new Date()) {
-  const today = parseShanghaiDateTime(shanghaiDateString(now));
-  const start = parseShanghaiDateTime(event.startDate);
-  const end = parseShanghaiDateTime(event.endDate, true) || start;
-  const regStart = parseShanghaiDateTime(event.registrationStart);
-  const regEnd = parseShanghaiDateTime(event.registrationEnd, true);
-
-  if (end && end < today) return { code: "past", label: "已结束" };
-  if (start && start <= today && end && end >= today) return { code: "running", label: "比赛中" };
-  if (regEnd && regEnd < now) return { code: "closed", label: "报名截止" };
-  if (regStart && regStart > now) return { code: "pending", label: "待开放" };
-  if (regEnd && regEnd >= now) return { code: "open", label: "可报名" };
-  if (event.registrationOpen === true) return { code: "open", label: "可报名" };
-  if (event.registrationOpen === false) return { code: "pending", label: "待开放" };
-  return { code: "watch", label: "关注公告" };
-}
-
 function eventKey(event) {
   return `${event.category}:${event.id || slug(event.name)}:${event.startDate || "undated"}`;
 }
 
 function normalizeEvent(event) {
-  const status = statusFor(event);
+  const status = statusForEvent(event);
   return {
     id: event.id || `${slug(event.name)}-${event.startDate || "date"}`,
     category: event.category,
@@ -172,6 +144,7 @@ function normalizeEvent(event) {
     statusCode: status.code,
     statusLabel: status.label,
     sourceSystem: event.sourceSystem || "",
+    scheduleAuthority: event.scheduleAuthority || inferScheduleAuthority(event),
     updatedFromOfficial: Boolean(event.updatedFromOfficial),
     notes: clean(event.notes || "")
   };
@@ -336,6 +309,7 @@ async function fetchCgaEvents(category, kindCode) {
     signupMethod: CATEGORY_META[category].defaultRequirement,
     requirement: CATEGORY_META[category].defaultRequirement,
     sourceSystem: "中高协年历接口",
+    scheduleAuthority: "calendar_api",
     updatedFromOfficial: true
   }));
 }
@@ -365,6 +339,7 @@ async function fetchClpgaEvents() {
       requirement: CATEGORY_META.women.defaultRequirement,
       registrationOpen: Boolean(Number(item.GameRegIsOk)),
       sourceSystem: "CLPGA官网接口",
+      scheduleAuthority: "official_api",
       updatedFromOfficial: true
     }));
 }
@@ -385,20 +360,27 @@ function mergeEvents(baseEvents, officialEvents) {
     const key = existingKey || directKey;
     const existing = byKey.get(key);
     if (!existing) {
-      byKey.set(key, incoming);
+      byKey.set(key, normalizeEvent(incoming));
       continue;
     }
 
+    const schedule = chooseSchedule(existing, incoming);
+    const incomingHasSchedule = Boolean(incoming.startDate || incoming.endDate);
+    const existingHasSchedule = Boolean(existing.startDate || existing.endDate);
+    const incomingScheduleWins = incomingHasSchedule && (
+      !existingHasSchedule || scheduleAuthorityRank(incoming) >= scheduleAuthorityRank(existing)
+    );
+
     byKey.set(key, normalizeEvent({
       ...existing,
-      startDate: incoming.startDate || existing.startDate,
-      endDate: incoming.endDate || existing.endDate,
+      ...schedule,
       location: chooseLocation(existing.location, incoming.location),
       sourceUrl: existing.sourceUrl && !existing.sourceUrl.includes("game_") ? existing.sourceUrl : incoming.sourceUrl,
       sourceLinks: existing.sourceLinks?.length ? existing.sourceLinks : incoming.sourceLinks,
       signupUrl: existing.signupUrl || incoming.signupUrl,
       registrationOpen: incoming.registrationOpen ?? existing.registrationOpen,
       sourceSystem: appendSourceSystem(existing.sourceSystem || "本地", incoming.sourceSystem),
+      scheduleAuthority: incomingScheduleWins ? incoming.scheduleAuthority : existing.scheduleAuthority,
       updatedFromOfficial: true
     }));
   }
@@ -436,21 +418,29 @@ async function main() {
 
   const errors = [];
   const official = [];
-  for (const task of [
-    () => fetchClpgaEvents(),
-    () => fetchCgaEvents("amateur", ["3", "4"]),
-    () => fetchCgaEvents("junior", ["5", "6", "7", "8", "16", "17"])
-  ]) {
+  const fallbacks = [];
+  const tasks = [
+    { name: "CLPGA", categories: ["women"], run: () => fetchClpgaEvents() },
+    { name: "中高协业余", categories: ["amateur"], run: () => fetchCgaEvents("amateur", ["3", "4"]) },
+    { name: "中高协青少年", categories: ["junior"], run: () => fetchCgaEvents("junior", ["5", "6", "7", "8", "16", "17"]) }
+  ];
+
+  for (const task of tasks) {
     try {
-      official.push(...await task());
+      official.push(...await task.run());
     } catch (error) {
-      errors.push(error.message);
+      errors.push(`${task.name}: ${error.message}`);
+      if (previousPayload?.events?.length) {
+        fallbacks.push(...previousPayload.events.filter((event) => task.categories.includes(event.category)));
+      }
     }
   }
 
-  const events = errors.length && previousPayload?.events?.length
-    ? previousPayload.events
-    : mergeEvents(parsedEvents, official);
+  const events = mergeEvents(mergeEvents(parsedEvents, fallbacks), official);
+  const validationErrors = validateEvents(events);
+  if (validationErrors.length) {
+    throw new Error(`赛事数据校验失败:\n- ${validationErrors.join("\n- ")}`);
+  }
 
   const nextPayload = {
     generatedAt: "",

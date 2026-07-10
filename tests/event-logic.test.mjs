@@ -1,0 +1,73 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {
+  chooseSchedule,
+  isRegistrationOpenAt,
+  statusForEvent,
+  validateEvents
+} from "../event-logic.js";
+
+test("single-event regulation schedule beats annual calendar API", () => {
+  const schedule = chooseSchedule(
+    {
+      startDate: "2026-08-12",
+      endDate: "2026-08-15",
+      scheduleAuthority: "regulation"
+    },
+    {
+      startDate: "2026-07-16",
+      endDate: "2026-07-18",
+      scheduleAuthority: "calendar_api"
+    }
+  );
+
+  assert.deepEqual(schedule, { startDate: "2026-08-12", endDate: "2026-08-15" });
+});
+
+test("expired registration is closed even when cached status says open", () => {
+  const event = {
+    startDate: "2026-08-10",
+    endDate: "2026-08-13",
+    registrationEnd: "2026-07-09 17:00",
+    statusCode: "open"
+  };
+  const now = new Date("2026-07-10T08:00:00+08:00");
+
+  assert.equal(isRegistrationOpenAt(event, now), false);
+  assert.equal(statusForEvent(event, now).code, "closed");
+});
+
+test("future registration start remains pending", () => {
+  const event = {
+    startDate: "2026-08-10",
+    endDate: "2026-08-13",
+    registrationStart: "2026-07-15 09:00",
+    registrationEnd: "2026-07-31 17:00",
+    signupUrl: "https://example.com/signup"
+  };
+
+  assert.equal(statusForEvent(event, new Date("2026-07-10T08:00:00+08:00")).code, "pending");
+});
+
+test("validation rejects deadline after the event and duplicate IDs", () => {
+  const events = [
+    {
+      id: "central",
+      name: "中部地区",
+      startDate: "2026-07-16",
+      endDate: "2026-07-18",
+      registrationEnd: "2026-07-31 17:00",
+      signupUrl: "https://example.com/signup"
+    },
+    {
+      id: "central",
+      name: "重复赛事",
+      startDate: "2026-08-01",
+      endDate: "2026-08-02"
+    }
+  ];
+
+  const errors = validateEvents(events, new Date("2026-07-10T08:00:00+08:00"));
+  assert.ok(errors.some((error) => error.includes("报名截止晚于比赛结束")));
+  assert.ok(errors.some((error) => error.includes("重复赛事ID")));
+});

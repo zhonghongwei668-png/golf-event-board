@@ -116,9 +116,14 @@ a {
 
 .segmented button,
 .refresh-button,
-.detail-back-button {
+.detail-back-button,
+.filter-toggle {
   border: 0;
   cursor: pointer;
+}
+
+.filter-toggle {
+  display: none;
 }
 
 .segmented button {
@@ -237,8 +242,31 @@ select {
 
 .toolbar-actions {
   display: grid;
-  grid-template-columns: 130px 160px;
+  grid-template-columns: 130px 160px auto;
   gap: 10px;
+}
+
+.direct-only-filter {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0 11px;
+  background: #fff;
+  color: #33404a;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.direct-only-filter input {
+  width: 16px;
+  min-height: 16px;
+  margin: 0;
+  accent-color: var(--green);
 }
 
 .alerts-panel,
@@ -319,6 +347,10 @@ select {
   display: grid;
   gap: 10px;
   margin-top: 16px;
+  border: 1px solid rgba(33, 38, 44, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  overflow: hidden;
 }
 
 .source-tier-heading {
@@ -326,6 +358,31 @@ select {
   align-items: flex-end;
   justify-content: space-between;
   gap: 12px;
+  min-height: 58px;
+  padding: 10px 13px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.source-tier-heading::-webkit-details-marker {
+  display: none;
+}
+
+.source-tier-heading::before {
+  content: "+";
+  display: grid;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 50%;
+  background: #ece8df;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.source-tier-group[open] .source-tier-heading::before {
+  content: "-";
 }
 
 .source-tier-heading h4 {
@@ -349,6 +406,10 @@ select {
   padding: 13px;
   background: #fff;
   box-shadow: 0 8px 22px rgba(28, 35, 42, 0.05);
+}
+
+.source-tier-group .source-grid {
+  padding: 0 12px 12px;
 }
 
 .source-card[data-tier="B"] {
@@ -492,6 +553,11 @@ select {
   box-shadow: var(--shadow);
 }
 
+.event-card:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 45%, white);
+  outline-offset: 2px;
+}
+
 .date-box {
   display: grid;
   align-content: center;
@@ -591,9 +657,29 @@ select {
 }
 
 .card-footer {
+  flex-wrap: wrap;
   align-self: end;
   color: var(--muted);
   font-size: 12px;
+}
+
+.card-source {
+  flex: 1 1 170px;
+  text-align: right;
+}
+
+.card-signup-link {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0 11px;
+  background: var(--green);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .detail-panel {
@@ -850,11 +936,44 @@ select {
     position: fixed;
     inset: 0 auto 0 0;
     z-index: 4;
-    width: 82px;
+    width: 48px;
     height: 100vh;
-    padding: 10px 7px;
+    padding: 9px 7px;
     overflow-y: auto;
     overflow-x: hidden;
+  }
+
+  .sidebar-controls {
+    display: none;
+  }
+
+  .filter-toggle {
+    display: inline-flex;
+    width: 34px;
+    min-height: 34px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #f8fafb;
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  body.filters-open .sidebar {
+    z-index: 11;
+    width: 150px;
+    padding-inline: 10px;
+    box-shadow: 16px 0 32px rgba(20, 25, 29, 0.28);
+  }
+
+  body.filters-open .sidebar-controls {
+    display: block;
+  }
+
+  body.filters-open .filter-toggle {
+    width: 100%;
   }
 
   .brand {
@@ -866,8 +985,8 @@ select {
   }
 
   .brand-mark {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 
   .filter-block {
@@ -896,7 +1015,7 @@ select {
   }
 
   .main-panel {
-    margin-left: 82px;
+    margin-left: 48px;
     padding: 14px;
   }
 
@@ -947,6 +1066,16 @@ select {
   .card-footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .card-source {
+    flex-basis: auto;
+    text-align: left;
+  }
+
+  .card-signup-link {
+    width: 100%;
+    min-height: 38px;
   }
 
   .detail-content {

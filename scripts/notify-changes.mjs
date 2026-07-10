@@ -4,6 +4,7 @@ import { promisify } from "node:util";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHmac } from "node:crypto";
+import { isRegistrationOpenAt } from "../event-logic.js";
 
 const execFileAsync = promisify(execFile);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -65,7 +66,7 @@ function formatOpenDigestEvent(event) {
 }
 
 function isOpenRegistration(event) {
-  return event.statusCode === "open";
+  return isRegistrationOpenAt(event);
 }
 
 function changedFields(before, after) {
@@ -164,7 +165,7 @@ function buildMarkdown(diff, currentPayload) {
 
 function buildOpenRegistrationDigest(currentPayload) {
   const events = (currentPayload?.events || [])
-    .filter((event) => event.statusCode === "open")
+    .filter((event) => isRegistrationOpenAt(event))
     .sort((a, b) => {
       const ad = a.registrationEnd || a.startDate || "9999-12-31";
       const bd = b.registrationEnd || b.startDate || "9999-12-31";
@@ -192,24 +193,33 @@ function buildOpenRegistrationDigest(currentPayload) {
   ].join("\n");
 }
 
-async function postJson(url, payload) {
-  const response = await fetch(url, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify(payload),
-  });
-  const text = await response.text();
-  if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${text}`);
+async function postJson(url, payload, attempts = 3) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const text = await response.text();
+      if (!response.ok) throw new Error(`${response.status} ${response.statusText}: ${text}`);
 
-  try {
-    const json = JSON.parse(text);
-    if (json.errcode && json.errcode !== 0) {
-      throw new Error(text);
+      try {
+        const json = JSON.parse(text);
+        if (json.errcode && json.errcode !== 0) throw new Error(text);
+      } catch (error) {
+        if (text.trim().startsWith("{")) throw error;
+      }
+      return text;
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) {
+        await new Promise((resolve) => setTimeout(resolve, attempt * 750));
+      }
     }
-  } catch (error) {
-    if (text.trim().startsWith("{")) throw error;
   }
-  return text;
+  throw lastError;
 }
 
 function signedDingTalkUrl(webhook, secret) {

@@ -1,3 +1,9 @@
+import {
+  isRegistrationOpenAt,
+  parseShanghaiDateTime,
+  statusForEvent
+} from "./event-logic.js";
+
 const state = {
   data: null,
   sources: [],
@@ -10,6 +16,7 @@ const state = {
   month: "all",
   sort: "asc",
   search: "",
+  directOnly: false,
   hasLiveApi: false
 };
 
@@ -20,6 +27,7 @@ const els = {
   searchInput: document.querySelector("#searchInput"),
   monthSelect: document.querySelector("#monthSelect"),
   sortSelect: document.querySelector("#sortSelect"),
+  directOnly: document.querySelector("#directOnly"),
   alertsPanel: document.querySelector("#alertsPanel"),
   watchPanel: document.querySelector("#watchPanel"),
   timeline: document.querySelector("#timeline"),
@@ -37,7 +45,8 @@ const els = {
   detailRequirement: document.querySelector("#detailRequirement"),
   previewOpen: document.querySelector("#previewOpen"),
   previewDomain: document.querySelector("#previewDomain"),
-  closeDetail: document.querySelector("#closeDetail")
+  closeDetail: document.querySelector("#closeDetail"),
+  filterToggle: document.querySelector("#filterToggle")
 };
 
 function escapeHtml(value = "") {
@@ -65,15 +74,6 @@ function safeUrl(value = "", allowedProtocols = ["http:", "https:"]) {
   } catch {
     return "";
   }
-}
-
-function parseShanghaiDateTime(value, endOfDay = false) {
-  if (!value) return null;
-  const text = String(value).trim().replace(" ", "T");
-  const hasTime = /T\d{1,2}:\d{2}/.test(text);
-  const normalized = hasTime ? text : `${text}T${endOfDay ? "23:59:59" : "00:00:00"}`;
-  const date = new Date(`${normalized}+08:00`);
-  return Number.isNaN(date.getTime()) ? null : date;
 }
 
 function todayInShanghai() {
@@ -124,10 +124,7 @@ function hasDeadline(event) {
 }
 
 function isRegistrationOpen(event) {
-  if (event.statusCode === "open") return true;
-  if (!event.registrationEnd) return false;
-  const end = parseShanghaiDateTime(event.registrationEnd, true);
-  return Boolean(end && end >= new Date());
+  return isRegistrationOpenAt(event);
 }
 
 function daysUntil(dateText) {
@@ -135,6 +132,16 @@ function daysUntil(dateText) {
   const date = new Date(`${dateText.slice(0, 10)}T23:59:59+08:00`);
   const diff = date.getTime() - todayInShanghai().getTime();
   return Math.ceil(diff / 86400000);
+}
+
+function deadlineCountdown(event) {
+  if (!event.registrationEnd || !isRegistrationOpen(event)) return "";
+  const end = parseShanghaiDateTime(event.registrationEnd, true);
+  if (!end) return "";
+  const hours = Math.ceil((end.getTime() - Date.now()) / 3600000);
+  if (hours <= 0) return "今日截止";
+  if (hours < 24) return `剩 ${hours} 小时`;
+  return `剩 ${Math.ceil(hours / 24)} 天`;
 }
 
 function isHotEvent(event) {
@@ -199,7 +206,7 @@ async function loadData() {
   renderAlerts();
   renderWatchPanel();
   const generated = state.data.generatedAt ? new Date(state.data.generatedAt) : null;
-  els.updatedAt.textContent = generated ? `最近更新 ${generated.toLocaleString("zh-CN", { hour12: false })}` : "已读取本地数据";
+  els.updatedAt.textContent = generated ? `最近数据变化 ${generated.toLocaleString("zh-CN", { hour12: false })}` : "已读取本地数据";
   els.refreshButton.textContent = state.hasLiveApi ? "更新官方数据" : "每日自动更新";
   els.refreshButton.title = state.hasLiveApi ? "立即从官方来源刷新" : "公网静态版由定时任务每日自动更新";
 }
@@ -227,7 +234,7 @@ function renderAlerts() {
         <p class="eyebrow">抢手名额提醒</p>
         <h3>优先盯报名开始、截止和补录</h3>
       </div>
-      <span>白天每小时检查</span>
+      <span>核心官网白天每小时检查</span>
     </div>
     <div class="alert-grid">
       ${candidates.map(({ event, deadlineDays }) => `
@@ -277,14 +284,14 @@ function renderWatchPanel() {
       <span>${escapeHtml(state.sources.length)} 个渠道</span>
     </div>
     ${sourceGroups.map((group) => `
-      <section class="source-tier-group source-tier-${safeClassToken(group.tier.toLowerCase())}">
-        <div class="source-tier-heading">
+      <details class="source-tier-group source-tier-${safeClassToken(group.tier.toLowerCase())}">
+        <summary class="source-tier-heading">
           <div>
             <p class="eyebrow">${escapeHtml(group.eyebrow)}</p>
             <h4>${escapeHtml(group.title)}</h4>
           </div>
           <span>${escapeHtml(group.sources.length)} 个 · ${escapeHtml(group.note)}</span>
-        </div>
+        </summary>
         <div class="source-grid">
           ${group.sources.map((source) => `
             <article class="source-card" data-tier="${escapeHtml(source.tier)}">
@@ -301,7 +308,7 @@ function renderWatchPanel() {
             </article>
           `).join("")}
         </div>
-      </section>
+      </details>
       `).join("")}
   `;
 }
@@ -320,11 +327,12 @@ function applyFilters() {
     const matchesMonth = state.month === "all" || monthKey(event) === state.month;
     const haystack = `${event.name} ${event.location} ${event.signupMethod} ${event.requirement}`.toLowerCase();
     const matchesSearch = !q || haystack.includes(q);
+    const matchesDirect = !state.directOnly || Boolean(safeUrl(event.signupUrl));
     let matchesStatus = true;
     if (state.status === "future") matchesStatus = isFuture(event);
     if (state.status === "open") matchesStatus = isRegistrationOpen(event);
     if (state.status === "deadline") matchesStatus = hasDeadline(event);
-    return matchesCategory && matchesMonth && matchesSearch && matchesStatus;
+    return matchesCategory && matchesMonth && matchesSearch && matchesDirect && matchesStatus;
   });
 
   state.filtered.sort((a, b) => {
@@ -380,15 +388,30 @@ function renderTimeline() {
   els.timeline.innerHTML = activeHtml + pastHtml;
 
   els.timeline.querySelectorAll(".event-card").forEach((card) => {
-    card.addEventListener("click", () => selectEvent(card.dataset.id));
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;
+      selectEvent(card.dataset.id);
+    });
+    card.addEventListener("keydown", (event) => {
+      if (event.target.closest("a") || !["Enter", " "].includes(event.key)) return;
+      event.preventDefault();
+      selectEvent(card.dataset.id);
+    });
   });
 }
 
 function renderCard(event) {
-  const deadline = event.registrationEnd ? `<span>报名至 ${escapeHtml(event.registrationEnd)}</span>` : `<span>${escapeHtml(event.statusLabel)}</span>`;
+  const liveStatus = statusForEvent(event);
+  const countdown = deadlineCountdown(event);
+  const deadline = event.registrationEnd
+    ? `<span>报名至 ${escapeHtml(event.registrationEnd)}${countdown ? ` · ${escapeHtml(countdown)}` : ""}</span>`
+    : `<span>${escapeHtml(liveStatus.label)}</span>`;
+  const signupAction = liveStatus.code === "open" && safeUrl(event.signupUrl)
+    ? `<a class="card-signup-link" href="${escapeHtml(safeUrl(event.signupUrl))}" target="_blank" rel="noreferrer">立即报名</a>`
+    : "";
   const selectedClass = state.selected?.id === event.id ? " is-selected" : "";
   return `
-    <article class="event-card${selectedClass}" data-id="${escapeHtml(event.id)}" style="--accent:${safeColor(event.color)}">
+    <article class="event-card${selectedClass}" data-id="${escapeHtml(event.id)}" style="--accent:${safeColor(event.color)}" role="button" tabindex="0" aria-label="查看 ${escapeHtml(event.name)}">
       <div class="date-box">
         <strong>${escapeHtml(cnDate(event.startDate))}</strong>
         <span>${event.endDate && event.endDate !== event.startDate ? `至 ${escapeHtml(cnDate(event.endDate))}` : escapeHtml(event.categoryLabel)}</span>
@@ -396,13 +419,14 @@ function renderCard(event) {
       <div class="card-body">
         <div class="card-topline">
           <span class="category-tag">${escapeHtml(event.categoryLabel)}</span>
-          <span class="status ${safeClassToken(event.statusCode)}">${escapeHtml(event.statusLabel)}</span>
+          <span class="status ${safeClassToken(liveStatus.code)}">${escapeHtml(liveStatus.label)}</span>
         </div>
         <h4>${escapeHtml(event.name)}</h4>
         <p>${escapeHtml(event.location)}</p>
         <div class="card-footer">
           ${deadline}
-          <span>${escapeHtml(event.sourceSystem || "官方信息源")}</span>
+          <span class="card-source">${escapeHtml(event.sourceSystem || "官方信息源")}</span>
+          ${signupAction}
         </div>
       </div>
     </article>
@@ -410,12 +434,13 @@ function renderCard(event) {
 }
 
 function renderCompactPastCard(event) {
+  const liveStatus = statusForEvent(event);
   return `
-    <article class="event-card past-compact" data-id="${escapeHtml(event.id)}" style="--accent:${safeColor(event.color)}">
+    <article class="event-card past-compact" data-id="${escapeHtml(event.id)}" style="--accent:${safeColor(event.color)}" role="button" tabindex="0" aria-label="查看 ${escapeHtml(event.name)}">
       <div class="card-body">
         <div class="card-topline">
           <span class="category-tag">${escapeHtml(event.categoryLabel)}</span>
-          <span class="status ${safeClassToken(event.statusCode)}">${escapeHtml(event.statusLabel)}</span>
+          <span class="status ${safeClassToken(liveStatus.code)}">${escapeHtml(liveStatus.label)}</span>
         </div>
         <h4>${escapeHtml(event.name)}</h4>
         <p>${escapeHtml(eventRange(event))} · ${escapeHtml(event.location)}</p>
@@ -424,12 +449,27 @@ function renderCompactPastCard(event) {
   `;
 }
 
-function selectEvent(id) {
+function usesDetailHistory() {
+  return window.matchMedia("(max-width: 1180px)").matches;
+}
+
+function selectEvent(id, { pushHistory = true } = {}) {
   const event = state.events.find((item) => item.id === id);
   if (!event) return;
   state.selected = event;
+  if (pushHistory && usesDetailHistory() && history.state?.golfEventId !== id) {
+    history.pushState({ golfEventDetail: true, golfEventId: id }, "", `#event=${encodeURIComponent(id)}`);
+  }
   renderTimeline();
   renderDetail(event);
+}
+
+function closeDetailPanel() {
+  state.selected = null;
+  els.detailPanel.classList.remove("is-open");
+  els.emptyDetail.hidden = false;
+  els.detailContent.hidden = true;
+  renderTimeline();
 }
 
 function renderDetail(event) {
@@ -547,12 +587,43 @@ els.sortSelect.addEventListener("change", (event) => {
   applyFilters();
 });
 
+els.directOnly.addEventListener("change", (event) => {
+  state.directOnly = event.target.checked;
+  applyFilters();
+});
+
 els.closeDetail.addEventListener("click", () => {
-  state.selected = null;
-  els.detailPanel.classList.remove("is-open");
-  els.emptyDetail.hidden = false;
-  els.detailContent.hidden = true;
-  renderTimeline();
+  if (usesDetailHistory() && history.state?.golfEventDetail) {
+    history.back();
+    return;
+  }
+  closeDetailPanel();
+});
+
+window.addEventListener("popstate", (event) => {
+  if (event.state?.golfEventDetail && event.state.golfEventId) {
+    selectEvent(event.state.golfEventId, { pushHistory: false });
+    return;
+  }
+  closeDetailPanel();
+});
+
+function setFiltersOpen(open) {
+  document.body.classList.toggle("filters-open", open);
+  els.filterToggle.setAttribute("aria-expanded", String(open));
+  els.filterToggle.textContent = open ? "收起" : "筛选";
+}
+
+els.filterToggle.addEventListener("click", () => {
+  setFiltersOpen(!document.body.classList.contains("filters-open"));
+});
+
+els.categoryFilters.addEventListener("click", () => {
+  if (window.matchMedia("(max-width: 760px)").matches) setFiltersOpen(false);
+});
+
+els.statusFilters.addEventListener("click", () => {
+  if (window.matchMedia("(max-width: 760px)").matches) setFiltersOpen(false);
 });
 
 els.refreshButton.addEventListener("click", async () => {

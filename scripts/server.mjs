@@ -14,6 +14,7 @@ const staleMs = 23 * 60 * 60 * 1000;
 const publicPaths = new Set([
   "/index.html",
   "/app.js",
+  "/event-logic.js",
   "/styles.css",
   "/manifest.webmanifest",
   "/icon.svg",

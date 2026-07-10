@@ -23,28 +23,31 @@
           </div>
         </div>
 
-        <section class="filter-block">
-          <h2>分类</h2>
-          <div class="segmented" id="categoryFilters">
-            <button class="is-active" data-category="all">全部</button>
-            <button data-category="women">女子</button>
-            <button data-category="women_development">起点</button>
-            <button data-category="amateur">业余</button>
-            <button data-category="junior">青少年</button>
-          </div>
-        </section>
+        <button id="filterToggle" class="filter-toggle" aria-expanded="false" aria-controls="sidebarControls">筛选</button>
+        <div class="sidebar-controls" id="sidebarControls">
+          <section class="filter-block">
+            <h2>分类</h2>
+            <div class="segmented" id="categoryFilters">
+              <button class="is-active" data-category="all">全部</button>
+              <button data-category="women">女子</button>
+              <button data-category="women_development">起点</button>
+              <button data-category="amateur">业余</button>
+              <button data-category="junior">青少年</button>
+            </div>
+          </section>
 
-        <section class="filter-block">
-          <h2>状态</h2>
-          <div class="segmented compact" id="statusFilters">
-            <button class="is-active" data-status="all">全部</button>
-            <button data-status="future">未来</button>
-            <button data-status="open">可报名</button>
-            <button data-status="deadline">有截止</button>
-          </div>
-        </section>
+          <section class="filter-block">
+            <h2>状态</h2>
+            <div class="segmented compact" id="statusFilters">
+              <button class="is-active" data-status="all">全部</button>
+              <button data-status="future">未来</button>
+              <button data-status="open">可报名</button>
+              <button data-status="deadline">有截止</button>
+            </div>
+          </section>
 
-        <button id="refreshButton" class="refresh-button">更新官方数据</button>
+          <button id="refreshButton" class="refresh-button">更新官方数据</button>
+        </div>
       </aside>
 
       <main class="main-panel">
@@ -74,6 +77,10 @@
               <option value="asc">日期从早到晚</option>
               <option value="desc">日期从晚到早</option>
             </select>
+            <label class="direct-only-filter">
+              <input id="directOnly" type="checkbox">
+              <span>有报名入口</span>
+            </label>
           </div>
         </div>
         <section class="alerts-panel" id="alertsPanel" aria-label="重点提醒"></section>
