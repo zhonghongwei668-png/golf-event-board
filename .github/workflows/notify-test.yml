@@ -2,6 +2,9 @@ name: Test DingTalk notification
 
 on:
   workflow_dispatch:
+  push:
+    tags:
+      - "dingtalk-test-*"
 
 jobs:
   notify-test:
