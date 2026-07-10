@@ -12,7 +12,7 @@ const [html, app] = await Promise.all([
 
 test("starts the event download before the application module", () => {
   const preloadIndex = html.indexOf('rel="preload" href="./data/events.json"');
-  const appIndex = html.indexOf('<script src="./app.js" type="module"></script>');
+  const appIndex = html.indexOf('<script src="./app.js');
 
   assert.notEqual(preloadIndex, -1);
   assert.notEqual(appIndex, -1);

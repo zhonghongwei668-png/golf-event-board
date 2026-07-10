@@ -129,6 +129,14 @@ function isRegistrationOpen(event) {
   return isRegistrationOpenAt(event);
 }
 
+function displayStatus(event) {
+  const status = statusForEvent(event);
+  if (status.code === "watch" && !event.signupUrl) {
+    return { ...status, label: "入口待发布" };
+  }
+  return status;
+}
+
 function daysUntil(dateText) {
   if (!dateText) return null;
   const date = new Date(`${dateText.slice(0, 10)}T23:59:59+08:00`);
@@ -444,7 +452,7 @@ function renderTimeline() {
 }
 
 function renderCard(event) {
-  const liveStatus = statusForEvent(event);
+  const liveStatus = displayStatus(event);
   const countdown = deadlineCountdown(event);
   const deadline = event.registrationEnd
     ? `<span>报名至 ${escapeHtml(event.registrationEnd)}${countdown ? ` · ${escapeHtml(countdown)}` : ""}</span>`
@@ -530,14 +538,20 @@ function renderDetail(event) {
     ["数据来源", event.sourceSystem || "官方网页"]
   ].map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("");
 
-  const sourceLinks = (event.sourceLinks || []).map((link) => linkButton(link.label || "官方信息", link.url)).join("");
+  const primaryUrl = event.signupUrl || event.sourceUrl || event.sourceLinks?.[0]?.url || "";
+  const safePrimaryUrl = safeUrl(primaryUrl);
+  const sourceLinks = (event.sourceLinks || [])
+    .filter((link) => safeUrl(link.url) !== safePrimaryUrl)
+    .map((link) => linkButton(link.label || "官方信息", link.url))
+    .join("");
   els.detailActions.innerHTML = [
+    linkButton(event.signupUrl ? "报名入口" : "查看官方公告", primaryUrl, "primary"),
     sourceLinks,
-    linkButton("报名入口", event.signupUrl, "primary")
   ].join("");
   renderDetailAppLinks(event);
 
-  els.detailSignup.textContent = event.signupMethod || event.registrationText || "以官方报名入口实时显示为准。";
+  const signupText = event.signupMethod || event.registrationText || "以赛事主办方最新通知为准。";
+  els.detailSignup.textContent = event.signupUrl ? signupText : `尚未发现可验证的公开报名入口。${signupText}`;
   els.detailRequirement.textContent = event.requirement || "以赛事单项规程和补充通知为准。";
   const previewUrl = safeUrl(event.sourceUrl || event.sourceLinks?.[0]?.url || event.signupUrl);
   els.previewOpen.href = previewUrl || "#";

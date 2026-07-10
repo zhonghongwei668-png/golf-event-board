@@ -22,6 +22,16 @@
       "instruction": "用于差点、会员和资格证明；报名仍以赛事指定入口为准。"
     },
     {
+      "id": "wechat-hsbc-junior",
+      "name": "汇丰中国青少年高尔夫",
+      "match": ["汇丰", "HSBC"],
+      "type": "官网/公众号",
+      "webUrl": "https://www.business.hsbc.com.cn/zh-cn/campaigns/hsbc-golf/hsbc-china-junior-golf",
+      "openUrl": "weixin://",
+      "wechat": "汇丰中国 / 汇丰青少年高尔夫相关官方发布",
+      "instruction": "尚无公开直达报名页时，优先查看中高协单项通知，并在微信官方渠道核对报名开放、资格和补录。"
+    },
+    {
       "id": "wechat-rugolf",
       "name": "如歌高尔夫赛事",
       "match": ["如歌高尔夫", "如歌高尔夫赛事", "如歌"],
