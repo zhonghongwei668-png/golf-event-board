@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-10T08:54:55.504Z",
+  "generatedAt": "2026-07-10T09:55:28.646Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -3290,7 +3290,7 @@
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
-      "name": "2026 U.S. Kids Golf China 上海秋季系列赛",
+      "name": "2026 U.S. Kids Golf China 上海秋季系列赛（一二）",
       "startDate": "2026-08-15",
       "endDate": "2026-08-16",
       "location": "上海协和高尔夫俱乐部",
@@ -3507,6 +3507,78 @@
       "notes": ""
     },
     {
+      "id": "dazheng-5057",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "NSP-2026青少年高尔夫嘉年华挑战赛山东赛区第六站-青岛华山站（亲子/师徒赛+个人赛+团队赛）",
+      "startDate": "2026-08-21",
+      "endDate": "2026-08-21",
+      "location": "山东青岛华山国际高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5057",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5057"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5057",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-01 至 2026-08-20。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-07-01",
+      "registrationEnd": "2026-08-20",
+      "registrationText": "2026年07月01日 ~ 08月20日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-嘉年华挑战赛",
+      "externalIds": {
+        "dazheng": "5057"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5076",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "NSP-2026青少年高尔夫嘉年华挑战赛深圳赛区第五站-惠州候鸟站（亲子/师徒/好朋友配对赛+个人赛+团队赛）",
+      "startDate": "2026-08-21",
+      "endDate": "2026-08-21",
+      "location": "惠州候鸟高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5076",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5076"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5076",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-10 至 2026-08-20。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-07-10",
+      "registrationEnd": "2026-08-20",
+      "registrationText": "2026年07月10日 ~ 08月20日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-嘉年华挑战赛",
+      "externalIds": {
+        "dazheng": "5076"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "dazheng-5056",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -3647,42 +3719,6 @@
       "seriesLabel": "青少赛-大正高尔夫",
       "externalIds": {
         "dazheng": "5072"
-      },
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "dazheng-5057",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "NSP-2026青少年高尔夫嘉年华挑战赛山东赛区第六站-青岛华山站（亲子/师徒赛+个人赛+团队赛）",
-      "startDate": "2026-08-24",
-      "endDate": "2026-08-24",
-      "location": "山东青岛华山国际高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5057",
-      "sourceLinks": [
-        {
-          "label": "大正赛事详情",
-          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5057"
-        }
-      ],
-      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5057",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-01 至 2026-08-23。",
-      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
-      "registrationStart": "2026-07-01",
-      "registrationEnd": "2026-08-23",
-      "registrationText": "2026年07月01日 ~ 08月23日",
-      "registrationOpen": true,
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": true,
-      "statusCode": "open",
-      "statusLabel": "可报名",
-      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
-      "scheduleAuthority": "signup_detail",
-      "seriesLabel": "青少赛-嘉年华挑战赛",
-      "externalIds": {
-        "dazheng": "5057"
       },
       "updatedFromOfficial": true,
       "notes": ""
