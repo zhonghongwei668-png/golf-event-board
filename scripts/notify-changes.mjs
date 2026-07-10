@@ -60,9 +60,28 @@ function formatPriorityOpenEvent(event) {
   return `- **【重点】新开放报名｜${formatDateRange(event)}｜${event.name}${deadline}${signup}**`;
 }
 
-function formatOpenDigestEvent(event) {
-  const deadline = event.registrationEnd ? `，报名截止 ${event.registrationEnd}` : "";
-  return `- ${formatDateRange(event)}｜${event.name}${deadline}`;
+function compactDate(value = "") {
+  const match = String(value).match(/^\d{4}-(\d{2})-(\d{2})(?:\s+(\d{1,2}:\d{2}))?/);
+  if (!match) return value || "—";
+  const date = `${Number(match[1])}/${Number(match[2])}`;
+  return match[3] ? `${date} ${match[3]}` : date;
+}
+
+function compactDateRange(event) {
+  if (!event.startDate) return "待定";
+  const start = compactDate(event.startDate);
+  if (!event.endDate || event.endDate === event.startDate) return start;
+  return `${start}–${compactDate(event.endDate)}`;
+}
+
+function compactTableText(value = "", maxLength = 24) {
+  const text = String(value).replaceAll("|", "｜").replace(/\s+/g, " ").trim();
+  const characters = [...text];
+  return characters.length > maxLength ? `${characters.slice(0, maxLength - 1).join("")}…` : text;
+}
+
+function formatOpenDigestRow(event) {
+  return `| ${compactDateRange(event)} | ${compactTableText(event.name)} | ${compactDate(event.registrationEnd)} |`;
 }
 
 function isOpenRegistration(event) {
@@ -163,13 +182,13 @@ function buildMarkdown(diff, currentPayload) {
   ].join("\n");
 }
 
-function buildOpenRegistrationDigest(currentPayload) {
+export function buildOpenRegistrationDigest(currentPayload) {
   const events = (currentPayload?.events || [])
     .filter((event) => isRegistrationOpenAt(event))
     .sort((a, b) => {
-      const ad = a.registrationEnd || a.startDate || "9999-12-31";
-      const bd = b.registrationEnd || b.startDate || "9999-12-31";
-      return ad.localeCompare(bd) || (a.startDate || "").localeCompare(b.startDate || "") || a.name.localeCompare(b.name, "zh-CN");
+      const ad = a.startDate || "9999-12-31";
+      const bd = b.startDate || "9999-12-31";
+      return ad.localeCompare(bd) || (a.endDate || ad).localeCompare(b.endDate || bd) || a.name.localeCompare(b.name, "zh-CN");
     });
 
   const generatedAt = currentPayload?.generatedAt
@@ -177,19 +196,21 @@ function buildOpenRegistrationDigest(currentPayload) {
     : new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" });
   const checkedAt = new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" });
 
-  const eventLines = events.length
-    ? events.map(formatOpenDigestEvent).join("\n")
-    : "- 当前没有状态为“可报名”的赛事。";
+  const eventTable = events.length
+    ? [
+        "| 比赛日期 | 赛事名称 | 报名截止 |",
+        "| --- | --- | --- |",
+        ...events.map(formatOpenDigestRow),
+      ].join("\n")
+    : "当前没有状态为“可报名”的赛事。";
 
   return [
-    "### 当前可报名赛事清单",
-    `检测时间：${checkedAt}`,
-    `数据更新时间：${generatedAt}`,
-    `可报名赛事：${events.length} 场`,
+    `### 可报名赛事一览（${events.length}场）`,
+    `检测：${checkedAt}｜数据更新：${generatedAt}`,
     "",
-    eventLines,
+    eventTable,
     "",
-    `[打开赛事日历](${siteUrl})`,
+    `[查看完整名称、资格要求和报名入口](${siteUrl})`,
   ].join("\n");
 }
 
@@ -367,7 +388,11 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  if (strictFailure) process.exitCode = 1;
-});
+const isDirectExecution = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (isDirectExecution) {
+  main().catch((error) => {
+    console.error(error);
+    if (strictFailure) process.exitCode = 1;
+  });
+}

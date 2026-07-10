@@ -12,6 +12,8 @@
 
 GitHub Actions 已接入赛事变化通知。每次自动更新后，如果发现新增赛事、报名状态变为可报名、报名截止/比赛日期/入口变化，会向已配置的机器人推送摘要。
 
+正式的“当前可报名赛事”推送采用 `比赛日期 / 赛事名称 / 报名截止` 三列一览表，按比赛开始日期从近到远排列；长名称会在消息里缩略，完整信息通过底部赛历链接查看。
+
 在 GitHub 仓库 `Settings -> Secrets and variables -> Actions -> New repository secret` 添加以下任一配置即可启用：
 
 - `DINGTALK_WEBHOOK`：钉钉群自定义机器人 Webhook。
