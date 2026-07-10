@@ -179,12 +179,19 @@ async function fetchData() {
     }
   }
   state.hasLiveApi = false;
-  return fetch("./data/events.json", { cache: "default", credentials: "omit" });
+  return fetch(dataUrl("events.json"), { cache: "no-store", credentials: "omit" });
+}
+
+const GITHUB_DATA_BASE = "https://zhonghongwei668-png.github.io/golf-event-board/data";
+
+function dataUrl(fileName) {
+  const isSitesDeployment = window.location.hostname.endsWith(".chatgpt.site");
+  return isSitesDeployment ? `${GITHUB_DATA_BASE}/${fileName}` : `./data/${fileName}`;
 }
 
 async function fetchSources() {
   try {
-    const response = await fetch("./data/sources.json", { cache: "default", credentials: "omit" });
+    const response = await fetch(dataUrl("sources.json"), { cache: "no-store", credentials: "omit" });
     if (!response.ok) return [];
     const payload = await response.json();
     return payload.sources || [];
@@ -195,7 +202,7 @@ async function fetchSources() {
 
 async function fetchAppLinks() {
   try {
-    const response = await fetch("./data/app-links.json", { cache: "default", credentials: "omit" });
+    const response = await fetch(dataUrl("app-links.json"), { cache: "no-store", credentials: "omit" });
     if (!response.ok) return [];
     const payload = await response.json();
     return payload.apps || [];

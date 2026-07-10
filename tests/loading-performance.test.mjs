@@ -34,3 +34,9 @@ test("keeps a successful event payload for an immediate repeat visit", () => {
   assert.match(app, /localStorage\.setItem\(EVENT_CACHE_KEY/);
   assert.match(app, /if \(cached\) renderPrimaryData\(cached, "cache"\)/);
 });
+
+test("Sites deployment reads automatically updated GitHub Pages data", () => {
+  assert.match(app, /zhonghongwei668-png\.github\.io\/golf-event-board\/data/);
+  assert.match(app, /window\.location\.hostname\.endsWith\("\.chatgpt\.site"\)/);
+  assert.match(app, /fetch\(dataUrl\("events\.json"\), \{ cache: "no-store"/);
+});
