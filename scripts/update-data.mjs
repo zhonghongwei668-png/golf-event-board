@@ -12,6 +12,10 @@ import {
   dazhengEventIdFromEvent,
   fetchDazhengEvents
 } from "./lib/dazheng-source.mjs";
+import {
+  DAZHENG_ANNOUNCEMENT_URL,
+  fetchDazhengAnnouncements
+} from "./lib/dazheng-announcement-source.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -483,6 +487,13 @@ async function main() {
     throw new Error(`赛事数据校验失败:\n- ${validationErrors.join("\n- ")}`);
   }
 
+  let announcements = previousPayload?.announcements || [];
+  try {
+    announcements = await fetchDazhengAnnouncements(events);
+  } catch (error) {
+    errors.push(`大正官方公告: ${error.message}`);
+  }
+
   const nextPayload = {
     generatedAt: "",
     year: YEAR,
@@ -492,11 +503,13 @@ async function main() {
       cgaAmateur: "https://www.cgagolf.org.cn/game_spare.html",
       cgaJunior: "https://www.cgagolf.org.cn/game_young.html",
       cgaMember: "https://member.cgagolf.org.cn/index",
-      dazheng: "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list"
+      dazheng: "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
+      dazhengAnnouncements: DAZHENG_ANNOUNCEMENT_URL
     },
     warnings: errors,
     categories: CATEGORY_META,
-    events
+    events,
+    announcements
   };
 
   const payload = {

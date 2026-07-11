@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T14:24:57.992Z",
+  "generatedAt": "2026-07-11T15:52:40.497Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -7,7 +7,8 @@
     "cgaAmateur": "https://www.cgagolf.org.cn/game_spare.html",
     "cgaJunior": "https://www.cgagolf.org.cn/game_young.html",
     "cgaMember": "https://member.cgagolf.org.cn/index",
-    "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list"
+    "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
+    "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
   "warnings": [],
   "categories": {
@@ -5012,6 +5013,30 @@
       "externalIds": {},
       "updatedFromOfficial": false,
       "notes": ""
+    }
+  ],
+  "announcements": [
+    {
+      "id": "dazheng-announcement-45003",
+      "sourceId": "45003",
+      "title": "第26届尤尼克斯“张连伟”杯国际青少年高尔夫球邀请赛明日12:00开启",
+      "publishedAt": "2026-07-09 09:11",
+      "kind": "open",
+      "source": "大正高尔夫官方公告",
+      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=45003",
+      "matchedEventIds": [
+        "dazheng-5069"
+      ]
+    },
+    {
+      "id": "dazheng-announcement-44946",
+      "sourceId": "44946",
+      "title": "倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！",
+      "publishedAt": "2026-06-11 17:36",
+      "kind": "deadline",
+      "source": "大正高尔夫官方公告",
+      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946",
+      "matchedEventIds": []
     }
   ]
 }

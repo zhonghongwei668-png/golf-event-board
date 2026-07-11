@@ -141,6 +141,26 @@ function diffEvents(previousPayload, currentPayload) {
   return { added, opened, priorityOpen, changed, removed };
 }
 
+export function diffDazhengAnnouncements(previousPayload, currentPayload) {
+  if (!Array.isArray(previousPayload?.announcements)) return [];
+  const previousIds = new Set(previousPayload.announcements.map((item) => item.id));
+  return (currentPayload?.announcements || []).filter((item) => !previousIds.has(item.id));
+}
+
+function announcementLabel(kind) {
+  if (kind === "open") return "报名开放";
+  if (kind === "deadline") return "报名截止提醒";
+  if (kind === "supplemental") return "补录/名额";
+  return "赛事公告";
+}
+
+function formatAnnouncement(announcement, currentPayload) {
+  const eventsById = new Map((currentPayload?.events || []).map((event) => [event.id, event]));
+  const matched = (announcement.matchedEventIds || []).map((id) => eventsById.get(id)).find(Boolean);
+  const signup = matched?.signupUrl ? `｜[报名入口](${matched.signupUrl})` : "";
+  return `- **【${announcementLabel(announcement.kind)}】${announcement.title}**｜${announcement.publishedAt}${signup}｜[官方公告](${announcement.url})`;
+}
+
 function topItems(items, formatter, limit = 8) {
   const visible = items.slice(0, limit).map(formatter);
   if (items.length > limit) visible.push(`- 另有 ${items.length - limit} 条，打开赛历查看`);
@@ -152,6 +172,10 @@ function buildMarkdown(diff, currentPayload) {
   const priorityOpenKeys = new Set((diff.priorityOpen || []).map(eventKey));
   const regularAdded = diff.added.filter((event) => !priorityOpenKeys.has(eventKey(event)));
   const regularChanged = diff.changed.filter(({ event }) => !priorityOpenKeys.has(eventKey(event)));
+
+  if (diff.announcements?.length) {
+    sections.push(`**【重点】大正 App 官方公告 ${diff.announcements.length} 条**\n${topItems(diff.announcements, (item) => formatAnnouncement(item, currentPayload), 10)}`);
+  }
 
   if (diff.priorityOpen?.length) {
     sections.push(`**【重点】新开放报名 ${diff.priorityOpen.length} 场**\n${topItems(diff.priorityOpen, formatPriorityOpenEvent, 10)}`);
@@ -180,6 +204,12 @@ function buildMarkdown(diff, currentPayload) {
     "",
     `[打开赛事日历](${siteUrl})`,
   ].join("\n");
+}
+
+export function buildChangeNotification(previousPayload, currentPayload) {
+  const diff = diffEvents(previousPayload, currentPayload);
+  diff.announcements = diffDazhengAnnouncements(previousPayload, currentPayload);
+  return buildMarkdown(diff, currentPayload);
 }
 
 export function buildOpenRegistrationDigest(currentPayload) {
@@ -383,8 +413,7 @@ async function main() {
     return;
   }
 
-  const diff = diffEvents(previousPayload, currentPayload);
-  const markdown = buildMarkdown(diff, currentPayload);
+  const markdown = buildChangeNotification(previousPayload, currentPayload);
   if (!markdown) {
     console.log("No event changes worth notifying.");
     return;
