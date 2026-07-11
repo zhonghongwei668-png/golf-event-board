@@ -53,15 +53,29 @@ jobs:
       - name: Detect event changes
         id: event_changes
         run: |
+          working_changed=false
           if ! git diff --quiet data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json; then
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=false" >> "$GITHUB_OUTPUT"
+            working_changed=true
           fi
 
+          notify_base=HEAD
+          notify_changed="$working_changed"
+          if [ "$GITHUB_EVENT_NAME" = "push" ] && [ -n "$EVENT_BEFORE" ] && ! echo "$EVENT_BEFORE" | grep -Eq '^0+$'; then
+            notify_base="$EVENT_BEFORE"
+            if ! git diff --quiet "$EVENT_BEFORE" HEAD -- data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json; then
+              notify_changed=true
+            fi
+          fi
+
+          echo "working_changed=$working_changed" >> "$GITHUB_OUTPUT"
+          echo "notify_changed=$notify_changed" >> "$GITHUB_OUTPUT"
+          echo "notify_base=$notify_base" >> "$GITHUB_OUTPUT"
+        env:
+          EVENT_BEFORE: ${{ github.event.before }}
+
       - name: Notify event changes
-        if: steps.event_changes.outputs.changed == 'true'
-        run: npm run notify -- --base HEAD --head working
+        if: steps.event_changes.outputs.notify_changed == 'true'
+        run: npm run notify -- --base "${{ steps.event_changes.outputs.notify_base }}" --head working
         env:
           NOTIFY_STRICT: "1"
           NOTIFY_SITE_URL: https://zhonghongwei668-png.github.io/golf-event-board/
@@ -73,7 +87,7 @@ jobs:
           WEWORK_WEBHOOK: ${{ secrets.WEWORK_WEBHOOK }}
 
       - name: Commit updated data
-        if: steps.event_changes.outputs.changed == 'true'
+        if: steps.event_changes.outputs.working_changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
