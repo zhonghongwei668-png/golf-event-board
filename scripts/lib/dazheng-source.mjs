@@ -89,10 +89,16 @@ function parseCompetitionDescription(value = "") {
 export function parseDazhengDetail(html = "") {
   const title = decodeHtml((html.match(/<div\s+class=["']activity_title["']>([\s\S]*?)<\/div>/i) || [])[1] || "");
   const description = (html.match(/desc:\s*'([^']*)'/i) || [])[1] || "";
-  const registrationOpen = /<input[^>]*name=["']button2["'][^>]*value=["']\s*报\s*名\s*["'][^>]*>/i.test(html);
+  const buttonValue = decodeHtml((html.match(/<input[^>]*name=["']button2["'][^>]*value=["']([^"']*)["'][^>]*>/i) || [])[1] || "");
+  let registrationState = "unknown";
+  if (/^报\s*名$/.test(buttonValue)) registrationState = "open";
+  else if (/未开始|待开放/.test(buttonValue)) registrationState = "pending";
+  else if (/已结束|报名截止|已满/.test(buttonValue)) registrationState = "closed";
   return {
     name: title,
-    registrationOpen,
+    registrationOpen: registrationState === "open",
+    registrationState,
+    registrationButtonText: buttonValue,
     ...parseCompetitionDescription(description)
   };
 }
@@ -135,13 +141,19 @@ export function dazhengEventIdFromEvent(event = {}) {
   return "";
 }
 
-function sourceEvent(entry, detail, registrationOpen = true) {
+function sourceEvent(entry, detail) {
   const name = detail.name || entry.name;
   const { category, seriesLabel } = classifyDazhengEvent(name);
+  const registrationState = detail.registrationState || "unknown";
+  const registrationOpen = registrationState === "open";
+  const registrationClosed = registrationState === "closed";
   const registrationWindow = `${entry.registrationStart || "以页面为准"} 至 ${entry.registrationEnd || "以页面为准"}`;
   const windowConflictsWithEvent = Boolean(
     entry.registrationEnd && detail.endDate && entry.registrationEnd > detail.endDate
   );
+  const registrationMessage = registrationOpen
+    ? "大正高尔夫公开报名页当前显示可报名"
+    : registrationClosed ? "大正高尔夫赛事详情显示报名已结束" : "大正高尔夫赛事详情显示待开放";
   return {
     id: `dazheng-${entry.eventId}`,
     category,
@@ -152,13 +164,13 @@ function sourceEvent(entry, detail, registrationOpen = true) {
     sourceUrl: entry.detailUrl,
     sourceLinks: [{ label: "大正赛事详情", url: entry.detailUrl }],
     signupUrl: entry.detailUrl,
-    signupMethod: `大正高尔夫公开报名页${registrationOpen ? "当前显示可报名" : "已不在当前报名列表"}；平台展示报名期 ${registrationWindow}${windowConflictsWithEvent ? "，该日期晚于单场赛期，截止以详情实时状态为准" : ""}。`,
+    signupMethod: `${registrationMessage}；平台展示报名期 ${registrationWindow}${windowConflictsWithEvent ? "，该日期晚于单场赛期，截止以详情实时状态为准" : ""}。`,
     registrationText: entry.registrationText,
     requirement: "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
     registrationStart: entry.registrationStart,
     registrationEnd: windowConflictsWithEvent ? "" : entry.registrationEnd,
     registrationOpen,
-    registrationClosed: !registrationOpen,
+    registrationClosed,
     registrationStatusAuthoritative: true,
     sourceSystem: `大正高尔夫 · ${seriesLabel}`,
     scheduleAuthority: "signup_detail",
@@ -206,59 +218,83 @@ export async function fetchDazhengEvents(previousEvents = [], options = {}) {
     if (id) previousById.set(id, event);
   }
 
-  const activeIds = new Set(entries.map((entry) => entry.eventId));
+  const listedIds = new Set(entries.map((entry) => entry.eventId));
+  const monitoredEntries = [...entries];
+  const preservedPast = [];
+  const today = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Shanghai",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(options.now || new Date());
+  for (const [eventId, previous] of previousById) {
+    if (listedIds.has(eventId) || !previous.startDate?.startsWith("2026-")) continue;
+    if (previous.endDate && previous.endDate < today) {
+      preservedPast.push(previous);
+      continue;
+    }
+    monitoredEntries.push({
+      eventId,
+      name: previous.name,
+      detailUrl: previous.signupUrl || previous.sourceUrl,
+      registrationText: previous.registrationText || "",
+      registrationStart: previous.registrationStart || "",
+      registrationEnd: previous.registrationEnd || "",
+      previousOnly: true
+    });
+  }
+
   const detailErrors = [];
-  const active = await mapWithConcurrency(entries, options.concurrency || 6, async (entry) => {
+  const monitored = await mapWithConcurrency(monitoredEntries, options.concurrency || 6, async (entry) => {
     const previous = previousById.get(entry.eventId);
-    const canReuse = previous?.startDate && previous.name === entry.name &&
-      previous.registrationStart === entry.registrationStart &&
-      previous.registrationEnd === entry.registrationEnd;
     let detail;
-    if (canReuse) {
+    try {
+      const parsed = parseDazhengDetail(await fetchText(entry.detailUrl, fetchImpl));
+      const previousState = previous?.registrationClosed
+        ? "closed"
+        : previous?.registrationOpen === true ? "open" : "pending";
+      detail = {
+        ...parsed,
+        name: parsed.name || previous?.name || entry.name,
+        startDate: parsed.startDate || previous?.startDate || "",
+        endDate: parsed.endDate || previous?.endDate || previous?.startDate || "",
+        location: parsed.location || previous?.location || "",
+        registrationState: parsed.registrationState === "unknown" ? previousState : parsed.registrationState
+      };
+    } catch (error) {
+      detailErrors.push(`${entry.eventId}: ${error.message}`);
+      if (!previous?.startDate) return null;
       detail = {
         name: previous.name,
         startDate: previous.startDate,
         endDate: previous.endDate,
         location: previous.location,
-        registrationOpen: true
+        registrationOpen: previous.registrationOpen === true,
+        registrationState: previous.registrationClosed
+          ? "closed"
+          : previous.registrationOpen === true ? "open" : "pending"
       };
-    } else {
-      try {
-        detail = parseDazhengDetail(await fetchText(entry.detailUrl, fetchImpl));
-      } catch (error) {
-        detailErrors.push(`${entry.eventId}: ${error.message}`);
-        if (!previous?.startDate) return null;
-        detail = {
-          name: previous.name,
-          startDate: previous.startDate,
-          endDate: previous.endDate,
-          location: previous.location,
-          registrationOpen: true
-        };
-      }
     }
-    const event = sourceEvent(entry, detail, true);
+    let event = sourceEvent(entry, detail);
+    if (entry.previousOnly && previous) {
+      event = {
+        ...previous,
+        signupMethod: event.signupMethod,
+        registrationOpen: event.registrationOpen,
+        registrationClosed: event.registrationClosed,
+        registrationStatusAuthoritative: true,
+        externalIds: { ...(previous.externalIds || {}), dazheng: entry.eventId }
+      };
+    }
     return isEligibleDazhengEvent(event) ? event : null;
   });
 
-  const eligibleActive = active.filter(Boolean);
-  if (!eligibleActive.length) throw new Error("Dazheng details returned no eligible tournaments");
+  const eligible = monitored.filter(Boolean);
+  if (!eligible.length) throw new Error("Dazheng details returned no eligible tournaments");
   if (detailErrors.length) {
     console.warn(`Dazheng detail warnings (${detailErrors.length}):`);
     for (const error of detailErrors) console.warn(`- ${error}`);
   }
 
-  const closed = [];
-  for (const [eventId, previous] of previousById) {
-    if (activeIds.has(eventId) || !previous.startDate?.startsWith("2026-")) continue;
-    closed.push({
-      ...previous,
-      registrationOpen: false,
-      registrationClosed: true,
-      registrationStatusAuthoritative: true,
-      externalIds: { ...(previous.externalIds || {}), dazheng: eventId }
-    });
-  }
-
-  return [...eligibleActive, ...closed];
+  return [...eligible, ...preservedPast];
 }

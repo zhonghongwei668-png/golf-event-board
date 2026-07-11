@@ -61,6 +61,20 @@ test("future registration start remains pending", () => {
   assert.equal(statusForEvent(event, new Date("2026-07-10T08:00:00+08:00")).code, "pending");
 });
 
+test("authoritative pending state beats a conflicting registration date", () => {
+  const event = {
+    startDate: "2026-08-10",
+    endDate: "2026-08-13",
+    registrationStart: "2026-07-01",
+    registrationEnd: "2026-08-01",
+    registrationOpen: false,
+    registrationClosed: false,
+    registrationStatusAuthoritative: true
+  };
+
+  assert.equal(statusForEvent(event, new Date("2026-07-10T08:00:00+08:00")).code, "pending");
+});
+
 test("validation rejects deadline after the event and duplicate IDs", () => {
   const events = [
     {

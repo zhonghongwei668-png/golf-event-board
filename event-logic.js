@@ -36,6 +36,9 @@ export function statusForEvent(event, now = new Date()) {
   if (end && end < today) return { code: "past", label: "已结束" };
   if (start && start <= today && end && end >= today) return { code: "running", label: "比赛中" };
   if (event.registrationClosed === true) return { code: "closed", label: "报名截止" };
+  if (event.registrationStatusAuthoritative && event.registrationOpen === false) {
+    return { code: "pending", label: "待开放" };
+  }
   if (regEnd && regEnd < now) return { code: "closed", label: "报名截止" };
   if (regStart && regStart > now) return { code: "pending", label: "待开放" };
   if (regEnd && regEnd >= now) return { code: "open", label: "可报名" };

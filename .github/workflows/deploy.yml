@@ -6,7 +6,8 @@ on:
       - main
       - master
   schedule:
-    - cron: "0 0-14 * * *"
+    # Offset from the top of the hour to reduce delayed or dropped scheduled runs.
+    - cron: "17 0-14 * * *"
   workflow_dispatch:
     inputs:
       notify_open_digest:

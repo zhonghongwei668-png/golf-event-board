@@ -59,6 +59,16 @@ test("parses competition dates, location, and live signup button from detail", (
   assert.equal(event.location, "天津27人高尔夫俱乐部");
 });
 
+test("distinguishes a pending Dazheng detail from an open registration", () => {
+  const event = parseDazhengDetail(`
+    <div class="activity_title">2026测试青少年系列赛</div>
+    <input name="button2" value="未开始">
+    <script>const share = { desc: '2026年08月15日 上海测试高尔夫球会' };</script>`);
+
+  assert.equal(event.registrationOpen, false);
+  assert.equal(event.registrationState, "pending");
+});
+
 test("classifies user-requested Dazheng series", () => {
   assert.equal(classifyDazhengEvent("NSP-2026青少年高尔夫嘉年华挑战赛").seriesLabel, "青少赛-嘉年华挑战赛");
   assert.equal(classifyDazhengEvent("2026迈阅青少年高尔夫巡回赛").seriesLabel, "青少赛-迈阅巡回赛");
@@ -112,4 +122,35 @@ test("live fetch keeps other events when one detail page fails", async () => {
   } finally {
     console.warn = originalWarn;
   }
+});
+
+test("rechecks a previously seen detail that is absent from the current list", async () => {
+  const list = `
+    <a class="alist" href="/default.php?g=m&m=baoming&a=baoming_detail&event_id=7001">
+      <td class="name">2026测试青少年系列赛第一站</td><td class="time">2026年07月01日 ~ 07月20日</td>
+    </a>`;
+  const openDetail = (id, name) => `
+    <div class="activity_title">${name}</div>
+    <input name="button2" value="报 名">
+    <script>const share = { desc: '2026年08月15日 北京测试高尔夫球会' };</script>`;
+  const previous = [{
+    id: "dazheng-7002",
+    category: "junior",
+    name: "2026测试青少年系列赛第二站",
+    startDate: "2026-08-15",
+    endDate: "2026-08-15",
+    location: "北京测试高尔夫球会",
+    registrationOpen: false,
+    registrationClosed: false,
+    signupUrl: "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=7002",
+    externalIds: { dazheng: "7002" }
+  }];
+  const fetchImpl = async (url) => {
+    if (url.includes("baoming_list")) return new Response(list, { status: 200 });
+    const id = url.includes("7002") ? "7002" : "7001";
+    return new Response(openDetail(id, `2026测试青少年系列赛第${id === "7002" ? "二" : "一"}站`), { status: 200 });
+  };
+
+  const events = await fetchDazhengEvents(previous, { fetchImpl, concurrency: 2 });
+  assert.equal(events.find((event) => event.externalIds.dazheng === "7002").registrationOpen, true);
 });
