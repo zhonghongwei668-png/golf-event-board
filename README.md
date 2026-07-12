@@ -8,6 +8,8 @@
 
 工作流会在北京时间 08:17-22:47 每小时第 17、47 分运行 `npm run update`，检查 CLPGA、中高协公开接口、大正高尔夫公开报名列表和大正官方公告，并更新 `data/events.json`。也可以在 GitHub 的 `Actions -> Update golf event data -> Run workflow` 手动触发。
 
+`ops/watchdog` 是独立的 Cloudflare 定时看门狗：每 10 分钟检查一次，并在北京时间 08:00-23:00 监控 GitHub 最近一次成功运行。超过 35 分钟且当前没有任务执行时主动触发 `workflow_dispatch`；补偿触发失败时向两个钉钉机器人报警。Cloudflare Secret 中需配置 `GITHUB_TOKEN`、两套 `DINGTALK_WEBHOOK`/`DINGTALK_SECRET`。
+
 ## 更新提醒
 
 GitHub Actions 已接入赛事变化通知。每次自动更新后，如果发现新增赛事、报名状态变为可报名、报名截止/比赛日期/入口变化，会向已配置的机器人推送摘要。

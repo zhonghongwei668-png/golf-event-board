@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "golf-event-board-watchdog",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-07-12",
+  "triggers": {
+    "crons": ["*/10 * * * *"]
+  },
+  "vars": {
+    "STALE_MINUTES": "35"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
