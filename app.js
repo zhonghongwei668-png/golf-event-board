@@ -1,4 +1,6 @@
 import {
+  compareEventLevel,
+  eventLevelInfo,
   isRegistrationOpenAt,
   parseShanghaiDateTime,
   statusForEvent
@@ -14,7 +16,7 @@ const state = {
   category: "all",
   status: "all",
   month: "all",
-  sort: "asc",
+  sort: "level",
   search: "",
   directOnly: false,
   hasLiveApi: false
@@ -396,7 +398,11 @@ function applyFilters() {
   state.filtered.sort((a, b) => {
     const left = a.startDate || "9999-12-31";
     const right = b.startDate || "9999-12-31";
-    return state.sort === "asc" ? left.localeCompare(right) : right.localeCompare(left);
+    if (state.sort === "level") {
+      return compareEventLevel(a, b) || left.localeCompare(right) || a.name.localeCompare(b.name, "zh-CN");
+    }
+    const dateOrder = state.sort === "asc" ? left.localeCompare(right) : right.localeCompare(left);
+    return dateOrder || compareEventLevel(a, b) || a.name.localeCompare(b.name, "zh-CN");
   });
 
   renderTimeline();
@@ -404,7 +410,8 @@ function applyFilters() {
 }
 
 function renderTimeline() {
-  els.resultTitle.textContent = `${state.filtered.length} 场赛事`;
+  const sortLabel = state.sort === "level" ? "按赛事等级" : "按比赛日期";
+  els.resultTitle.textContent = `${sortLabel} · ${state.filtered.length} 场`;
   if (!state.filtered.length) {
     els.timeline.innerHTML = `<div class="empty-list">没有符合条件的赛事</div>`;
     return;
@@ -414,7 +421,7 @@ function renderTimeline() {
   const pastEvents = state.filtered.filter((event) => !isFuture(event));
   const groups = new Map();
   for (const event of activeEvents) {
-    const key = monthKey(event);
+    const key = state.sort === "level" ? eventLevelInfo(event).code : monthKey(event);
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(event);
   }
@@ -422,7 +429,9 @@ function renderTimeline() {
   const activeHtml = activeEvents.length ? [...groups.entries()].map(([key, events]) => `
     <section class="month-group">
       <div class="month-heading">
-        <h3>${escapeHtml(monthLabel(key))}</h3>
+        <h3>${escapeHtml(state.sort === "level"
+          ? `${eventLevelInfo(events[0]).label} · ${eventLevelInfo(events[0]).description}`
+          : monthLabel(key))}</h3>
         <span>${escapeHtml(events.length)} 场</span>
       </div>
       <div class="event-grid">
@@ -460,6 +469,7 @@ function renderTimeline() {
 
 function renderCard(event) {
   const liveStatus = displayStatus(event);
+  const level = eventLevelInfo(event);
   const countdown = deadlineCountdown(event);
   const deadline = event.registrationEnd
     ? `<span>报名至 ${escapeHtml(event.registrationEnd)}${countdown ? ` · ${escapeHtml(countdown)}` : ""}</span>`
@@ -476,6 +486,7 @@ function renderCard(event) {
       </div>
       <div class="card-body">
         <div class="card-topline">
+          <span class="level-tag level-${safeClassToken(level.code.toLowerCase())}" title="${escapeHtml(level.description)}">${escapeHtml(level.label)}</span>
           <span class="category-tag">${escapeHtml(event.categoryLabel)}</span>
           <span class="status ${safeClassToken(liveStatus.code)}">${escapeHtml(liveStatus.label)}</span>
         </div>
@@ -493,10 +504,12 @@ function renderCard(event) {
 
 function renderCompactPastCard(event) {
   const liveStatus = statusForEvent(event);
+  const level = eventLevelInfo(event);
   return `
     <article class="event-card past-compact" data-id="${escapeHtml(event.id)}" style="--accent:${safeColor(event.color)}" role="button" tabindex="0" aria-label="查看 ${escapeHtml(event.name)}">
       <div class="card-body">
         <div class="card-topline">
+          <span class="level-tag level-${safeClassToken(level.code.toLowerCase())}">${escapeHtml(level.label)}</span>
           <span class="category-tag">${escapeHtml(event.categoryLabel)}</span>
           <span class="status ${safeClassToken(liveStatus.code)}">${escapeHtml(liveStatus.label)}</span>
         </div>
@@ -531,6 +544,7 @@ function closeDetailPanel() {
 }
 
 function renderDetail(event) {
+  const level = eventLevelInfo(event);
   els.detailPanel.classList.add("is-open");
   els.emptyDetail.hidden = true;
   els.detailContent.hidden = false;
@@ -538,6 +552,7 @@ function renderDetail(event) {
   els.detailCategory.style.backgroundColor = safeColor(event.color);
   els.detailName.textContent = event.name;
   els.detailMeta.innerHTML = [
+    ["赛事等级", `${level.label} · ${level.description}`],
     ["比赛时间", eventRange(event)],
     ["报名时间", event.registrationStart || event.registrationEnd ? `${event.registrationStart || "即日起"} - ${event.registrationEnd || "以公告为准"}` : "以单项公告/报名平台为准"],
     ["比赛地点", event.location],

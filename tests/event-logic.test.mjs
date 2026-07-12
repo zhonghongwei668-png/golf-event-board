@@ -2,10 +2,24 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   chooseSchedule,
+  compareEventLevel,
+  eventLevelInfo,
   isRegistrationOpenAt,
   statusForEvent,
   validateEvents
 } from "../event-logic.js";
+
+test("classifies and sorts events by competition level", () => {
+  const events = [
+    { name: "周末亲子挑战赛", category: "junior", startDate: "2026-07-01" },
+    { name: "区域青少年系列赛", category: "junior", startDate: "2026-07-02" },
+    { name: "WAGR全国青少年公开赛", category: "junior", startDate: "2026-07-03" },
+    { name: "中国女子职业高尔夫球巡回赛", category: "women", startDate: "2026-07-04" }
+  ];
+
+  assert.deepEqual(events.map((event) => eventLevelInfo(event).code), ["C", "B", "A", "S"]);
+  assert.deepEqual(events.sort(compareEventLevel).map((event) => eventLevelInfo(event).code), ["S", "A", "B", "C"]);
+});
 
 test("single-event regulation schedule beats annual calendar API", () => {
   const schedule = chooseSchedule(

@@ -8,6 +8,44 @@ const AUTHORITY_RANK = {
   regulation: 400
 };
 
+const EVENT_LEVELS = {
+  S: { code: "S", rank: 400, label: "S级", description: "职业 / 国家顶级" },
+  A: { code: "A", rank: 300, label: "A级", description: "全国 / 重点积分" },
+  B: { code: "B", rank: 200, label: "B级", description: "区域 / 系列巡回" },
+  C: { code: "C", rank: 100, label: "C级", description: "俱乐部 / 普及赛事" }
+};
+
+export function eventLevelInfo(event = {}) {
+  const explicit = String(event.eventLevel || "").toUpperCase();
+  if (EVENT_LEVELS[explicit]) return EVENT_LEVELS[explicit];
+
+  const name = String(event.name || "");
+  const series = String(event.seriesLabel || "");
+  const source = String(event.sourceSystem || "");
+  const text = `${name} ${series} ${source}`;
+
+  if (
+    event.category === "women" ||
+    /CLPGA|女子职业|中国巡回赛|中巡赛/i.test(text) ||
+    /全国[^赛]*(锦标赛|冠军赛)|中国[^赛]*(公开赛|冠军赛)/i.test(name)
+  ) return EVENT_LEVELS.S;
+
+  if (
+    /全国|WAGR|JGS|CJGT|汇丰|斐乐|FILA|精英赛|公开赛|锦标赛|冠军赛/i.test(text) ||
+    /中高协/.test(source)
+  ) return EVENT_LEVELS.A;
+
+  if (/巡回赛|系列赛|邀请赛|地区|赛区|省高协|市高协|北京高协|高尔夫球协会/i.test(text)) {
+    return EVENT_LEVELS.B;
+  }
+
+  return EVENT_LEVELS.C;
+}
+
+export function compareEventLevel(a = {}, b = {}) {
+  return eventLevelInfo(b).rank - eventLevelInfo(a).rank;
+}
+
 export function parseShanghaiDateTime(value, endOfDay = false) {
   if (!value) return null;
   const text = String(value).trim().replace(" ", "T");
@@ -36,6 +74,9 @@ export function statusForEvent(event, now = new Date()) {
   if (end && end < today) return { code: "past", label: "已结束" };
   if (start && start <= today && end && end >= today) return { code: "running", label: "比赛中" };
   if (event.registrationClosed === true) return { code: "closed", label: "报名截止" };
+  if (event.registrationStatusAuthoritative && event.registrationOpen === false) {
+    return { code: "pending", label: "待开放" };
+  }
   if (regEnd && regEnd < now) return { code: "closed", label: "报名截止" };
   if (regStart && regStart > now) return { code: "pending", label: "待开放" };
   if (regEnd && regEnd >= now) return { code: "open", label: "可报名" };

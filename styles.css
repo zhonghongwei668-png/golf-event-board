@@ -643,6 +643,7 @@ select {
   gap: 12px;
 }
 
+.level-tag,
 .category-tag,
 .status,
 .pill {
@@ -653,6 +654,26 @@ select {
   padding: 0 9px;
   font-size: 12px;
   font-weight: 800;
+}
+
+.level-tag {
+  background: #edf0f2;
+  color: #38434c;
+}
+
+.level-tag.level-s {
+  background: #202830;
+  color: #fff;
+}
+
+.level-tag.level-a {
+  background: #e6f0ed;
+  color: #12665b;
+}
+
+.level-tag.level-b {
+  background: #e9eef7;
+  color: #365f91;
 }
 
 .category-tag {
@@ -1142,6 +1163,7 @@ select {
     flex-wrap: wrap;
   }
 
+  .level-tag,
   .category-tag,
   .status {
     min-height: 20px;
