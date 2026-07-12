@@ -8,38 +8,46 @@ const AUTHORITY_RANK = {
   regulation: 400
 };
 
-const EVENT_LEVELS = {
-  S: { code: "S", rank: 400, label: "S级", description: "职业 / 国家顶级" },
-  A: { code: "A", rank: 300, label: "A级", description: "全国 / 重点积分" },
-  B: { code: "B", rank: 200, label: "B级", description: "区域 / 系列巡回" },
-  C: { code: "C", rank: 100, label: "C级", description: "俱乐部 / 普及赛事" }
-};
+const GRADE_NAMES = { 1: "一级", 2: "二级", 3: "三级", 4: "四级", 5: "五级" };
 
 export function eventLevelInfo(event = {}) {
-  const explicit = String(event.eventLevel || "").toUpperCase();
-  if (EVENT_LEVELS[explicit]) return EVENT_LEVELS[explicit];
-
   const name = String(event.name || "");
-  const series = String(event.seriesLabel || "");
   const source = String(event.sourceSystem || "");
-  const text = `${name} ${series} ${source}`;
+  const grade = Number(event.competitionGrade);
+  const gradeName = GRADE_NAMES[grade];
 
-  if (
-    event.category === "women" ||
-    /CLPGA|女子职业|中国巡回赛|中巡赛/i.test(text) ||
-    /全国[^赛]*(锦标赛|冠军赛)|中国[^赛]*(公开赛|冠军赛)/i.test(name)
-  ) return EVENT_LEVELS.S;
-
-  if (
-    /全国|WAGR|JGS|CJGT|汇丰|斐乐|FILA|精英赛|公开赛|锦标赛|冠军赛/i.test(text) ||
-    /中高协/.test(source)
-  ) return EVENT_LEVELS.A;
-
-  if (/巡回赛|系列赛|邀请赛|地区|赛区|省高协|市高协|北京高协|高尔夫球协会/i.test(text)) {
-    return EVENT_LEVELS.B;
+  if (/INTERNATIONAL|国际赛事/i.test(name)) {
+    return { code: "international", rank: 1400, label: "国际赛事", description: "国际赛事" };
   }
-
-  return EVENT_LEVELS.C;
+  if (event.category === "women") {
+    return { code: "women", rank: 1300, label: "女子职业赛", description: "CLPGA 女子职业赛事" };
+  }
+  if (event.category === "women_development") {
+    return { code: "women-development", rank: 1250, label: "女子二级赛", description: "女子发展级赛事" };
+  }
+  if (event.category === "junior" && gradeName) {
+    return {
+      code: `junior-${grade}`,
+      rank: 1200 - (grade - 1) * 100,
+      label: `青少${gradeName}赛`,
+      description: `中高协青少年${gradeName}赛事`
+    };
+  }
+  if (event.category === "junior" && /中高协/.test(source)) {
+    return { code: "junior", rank: 750, label: "青少赛", description: "中高协青少年赛事，级别待确认" };
+  }
+  if (event.category === "amateur" && gradeName) {
+    return {
+      code: `amateur-${grade}`,
+      rank: 700 - (grade - 1) * 100,
+      label: `业余${gradeName}赛`,
+      description: `中高协业余${gradeName}赛事`
+    };
+  }
+  if (event.category === "amateur") {
+    return { code: "amateur", rank: 150, label: "业余赛", description: "业余赛事，级别待确认" };
+  }
+  return { code: "junior-unranked", rank: 100, label: "青少赛【统计无积分】", description: "尚未取得中高协积分级别字段" };
 }
 
 export function compareEventLevel(a = {}, b = {}) {

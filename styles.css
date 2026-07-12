@@ -661,19 +661,35 @@ select {
   color: #38434c;
 }
 
-.level-tag.level-s {
+.level-tag.level-international,
+.level-tag.level-women {
   background: #202830;
   color: #fff;
 }
 
-.level-tag.level-a {
+.level-tag[class*="level-junior-"] {
+  background: #f4e8dc;
+  color: #994d12;
+}
+
+.level-tag.level-junior-1 {
+  background: #b95116;
+  color: #fff;
+}
+
+.level-tag.level-junior-unranked {
+  background: #edf0f2;
+  color: #53606a;
+}
+
+.level-tag[class*="level-amateur-"] {
   background: #e6f0ed;
   color: #12665b;
 }
 
-.level-tag.level-b {
-  background: #e9eef7;
-  color: #365f91;
+.level-tag.level-amateur-1 {
+  background: #147368;
+  color: #fff;
 }
 
 .category-tag {

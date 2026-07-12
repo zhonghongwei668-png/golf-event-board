@@ -153,6 +153,7 @@ function normalizeEvent(event) {
     registrationOpen: event.registrationOpen,
     registrationClosed: Boolean(event.registrationClosed),
     registrationStatusAuthoritative: Boolean(event.registrationStatusAuthoritative),
+    competitionGrade: event.competitionGrade ? String(event.competitionGrade) : "",
     statusCode: status.code,
     statusLabel: status.label,
     sourceSystem: event.sourceSystem || "",
@@ -338,6 +339,7 @@ async function fetchCgaEvents(category, kindCode) {
     signupMethod: CATEGORY_META[category].defaultRequirement,
     requirement: CATEGORY_META[category].defaultRequirement,
     sourceSystem: "中高协年历接口",
+    competitionGrade: item.gradeCode || "",
     scheduleAuthority: "calendar_api",
     updatedFromOfficial: true
   }));
@@ -421,6 +423,7 @@ function mergeEvents(baseEvents, officialEvents) {
       registrationOpen: incoming.registrationOpen ?? existing.registrationOpen,
       registrationClosed: incomingRegistrationWins ? incoming.registrationClosed : existing.registrationClosed,
       registrationStatusAuthoritative: incomingRegistrationWins || existing.registrationStatusAuthoritative,
+      competitionGrade: incoming.competitionGrade || existing.competitionGrade || "",
       sourceSystem: appendSourceSystem(existing.sourceSystem || "本地", incoming.sourceSystem),
       scheduleAuthority: incomingScheduleWins ? incoming.scheduleAuthority : existing.scheduleAuthority,
       seriesLabel: incoming.seriesLabel || existing.seriesLabel,

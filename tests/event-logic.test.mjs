@@ -11,14 +11,14 @@ import {
 
 test("classifies and sorts events by competition level", () => {
   const events = [
-    { name: "周末亲子挑战赛", category: "junior", startDate: "2026-07-01" },
-    { name: "区域青少年系列赛", category: "junior", startDate: "2026-07-02" },
-    { name: "WAGR全国青少年公开赛", category: "junior", startDate: "2026-07-03" },
-    { name: "中国女子职业高尔夫球巡回赛", category: "women", startDate: "2026-07-04" }
+    { name: "青少年无积分赛", category: "junior", startDate: "2026-07-01" },
+    { name: "全国业余希望赛", category: "amateur", competitionGrade: "4", startDate: "2026-07-02" },
+    { name: "全国青少年精英赛", category: "junior", competitionGrade: "2", startDate: "2026-07-03" },
+    { name: "汇丰全国青少年冠军赛", category: "junior", competitionGrade: "1", startDate: "2026-07-04" }
   ];
 
-  assert.deepEqual(events.map((event) => eventLevelInfo(event).code), ["C", "B", "A", "S"]);
-  assert.deepEqual(events.sort(compareEventLevel).map((event) => eventLevelInfo(event).code), ["S", "A", "B", "C"]);
+  assert.deepEqual(events.map((event) => eventLevelInfo(event).code), ["junior-unranked", "amateur-4", "junior-2", "junior-1"]);
+  assert.deepEqual(events.sort(compareEventLevel).map((event) => eventLevelInfo(event).code), ["junior-1", "junior-2", "amateur-4", "junior-unranked"]);
 });
 
 test("single-event regulation schedule beats annual calendar API", () => {
