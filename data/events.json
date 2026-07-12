@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T02:08:44.372Z",
+  "generatedAt": "2026-07-12T02:39:11.572Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -10,7 +10,9 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [],
+  "warnings": [
+    "大正高尔夫: The operation was aborted due to timeout"
+  ],
   "categories": {
     "women": {
       "label": "女子赛",
@@ -2809,7 +2811,7 @@
       "name": "2026年南山全国业余高尔夫球锦标赛第三站",
       "startDate": "2026-08-03",
       "endDate": "2026-08-06",
-      "location": "山东烟台南山国际高尔夫俱乐部",
+      "location": "南山丹岭翠谷球场",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2378.html",
       "sourceLinks": [
         {
