@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T06:32:51.785Z",
+  "generatedAt": "2026-07-12T16:13:10.159Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1413,8 +1413,8 @@
       "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "4",
-      "statusCode": "closed",
-      "statusLabel": "报名截止",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "scheduleAuthority": "regulation",
       "seriesLabel": "",
