@@ -6,7 +6,7 @@
 
 推荐部署到 GitHub Pages。推送到 GitHub 仓库后，在仓库 `Settings -> Pages` 中把 `Source` 设为 `Deploy from a branch`，`Branch` 选择 `main`，目录选择 `/ (root)`。
 
-工作流会在北京时间 08:17-22:17 每小时运行 `npm run update`，检查 CLPGA、中高协公开接口、大正高尔夫公开报名列表和大正官方公告，并更新 `data/events.json`。也可以在 GitHub 的 `Actions -> Update golf event data -> Run workflow` 手动触发。
+工作流会在北京时间 08:17-22:47 每小时第 17、47 分运行 `npm run update`，检查 CLPGA、中高协公开接口、大正高尔夫公开报名列表和大正官方公告，并更新 `data/events.json`。也可以在 GitHub 的 `Actions -> Update golf event data -> Run workflow` 手动触发。
 
 ## 更新提醒
 
