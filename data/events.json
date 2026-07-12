@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T04:30:37.811Z",
+  "generatedAt": "2026-07-12T05:50:42.861Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -10,7 +10,9 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [],
+  "warnings": [
+    "大正官方公告: 502 Bad Gateway for https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list_data&page=3"
+  ],
   "categories": {
     "women": {
       "label": "女子赛",
