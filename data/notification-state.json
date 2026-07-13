@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-13T06:46:27.596Z",
+  "updatedAt": "2026-07-13T06:49:07.342Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -73,6 +73,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-13T06:46:27.596Z",
           "sentAt": "2026-07-13T06:46:27.596Z",
+          "error": ""
+        }
+      }
+    },
+    "a865a6b438b06dfd37ffc40a72aa662b395bca73bd208b71e078bca5200127da": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/13 14:48:46\n\n**【恢复】1 个信息源已恢复**\n- 中高协官方公告｜本次抓取 10 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-13T06:49:05.163Z",
+      "updatedAt": "2026-07-13T06:49:07.342Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-13T06:49:06.799Z",
+          "sentAt": "2026-07-13T06:49:06.799Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-13T06:49:07.342Z",
+          "sentAt": "2026-07-13T06:49:07.342Z",
           "error": ""
         }
       }
