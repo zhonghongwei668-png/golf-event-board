@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T10:51:28.591Z",
+  "generatedAt": "2026-07-13T11:31:28.632Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -3008,7 +3008,7 @@
       "name": "2026重庆市青少年高尔夫巡回赛第一站",
       "startDate": "2026-05-03",
       "endDate": "2026-05-04",
-      "location": "重庆上邦高尔夫俱乐部",
+      "location": "重庆",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4882,7 +4882,7 @@
       "name": "2026重庆市青少年高尔夫巡回赛第二站",
       "startDate": "2026-06-06",
       "endDate": "2026-06-07",
-      "location": "重庆庆隆南山高尔夫球会",
+      "location": "重庆",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
