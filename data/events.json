@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T09:31:26.887Z",
+  "generatedAt": "2026-07-13T10:51:28.591Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -3742,7 +3742,7 @@
       "name": "2026重庆市校园高尔夫球巡回赛第二站",
       "startDate": "2026-05-23",
       "endDate": "2026-05-24",
-      "location": "重庆保利高尔夫球会",
+      "location": "重庆",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -5464,7 +5464,7 @@
       "name": "2026重庆市校园高尔夫球巡回赛第三站",
       "startDate": "2026-06-19",
       "endDate": "2026-06-20",
-      "location": "重庆庆隆南山高尔夫球会",
+      "location": "重庆",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
