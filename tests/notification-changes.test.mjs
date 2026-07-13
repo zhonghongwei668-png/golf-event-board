@@ -52,3 +52,29 @@ test("notifies material location and eligibility changes", () => {
   const markdown = buildChangeNotification(before, after);
   assert.match(markdown, /比赛地点、参赛要求/);
 });
+
+test("treats a date-derived ID change as an update to the same event", () => {
+  const previous = {
+    announcements: [],
+    events: [{
+      id: "同一赛事-2026-07-01",
+      category: "junior",
+      name: "同一场青少年赛事",
+      startDate: "2026-07-20",
+      endDate: "2026-07-21"
+    }]
+  };
+  const current = {
+    announcements: [],
+    generatedAt: "2026-07-13T00:00:00.000Z",
+    events: [{
+      ...previous.events[0],
+      id: "同一赛事-2026-07-02",
+      startDate: "2026-07-21",
+      endDate: "2026-07-22"
+    }]
+  };
+  const markdown = buildChangeNotification(previous, current);
+  assert.match(markdown, /变化：比赛开始、比赛结束/);
+  assert.doesNotMatch(markdown, /新增赛事|赛事下架/);
+});

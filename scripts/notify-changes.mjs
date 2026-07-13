@@ -52,6 +52,20 @@ function eventKey(event) {
   return event.id || `${event.category}:${event.name}:${event.startDate || "undated"}`;
 }
 
+function eventIdentity(event) {
+  const normalizedName = String(event.name || "")
+    .toLowerCase()
+    .replace(/[\s\p{P}\p{S}]/gu, "");
+  return `${event.category || ""}:${normalizedName}`;
+}
+
+function dateDistanceDays(left, right) {
+  const leftTime = Date.parse(`${left || ""}T00:00:00Z`);
+  const rightTime = Date.parse(`${right || ""}T00:00:00Z`);
+  if (!Number.isFinite(leftTime) || !Number.isFinite(rightTime)) return Number.POSITIVE_INFINITY;
+  return Math.abs(leftTime - rightTime) / 86400000;
+}
+
 function formatDateRange(event) {
   if (!event.startDate) return "日期待定";
   if (!event.endDate || event.endDate === event.startDate) return event.startDate;
@@ -132,7 +146,12 @@ function diffEvents(previousPayload, currentPayload) {
   const previousEvents = previousPayload?.events || [];
   const currentEvents = currentPayload?.events || [];
   const previousByKey = new Map(previousEvents.map((event) => [eventKey(event), event]));
-  const currentByKey = new Map(currentEvents.map((event) => [eventKey(event), event]));
+  const previousByIdentity = new Map();
+  for (const event of previousEvents) {
+    const identity = eventIdentity(event);
+    previousByIdentity.set(identity, [...(previousByIdentity.get(identity) || []), event]);
+  }
+  const matchedPrevious = new Set();
 
   const added = [];
   const opened = [];
@@ -142,8 +161,17 @@ function diffEvents(previousPayload, currentPayload) {
   const historicalBackfill = [];
   const today = shanghaiDateString(new Date());
 
-  for (const [key, event] of currentByKey) {
-    const previous = previousByKey.get(key);
+  for (const event of currentEvents) {
+    const exact = previousByKey.get(eventKey(event));
+    let previous = exact && !matchedPrevious.has(exact) ? exact : null;
+    if (!previous) {
+      const candidates = (previousByIdentity.get(eventIdentity(event)) || [])
+        .filter((candidate) => !matchedPrevious.has(candidate))
+        .sort((a, b) => dateDistanceDays(a.startDate, event.startDate) - dateDistanceDays(b.startDate, event.startDate));
+      if (candidates.length === 1 || dateDistanceDays(candidates[0]?.startDate, event.startDate) <= 45) {
+        previous = candidates[0] || null;
+      }
+    }
     if (!previous) {
       if (eventIsHistorical(event, today)) {
         historicalBackfill.push(event);
@@ -153,6 +181,7 @@ function diffEvents(previousPayload, currentPayload) {
       if (isOpenRegistration(event)) priorityOpen.push(event);
       continue;
     }
+    matchedPrevious.add(previous);
 
     const fields = eventIsHistorical(event, today) ? [] : changedFields(previous, event);
     if (fields.length) {
@@ -164,8 +193,8 @@ function diffEvents(previousPayload, currentPayload) {
     }
   }
 
-  for (const [key, event] of previousByKey) {
-    if (!currentByKey.has(key) && !eventIsHistorical(event, today)) {
+  for (const event of previousEvents) {
+    if (!matchedPrevious.has(event) && !eventIsHistorical(event, today)) {
       removed.push(event);
     }
   }
@@ -223,7 +252,11 @@ function buildMarkdown(diff, currentPayload) {
     sections.push(`**【重点】新开放报名 ${diff.priorityOpen.length} 场**\n${topItems(diff.priorityOpen, formatPriorityOpenEvent, 10)}`);
   }
   if (regularAdded.length) {
-    sections.push(`**新增赛事 ${regularAdded.length} 场**\n${topItems(regularAdded, formatEvent)}`);
+    if (regularAdded.length > 40) {
+      sections.push(`**官方赛历资料补录 ${regularAdded.length} 场**\n本次扩展了官方年历覆盖，资料已写入赛历；为避免刷屏不逐场列出，新开放报名仍在上方重点提醒。`);
+    } else {
+      sections.push(`**新增赛事 ${regularAdded.length} 场**\n${topItems(regularAdded, formatEvent)}`);
+    }
   }
   if (regularChanged.length) {
     sections.push(`**报名/日期/入口变化 ${regularChanged.length} 条**\n${topItems(regularChanged, ({ event, fields }) => `${formatEvent(event)}，变化：${fields.join("、")}`)}`);
