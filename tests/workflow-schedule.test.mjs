@@ -11,6 +11,7 @@ test("scheduled updates avoid GitHub Actions top-of-hour congestion", async () =
   assert.doesNotMatch(workflow, /cron: "0 0-14 \* \* \*"/);
   assert.match(workflow, /timeout-minutes: 12/);
   assert.match(workflow, /node-version: 22/);
+  assert.match(workflow, /fetch-depth: 0/);
 });
 
 test("push updates notify for event data already included in the commit", async () => {
@@ -20,6 +21,7 @@ test("push updates notify for event data already included in the commit", async 
   assert.match(workflow, /git diff --quiet "\$EVENT_BEFORE" HEAD -- data\/events\.json/);
   assert.match(workflow, /outputs\.notify_changed == 'true'/);
   assert.match(workflow, /steps\.persist_changes\.outputs\.changed == 'true'/);
+  assert.match(workflow, /NOTIFY_BASE_INPUT: \$\{\{ inputs\.notify_base_ref \}\}/);
 });
 
 test("source health is notified, persisted, and enforced", async () => {

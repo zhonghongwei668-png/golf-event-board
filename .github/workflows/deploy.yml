@@ -18,6 +18,11 @@ on:
         options:
           - "false"
           - "true"
+      notify_base_ref:
+        description: "Optional commit SHA to replay missed change notifications from"
+        required: false
+        default: ""
+        type: string
 
 permissions:
   contents: write
@@ -33,6 +38,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -80,7 +87,10 @@ jobs:
           fi
 
           notify_base=HEAD
-          if [ "$GITHUB_EVENT_NAME" = "push" ] && [ -n "$EVENT_BEFORE" ] && ! echo "$EVENT_BEFORE" | grep -Eq '^0+$'; then
+          if [ -n "$NOTIFY_BASE_INPUT" ]; then
+            notify_base="$NOTIFY_BASE_INPUT"
+            notify_changed=true
+          elif [ "$GITHUB_EVENT_NAME" = "push" ] && [ -n "$EVENT_BEFORE" ] && ! echo "$EVENT_BEFORE" | grep -Eq '^0+$'; then
             notify_base="$EVENT_BEFORE"
             if ! git diff --quiet "$EVENT_BEFORE" HEAD -- data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json; then
               notify_changed=true
@@ -91,6 +101,7 @@ jobs:
           echo "notify_base=$notify_base" >> "$GITHUB_OUTPUT"
         env:
           EVENT_BEFORE: ${{ github.event.before }}
+          NOTIFY_BASE_INPUT: ${{ inputs.notify_base_ref }}
 
       - name: Notify event changes
         if: steps.event_changes.outputs.notify_changed == 'true'
