@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T06:49:04.409Z",
+  "generatedAt": "2026-07-13T07:30:42.123Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1997,7 +1997,7 @@
       "name": "2026湖南省青少年高尔夫球冠军赛(SLGS超级蒸枝系列赛)",
       "startDate": "2026-04-18",
       "endDate": "2026-04-19",
-      "location": "湖南益阳梓山湖国际高尔夫俱乐部",
+      "location": "湖南梓山湖国际高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -17772,6 +17772,16 @@
       "matchedEventIds": [
         "clpga-8114"
       ]
+    },
+    {
+      "id": "dazheng-announcement-44946",
+      "sourceId": "44946",
+      "title": "倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！",
+      "publishedAt": "2026-06-11 17:36",
+      "kind": "deadline",
+      "source": "大正高尔夫官方公告",
+      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946",
+      "matchedEventIds": []
     },
     {
       "id": "rungolf-announcement-2586",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-13T06:49:07.342Z",
+  "updatedAt": "2026-07-13T07:30:45.170Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -98,6 +98,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-13T06:49:07.342Z",
           "sentAt": "2026-07-13T06:49:07.342Z",
+          "error": ""
+        }
+      }
+    },
+    "c8acdd42cd05edd18e7886b3b7053ee499d6920b35738861950dbdf74d4b175b": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/13 15:30:42\n\n**【重点】官方赛事公告 1 条**\n- **【报名截止提醒】倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！**｜2026-06-11 17:36｜[官方公告](https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946)\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-13T07:30:43.217Z",
+      "updatedAt": "2026-07-13T07:30:45.170Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-13T07:30:44.602Z",
+          "sentAt": "2026-07-13T07:30:44.602Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-13T07:30:45.170Z",
+          "sentAt": "2026-07-13T07:30:45.170Z",
           "error": ""
         }
       }
