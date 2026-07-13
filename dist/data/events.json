@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T14:21:35.906Z",
+  "generatedAt": "2026-07-13T18:19:12.023Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1581,7 +1581,7 @@
       "name": "2026年“星企杯”广东省练习场（馆）青少年高尔夫球锦标赛",
       "startDate": "2026-04-10",
       "endDate": "2026-04-12",
-      "location": "阳江涛景高尔夫球会",
+      "location": "广东·阳江",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -7096,8 +7096,8 @@
       "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "closed",
-      "statusLabel": "报名截止",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -7132,8 +7132,8 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "5",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "中高协年历接口",
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
