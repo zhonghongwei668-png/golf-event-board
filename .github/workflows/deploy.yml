@@ -87,8 +87,15 @@ jobs:
           fi
 
           notify_base=HEAD
+          commit_replay_base=""
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            commit_replay_base=$(git log -1 --format=%B | sed -n 's/^Notify-Replay-From:[[:space:]]*//p' | head -n 1)
+          fi
           if [ -n "$NOTIFY_BASE_INPUT" ]; then
             notify_base="$NOTIFY_BASE_INPUT"
+            notify_changed=true
+          elif [ -n "$commit_replay_base" ]; then
+            notify_base="$commit_replay_base"
             notify_changed=true
           elif [ "$GITHUB_EVENT_NAME" = "push" ] && [ -n "$EVENT_BEFORE" ] && ! echo "$EVENT_BEFORE" | grep -Eq '^0+$'; then
             notify_base="$EVENT_BEFORE"

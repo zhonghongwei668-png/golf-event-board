@@ -22,6 +22,8 @@ test("push updates notify for event data already included in the commit", async 
   assert.match(workflow, /outputs\.notify_changed == 'true'/);
   assert.match(workflow, /steps\.persist_changes\.outputs\.changed == 'true'/);
   assert.match(workflow, /NOTIFY_BASE_INPUT: \$\{\{ inputs\.notify_base_ref \}\}/);
+  assert.match(workflow, /Notify-Replay-From:/);
+  assert.match(workflow, /notify_base="\$commit_replay_base"/);
 });
 
 test("source health is notified, persisted, and enforced", async () => {
