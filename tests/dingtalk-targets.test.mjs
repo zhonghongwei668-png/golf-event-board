@@ -11,8 +11,8 @@ test("configures two independent DingTalk robots", () => {
   });
 
   assert.deepEqual(targets, [
-    { label: "主机器人", webhook: "https://example.test/primary", secret: "primary-secret" },
-    { label: "第二机器人", webhook: "https://example.test/secondary", secret: "secondary-secret" },
+    { id: "dingtalk-primary", label: "主机器人", webhook: "https://example.test/primary", secret: "primary-secret" },
+    { id: "dingtalk-secondary", label: "第二机器人", webhook: "https://example.test/secondary", secret: "secondary-secret" },
   ]);
 });
 

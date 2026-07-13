@@ -4,14 +4,22 @@ import { promisify } from "node:util";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHmac } from "node:crypto";
-import { isRegistrationOpenAt } from "../event-logic.js";
+import { isRegistrationOpenAt, shanghaiDateString } from "../event-logic.js";
 import { shouldAlertFailure } from "./lib/source-health.mjs";
+import {
+  ensureNotificationMessage,
+  markNotificationDelivery,
+  pendingNotificationMessages,
+  readNotificationState,
+  writeNotificationState
+} from "./lib/notification-state.mjs";
 
 const execFileAsync = promisify(execFile);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const eventDataPath = "data/events.json";
 const sourceHealthPath = "data/source-health.json";
+const notificationStatePath = path.join(rootDir, "data/notification-state.json");
 const siteUrl = process.env.NOTIFY_SITE_URL || "https://zhonghongwei668-png.github.io/golf-event-board/";
 const strictFailure = process.env.NOTIFY_STRICT === "1";
 const requireWebhook = process.env.NOTIFY_REQUIRE_WEBHOOK === "1";
@@ -91,17 +99,33 @@ function isOpenRegistration(event) {
 }
 
 function changedFields(before, after) {
+  const comparable = (value) => {
+    if (value === undefined || value === null) return "";
+    return Array.isArray(value) || typeof value === "object" ? JSON.stringify(value) : value;
+  };
   return [
+    ["name", "赛事名称"],
     ["statusLabel", "状态"],
     ["registrationStart", "报名开始"],
     ["registrationEnd", "报名截止"],
+    ["registrationOpen", "报名状态"],
     ["signupUrl", "报名入口"],
+    ["signupMethod", "报名方式"],
     ["sourceUrl", "信息源"],
+    ["sourceLinks", "信息源链接"],
     ["startDate", "比赛开始"],
     ["endDate", "比赛结束"],
+    ["location", "比赛地点"],
+    ["requirement", "参赛要求"],
+    ["competitionGrade", "赛事级别"],
   ]
-    .filter(([key]) => (before[key] || "") !== (after[key] || ""))
+    .filter(([key]) => comparable(before[key]) !== comparable(after[key]))
     .map(([, label]) => label);
+}
+
+function eventIsHistorical(event, today) {
+  const lastDate = event.endDate || event.startDate;
+  return Boolean(lastDate && lastDate < today);
 }
 
 function diffEvents(previousPayload, currentPayload) {
@@ -115,16 +139,22 @@ function diffEvents(previousPayload, currentPayload) {
   const priorityOpen = [];
   const changed = [];
   const removed = [];
+  const historicalBackfill = [];
+  const today = shanghaiDateString(new Date());
 
   for (const [key, event] of currentByKey) {
     const previous = previousByKey.get(key);
     if (!previous) {
+      if (eventIsHistorical(event, today)) {
+        historicalBackfill.push(event);
+        continue;
+      }
       added.push(event);
       if (isOpenRegistration(event)) priorityOpen.push(event);
       continue;
     }
 
-    const fields = changedFields(previous, event);
+    const fields = eventIsHistorical(event, today) ? [] : changedFields(previous, event);
     if (fields.length) {
       changed.push({ event, fields });
     }
@@ -135,18 +165,27 @@ function diffEvents(previousPayload, currentPayload) {
   }
 
   for (const [key, event] of previousByKey) {
-    if (!currentByKey.has(key)) {
+    if (!currentByKey.has(key) && !eventIsHistorical(event, today)) {
       removed.push(event);
     }
   }
 
-  return { added, opened, priorityOpen, changed, removed };
+  return { added, opened, priorityOpen, changed, removed, historicalBackfill };
 }
 
-export function diffDazhengAnnouncements(previousPayload, currentPayload) {
+export function diffOfficialAnnouncements(previousPayload, currentPayload, options = {}) {
   if (!Array.isArray(previousPayload?.announcements)) return [];
   const previousIds = new Set(previousPayload.announcements.map((item) => item.id));
-  return (currentPayload?.announcements || []).filter((item) => !previousIds.has(item.id));
+  const previousSources = new Set(previousPayload.announcements.map((item) => item.source).filter(Boolean));
+  const today = options.today || shanghaiDateString(new Date());
+  return (currentPayload?.announcements || []).filter((item) => (
+    !previousIds.has(item.id)
+    && (!item.source || previousSources.has(item.source) || item.publishedAt >= today)
+  ));
+}
+
+export function diffDazhengAnnouncements(previousPayload, currentPayload, options = {}) {
+  return diffOfficialAnnouncements(previousPayload, currentPayload, options);
 }
 
 function announcementLabel(kind) {
@@ -211,7 +250,7 @@ function buildMarkdown(diff, currentPayload) {
 
 export function buildChangeNotification(previousPayload, currentPayload) {
   const diff = diffEvents(previousPayload, currentPayload);
-  diff.announcements = diffDazhengAnnouncements(previousPayload, currentPayload);
+  diff.announcements = diffOfficialAnnouncements(previousPayload, currentPayload);
   return buildMarkdown(diff, currentPayload);
 }
 
@@ -324,8 +363,8 @@ function signedDingTalkUrl(webhook, secret) {
 
 export function configuredDingTalkTargets(env = process.env) {
   const candidates = [
-    { label: "主机器人", webhook: env.DINGTALK_WEBHOOK, secret: env.DINGTALK_SECRET },
-    { label: "第二机器人", webhook: env.DINGTALK_WEBHOOK_2, secret: env.DINGTALK_SECRET_2 },
+    { id: "dingtalk-primary", label: "主机器人", webhook: env.DINGTALK_WEBHOOK, secret: env.DINGTALK_SECRET },
+    { id: "dingtalk-secondary", label: "第二机器人", webhook: env.DINGTALK_WEBHOOK_2, secret: env.DINGTALK_SECRET_2 },
   ];
   const seen = new Set();
   return candidates.filter((target) => {
@@ -335,33 +374,77 @@ export function configuredDingTalkTargets(env = process.env) {
   });
 }
 
-async function notifyDingTalk(markdown) {
-  const targets = configuredDingTalkTargets();
-  if (!targets.length) return false;
+function assertDingTalkConfiguration(targets) {
   const expectedTargets = Number(process.env.DINGTALK_EXPECTED_TARGETS || 0);
   if (expectedTargets && targets.length < expectedTargets) {
     throw new Error(`DingTalk robots configured: ${targets.length}/${expectedTargets}`);
   }
+}
 
-  const results = await Promise.allSettled(targets.map((target) => (
-    postJson(signedDingTalkUrl(target.webhook, target.secret), {
-      msgtype: "markdown",
-      markdown: {
-        title: "高尔夫赛事报名信息更新",
-        text: markdown,
-      },
-      at: { isAtAll: false },
-    })
-  )));
-  const failures = results
-    .map((result, index) => ({ result, target: targets[index] }))
-    .filter(({ result }) => result.status === "rejected");
-  if (failures.length) {
-    throw new Error(failures.map(({ result, target }) => `${target.label}: ${result.reason.message}`).join("; "));
+async function notifyDingTalk(markdown, options = {}) {
+  const targets = configuredDingTalkTargets();
+  assertDingTalkConfiguration(targets);
+  if (!targets.length) return false;
+
+  const kind = options.kind || "event-change";
+  const title = options.title || "高尔夫赛事报名信息更新";
+  const state = await readNotificationState(notificationStatePath);
+  const { fingerprint, message } = ensureNotificationMessage(state, {
+    kind,
+    title,
+    markdown,
+    targetIds: targets.map((target) => target.id)
+  });
+  const failures = [];
+  let newlySent = 0;
+
+  for (const target of targets) {
+    if (message.targets?.[target.id]?.status === "sent") {
+      console.log(`Skipped ${target.label}: this message was already delivered.`);
+      continue;
+    }
+    try {
+      await postJson(signedDingTalkUrl(target.webhook, target.secret), {
+        msgtype: "markdown",
+        markdown: { title, text: markdown },
+        at: { isAtAll: false },
+      });
+      markNotificationDelivery(state, fingerprint, target.id, { ok: true });
+      newlySent += 1;
+    } catch (error) {
+      markNotificationDelivery(state, fingerprint, target.id, { ok: false, error: error.message });
+      failures.push({ target, error });
+    }
+    await writeNotificationState(notificationStatePath, state);
   }
 
-  console.log(`Sent DingTalk notification to ${targets.length} robot(s)`);
+  if (failures.length) {
+    throw new Error(failures.map(({ target, error }) => `${target.label}: ${error.message}`).join("; "));
+  }
+
+  console.log(`DingTalk delivery complete: ${newlySent} sent, ${targets.length - newlySent} already delivered.`);
   return targets.length;
+}
+
+async function retryPendingDingTalkNotifications() {
+  assertDingTalkConfiguration(configuredDingTalkTargets());
+  const state = await readNotificationState(notificationStatePath);
+  const pending = pendingNotificationMessages(state).slice(0, 20);
+  if (!pending.length) {
+    console.log("No pending DingTalk notifications.");
+    return 0;
+  }
+
+  const failures = [];
+  for (const message of pending) {
+    try {
+      await notifyDingTalk(message.markdown, { kind: message.kind, title: message.title });
+    } catch (error) {
+      failures.push(error);
+    }
+  }
+  if (failures.length) throw new Error(`${failures.length} pending notification(s) still failed: ${failures[0].message}`);
+  return pending.length;
 }
 
 async function notifyWeWork(markdown) {
@@ -377,6 +460,16 @@ async function notifyWeWork(markdown) {
 }
 
 async function main() {
+  if (process.argv.includes("--retry-pending") || process.env.NOTIFY_RETRY_PENDING === "1") {
+    try {
+      await retryPendingDingTalkNotifications();
+    } catch (error) {
+      console.warn(`Pending DingTalk retry failed: ${error.message}`);
+      if (strictFailure || requireWebhook) process.exitCode = 1;
+    }
+    return;
+  }
+
   if (process.argv.includes("--source-health") || process.env.NOTIFY_SOURCE_HEALTH === "1") {
     const health = JSON.parse(await readFile(path.join(rootDir, sourceHealthPath), "utf8"));
     const markdown = buildSourceHealthNotification(health);
@@ -388,7 +481,10 @@ async function main() {
       console.log(markdown);
       return;
     }
-    const sent = await notifyDingTalk(markdown);
+    const sent = await notifyDingTalk(markdown, {
+      kind: "source-health",
+      title: "高尔夫赛历信息源健康提醒"
+    });
     if (!sent && (requireWebhook || strictFailure)) process.exitCode = 1;
     return;
   }
@@ -403,7 +499,7 @@ async function main() {
     }
 
     const results = await Promise.allSettled([
-      notifyDingTalk(markdown),
+      notifyDingTalk(markdown, { kind: "open-digest", title: "可报名赛事一览" }),
       notifyWeWork(markdown),
     ]);
     const sent = results.some((result) => result.status === "fulfilled" && result.value);
@@ -439,7 +535,7 @@ async function main() {
     }
 
     const results = await Promise.allSettled([
-      notifyDingTalk(markdown),
+      notifyDingTalk(markdown, { kind: "test", title: "高尔夫赛事报名提醒测试" }),
       notifyWeWork(markdown),
     ]);
     const sent = results.some((result) => result.status === "fulfilled" && result.value);
@@ -480,7 +576,7 @@ async function main() {
   }
 
   const results = await Promise.allSettled([
-    notifyDingTalk(markdown),
+    notifyDingTalk(markdown, { kind: "event-change", title: "高尔夫赛事报名信息更新" }),
     notifyWeWork(markdown),
   ]);
   const sent = results.some((result) => result.status === "fulfilled" && result.value);
@@ -503,6 +599,6 @@ const isDirectExecution = process.argv[1] && path.resolve(process.argv[1]) === f
 if (isDirectExecution) {
   main().catch((error) => {
     console.error(error);
-    if (strictFailure) process.exitCode = 1;
+    if (strictFailure || requireWebhook) process.exitCode = 1;
   });
 }
