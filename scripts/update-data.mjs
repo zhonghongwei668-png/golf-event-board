@@ -5,6 +5,7 @@ import {
   chooseSchedule,
   inferScheduleAuthority,
   scheduleAuthorityRank,
+  shanghaiDateString,
   statusForEvent,
   validateEvents
 } from "../event-logic.js";
@@ -309,7 +310,7 @@ async function fetchJson(url, options = {}) {
 
 function msToDate(ms) {
   if (!ms) return "";
-  return new Date(ms).toISOString().slice(0, 10);
+  return shanghaiDateString(new Date(ms));
 }
 
 function resolveKnownSource(name, category) {

@@ -8,13 +8,15 @@ const AUTHORITY_RANK = {
   regulation: 400
 };
 
-const GRADE_NAMES = { 1: "一级", 2: "二级", 3: "三级", 4: "四级", 5: "五级" };
+const JUNIOR_GRADE_NAMES = { 1: "一级", 2: "二级", 3: "三级", 4: "四级" };
+const AMATEUR_GRADE_NAMES = { 1: "一级", 2: "二级", 3: "三级", 4: "四级", 5: "五级" };
 
 export function eventLevelInfo(event = {}) {
   const name = String(event.name || "");
   const source = String(event.sourceSystem || "");
   const grade = Number(event.competitionGrade);
-  const gradeName = GRADE_NAMES[grade];
+  const juniorGradeName = JUNIOR_GRADE_NAMES[grade];
+  const amateurGradeName = AMATEUR_GRADE_NAMES[grade];
 
   if (/INTERNATIONAL|国际赛事/i.test(name)) {
     return { code: "international", rank: 1400, label: "国际赛事", description: "国际赛事" };
@@ -25,23 +27,29 @@ export function eventLevelInfo(event = {}) {
   if (event.category === "women_development") {
     return { code: "women-development", rank: 1250, label: "女子二级赛", description: "女子发展级赛事" };
   }
-  if (event.category === "junior" && gradeName) {
+  if (event.category === "junior" && juniorGradeName) {
     return {
       code: `junior-${grade}`,
       rank: 1200 - (grade - 1) * 100,
-      label: `青少${gradeName}赛`,
-      description: `中高协青少年${gradeName}赛事`
+      label: `青少${juniorGradeName}赛`,
+      description: `中高协青少年${juniorGradeName}赛事`
     };
+  }
+  if (event.category === "junior" && grade === 5) {
+    return { code: "junior", rank: 750, label: "青少赛", description: "中高协青少年赛事" };
+  }
+  if (event.category === "junior" && grade === 6) {
+    return { code: "junior-unranked", rank: 100, label: "青少赛【统计无积分】", description: "中高协统计无积分赛事" };
   }
   if (event.category === "junior" && /中高协/.test(source)) {
     return { code: "junior", rank: 750, label: "青少赛", description: "中高协青少年赛事，级别待确认" };
   }
-  if (event.category === "amateur" && gradeName) {
+  if (event.category === "amateur" && amateurGradeName) {
     return {
       code: `amateur-${grade}`,
       rank: 700 - (grade - 1) * 100,
-      label: `业余${gradeName}赛`,
-      description: `中高协业余${gradeName}赛事`
+      label: `业余${amateurGradeName}赛`,
+      description: `中高协业余${amateurGradeName}赛事`
     };
   }
   if (event.category === "amateur") {
@@ -63,7 +71,7 @@ export function parseShanghaiDateTime(value, endOfDay = false) {
   return Number.isNaN(date.getTime()) ? null : date;
 }
 
-function shanghaiDateString(now = new Date()) {
+export function shanghaiDateString(now = new Date()) {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Shanghai",
     year: "numeric",

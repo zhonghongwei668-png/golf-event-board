@@ -5,6 +5,7 @@ import {
   compareEventLevel,
   eventLevelInfo,
   isRegistrationOpenAt,
+  shanghaiDateString,
   statusForEvent,
   validateEvents
 } from "../event-logic.js";
@@ -19,6 +20,17 @@ test("classifies and sorts events by competition level", () => {
 
   assert.deepEqual(events.map((event) => eventLevelInfo(event).code), ["junior-unranked", "amateur-4", "junior-2", "junior-1"]);
   assert.deepEqual(events.sort(compareEventLevel).map((event) => eventLevelInfo(event).code), ["junior-1", "junior-2", "amateur-4", "junior-unranked"]);
+});
+
+test("maps CGA junior grade codes 5 and 6 to the official filter labels", () => {
+  assert.equal(eventLevelInfo({ category: "junior", competitionGrade: "5" }).label, "青少赛");
+  assert.equal(eventLevelInfo({ category: "junior", competitionGrade: "6" }).label, "青少赛【统计无积分】");
+  assert.equal(eventLevelInfo({ category: "amateur", competitionGrade: "5" }).label, "业余五级赛");
+});
+
+test("formats CGA epoch timestamps in Asia/Shanghai instead of UTC", () => {
+  assert.equal(shanghaiDateString(new Date(1781884800000)), "2026-06-20");
+  assert.equal(shanghaiDateString(new Date(1781971200000)), "2026-06-21");
 });
 
 test("single-event regulation schedule beats annual calendar API", () => {
