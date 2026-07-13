@@ -38,7 +38,7 @@ export function eventLevelInfo(event = {}) {
   if (event.category === "junior" && grade === 5) {
     return { code: "junior", rank: 750, label: "青少赛", description: "中高协青少年赛事" };
   }
-  if (event.category === "junior" && grade === 6) {
+  if (event.category === "junior" && grade >= 6) {
     return { code: "junior-unranked", rank: 100, label: "青少赛【统计无积分】", description: "中高协统计无积分赛事" };
   }
   if (event.category === "junior" && /中高协/.test(source)) {

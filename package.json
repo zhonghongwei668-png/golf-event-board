@@ -6,6 +6,7 @@
   "scripts": {
     "update": "node scripts/update-data.mjs",
     "notify": "node scripts/notify-changes.mjs",
+    "health:check": "node scripts/check-source-health.mjs",
     "build": "node scripts/build-static.mjs",
     "build:sites": "node scripts/prepare-sites.mjs && vinext build",
     "serve": "node scripts/server.mjs",

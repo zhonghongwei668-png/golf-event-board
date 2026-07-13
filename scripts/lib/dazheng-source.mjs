@@ -1,3 +1,5 @@
+import { fetchWithRetry } from "./fetch-with-retry.mjs";
+
 const DAZHENG_BASE = "https://www.bwvip.com";
 export const DAZHENG_LIST_URL = `${DAZHENG_BASE}/default.php?g=m&m=baoming&a=baoming_list`;
 
@@ -181,12 +183,15 @@ function sourceEvent(entry, detail) {
 }
 
 async function fetchText(url, fetchImpl) {
-  const response = await fetchImpl(url, {
+  const response = await fetchWithRetry(url, {
     headers: {
       accept: "text/html,application/xhtml+xml",
       "user-agent": "Mozilla/5.0 GolfScheduleBot/1.0"
-    },
-    signal: AbortSignal.timeout(15000)
+    }
+  }, {
+    fetchImpl,
+    timeoutMs: 15000,
+    attempts: 3
   });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${url}`);
   return response.text();
@@ -294,6 +299,7 @@ export async function fetchDazhengEvents(previousEvents = [], options = {}) {
   if (detailErrors.length) {
     console.warn(`Dazheng detail warnings (${detailErrors.length}):`);
     for (const error of detailErrors) console.warn(`- ${error}`);
+    options.onWarnings?.(detailErrors);
   }
 
   return [...eligible, ...preservedPast];

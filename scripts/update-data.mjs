@@ -17,12 +17,28 @@ import {
   DAZHENG_ANNOUNCEMENT_URL,
   fetchDazhengAnnouncements
 } from "./lib/dazheng-announcement-source.mjs";
+import {
+  degradedSourceState,
+  detectCountAnomaly,
+  healthySourceState,
+  summarizeSourceHealth
+} from "./lib/source-health.mjs";
+import { fetchWithRetry } from "./lib/fetch-with-retry.mjs";
+import {
+  CGA_ANNOUNCEMENT_URL,
+  fetchCgaAnnouncements
+} from "./lib/cga-announcement-source.mjs";
+import {
+  RUNGOLF_ANNOUNCEMENT_URL,
+  fetchRungolfAnnouncements
+} from "./lib/rungolf-announcement-source.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const reportPath = path.join(rootDir, "2026国内女子青少年业余高尔夫赛事报名入口汇总.md");
 const dataDir = path.join(rootDir, "data");
 const outPath = path.join(dataDir, "events.json");
+const healthPath = path.join(dataDir, "source-health.json");
 
 const YEAR = 2026;
 const CGA_API = "https://ranking.cgagolf.org.cn/api/game/match/events";
@@ -296,14 +312,14 @@ function parseMarkdownEvents(markdown) {
 }
 
 async function fetchJson(url, options = {}) {
-  const response = await fetch(url, {
+  const response = await fetchWithRetry(url, {
     headers: {
       "accept": "application/json,text/plain,*/*",
       "content-type": "application/json",
       "user-agent": "Mozilla/5.0 GolfScheduleBot/1.0"
     },
     ...options
-  });
+  }, { timeoutMs: 15000, attempts: 3 });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${url}`);
   return response.json();
 }
@@ -320,17 +336,26 @@ function resolveKnownSource(name, category) {
 }
 
 async function fetchCgaEvents(category, kindCode) {
-  const payload = {
-    kindCode,
-    startTime: `${YEAR}-01-01`,
-    endTime: `${YEAR}-12-31`,
-    dataCount: 500
-  };
-  const json = await fetchJson(CGA_API, { method: "POST", body: JSON.stringify(payload) });
-  if (!json?.success || !Array.isArray(json.data)) {
-    throw new Error(`CGA API returned unexpected payload for ${category}`);
+  const codes = Array.isArray(kindCode) ? kindCode : [kindCode];
+  const responses = await Promise.all(codes.map(async (code) => {
+    const payload = {
+      kindCode: [code],
+      startTime: `${YEAR}-01-01`,
+      endTime: `${YEAR}-12-31`,
+      dataCount: 500
+    };
+    const json = await fetchJson(CGA_API, { method: "POST", body: JSON.stringify(payload) });
+    if (!json?.success || !Array.isArray(json.data)) {
+      throw new Error(`CGA API returned unexpected payload for ${category}/${code}`);
+    }
+    return json.data;
+  }));
+  const unique = new Map();
+  for (const item of responses.flat()) {
+    const key = [item.fieldName || item.eventsName, item.fieldTime, item.fieldEndtime, item.fieldCourt].join("|");
+    if (!unique.has(key)) unique.set(key, item);
   }
-  return json.data.map((item) => normalizeEvent({
+  return [...unique.values()].map((item) => normalizeEvent({
     category,
     name: item.fieldName || item.eventsName,
     startDate: msToDate(item.fieldTime),
@@ -448,6 +473,14 @@ async function readPreviousPayload() {
   }
 }
 
+async function readPreviousHealth() {
+  try {
+    return JSON.parse(await readFile(healthPath, "utf8"));
+  } catch {
+    return { sources: {} };
+  }
+}
+
 function semanticPayload(payload) {
   const { generatedAt, ...rest } = payload;
   return rest;
@@ -461,27 +494,75 @@ function hasSemanticChanges(previous, next) {
 async function main() {
   await mkdir(dataDir, { recursive: true });
   const previousPayload = await readPreviousPayload();
+  const previousHealth = await readPreviousHealth();
   const markdown = await readFile(reportPath, "utf8");
   const parsedEvents = parseMarkdownEvents(markdown);
 
   const errors = [];
   const official = [];
   const fallbacks = [];
+  const checkedAt = new Date().toISOString();
+  const sourceHealth = {};
   const tasks = [
-    { name: "CLPGA", fallback: (event) => event.category === "women", run: () => fetchClpgaEvents() },
-    { name: "中高协业余", fallback: (event) => event.category === "amateur", run: () => fetchCgaEvents("amateur", ["3", "4"]) },
-    { name: "中高协青少年", fallback: (event) => event.category === "junior", run: () => fetchCgaEvents("junior", ["5", "6", "7", "8", "16", "17"]) },
-    { name: "大正高尔夫", fallback: (event) => Boolean(dazhengEventIdFromEvent(event)), run: () => fetchDazhengEvents(previousPayload?.events || []) }
+    { key: "clpga", name: "CLPGA", matches: (event) => /CLPGA官网接口/.test(event.sourceSystem || ""), run: () => fetchClpgaEvents() },
+    { key: "cgaAmateur", name: "中高协业余", matches: (event) => event.category === "amateur" && /中高协年历接口/.test(event.sourceSystem || ""), run: () => fetchCgaEvents("amateur", ["3", "4"]) },
+    { key: "cgaJunior", name: "中高协青少年", matches: (event) => event.category === "junior" && /中高协年历接口/.test(event.sourceSystem || ""), run: () => fetchCgaEvents("junior", ["5", "6", "7", "8", "16", "17"]) },
+    {
+      key: "dazheng",
+      name: "大正高尔夫",
+      matches: (event) => Boolean(dazhengEventIdFromEvent(event)),
+      run: async () => {
+        let warnings = [];
+        const items = await fetchDazhengEvents(previousPayload?.events || [], {
+          onWarnings: (incoming) => { warnings = incoming; }
+        });
+        return { items, warnings };
+      }
+    }
   ];
 
   for (const task of tasks) {
+    const startedAt = Date.now();
+    const previousSource = previousHealth.sources?.[task.key] || {};
+    const previousSourceEvents = previousPayload?.events?.filter(task.matches) || [];
     try {
-      official.push(...await task.run());
+      const outcome = await task.run();
+      const result = Array.isArray(outcome) ? outcome : outcome.items;
+      const taskWarnings = Array.isArray(outcome?.warnings) ? outcome.warnings : [];
+      const previousCount = Number.isFinite(previousSource.itemCount)
+        ? previousSource.itemCount
+        : previousSourceEvents.length;
+      const anomaly = detectCountAnomaly(previousCount, result.length);
+      if (anomaly) throw new Error(anomaly);
+      official.push(...result);
+      if (taskWarnings.length) {
+        const message = `${taskWarnings.length} 个详情页读取失败：${taskWarnings.slice(0, 3).join("；")}`;
+        errors.push(`${task.name}: ${message}`);
+        sourceHealth[task.key] = degradedSourceState(previousSource, {
+          label: task.name,
+          checkedAt,
+          itemCount: result.length,
+          durationMs: Date.now() - startedAt,
+          error: message
+        });
+      } else {
+        sourceHealth[task.key] = healthySourceState(previousSource, {
+          label: task.name,
+          checkedAt,
+          itemCount: result.length,
+          durationMs: Date.now() - startedAt
+        });
+      }
     } catch (error) {
       errors.push(`${task.name}: ${error.message}`);
-      if (previousPayload?.events?.length) {
-        fallbacks.push(...previousPayload.events.filter(task.fallback));
-      }
+      fallbacks.push(...previousSourceEvents);
+      sourceHealth[task.key] = degradedSourceState(previousSource, {
+        label: task.name,
+        checkedAt,
+        fallbackCount: previousSourceEvents.length,
+        durationMs: Date.now() - startedAt,
+        error: error.message
+      });
     }
   }
 
@@ -492,11 +573,130 @@ async function main() {
   }
 
   let announcements = previousPayload?.announcements || [];
+  const announcementStartedAt = Date.now();
+  const previousAnnouncementHealth = previousHealth.sources?.dazhengAnnouncements || {};
   try {
-    announcements = await fetchDazhengAnnouncements(events);
+    let announcementWarnings = [];
+    const incomingAnnouncements = await fetchDazhengAnnouncements(events, {
+      onWarnings: (incoming) => { announcementWarnings = incoming; }
+    });
+    const previousCount = Number.isFinite(previousAnnouncementHealth.itemCount)
+      ? previousAnnouncementHealth.itemCount
+      : announcements.length;
+    const anomaly = detectCountAnomaly(previousCount, incomingAnnouncements.length, {
+      minimumPrevious: 20,
+      minimumDrop: 10,
+      minimumRatio: 0.5
+    });
+    if (anomaly) throw new Error(anomaly);
+    announcements = incomingAnnouncements;
+    if (announcementWarnings.length) {
+      const message = `${announcementWarnings.length} 个公告分页读取失败：${announcementWarnings.slice(0, 3).join("；")}`;
+      errors.push(`大正官方公告: ${message}`);
+      sourceHealth.dazhengAnnouncements = degradedSourceState(previousAnnouncementHealth, {
+        label: "大正官方公告",
+        checkedAt,
+        itemCount: announcements.length,
+        durationMs: Date.now() - announcementStartedAt,
+        error: message
+      });
+    } else {
+      sourceHealth.dazhengAnnouncements = healthySourceState(previousAnnouncementHealth, {
+        label: "大正官方公告",
+        checkedAt,
+        itemCount: announcements.length,
+        durationMs: Date.now() - announcementStartedAt
+      });
+    }
   } catch (error) {
     errors.push(`大正官方公告: ${error.message}`);
+    sourceHealth.dazhengAnnouncements = degradedSourceState(previousAnnouncementHealth, {
+      label: "大正官方公告",
+      checkedAt,
+      fallbackCount: announcements.length,
+      durationMs: Date.now() - announcementStartedAt,
+      error: error.message
+    });
   }
+
+  const previousCgaAnnouncements = (previousPayload?.announcements || [])
+    .filter((announcement) => announcement.source === "中国高尔夫球协会官方公告");
+  const cgaAnnouncementStartedAt = Date.now();
+  const previousCgaAnnouncementHealth = previousHealth.sources?.cgaAnnouncements || {};
+  try {
+    const incoming = await fetchCgaAnnouncements(events);
+    const previousCount = Number.isFinite(previousCgaAnnouncementHealth.itemCount)
+      ? previousCgaAnnouncementHealth.itemCount
+      : previousCgaAnnouncements.length;
+    const anomaly = detectCountAnomaly(previousCount, incoming.length, {
+      minimumPrevious: 8,
+      minimumDrop: 5,
+      minimumRatio: 0.5
+    });
+    if (anomaly) throw new Error(anomaly);
+    announcements.push(...incoming);
+    sourceHealth.cgaAnnouncements = healthySourceState(previousCgaAnnouncementHealth, {
+      label: "中高协官方公告",
+      checkedAt,
+      itemCount: incoming.length,
+      durationMs: Date.now() - cgaAnnouncementStartedAt
+    });
+  } catch (error) {
+    errors.push(`中高协官方公告: ${error.message}`);
+    announcements.push(...previousCgaAnnouncements);
+    sourceHealth.cgaAnnouncements = degradedSourceState(previousCgaAnnouncementHealth, {
+      label: "中高协官方公告",
+      checkedAt,
+      fallbackCount: previousCgaAnnouncements.length,
+      durationMs: Date.now() - cgaAnnouncementStartedAt,
+      error: error.message
+    });
+  }
+
+  const previousRungolfAnnouncements = (previousPayload?.announcements || [])
+    .filter((announcement) => announcement.source === "如歌高尔夫官方赛事新闻");
+  const rungolfAnnouncementStartedAt = Date.now();
+  const previousRungolfAnnouncementHealth = previousHealth.sources?.rungolfAnnouncements || {};
+  try {
+    const incoming = await fetchRungolfAnnouncements(events);
+    const previousCount = Number.isFinite(previousRungolfAnnouncementHealth.itemCount)
+      ? previousRungolfAnnouncementHealth.itemCount
+      : previousRungolfAnnouncements.length;
+    const anomaly = detectCountAnomaly(previousCount, incoming.length, {
+      minimumPrevious: 4,
+      minimumDrop: 2,
+      minimumRatio: 0.5
+    });
+    if (anomaly) throw new Error(anomaly);
+    announcements.push(...incoming);
+    sourceHealth.rungolfAnnouncements = healthySourceState(previousRungolfAnnouncementHealth, {
+      label: "如歌官方赛事新闻",
+      checkedAt,
+      itemCount: incoming.length,
+      durationMs: Date.now() - rungolfAnnouncementStartedAt
+    });
+  } catch (error) {
+    errors.push(`如歌官方赛事新闻: ${error.message}`);
+    announcements.push(...previousRungolfAnnouncements);
+    sourceHealth.rungolfAnnouncements = degradedSourceState(previousRungolfAnnouncementHealth, {
+      label: "如歌官方赛事新闻",
+      checkedAt,
+      fallbackCount: previousRungolfAnnouncements.length,
+      durationMs: Date.now() - rungolfAnnouncementStartedAt,
+      error: error.message
+    });
+  }
+
+  announcements = [...new Map(announcements.map((announcement) => [announcement.id, announcement])).values()]
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || b.id.localeCompare(a.id))
+    .slice(0, 100);
+
+  const healthSummary = summarizeSourceHealth(sourceHealth);
+  const healthPayload = {
+    checkedAt,
+    ...healthSummary,
+    sources: sourceHealth
+  };
 
   const nextPayload = {
     generatedAt: "",
@@ -507,6 +707,8 @@ async function main() {
       cgaAmateur: "https://www.cgagolf.org.cn/game_spare.html",
       cgaJunior: "https://www.cgagolf.org.cn/game_young.html",
       cgaMember: "https://member.cgagolf.org.cn/index",
+      cgaAnnouncements: CGA_ANNOUNCEMENT_URL,
+      rungolfAnnouncements: RUNGOLF_ANNOUNCEMENT_URL,
       dazheng: "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
       dazhengAnnouncements: DAZHENG_ANNOUNCEMENT_URL
     },
@@ -524,6 +726,7 @@ async function main() {
   };
 
   await writeFile(outPath, JSON.stringify(payload, null, 2), "utf8");
+  await writeFile(healthPath, JSON.stringify(healthPayload, null, 2), "utf8");
   console.log(`Updated ${events.length} events -> ${path.relative(rootDir, outPath)}`);
   if (errors.length) {
     console.warn("Warnings:");

@@ -59,6 +59,34 @@ test("watchdog does not duplicate an active replacement run", async () => {
   assert.equal(result.action, "active");
 });
 
+test("watchdog replaces and reports a stuck active run", async () => {
+  const requests = [];
+  const fetchImpl = async (url, options = {}) => {
+    requests.push({ url, method: options.method || "GET" });
+    if (url.includes("/runs?")) {
+      return response({
+        workflow_runs: [{
+          status: "in_progress",
+          conclusion: null,
+          created_at: "2026-07-12T00:00:00.000Z"
+        }]
+      });
+    }
+    if (url.includes("/dispatches")) return new Response(null, { status: 204 });
+    return response({ errcode: 0 });
+  };
+  const result = await runWatchdog({
+    GITHUB_TOKEN: "token",
+    DINGTALK_WEBHOOK: "https://oapi.dingtalk.com/robot/send?a=1",
+    DINGTALK_SECRET: "secret-1",
+    DINGTALK_WEBHOOK_2: "https://oapi.dingtalk.com/robot/send?a=2",
+    DINGTALK_SECRET_2: "secret-2"
+  }, fetchImpl, new Date("2026-07-12T00:20:00.000Z"));
+
+  assert.equal(result.action, "dispatched_stale_active");
+  assert.ok(requests.some((request) => request.url.includes("/dispatches")));
+});
+
 test("watchdog only compensates during the Beijing active window", async () => {
   assert.equal(isActiveWindow(new Date("2026-07-11T23:59:00.000Z")), false);
   assert.equal(isActiveWindow(new Date("2026-07-12T00:00:00.000Z")), true);

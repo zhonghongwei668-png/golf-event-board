@@ -25,6 +25,7 @@ test("classifies and sorts events by competition level", () => {
 test("maps CGA junior grade codes 5 and 6 to the official filter labels", () => {
   assert.equal(eventLevelInfo({ category: "junior", competitionGrade: "5" }).label, "青少赛");
   assert.equal(eventLevelInfo({ category: "junior", competitionGrade: "6" }).label, "青少赛【统计无积分】");
+  assert.equal(eventLevelInfo({ category: "junior", competitionGrade: "10" }).label, "青少赛【统计无积分】");
   assert.equal(eventLevelInfo({ category: "amateur", competitionGrade: "5" }).label, "业余五级赛");
 });
 

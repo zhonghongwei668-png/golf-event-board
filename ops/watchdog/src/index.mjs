@@ -3,6 +3,7 @@ const REPO = "golf-event-board";
 const WORKFLOW = "deploy.yml";
 const API_ROOT = `https://api.github.com/repos/${OWNER}/${REPO}`;
 const DEFAULT_STALE_MINUTES = 35;
+const ACTIVE_STALE_MINUTES = 15;
 const ACTIVE_START_HOUR = 8;
 const ACTIVE_END_HOUR = 23;
 
@@ -51,15 +52,29 @@ export async function getWorkflowHealth(env, fetchImpl = fetch, now = new Date()
   const runs = payload?.workflow_runs || [];
   const latestSuccess = runs.find((run) => run.status === "completed" && run.conclusion === "success");
   const active = runs.find((run) => run.status === "queued" || run.status === "in_progress");
+  const latestFailure = runs.find((run) => run.status === "completed" && run.conclusion !== "success");
   const staleMinutes = Number(env.STALE_MINUTES || DEFAULT_STALE_MINUTES);
   const successAt = latestSuccess?.updated_at ? new Date(latestSuccess.updated_at) : null;
   const ageMinutes = successAt ? Math.max(0, (now.getTime() - successAt.getTime()) / 60000) : Infinity;
+  const activeAt = active?.run_started_at || active?.created_at;
+  const activeAgeMinutes = activeAt ? Math.max(0, (now.getTime() - new Date(activeAt).getTime()) / 60000) : 0;
+  const activeStale = Boolean(active && activeAgeMinutes > ACTIVE_STALE_MINUTES);
+  const failureAt = latestFailure?.updated_at ? new Date(latestFailure.updated_at) : null;
+  const recentFailure = Boolean(
+    failureAt &&
+    (!successAt || failureAt > successAt) &&
+    now.getTime() - failureAt.getTime() <= 15 * 60000
+  );
   return {
     healthy: ageMinutes <= staleMinutes,
     ageMinutes,
     staleMinutes,
     latestSuccess,
-    active
+    active,
+    activeAgeMinutes,
+    activeStale,
+    latestFailure,
+    recentFailure
   };
 }
 
@@ -132,10 +147,30 @@ export async function runWatchdog(env, fetchImpl = fetch, now = new Date()) {
 
   const health = await getWorkflowHealth(env, fetchImpl, now);
   if (health.healthy) return { action: "healthy", health };
-  if (health.active) return { action: "active", health };
+  if (health.active && !health.activeStale) return { action: "active", health };
 
   try {
     await dispatchWorkflow(env, fetchImpl);
+    if (health.activeStale) {
+      await notifyDingTalk(env, [
+        "### 【报警】赛事更新任务执行超时",
+        `当前任务已运行：${Math.round(health.activeAgeMinutes)} 分钟`,
+        "已触发补偿任务，请检查 GitHub Actions。",
+        "",
+        `[查看 GitHub Actions](https://github.com/${OWNER}/${REPO}/actions)`
+      ].join("\n"), fetchImpl);
+      return { action: "dispatched_stale_active", health };
+    }
+    if (health.recentFailure) {
+      await notifyDingTalk(env, [
+        "### 【报警】赛事更新任务执行失败",
+        `失败任务：${health.latestFailure?.name || health.latestFailure?.display_title || "Update golf event data"}`,
+        "已自动触发补偿任务。",
+        "",
+        `[查看失败记录](${health.latestFailure?.html_url || `https://github.com/${OWNER}/${REPO}/actions`})`
+      ].join("\n"), fetchImpl);
+      return { action: "dispatched_after_failure", health };
+    }
     return { action: "dispatched", health };
   } catch (error) {
     const age = Number.isFinite(health.ageMinutes) ? `${Math.round(health.ageMinutes)} 分钟` : "未知";

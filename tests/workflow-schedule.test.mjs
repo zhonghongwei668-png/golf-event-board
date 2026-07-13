@@ -9,6 +9,8 @@ test("scheduled updates avoid GitHub Actions top-of-hour congestion", async () =
 
   assert.match(workflow, /cron: "17,47 0-14 \* \* \*"/);
   assert.doesNotMatch(workflow, /cron: "0 0-14 \* \* \*"/);
+  assert.match(workflow, /timeout-minutes: 12/);
+  assert.match(workflow, /node-version: 22/);
 });
 
 test("push updates notify for event data already included in the commit", async () => {
@@ -18,4 +20,11 @@ test("push updates notify for event data already included in the commit", async 
   assert.match(workflow, /git diff --quiet "\$EVENT_BEFORE" HEAD -- data\/events\.json/);
   assert.match(workflow, /outputs\.notify_changed == 'true'/);
   assert.match(workflow, /outputs\.working_changed == 'true'/);
+});
+
+test("source health is notified, persisted, and enforced", async () => {
+  const workflow = await readFile(new URL("../.github/workflows/deploy.yml", import.meta.url), "utf8");
+  assert.match(workflow, /npm run notify -- --source-health/);
+  assert.match(workflow, /git add data\/events\.json data\/source-health\.json/);
+  assert.match(workflow, /name: Enforce source health\n\s+run: npm run health:check/);
 });

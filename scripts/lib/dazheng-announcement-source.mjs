@@ -1,3 +1,5 @@
+import { fetchWithRetry } from "./fetch-with-retry.mjs";
+
 const DAZHENG_BASE = "https://www.bwvip.com";
 export const DAZHENG_ANNOUNCEMENT_URL = `${DAZHENG_BASE}/default.php?g=m&m=arc&a=arc_list`;
 const DAZHENG_ANNOUNCEMENT_DATA_URL = `${DAZHENG_BASE}/default.php?g=m&m=arc&a=arc_list_data`;
@@ -67,12 +69,15 @@ function matchEventIds(announcement, events = []) {
 }
 
 async function fetchText(url, fetchImpl) {
-  const response = await fetchImpl(url, {
+  const response = await fetchWithRetry(url, {
     headers: {
       accept: "text/html,application/xhtml+xml",
       "user-agent": "Mozilla/5.0 GolfScheduleBot/1.0"
-    },
-    signal: AbortSignal.timeout(15000)
+    }
+  }, {
+    fetchImpl,
+    timeoutMs: 15000,
+    attempts: 3
   });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${url}`);
   return response.text();
@@ -81,13 +86,20 @@ async function fetchText(url, fetchImpl) {
 export async function fetchDazhengAnnouncements(events = [], options = {}) {
   const fetchImpl = options.fetchImpl || fetch;
   const pages = options.pages || 5;
-  const pageResults = await Promise.all(
+  const pageResults = await Promise.allSettled(
     Array.from({ length: pages }, (_, index) => (
       fetchText(`${DAZHENG_ANNOUNCEMENT_DATA_URL}&page=${index + 1}`, fetchImpl)
     ))
   );
+  const successfulPages = pageResults.filter((result) => result.status === "fulfilled");
+  const failedPages = pageResults.filter((result) => result.status === "rejected");
+  if (!successfulPages.length) throw new Error("Dazheng announcement pages all failed");
+  if (failedPages.length) {
+    options.onWarnings?.(failedPages.map((result) => result.reason.message));
+  }
   const unique = new Map();
-  for (const html of pageResults) {
+  for (const result of successfulPages) {
+    const html = result.value;
     for (const announcement of parseDazhengAnnouncements(html)) {
       unique.set(announcement.id, {
         ...announcement,

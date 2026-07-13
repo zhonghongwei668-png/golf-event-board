@@ -17,6 +17,7 @@ for (const file of ["index.html", "app.js", "event-logic.js", "styles.css", "man
 await cp(path.join(rootDir, "data", "events.json"), path.join(distDir, "data", "events.json"));
 await cp(path.join(rootDir, "data", "sources.json"), path.join(distDir, "data", "sources.json"));
 await cp(path.join(rootDir, "data", "app-links.json"), path.join(distDir, "data", "app-links.json"));
+await cp(path.join(rootDir, "data", "source-health.json"), path.join(distDir, "data", "source-health.json"));
 await writeFile(path.join(distDir, ".nojekyll"), "", "utf8");
 await writeFile(
   path.join(distDir, "server", "index.js"),

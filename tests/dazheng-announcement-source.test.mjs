@@ -41,6 +41,22 @@ test("matches an official announcement to an existing registration event", async
   assert.deepEqual(announcement.matchedEventIds, ["dazheng-5069"]);
 });
 
+test("keeps successful announcement pages when another page fails", async () => {
+  let warnings = [];
+  const fetchImpl = async (url) => (
+    url.includes("page=2")
+      ? new Response("temporary", { status: 404, statusText: "Not Found" })
+      : new Response(announcementList, { status: 200 })
+  );
+  const announcements = await fetchDazhengAnnouncements([], {
+    fetchImpl,
+    pages: 2,
+    onWarnings: (incoming) => { warnings = incoming; }
+  });
+  assert.equal(announcements.length, 1);
+  assert.equal(warnings.length, 1);
+});
+
 test("does not notify the initial announcement baseline twice", () => {
   const current = { announcements: [{ id: "notice-1" }] };
 
@@ -69,7 +85,7 @@ test("formats a new App announcement with its matched signup link", () => {
   };
   const markdown = buildChangeNotification(previous, current);
 
-  assert.match(markdown, /【重点】大正 App 官方公告 1 条/);
+  assert.match(markdown, /【重点】官方赛事公告 1 条/);
   assert.match(markdown, /【报名开放】测试青少年高尔夫公开赛报名开启/);
   assert.match(markdown, /\[报名入口\]\(https:\/\/www\.bwvip\.com\/signup-2\)/);
 });

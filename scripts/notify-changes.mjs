@@ -5,11 +5,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHmac } from "node:crypto";
 import { isRegistrationOpenAt } from "../event-logic.js";
+import { shouldAlertFailure } from "./lib/source-health.mjs";
 
 const execFileAsync = promisify(execFile);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const eventDataPath = "data/events.json";
+const sourceHealthPath = "data/source-health.json";
 const siteUrl = process.env.NOTIFY_SITE_URL || "https://zhonghongwei668-png.github.io/golf-event-board/";
 const strictFailure = process.env.NOTIFY_STRICT === "1";
 const requireWebhook = process.env.NOTIFY_REQUIRE_WEBHOOK === "1";
@@ -151,6 +153,7 @@ function announcementLabel(kind) {
   if (kind === "open") return "报名开放";
   if (kind === "deadline") return "报名截止提醒";
   if (kind === "supplemental") return "补录/名额";
+  if (kind === "regulation") return "竞赛规程/资格";
   return "赛事公告";
 }
 
@@ -174,7 +177,7 @@ function buildMarkdown(diff, currentPayload) {
   const regularChanged = diff.changed.filter(({ event }) => !priorityOpenKeys.has(eventKey(event)));
 
   if (diff.announcements?.length) {
-    sections.push(`**【重点】大正 App 官方公告 ${diff.announcements.length} 条**\n${topItems(diff.announcements, (item) => formatAnnouncement(item, currentPayload), 10)}`);
+    sections.push(`**【重点】官方赛事公告 ${diff.announcements.length} 条**\n${topItems(diff.announcements, (item) => formatAnnouncement(item, currentPayload), 10)}`);
   }
 
   if (diff.priorityOpen?.length) {
@@ -241,6 +244,42 @@ export function buildOpenRegistrationDigest(currentPayload) {
     eventTable,
     "",
     `[查看完整名称、资格要求和报名入口](${siteUrl})`,
+  ].join("\n");
+}
+
+export function buildSourceHealthNotification(health) {
+  const sources = Object.values(health?.sources || {});
+  const degraded = sources.filter((source) => (
+    source.status === "degraded" && shouldAlertFailure(source.consecutiveFailures)
+  ));
+  const recovered = sources.filter((source) => source.recovered);
+  if (!degraded.length && !recovered.length) return "";
+
+  const checkedAt = health?.checkedAt
+    ? new Date(health.checkedAt).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" })
+    : new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" });
+  const sections = [];
+  if (degraded.length) {
+    sections.push([
+      `**【报警】${degraded.length} 个信息源更新异常**`,
+      ...degraded.map((source) => (
+        `- ${source.label}｜连续失败 ${source.consecutiveFailures} 次｜${source.error}`
+      ))
+    ].join("\n"));
+  }
+  if (recovered.length) {
+    sections.push([
+      `**【恢复】${recovered.length} 个信息源已恢复**`,
+      ...recovered.map((source) => `- ${source.label}｜本次抓取 ${source.itemCount} 条`)
+    ].join("\n"));
+  }
+  return [
+    "### 高尔夫赛历信息源健康提醒",
+    `检测时间：${checkedAt}`,
+    "",
+    sections.join("\n\n"),
+    "",
+    `[查看自动任务](${siteUrl})`
   ].join("\n");
 }
 
@@ -338,6 +377,22 @@ async function notifyWeWork(markdown) {
 }
 
 async function main() {
+  if (process.argv.includes("--source-health") || process.env.NOTIFY_SOURCE_HEALTH === "1") {
+    const health = JSON.parse(await readFile(path.join(rootDir, sourceHealthPath), "utf8"));
+    const markdown = buildSourceHealthNotification(health);
+    if (!markdown) {
+      console.log("No source health alert needed.");
+      return;
+    }
+    if (process.env.NOTIFY_DRY_RUN === "1") {
+      console.log(markdown);
+      return;
+    }
+    const sent = await notifyDingTalk(markdown);
+    if (!sent && (requireWebhook || strictFailure)) process.exitCode = 1;
+    return;
+  }
+
   if (process.argv.includes("--open-digest") || process.env.NOTIFY_OPEN_DIGEST === "1") {
     const currentPayload = await readPayload(argValue("--head") || process.env.NOTIFY_HEAD_REF || "working");
     const markdown = buildOpenRegistrationDigest(currentPayload);

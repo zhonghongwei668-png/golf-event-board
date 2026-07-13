@@ -29,6 +29,7 @@ concurrency:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,13 +37,25 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Test event rules
         run: npm test
 
       - name: Update event data
         run: npm run update
+
+      - name: Notify source health
+        run: npm run notify -- --source-health
+        env:
+          NOTIFY_STRICT: "1"
+          NOTIFY_REQUIRE_WEBHOOK: "1"
+          NOTIFY_SITE_URL: https://zhonghongwei668-png.github.io/golf-event-board/
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
+          DINGTALK_WEBHOOK_2: ${{ secrets.DINGTALK_WEBHOOK_2 || secrets.DINGTALK_WEBHOOK2 || secrets.DINGTALK_WEBHOOK_SECONDARY }}
+          DINGTALK_SECRET_2: ${{ secrets.DINGTALK_SECRET_2 || secrets.DINGTALK_SECRET2 || secrets.DINGTALK_SECRET_SECONDARY }}
+          DINGTALK_EXPECTED_TARGETS: "2"
 
       - name: Validate event data
         run: npm run validate
@@ -54,12 +67,16 @@ jobs:
         id: event_changes
         run: |
           working_changed=false
+          notify_changed=false
           if ! git diff --quiet data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json; then
+            working_changed=true
+            notify_changed=true
+          fi
+          if ! git diff --quiet data/source-health.json dist/data/source-health.json; then
             working_changed=true
           fi
 
           notify_base=HEAD
-          notify_changed="$working_changed"
           if [ "$GITHUB_EVENT_NAME" = "push" ] && [ -n "$EVENT_BEFORE" ] && ! echo "$EVENT_BEFORE" | grep -Eq '^0+$'; then
             notify_base="$EVENT_BEFORE"
             if ! git diff --quiet "$EVENT_BEFORE" HEAD -- data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json; then
@@ -91,7 +108,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/events.json dist/data/events.json dist/data/sources.json dist/data/app-links.json
+          git add data/events.json data/source-health.json dist/data/events.json dist/data/source-health.json dist/data/sources.json dist/data/app-links.json
           git commit -m "Update golf event data"
           git push
 
@@ -110,3 +127,6 @@ jobs:
           DINGTALK_SECRET_2: ${{ secrets.DINGTALK_SECRET_2 || secrets.DINGTALK_SECRET2 || secrets.DINGTALK_SECRET_SECONDARY }}
           DINGTALK_EXPECTED_TARGETS: "2"
           WEWORK_WEBHOOK: ${{ secrets.WEWORK_WEBHOOK }}
+
+      - name: Enforce source health
+        run: npm run health:check

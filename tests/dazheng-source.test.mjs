@@ -115,10 +115,16 @@ test("live fetch keeps other events when one detail page fails", async () => {
   const originalWarn = console.warn;
   console.warn = () => {};
   try {
-    const events = await fetchDazhengEvents(previous, { fetchImpl, concurrency: 2 });
+    let warnings = [];
+    const events = await fetchDazhengEvents(previous, {
+      fetchImpl,
+      concurrency: 2,
+      onWarnings: (incoming) => { warnings = incoming; }
+    });
     assert.equal(events.length, 2);
     assert.equal(events.find((event) => event.externalIds.dazheng === "6001").registrationEnd, "");
     assert.equal(events.find((event) => event.externalIds.dazheng === "6002").startDate, "2026-08-01");
+    assert.equal(warnings.length, 1);
   } finally {
     console.warn = originalWarn;
   }
