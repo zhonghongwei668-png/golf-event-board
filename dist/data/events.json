@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T16:13:10.159Z",
+  "generatedAt": "2026-07-13T01:20:45.490Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -3966,6 +3966,45 @@
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "clpga-8155",
+      "category": "women",
+      "categoryLabel": "女子赛",
+      "color": "#b8325f",
+      "name": "2026海峡杯女子菁英赛",
+      "startDate": "2026-09-02",
+      "endDate": "2026-09-04",
+      "location": "天津松江团泊湖高尔夫球会CD场",
+      "sourceUrl": "https://www.clpga.org/Match?lang=cn&id=8155",
+      "sourceLinks": [
+        {
+          "label": "赛程/详情",
+          "url": "https://www.clpga.org/Match?lang=cn&id=8155"
+        },
+        {
+          "label": "报名页",
+          "url": "https://www.clpga.org/SignUp?lang=cn&mt_id=8155"
+        }
+      ],
+      "signupUrl": "https://www.clpga.org/SignUp?lang=cn&mt_id=8155",
+      "signupMethod": "报名未公开/未开放，以CLPGA官网为准。",
+      "requirement": "以CLPGA/赛事官方资格排序、会员体系、外卡及单站通知为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "报名未公开/未开放，以CLPGA官网为准。",
+      "registrationOpen": false,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "",
+      "statusCode": "pending",
+      "statusLabel": "待开放",
+      "sourceSystem": "CLPGA官网接口",
+      "scheduleAuthority": "official_api",
       "seriesLabel": "",
       "externalIds": {},
       "updatedFromOfficial": true,
