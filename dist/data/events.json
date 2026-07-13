@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T11:31:28.632Z",
+  "generatedAt": "2026-07-13T12:21:28.801Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -6482,14 +6482,14 @@
       "notes": ""
     },
     {
-      "id": "2026年保利青少年高尔夫球巡回赛-佛山云东海站-2026-07-03",
+      "id": "2026年保利青少年高尔夫球巡回赛-佛山云东海站-2026-07-04",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
       "name": "2026年保利青少年高尔夫球巡回赛（佛山云东海站）",
-      "startDate": "2026-07-03",
+      "startDate": "2026-07-04",
       "endDate": "2026-07-05",
-      "location": "佛山保利高尔夫球会",
+      "location": "佛山保利云东海高尔夫球会",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
