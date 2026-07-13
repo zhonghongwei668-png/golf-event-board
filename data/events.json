@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T03:20:40.231Z",
+  "generatedAt": "2026-07-13T04:00:39.868Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -10,9 +10,7 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [
-    "大正官方公告: 502 Bad Gateway for https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list_data&page=1"
-  ],
+  "warnings": [],
   "categories": {
     "women": {
       "label": "女子赛",
@@ -5194,6 +5192,18 @@
     }
   ],
   "announcements": [
+    {
+      "id": "dazheng-announcement-45003",
+      "sourceId": "45003",
+      "title": "第26届尤尼克斯“张连伟”杯国际青少年高尔夫球邀请赛明日12:00开启",
+      "publishedAt": "2026-07-09 09:11",
+      "kind": "open",
+      "source": "大正高尔夫官方公告",
+      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=45003",
+      "matchedEventIds": [
+        "dazheng-5069"
+      ]
+    },
     {
       "id": "dazheng-announcement-44946",
       "sourceId": "44946",
