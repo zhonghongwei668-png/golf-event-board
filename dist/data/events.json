@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T00:01:27.885Z",
+  "generatedAt": "2026-07-14T01:21:26.470Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -2346,7 +2346,7 @@
       "name": "2026 “北京高协”北京青少年高尔夫球精英赛 第二站",
       "startDate": "2026-04-25",
       "endDate": "2026-04-26",
-      "location": "北京大运河高尔夫球俱乐部",
+      "location": "北京大运河高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -2694,7 +2694,7 @@
       "name": "2026 “北京高协”北京青少年高尔夫成长系列赛 第五站",
       "startDate": "2026-05-01",
       "endDate": "2026-05-01",
-      "location": "北京东方天星高尔夫俱乐部",
+      "location": "北京",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -2902,7 +2902,7 @@
       "name": "2026 “北京高协”北京青少年高尔夫成长系列赛 第六站",
       "startDate": "2026-05-03",
       "endDate": "2026-05-03",
-      "location": "东方明珠高尔夫俱乐部",
+      "location": "北京",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
