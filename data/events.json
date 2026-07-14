@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T02:01:27.602Z",
+  "generatedAt": "2026-07-14T02:42:21.812Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -5430,7 +5430,7 @@
       "name": "2026 “北京高协”北京青少年高尔夫成长系列赛 第十站",
       "startDate": "2026-06-19",
       "endDate": "2026-06-19",
-      "location": "北京拉斐特国际高尔夫俱乐部",
+      "location": "北京",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -5634,7 +5634,7 @@
       "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第二站",
       "startDate": "2026-06-20",
       "endDate": "2026-06-21",
-      "location": "待定/年历未列",
+      "location": "乡村高尔夫俱乐部（A、E场）",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -10217,20 +10217,16 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5085",
+      "id": "dazheng-5086",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
-      "name": "2026“京津冀鲁辽”青少年高尔夫球巡回赛",
+      "name": "2026“京津冀鲁辽”青少年高尔夫球巡回赛（二级一档）",
       "startDate": "2026-08-13",
       "endDate": "2026-08-14",
       "location": "河北廊坊艾力枫社高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5085",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5086",
       "sourceLinks": [
-        {
-          "label": "大正赛事详情",
-          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5085"
-        },
         {
           "label": "大正赛事详情",
           "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5086"
@@ -18035,6 +18031,16 @@
       "matchedEventIds": [
         "clpga-8114"
       ]
+    },
+    {
+      "id": "dazheng-announcement-44946",
+      "sourceId": "44946",
+      "title": "倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！",
+      "publishedAt": "2026-06-11 17:36",
+      "kind": "deadline",
+      "source": "大正高尔夫官方公告",
+      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946",
+      "matchedEventIds": []
     },
     {
       "id": "rungolf-announcement-2586",
