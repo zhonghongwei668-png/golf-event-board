@@ -210,6 +210,15 @@ const ANNOUNCEMENT_MAX_AGE_DAYS = {
   regulation: 30
 };
 
+function relativeAnnouncementMaxAge(title = "") {
+  const text = String(title);
+  if (/今日|今天|今晚|今早|今晨/.test(text)) return 0;
+  if (/明日|明天/.test(text)) return 1;
+  if (/最后\s*一天/.test(text)) return 0;
+  const countdown = text.match(/(?:倒计时|最后)\s*(\d+)\s*天/);
+  return countdown ? Math.min(Number(countdown[1]), 7) : Infinity;
+}
+
 export function isAnnouncementFresh(announcement, today = shanghaiDateString(new Date())) {
   const published = String(announcement?.publishedAt || "").match(/^(\d{4}-\d{2}-\d{2})/)?.[1];
   if (!published) return false;
@@ -217,7 +226,10 @@ export function isAnnouncementFresh(announcement, today = shanghaiDateString(new
   const publishedTime = Date.parse(`${published}T00:00:00Z`);
   if (!Number.isFinite(todayTime) || !Number.isFinite(publishedTime)) return false;
   const ageDays = (todayTime - publishedTime) / 86400000;
-  const maxAgeDays = ANNOUNCEMENT_MAX_AGE_DAYS[announcement.kind] ?? 14;
+  const maxAgeDays = Math.min(
+    ANNOUNCEMENT_MAX_AGE_DAYS[announcement.kind] ?? 14,
+    relativeAnnouncementMaxAge(announcement.title)
+  );
   return ageDays >= -1 && ageDays <= maxAgeDays;
 }
 

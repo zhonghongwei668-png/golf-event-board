@@ -53,6 +53,25 @@ test("keeps genuinely recent deadline notices eligible for alerts", () => {
   assert.equal(isAnnouncementFresh({ publishedAt: "2026-07-13 18:00", kind: "deadline" }, "2026-07-14"), true);
 });
 
+test("expires relative-time registration notices after their stated day", () => {
+  const announcement = {
+    publishedAt: "2026-07-09 09:11",
+    kind: "open",
+    title: "【报名开放】第26届张连伟杯明日12:00开启"
+  };
+  assert.equal(isAnnouncementFresh(announcement, "2026-07-10"), true);
+  assert.equal(isAnnouncementFresh(announcement, "2026-07-11"), false);
+  assert.equal(isAnnouncementFresh(announcement, "2026-07-14"), false);
+});
+
+test("keeps ordinary recent registration notices eligible", () => {
+  assert.equal(isAnnouncementFresh({
+    publishedAt: "2026-07-09 09:11",
+    kind: "open",
+    title: "张连伟杯报名通道开放"
+  }, "2026-07-14"), true);
+});
+
 test("suppresses a recent deadline notice when the matched registration already closed", () => {
   const previous = { announcements: [{
     id: "baseline",

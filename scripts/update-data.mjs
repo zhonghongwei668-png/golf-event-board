@@ -32,6 +32,7 @@ import {
   RUNGOLF_ANNOUNCEMENT_URL,
   fetchRungolfAnnouncements
 } from "./lib/rungolf-announcement-source.mjs";
+import { mergeAnnouncementHistory } from "./lib/announcement-history.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -572,7 +573,13 @@ async function main() {
     throw new Error(`赛事数据校验失败:\n- ${validationErrors.join("\n- ")}`);
   }
 
-  let announcements = previousPayload?.announcements || [];
+  let announcements = [];
+  const announcementHistoryOptions = {
+    today: shanghaiDateString(new Date()),
+    retentionDays: 45
+  };
+  const previousDazhengAnnouncements = (previousPayload?.announcements || [])
+    .filter((announcement) => announcement.source === "大正高尔夫官方公告");
   const announcementStartedAt = Date.now();
   const previousAnnouncementHealth = previousHealth.sources?.dazhengAnnouncements || {};
   try {
@@ -582,21 +589,25 @@ async function main() {
     });
     const previousCount = Number.isFinite(previousAnnouncementHealth.itemCount)
       ? previousAnnouncementHealth.itemCount
-      : announcements.length;
+      : previousDazhengAnnouncements.length;
     const anomaly = detectCountAnomaly(previousCount, incomingAnnouncements.length, {
       minimumPrevious: 20,
       minimumDrop: 10,
       minimumRatio: 0.5
     });
     if (anomaly) throw new Error(anomaly);
-    announcements = incomingAnnouncements;
+    announcements = mergeAnnouncementHistory(
+      incomingAnnouncements,
+      previousDazhengAnnouncements,
+      announcementHistoryOptions
+    );
     if (announcementWarnings.length) {
       const message = `${announcementWarnings.length} 个公告分页读取失败：${announcementWarnings.slice(0, 3).join("；")}`;
       errors.push(`大正官方公告: ${message}`);
       sourceHealth.dazhengAnnouncements = degradedSourceState(previousAnnouncementHealth, {
         label: "大正官方公告",
         checkedAt,
-        itemCount: announcements.length,
+        itemCount: incomingAnnouncements.length,
         durationMs: Date.now() - announcementStartedAt,
         error: message
       });
@@ -604,16 +615,17 @@ async function main() {
       sourceHealth.dazhengAnnouncements = healthySourceState(previousAnnouncementHealth, {
         label: "大正官方公告",
         checkedAt,
-        itemCount: announcements.length,
+        itemCount: incomingAnnouncements.length,
         durationMs: Date.now() - announcementStartedAt
       });
     }
   } catch (error) {
     errors.push(`大正官方公告: ${error.message}`);
+    announcements.push(...previousDazhengAnnouncements);
     sourceHealth.dazhengAnnouncements = degradedSourceState(previousAnnouncementHealth, {
       label: "大正官方公告",
       checkedAt,
-      fallbackCount: announcements.length,
+      fallbackCount: previousDazhengAnnouncements.length,
       durationMs: Date.now() - announcementStartedAt,
       error: error.message
     });
@@ -634,7 +646,11 @@ async function main() {
       minimumRatio: 0.5
     });
     if (anomaly) throw new Error(anomaly);
-    announcements.push(...incoming);
+    announcements.push(...mergeAnnouncementHistory(
+      incoming,
+      previousCgaAnnouncements,
+      announcementHistoryOptions
+    ));
     sourceHealth.cgaAnnouncements = healthySourceState(previousCgaAnnouncementHealth, {
       label: "中高协官方公告",
       checkedAt,
@@ -668,7 +684,11 @@ async function main() {
       minimumRatio: 0.5
     });
     if (anomaly) throw new Error(anomaly);
-    announcements.push(...incoming);
+    announcements.push(...mergeAnnouncementHistory(
+      incoming,
+      previousRungolfAnnouncements,
+      announcementHistoryOptions
+    ));
     sourceHealth.rungolfAnnouncements = healthySourceState(previousRungolfAnnouncementHealth, {
       label: "如歌官方赛事新闻",
       checkedAt,
