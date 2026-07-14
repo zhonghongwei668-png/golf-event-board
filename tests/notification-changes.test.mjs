@@ -2,7 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   buildChangeNotification,
-  diffOfficialAnnouncements
+  diffOfficialAnnouncements,
+  isAnnouncementFresh
 } from "../scripts/notify-changes.mjs";
 
 test("suppresses historical event backfill from change notifications", () => {
@@ -29,6 +30,47 @@ test("a newly added official source only alerts notices published today", () => 
     diffOfficialAnnouncements({ announcements: [] }, current, { today: "2026-07-13" }).map((item) => item.id),
     ["today"]
   );
+});
+
+test("never re-alerts an expired deadline notice that disappears and returns", () => {
+  const previous = { announcements: [{
+    id: "another-notice",
+    source: "大正高尔夫官方公告",
+    publishedAt: "2026-07-14 09:00",
+    kind: "open"
+  }] };
+  const current = { announcements: [{
+    id: "dazheng-announcement-44946",
+    source: "大正高尔夫官方公告",
+    publishedAt: "2026-06-11 17:36",
+    kind: "deadline"
+  }] };
+  assert.deepEqual(diffOfficialAnnouncements(previous, current, { today: "2026-07-14" }), []);
+  assert.equal(isAnnouncementFresh(current.announcements[0], "2026-07-14"), false);
+});
+
+test("keeps genuinely recent deadline notices eligible for alerts", () => {
+  assert.equal(isAnnouncementFresh({ publishedAt: "2026-07-13 18:00", kind: "deadline" }, "2026-07-14"), true);
+});
+
+test("suppresses a recent deadline notice when the matched registration already closed", () => {
+  const previous = { announcements: [{
+    id: "baseline",
+    source: "官方公告",
+    publishedAt: "2026-07-14",
+    kind: "open"
+  }] };
+  const current = {
+    announcements: [{
+      id: "expired-deadline",
+      source: "官方公告",
+      publishedAt: "2026-07-14 09:00",
+      kind: "deadline",
+      matchedEventIds: ["event-1"]
+    }],
+    events: [{ id: "event-1", registrationEnd: "2026-07-13 18:00" }]
+  };
+  assert.deepEqual(diffOfficialAnnouncements(previous, current, { today: "2026-07-14" }), []);
 });
 
 test("notifies material location and eligibility changes", () => {
@@ -77,4 +119,30 @@ test("treats a date-derived ID change as an update to the same event", () => {
   const markdown = buildChangeNotification(previous, current);
   assert.match(markdown, /变化：比赛开始、比赛结束/);
   assert.doesNotMatch(markdown, /新增赛事|赛事下架/);
+});
+
+test("treats an added competition-grade suffix as the same event", () => {
+  const previous = {
+    announcements: [],
+    events: [{
+      id: "tour-old",
+      category: "junior",
+      name: "2026京津冀鲁辽青少年高尔夫球巡回赛",
+      startDate: "2026-08-13",
+      endDate: "2026-08-14",
+      registrationOpen: true
+    }]
+  };
+  const current = {
+    announcements: [],
+    generatedAt: "2026-07-14T02:42:21.000Z",
+    events: [{
+      ...previous.events[0],
+      id: "tour-new",
+      name: "2026京津冀鲁辽青少年高尔夫球巡回赛（二级一档）"
+    }]
+  };
+  const markdown = buildChangeNotification(previous, current);
+  assert.match(markdown, /变化：赛事名称/);
+  assert.doesNotMatch(markdown, /新开放报名|赛事下架/);
 });

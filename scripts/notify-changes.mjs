@@ -55,6 +55,7 @@ function eventKey(event) {
 function eventIdentity(event) {
   const normalizedName = String(event.name || "")
     .toLowerCase()
+    .replace(/[（(]\s*(?:青少|业余)?[一二三四五]级(?:[一二三四]档)?赛?\s*[）)]/gu, "")
     .replace(/[\s\p{P}\p{S}]/gu, "");
   return `${event.category || ""}:${normalizedName}`;
 }
@@ -202,13 +203,42 @@ function diffEvents(previousPayload, currentPayload) {
   return { added, opened, priorityOpen, changed, removed, historicalBackfill };
 }
 
+const ANNOUNCEMENT_MAX_AGE_DAYS = {
+  deadline: 1,
+  supplemental: 7,
+  open: 14,
+  regulation: 30
+};
+
+export function isAnnouncementFresh(announcement, today = shanghaiDateString(new Date())) {
+  const published = String(announcement?.publishedAt || "").match(/^(\d{4}-\d{2}-\d{2})/)?.[1];
+  if (!published) return false;
+  const todayTime = Date.parse(`${today}T00:00:00Z`);
+  const publishedTime = Date.parse(`${published}T00:00:00Z`);
+  if (!Number.isFinite(todayTime) || !Number.isFinite(publishedTime)) return false;
+  const ageDays = (todayTime - publishedTime) / 86400000;
+  const maxAgeDays = ANNOUNCEMENT_MAX_AGE_DAYS[announcement.kind] ?? 14;
+  return ageDays >= -1 && ageDays <= maxAgeDays;
+}
+
+function deadlineAnnouncementIsActionable(announcement, eventsById, today) {
+  if (announcement.kind !== "deadline") return true;
+  const deadlines = (announcement.matchedEventIds || [])
+    .map((id) => eventsById.get(id)?.registrationEnd?.slice(0, 10))
+    .filter(Boolean);
+  return !deadlines.length || deadlines.some((deadline) => deadline >= today);
+}
+
 export function diffOfficialAnnouncements(previousPayload, currentPayload, options = {}) {
   if (!Array.isArray(previousPayload?.announcements)) return [];
   const previousIds = new Set(previousPayload.announcements.map((item) => item.id));
   const previousSources = new Set(previousPayload.announcements.map((item) => item.source).filter(Boolean));
   const today = options.today || shanghaiDateString(new Date());
+  const eventsById = new Map((currentPayload?.events || []).map((event) => [event.id, event]));
   return (currentPayload?.announcements || []).filter((item) => (
     !previousIds.has(item.id)
+    && isAnnouncementFresh(item, today)
+    && deadlineAnnouncementIsActionable(item, eventsById, today)
     && (!item.source || previousSources.has(item.source) || item.publishedAt >= today)
   ));
 }

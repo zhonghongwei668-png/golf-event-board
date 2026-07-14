@@ -58,10 +58,18 @@ test("keeps successful announcement pages when another page fails", async () => 
 });
 
 test("does not notify the initial announcement baseline twice", () => {
-  const current = { announcements: [{ id: "notice-1" }] };
+  const current = { announcements: [{
+    id: "notice-1",
+    source: "大正高尔夫官方公告",
+    publishedAt: "2026-07-14 09:00",
+    kind: "open"
+  }] };
 
   assert.deepEqual(diffDazhengAnnouncements({}, current), []);
-  assert.deepEqual(diffDazhengAnnouncements({ announcements: [] }, current), current.announcements);
+  assert.deepEqual(
+    diffDazhengAnnouncements({ announcements: [] }, current, { today: "2026-07-14" }),
+    current.announcements
+  );
   assert.deepEqual(diffDazhengAnnouncements(current, current), []);
 });
 
