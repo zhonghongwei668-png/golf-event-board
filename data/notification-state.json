@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T07:01:34.440Z",
+  "updatedAt": "2026-07-14T07:26:49.196Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -348,6 +348,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-14T07:01:34.440Z",
           "sentAt": "2026-07-14T07:01:34.440Z",
+          "error": ""
+        }
+      }
+    },
+    "25d0f0e93cfb840eb4e9c841000ad2cd46bea1eaae805735b07fb9984d03c6ff": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/14 15:26:45\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026华东青少年球队争霸赛-协和站｜2026-07-15，报名截止 2026-07-14，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-14T07:26:46.695Z",
+      "updatedAt": "2026-07-14T07:26:49.196Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-14T07:26:48.641Z",
+          "sentAt": "2026-07-14T07:26:48.641Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-14T07:26:49.196Z",
+          "sentAt": "2026-07-14T07:26:49.196Z",
           "error": ""
         }
       }
