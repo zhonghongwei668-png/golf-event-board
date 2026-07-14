@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T08:11:30.107Z",
+  "generatedAt": "2026-07-14T08:51:28.876Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -401,7 +401,7 @@
       "name": "2026云南省高协青少年巡回赛第一站暨2026沪滇青少年高尔夫邀请赛",
       "startDate": "2026-02-07",
       "endDate": "2026-02-08",
-      "location": "昆明春城湖畔度假村-山景球场",
+      "location": "云南昆明",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -17941,18 +17941,6 @@
       "source": "中国高尔夫球协会官方公告",
       "url": "https://www.cgagolf.org.cn/xnews_details/2418.html",
       "matchedEventIds": []
-    },
-    {
-      "id": "dazheng-announcement-45003",
-      "sourceId": "45003",
-      "title": "第26届尤尼克斯“张连伟”杯国际青少年高尔夫球邀请赛明日12:00开启",
-      "publishedAt": "2026-07-09 09:11",
-      "kind": "open",
-      "source": "大正高尔夫官方公告",
-      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=45003",
-      "matchedEventIds": [
-        "dazheng-5069"
-      ]
     },
     {
       "id": "cga-announcement-2417",
