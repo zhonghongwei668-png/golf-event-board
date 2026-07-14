@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T02:42:21.812Z",
+  "generatedAt": "2026-07-14T03:31:31.250Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -401,7 +401,7 @@
       "name": "2026云南省高协青少年巡回赛第一站暨2026沪滇青少年高尔夫邀请赛",
       "startDate": "2026-02-07",
       "endDate": "2026-02-08",
-      "location": "昆明春城湖畔度假村",
+      "location": "昆明春城湖畔度假村-山景球场",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -1997,7 +1997,7 @@
       "name": "2026湖南省青少年高尔夫球冠军赛(SLGS超级蒸枝系列赛)",
       "startDate": "2026-04-18",
       "endDate": "2026-04-19",
-      "location": "湖南梓山湖国际高尔夫俱乐部",
+      "location": "湖南益阳",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -5450,6 +5450,44 @@
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "2026北京青少年高尔夫球公开赛-2026-08-18",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026北京青少年高尔夫球公开赛",
+      "startDate": "2026-06-19",
+      "endDate": "2026-06-19",
+      "location": "北京大运河高尔夫俱乐部",
+      "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
+      "sourceLinks": [
+        {
+          "label": "www.cgagolf.org.cn/xnews_details/2253.html",
+          "url": "https://www.cgagolf.org.cn/xnews_details/2253.html"
+        },
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "requirement": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "3",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
@@ -10785,44 +10823,6 @@
       "externalIds": {
         "dazheng": "5084"
       },
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "2026北京青少年高尔夫球公开赛-2026-08-18",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026北京青少年高尔夫球公开赛",
-      "startDate": "2026-08-18",
-      "endDate": "2026-08-21",
-      "location": "待定/年历未列",
-      "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
-      "sourceLinks": [
-        {
-          "label": "www.cgagolf.org.cn/xnews_details/2253.html",
-          "url": "https://www.cgagolf.org.cn/xnews_details/2253.html"
-        },
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "requirement": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "3",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
       "updatedFromOfficial": true,
       "notes": ""
     },
