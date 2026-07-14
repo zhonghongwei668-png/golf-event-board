@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T02:42:25.077Z",
+  "updatedAt": "2026-07-14T06:52:56.485Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -248,6 +248,56 @@
           "status": "sent",
           "attemptedAt": "2026-07-14T02:42:25.077Z",
           "sentAt": "2026-07-14T02:42:25.077Z",
+          "error": ""
+        }
+      }
+    },
+    "a73442f593b1e7df5baff79f42015c80a2e5ea4f19e683fd2a703615a294aeca": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/14 14:51:08\n\n**【报警】3 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜fetch failed\n- 大正官方公告｜连续失败 1 次｜Dazheng announcement pages all failed\n- 中高协官方公告｜连续失败 1 次｜fetch failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-14T06:52:53.393Z",
+      "updatedAt": "2026-07-14T06:52:54.897Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-14T06:52:54.389Z",
+          "sentAt": "2026-07-14T06:52:54.389Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-14T06:52:54.897Z",
+          "sentAt": "2026-07-14T06:52:54.897Z",
+          "error": ""
+        }
+      }
+    },
+    "3d51e612cf44ecb198df4ac06eeb77b5f8e6535eba44729bf08fd434e4988cab": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/14 14:52:52\n\n**报名/日期/入口变化 3 条**\n- 青少年赛｜GCCT青少年高尔夫球技能等级二级赛-山东第一站｜2026-07-28 至 2026-07-29，报名截止 2026-07-23，变化：比赛地点\n- 业余赛｜2026年南山全国业余高尔夫球锦标赛第三站｜2026-08-03 至 2026-08-06，报名截止 2026-07-31，变化：比赛地点\n- 青少年赛｜GCCT青少年高尔夫球技能等级二级赛-陕西站｜2026-08-06 至 2026-08-07，报名截止 2026-08-05，变化：比赛地点\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-14T06:52:55.201Z",
+      "updatedAt": "2026-07-14T06:52:56.485Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-14T06:52:55.990Z",
+          "sentAt": "2026-07-14T06:52:55.990Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-14T06:52:56.485Z",
+          "sentAt": "2026-07-14T06:52:56.485Z",
           "error": ""
         }
       }
