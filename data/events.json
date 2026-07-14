@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T01:21:26.470Z",
+  "generatedAt": "2026-07-14T02:01:27.602Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -3708,7 +3708,7 @@
       "name": "2026 “北京高协”北京青少年高尔夫球精英赛 第三站",
       "startDate": "2026-05-23",
       "endDate": "2026-05-24",
-      "location": "北京大运河高尔夫球俱乐部",
+      "location": "北京大运河高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -5430,7 +5430,7 @@
       "name": "2026 “北京高协”北京青少年高尔夫成长系列赛 第十站",
       "startDate": "2026-06-19",
       "endDate": "2026-06-19",
-      "location": "待定/年历未列",
+      "location": "北京拉斐特国际高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -10213,6 +10213,47 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5085",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026“京津冀鲁辽”青少年高尔夫球巡回赛",
+      "startDate": "2026-08-13",
+      "endDate": "2026-08-14",
+      "location": "河北廊坊艾力枫社高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5085",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5085"
+        },
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5086"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5086",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-14 至 2026-08-12。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-07-14",
+      "registrationEnd": "2026-08-12",
+      "registrationText": "2026年07月14日 ~ 08月12日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5086"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -17994,16 +18035,6 @@
       "matchedEventIds": [
         "clpga-8114"
       ]
-    },
-    {
-      "id": "dazheng-announcement-44946",
-      "sourceId": "44946",
-      "title": "倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！",
-      "publishedAt": "2026-06-11 17:36",
-      "kind": "deadline",
-      "source": "大正高尔夫官方公告",
-      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946",
-      "matchedEventIds": []
     },
     {
       "id": "rungolf-announcement-2586",
