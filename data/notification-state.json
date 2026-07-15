@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-15T02:40:40.051Z",
+  "updatedAt": "2026-07-15T06:00:42.396Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -498,6 +498,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-15T02:40:40.051Z",
           "sentAt": "2026-07-15T02:40:40.051Z",
+          "error": ""
+        }
+      }
+    },
+    "5b627657e80139445cc45f159e30ba103a7e451efc578abdaa88c5b13ef9695e": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/15 14:00:39\n\n**【重点】官方赛事公告 1 条**\n- **【报名开放】25周年，等你归来|张连伟杯25周年庆典暨珍宝怀邀请赛公开报名启动！**｜2026-07-15 13:53｜[官方公告](https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=45012)\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026“京津冀鲁辽”青少年高尔夫球巡回赛（二级一档）｜2026-08-06 至 2026-08-07，报名截止 2026-08-04，变化：报名截止、报名方式、比赛开始、比赛结束\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-15T06:00:40.523Z",
+      "updatedAt": "2026-07-15T06:00:42.396Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-15T06:00:41.841Z",
+          "sentAt": "2026-07-15T06:00:41.841Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-15T06:00:42.396Z",
+          "sentAt": "2026-07-15T06:00:42.396Z",
           "error": ""
         }
       }
