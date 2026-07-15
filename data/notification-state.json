@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T16:48:19.879Z",
+  "updatedAt": "2026-07-15T00:00:36.745Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -423,6 +423,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-14T16:48:19.879Z",
           "sentAt": "2026-07-14T16:48:19.879Z",
+          "error": ""
+        }
+      }
+    },
+    "2e1f8e11cf636b5709e87a34981ad6543059ca0c557d20bef87e1214833c04e3": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/15 08:00:34\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-14｜2026华东青少年球队争霸赛-协和站，报名截止 2026-08-13，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4866)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-15T00:00:35.262Z",
+      "updatedAt": "2026-07-15T00:00:36.745Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-15T00:00:36.170Z",
+          "sentAt": "2026-07-15T00:00:36.170Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-15T00:00:36.745Z",
+          "sentAt": "2026-07-15T00:00:36.745Z",
           "error": ""
         }
       }
