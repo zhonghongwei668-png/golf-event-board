@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-15T10:50:37.994Z",
+  "updatedAt": "2026-07-15T11:30:35.869Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -548,6 +548,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-15T10:50:37.994Z",
           "sentAt": "2026-07-15T10:50:37.994Z",
+          "error": ""
+        }
+      }
+    },
+    "bf6182720aa5efda81d56ecb83cece2a96d679c38b654ab5453e68e9915540c9": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/15 19:30:32\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜FVF-2026年青少年嘉年华挑战赛PCGC及NJDP东北赛区资格赛-辽阳太子河站 (JGS积分)｜2026-07-16 至 2026-07-17，报名截止 2026-07-15，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-15T11:30:33.404Z",
+      "updatedAt": "2026-07-15T11:30:35.869Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-15T11:30:35.321Z",
+          "sentAt": "2026-07-15T11:30:35.321Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-15T11:30:35.869Z",
+          "sentAt": "2026-07-15T11:30:35.869Z",
           "error": ""
         }
       }
