@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-16T01:20:34.257Z",
+  "updatedAt": "2026-07-16T02:40:34.437Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -623,6 +623,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-16T01:20:34.257Z",
           "sentAt": "2026-07-16T01:20:34.257Z",
+          "error": ""
+        }
+      }
+    },
+    "324f2a860827074e91bfc4083b90fb09a5234dc5ff9dd6077d7301df5604b60a": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/16 10:40:32\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-15 至 2026-08-16｜2026 SLGS FCG中国区青少年系列赛-广东第6站（WAGR+JGS积分），报名截止 2026-08-10，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5088)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-16T02:40:33.032Z",
+      "updatedAt": "2026-07-16T02:40:34.437Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T02:40:33.901Z",
+          "sentAt": "2026-07-16T02:40:33.901Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T02:40:34.437Z",
+          "sentAt": "2026-07-16T02:40:34.437Z",
           "error": ""
         }
       }
