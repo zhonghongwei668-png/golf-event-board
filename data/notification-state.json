@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-16T11:12:08.021Z",
+  "updatedAt": "2026-07-16T11:31:28.145Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -823,6 +823,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-16T11:12:08.021Z",
           "sentAt": "2026-07-16T11:12:08.021Z",
+          "error": ""
+        }
+      }
+    },
+    "af06ec627b5bd321d63e2030998df0011d2e0666458207e12e43eba176372e53": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/16 19:31:08\n\n**【恢复】1 个信息源已恢复**\n- CLPGA｜本次抓取 16 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-16T11:31:26.366Z",
+      "updatedAt": "2026-07-16T11:31:28.145Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T11:31:27.494Z",
+          "sentAt": "2026-07-16T11:31:27.494Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T11:31:28.145Z",
+          "sentAt": "2026-07-16T11:31:28.145Z",
           "error": ""
         }
       }
