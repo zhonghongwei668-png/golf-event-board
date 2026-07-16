@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-15T16:57:38.734Z",
+  "updatedAt": "2026-07-16T01:20:34.257Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -598,6 +598,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-15T16:57:38.734Z",
           "sentAt": "2026-07-15T16:57:38.734Z",
+          "error": ""
+        }
+      }
+    },
+    "21b2a8d01952438e3de36704d697607374af93546154c1fc88b581083e73ac9e": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/16 09:20:30\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026迈阅青少年高尔夫巡回赛·上海新天鸿名人站｜2026-07-17，报名截止 2026-07-16，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-16T01:20:31.815Z",
+      "updatedAt": "2026-07-16T01:20:34.257Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T01:20:33.716Z",
+          "sentAt": "2026-07-16T01:20:33.716Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T01:20:34.257Z",
+          "sentAt": "2026-07-16T01:20:34.257Z",
           "error": ""
         }
       }
