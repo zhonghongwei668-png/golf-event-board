@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-16T03:20:36.219Z",
+  "updatedAt": "2026-07-16T04:40:38.897Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -673,6 +673,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-16T03:20:36.219Z",
           "sentAt": "2026-07-16T03:20:36.219Z",
+          "error": ""
+        }
+      }
+    },
+    "3ff7448d032ab99b95eb5d7b378883ab099a7c3c7d98e521c9feb10070fe80a3": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/16 12:40:35\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-17 至 2026-08-18｜2026迈阅青少年高尔夫巡回赛·合肥紫篷湾站，报名截止 2026-08-16，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5090)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-16T04:40:36.925Z",
+      "updatedAt": "2026-07-16T04:40:38.897Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T04:40:38.343Z",
+          "sentAt": "2026-07-16T04:40:38.343Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T04:40:38.897Z",
+          "sentAt": "2026-07-16T04:40:38.897Z",
           "error": ""
         }
       }
