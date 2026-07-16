@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-16T06:00:44.778Z",
+  "updatedAt": "2026-07-16T06:40:38.984Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -723,6 +723,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-16T06:00:44.778Z",
           "sentAt": "2026-07-16T06:00:44.778Z",
+          "error": ""
+        }
+      }
+    },
+    "d3d97a41d386b15ed72f5c47ccee03d9a601fe1645d10a291ce1406a4f6c37b5": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/16 14:40:35\n\n**【重点】官方赛事公告 2 条**\n- **【竞赛规程/资格】中国高尔夫球协会关于印发2026海峡杯·青少年 高尔夫球厦门公开赛竞赛规程的通知**｜2026-07-16｜[官方公告](https://www.cgagolf.org.cn/xnews_details/2422.html)\n- **【竞赛规程/资格】中国高尔夫球协会关于印发2026全国青少年高尔夫球公开赛·西北地区竞赛规程的通知**｜2026-07-16｜[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5070)｜[官方公告](https://www.cgagolf.org.cn/xnews_details/2421.html)\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-16T06:40:36.501Z",
+      "updatedAt": "2026-07-16T06:40:38.984Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T06:40:38.423Z",
+          "sentAt": "2026-07-16T06:40:38.423Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T06:40:38.984Z",
+          "sentAt": "2026-07-16T06:40:38.984Z",
           "error": ""
         }
       }
