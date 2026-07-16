@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-16T04:40:38.897Z",
+  "updatedAt": "2026-07-16T06:00:44.778Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -698,6 +698,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-16T04:40:38.897Z",
           "sentAt": "2026-07-16T04:40:38.897Z",
+          "error": ""
+        }
+      }
+    },
+    "b9de34f3c00c7bb60d4990cbecba1a3241ada67a9ebf004af198ea78c24fe0f4": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/16 14:00:41\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-25 至 2026-08-26｜2026FALA·长三角青少年高尔夫球员精英赛-第五站，报名截止 2026-08-18，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5091)**\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜“魅力江苏 最美体育”-“挥杆未来”2026江苏省青少年高尔夫球巡回赛-苏州光明站｜2026-07-27 至 2026-07-28，报名截止 2026-07-25，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-16T06:00:42.960Z",
+      "updatedAt": "2026-07-16T06:00:44.778Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T06:00:44.279Z",
+          "sentAt": "2026-07-16T06:00:44.279Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-16T06:00:44.778Z",
+          "sentAt": "2026-07-16T06:00:44.778Z",
           "error": ""
         }
       }

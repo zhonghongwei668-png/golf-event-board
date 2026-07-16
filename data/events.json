@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T04:40:35.853Z",
+  "generatedAt": "2026-07-16T06:00:41.891Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -8317,17 +8317,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5089",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-16 至 2026-07-25。",
+      "signupMethod": "大正高尔夫赛事详情显示待开放；平台展示报名期 2026-07-16 至 2026-07-25。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-07-16",
       "registrationEnd": "2026-07-25",
       "registrationText": "2026年07月16 ~ 25日",
-      "registrationOpen": true,
+      "registrationOpen": false,
       "registrationClosed": false,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "pending",
+      "statusLabel": "待开放",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -11684,6 +11684,43 @@
       "seriesLabel": "青少赛-大正高尔夫",
       "externalIds": {
         "dazheng": "5063"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5091",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026FALA·长三角青少年高尔夫球员精英赛-第五站",
+      "startDate": "2026-08-25",
+      "endDate": "2026-08-26",
+      "location": "浙江安吉龙王溪高尔夫乡村俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5091",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5091"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5091",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-16 至 2026-08-18。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-07-16",
+      "registrationEnd": "2026-08-18",
+      "registrationText": "2026年07月16日 ~ 08月18日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5091"
       },
       "updatedFromOfficial": true,
       "notes": ""
