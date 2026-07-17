@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-17T00:31:23.919Z",
+  "updatedAt": "2026-07-17T01:12:09.122Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -948,6 +948,56 @@
           "status": "sent",
           "attemptedAt": "2026-07-17T00:31:23.919Z",
           "sentAt": "2026-07-17T00:31:23.919Z",
+          "error": ""
+        }
+      }
+    },
+    "c29d44ec4c8bfce95a1f937c907c741bf9626541f283d951123d07dd24155f21": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/17 09:11:03\n\n**【报警】1 个信息源更新异常**\n- CLPGA｜连续失败 1 次｜The operation was aborted due to timeout\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-17T01:12:05.868Z",
+      "updatedAt": "2026-07-17T01:12:07.676Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T01:12:07.145Z",
+          "sentAt": "2026-07-17T01:12:07.145Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T01:12:07.676Z",
+          "sentAt": "2026-07-17T01:12:07.676Z",
+          "error": ""
+        }
+      }
+    },
+    "5b13e71a8e0191104f1ea3d145c0576bbb1c287e8aaff181c1e364c14ff2c72a": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/17 09:12:05\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026全国青少年高尔夫球公开赛·中部地区｜2026-08-12 至 2026-08-15，报名截止 2026-07-17，变化：报名截止\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-17T01:12:07.998Z",
+      "updatedAt": "2026-07-17T01:12:09.122Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T01:12:08.632Z",
+          "sentAt": "2026-07-17T01:12:08.632Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T01:12:09.122Z",
+          "sentAt": "2026-07-17T01:12:09.122Z",
           "error": ""
         }
       }
