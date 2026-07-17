@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-16T17:48:33.669Z",
+  "updatedAt": "2026-07-17T00:02:06.006Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -873,6 +873,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-16T17:48:33.669Z",
           "sentAt": "2026-07-16T17:48:33.669Z",
+          "error": ""
+        }
+      }
+    },
+    "88d08afe98159aa9bafe18cf45fc7797caf6182e70d5a84e4a3fba7ed222fae7": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/17 08:01:06\n\n**【报警】1 个信息源更新异常**\n- CLPGA｜连续失败 1 次｜The operation was aborted due to timeout\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-17T00:02:03.794Z",
+      "updatedAt": "2026-07-17T00:02:06.006Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T00:02:05.375Z",
+          "sentAt": "2026-07-17T00:02:05.375Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T00:02:06.006Z",
+          "sentAt": "2026-07-17T00:02:06.006Z",
           "error": ""
         }
       }
