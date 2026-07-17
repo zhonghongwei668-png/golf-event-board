@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-17T07:21:29.664Z",
+  "updatedAt": "2026-07-17T07:36:08.367Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -1173,6 +1173,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-17T07:21:29.664Z",
           "sentAt": "2026-07-17T07:21:29.664Z",
+          "error": ""
+        }
+      }
+    },
+    "d45ae9c4c9eb2a48703ba9bc8d47ba647ad70326034bf7748a11778598a8502e": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/17 15:36:05\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-06 至 2026-08-07｜2026“九鹤岩茶杯”福建省武夷山青少年高尔夫球系列赛·总决赛，报名截止 2026-08-05，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5095)**\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜第26届尤尼克斯“张连伟”杯国际青少年高尔夫球邀请赛｜2026-08-11 至 2026-08-15，报名截止 2026-07-17，变化：报名截止、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-17T07:36:06.564Z",
+      "updatedAt": "2026-07-17T07:36:08.367Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T07:36:07.825Z",
+          "sentAt": "2026-07-17T07:36:07.825Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T07:36:08.367Z",
+          "sentAt": "2026-07-17T07:36:08.367Z",
           "error": ""
         }
       }
