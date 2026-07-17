@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T04:41:25.045Z",
+  "generatedAt": "2026-07-17T06:01:22.214Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -889,7 +889,7 @@
       "name": "2026年江西省青少年高尔夫球积分巡回赛第一站",
       "startDate": "2026-03-21",
       "endDate": "2026-03-22",
-      "location": "南昌保利高尔夫球会",
+      "location": "江西省南昌市",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4334,7 +4334,7 @@
       "name": "2026年江西省青少年高尔夫球积分巡回赛第三站",
       "startDate": "2026-05-30",
       "endDate": "2026-05-31",
-      "location": "南昌翠林高尔夫球会",
+      "location": "江西省南昌市",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4504,7 +4504,7 @@
       "name": "湖南省青少年高尔夫球公开赛暨U系列赛第二站",
       "startDate": "2026-05-30",
       "endDate": "2026-05-31",
-      "location": "湖南长沙星河湾国际高尔夫俱乐部",
+      "location": "长沙",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
