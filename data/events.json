@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T13:21:22.661Z",
+  "generatedAt": "2026-07-17T13:31:28.077Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,9 +12,7 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [
-    "中高协官方公告: 430 Unknown Status for https://www.cgagolf.org.cn/society/c-_detailId%3D19827639.html"
-  ],
+  "warnings": [],
   "categories": {
     "women": {
       "label": "女子赛",
