@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-17T04:01:24.171Z",
+  "updatedAt": "2026-07-17T04:41:27.901Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -1098,6 +1098,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-17T04:01:24.171Z",
           "sentAt": "2026-07-17T04:01:24.171Z",
+          "error": ""
+        }
+      }
+    },
+    "93321fc2cbc42f96ad715b8ca2db3cf4d2e14bcec0477ea3869791c5d7325c1d": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/17 12:41:25\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026“京津冀鲁辽”青少年高尔夫球巡回赛（二级一档）｜2026-08-20 至 2026-08-21，报名截止 2026-08-19，变化：报名截止、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-17T04:41:26.116Z",
+      "updatedAt": "2026-07-17T04:41:27.901Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T04:41:27.388Z",
+          "sentAt": "2026-07-17T04:41:27.388Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-17T04:41:27.901Z",
+          "sentAt": "2026-07-17T04:41:27.901Z",
           "error": ""
         }
       }
