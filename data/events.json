@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T01:12:05.135Z",
+  "generatedAt": "2026-07-17T01:21:21.204Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,9 +12,7 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [
-    "CLPGA: The operation was aborted due to timeout"
-  ],
+  "warnings": [],
   "categories": {
     "women": {
       "label": "女子赛",
