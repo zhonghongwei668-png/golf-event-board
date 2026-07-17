@@ -75,14 +75,12 @@ function formatDateRange(event) {
 
 function formatEvent(event) {
   const label = event.categoryLabel || event.category || "赛事";
-  const deadline = event.registrationEnd ? `，报名截止 ${event.registrationEnd}` : "";
-  return `- ${label}｜${event.name}｜${formatDateRange(event)}${deadline}`;
+  return `- ${label}｜${event.name}｜${formatDateRange(event)}`;
 }
 
 function formatPriorityOpenEvent(event) {
-  const deadline = event.registrationEnd ? `，报名截止 ${event.registrationEnd}` : "";
   const signup = event.signupUrl ? `，[报名入口](${event.signupUrl})` : "";
-  return `- **【重点】新开放报名｜${formatDateRange(event)}｜${event.name}${deadline}${signup}**`;
+  return `- **【重点】新开放报名｜${formatDateRange(event)}｜${event.name}${signup}**`;
 }
 
 function compactDate(value = "") {
@@ -106,7 +104,7 @@ function compactTableText(value = "", maxLength = 24) {
 }
 
 function formatOpenDigestRow(event) {
-  return `| ${compactDateRange(event)} | ${compactTableText(event.name)} | ${compactDate(event.registrationEnd)} |`;
+  return `| ${compactDateRange(event)} | ${compactTableText(event.name)} |`;
 }
 
 function isOpenRegistration(event) {
@@ -122,8 +120,6 @@ function changedFields(before, after) {
     ["name", "赛事名称"],
     ["statusLabel", "状态"],
     ["registrationStart", "报名开始"],
-    ["registrationEnd", "报名截止"],
-    ["registrationOpen", "报名状态"],
     ["signupUrl", "报名入口"],
     ["signupMethod", "报名方式"],
     ["sourceUrl", "信息源"],
@@ -135,6 +131,7 @@ function changedFields(before, after) {
     ["competitionGrade", "赛事级别"],
   ]
     .filter(([key]) => comparable(before[key]) !== comparable(after[key]))
+    .filter(([key]) => key !== "statusLabel" || !/报名截止|已截止|报名结束|已满/.test(String(after[key] || "")))
     .map(([, label]) => label);
 }
 
@@ -233,24 +230,15 @@ export function isAnnouncementFresh(announcement, today = shanghaiDateString(new
   return ageDays >= -1 && ageDays <= maxAgeDays;
 }
 
-function deadlineAnnouncementIsActionable(announcement, eventsById, today) {
-  if (announcement.kind !== "deadline") return true;
-  const deadlines = (announcement.matchedEventIds || [])
-    .map((id) => eventsById.get(id)?.registrationEnd?.slice(0, 10))
-    .filter(Boolean);
-  return !deadlines.length || deadlines.some((deadline) => deadline >= today);
-}
-
 export function diffOfficialAnnouncements(previousPayload, currentPayload, options = {}) {
   if (!Array.isArray(previousPayload?.announcements)) return [];
   const previousIds = new Set(previousPayload.announcements.map((item) => item.id));
   const previousSources = new Set(previousPayload.announcements.map((item) => item.source).filter(Boolean));
   const today = options.today || shanghaiDateString(new Date());
-  const eventsById = new Map((currentPayload?.events || []).map((event) => [event.id, event]));
   return (currentPayload?.announcements || []).filter((item) => (
     !previousIds.has(item.id)
+    && item.kind !== "deadline"
     && isAnnouncementFresh(item, today)
-    && deadlineAnnouncementIsActionable(item, eventsById, today)
     && (!item.source || previousSources.has(item.source) || item.publishedAt >= today)
   ));
 }
@@ -345,8 +333,8 @@ export function buildOpenRegistrationDigest(currentPayload) {
 
   const eventTable = events.length
     ? [
-        "| 比赛日期 | 赛事名称 | 报名截止 |",
-        "| --- | --- | --- |",
+        "| 比赛日期 | 赛事名称 |",
+        "| --- | --- |",
         ...events.map(formatOpenDigestRow),
       ].join("\n")
     : "当前没有状态为“可报名”的赛事。";
@@ -599,7 +587,7 @@ async function main() {
       `测试时间：${new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" })}`,
       "",
       "- 钉钉机器人已接入赛事报名日历。",
-      "- 后续发现新增赛事、可报名、报名截止/入口变化、赛事下架时，会自动推送摘要。",
+      "- 后续发现新增赛事、可报名、报名入口变化、赛事下架时，会自动推送摘要。",
       "",
       `[打开赛事日历](${siteUrl})`,
     ].join("\n");

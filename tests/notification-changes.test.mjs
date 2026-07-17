@@ -49,8 +49,20 @@ test("never re-alerts an expired deadline notice that disappears and returns", (
   assert.equal(isAnnouncementFresh(current.announcements[0], "2026-07-14"), false);
 });
 
-test("keeps genuinely recent deadline notices eligible for alerts", () => {
-  assert.equal(isAnnouncementFresh({ publishedAt: "2026-07-13 18:00", kind: "deadline" }, "2026-07-14"), true);
+test("never pushes deadline notices even when they are recent", () => {
+  const previous = { announcements: [{
+    id: "baseline",
+    source: "官方公告",
+    publishedAt: "2026-07-14",
+    kind: "open"
+  }] };
+  const current = { announcements: [{
+    id: "fresh-deadline",
+    source: "官方公告",
+    publishedAt: "2026-07-17 09:00",
+    kind: "deadline"
+  }] };
+  assert.deepEqual(diffOfficialAnnouncements(previous, current, { today: "2026-07-17" }), []);
 });
 
 test("expires relative-time registration notices after their stated day", () => {
@@ -90,6 +102,33 @@ test("suppresses a recent deadline notice when the matched registration already 
     events: [{ id: "event-1", registrationEnd: "2026-07-13 18:00" }]
   };
   assert.deepEqual(diffOfficialAnnouncements(previous, current, { today: "2026-07-14" }), []);
+});
+
+test("does not push registration deadline or closed-status-only changes", () => {
+  const previous = {
+    announcements: [],
+    events: [{
+      id: "event-1",
+      category: "junior",
+      name: "青少年测试赛",
+      startDate: "2026-08-01",
+      endDate: "2026-08-02",
+      statusLabel: "可报名",
+      registrationOpen: true,
+      registrationEnd: "2026-07-20"
+    }]
+  };
+  const current = {
+    ...previous,
+    generatedAt: "2026-07-17T00:00:00.000Z",
+    events: [{
+      ...previous.events[0],
+      statusLabel: "报名截止",
+      registrationOpen: false,
+      registrationEnd: "2026-07-19"
+    }]
+  };
+  assert.equal(buildChangeNotification(previous, current), "");
 });
 
 test("notifies material location and eligibility changes", () => {
