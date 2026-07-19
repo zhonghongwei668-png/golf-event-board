@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T01:21:21.834Z",
+  "generatedAt": "2026-07-19T02:02:31.043Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -2414,7 +2414,7 @@
       "name": "2026海南省青少年高尔夫球巡回赛第一站",
       "startDate": "2026-04-25",
       "endDate": "2026-04-26",
-      "location": "海南美兰高尔夫俱乐部",
+      "location": "海口",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -3844,7 +3844,7 @@
       "name": "2026海南省青少年高尔夫球巡回赛第二站",
       "startDate": "2026-05-23",
       "endDate": "2026-05-24",
-      "location": "海口观澜湖高尔夫球会",
+      "location": "海口",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4984,7 +4984,7 @@
       "name": "2026海南省青少年高尔夫球巡回赛第三站",
       "startDate": "2026-06-07",
       "endDate": "2026-06-09",
-      "location": "三亚亚龙湾高尔夫球会",
+      "location": "三亚",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
