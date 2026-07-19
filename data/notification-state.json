@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-18T14:11:28.461Z",
+  "updatedAt": "2026-07-19T01:21:24.829Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -1373,6 +1373,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-18T14:11:28.461Z",
           "sentAt": "2026-07-18T14:11:28.461Z",
+          "error": ""
+        }
+      }
+    },
+    "72e9845e8569094d9661e678570632e95e1cdb2eb7d2ef7219b89347c4e2edab": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/19 09:21:21\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026上海市青少年高尔夫球精英赛-旭宝站｜2026-07-20 至 2026-07-21，变化：报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-19T01:21:22.892Z",
+      "updatedAt": "2026-07-19T01:21:24.829Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-19T01:21:24.259Z",
+          "sentAt": "2026-07-19T01:21:24.259Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-19T01:21:24.829Z",
+          "sentAt": "2026-07-19T01:21:24.829Z",
           "error": ""
         }
       }
