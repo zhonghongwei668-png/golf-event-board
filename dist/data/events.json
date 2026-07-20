@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T10:31:19.197Z",
+  "generatedAt": "2026-07-20T11:10:47.643Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1963,7 +1963,7 @@
       "name": "2026广东省青少年巡回赛 第3站",
       "startDate": "2026-04-18",
       "endDate": "2026-04-19",
-      "location": "肇庆·金立",
+      "location": "广东·肇庆",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -3042,7 +3042,7 @@
       "name": "2026广东省青少年巡回赛 第4站",
       "startDate": "2026-05-04",
       "endDate": "2026-05-05",
-      "location": "肇庆·金立",
+      "location": "金立·肇庆高尔夫俱乐部（BC场）",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -5894,7 +5894,7 @@
       "registrationStart": "",
       "registrationEnd": "",
       "registrationText": "官网字段显示 GameRegIsOk=1，但比赛已过",
-      "registrationOpen": true,
+      "registrationOpen": false,
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "",
@@ -12760,17 +12760,17 @@
         }
       ],
       "signupUrl": "https://www.clpga.org/SignUp?lang=cn&mt_id=8155",
-      "signupMethod": "报名未公开/未开放，以CLPGA官网为准。",
+      "signupMethod": "CLPGA官网字段显示可报名/曾开放，仍需进入报名页确认。",
       "requirement": "以CLPGA/赛事官方资格排序、会员体系、外卡及单站通知为准。",
       "registrationStart": "",
       "registrationEnd": "",
-      "registrationText": "报名未公开/未开放，以CLPGA官网为准。",
-      "registrationOpen": false,
+      "registrationText": "CLPGA官网字段显示可报名/曾开放，仍需进入报名页确认。",
+      "registrationOpen": true,
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "",
-      "statusCode": "pending",
-      "statusLabel": "待开放",
+      "statusCode": "open",
+      "statusLabel": "可报名",
       "sourceSystem": "CLPGA官网接口",
       "scheduleAuthority": "official_api",
       "seriesLabel": "",
