@@ -131,7 +131,7 @@ test("does not push registration deadline or closed-status-only changes", () => 
   assert.equal(buildChangeNotification(previous, current), "");
 });
 
-test("notifies material location and eligibility changes", () => {
+test("does not push location or eligibility changes", () => {
   const before = {
     events: [{
       id: "future-event",
@@ -150,10 +150,10 @@ test("notifies material location and eligibility changes", () => {
     events: [{ ...before.events[0], location: "苏州", requirement: "A、B组" }]
   };
   const markdown = buildChangeNotification(before, after);
-  assert.match(markdown, /比赛地点、参赛要求/);
+  assert.equal(markdown, "");
 });
 
-test("treats a date-derived ID change as an update to the same event", () => {
+test("does not push competition start or end changes", () => {
   const previous = {
     announcements: [],
     events: [{
@@ -175,11 +175,10 @@ test("treats a date-derived ID change as an update to the same event", () => {
     }]
   };
   const markdown = buildChangeNotification(previous, current);
-  assert.match(markdown, /变化：比赛开始、比赛结束/);
-  assert.doesNotMatch(markdown, /新增赛事|赛事下架/);
+  assert.equal(markdown, "");
 });
 
-test("treats an added competition-grade suffix as the same event", () => {
+test("does not push a name or competition-grade change", () => {
   const previous = {
     announcements: [],
     events: [{
@@ -201,6 +200,54 @@ test("treats an added competition-grade suffix as the same event", () => {
     }]
   };
   const markdown = buildChangeNotification(previous, current);
-  assert.match(markdown, /变化：赛事名称/);
-  assert.doesNotMatch(markdown, /新开放报名|赛事下架/);
+  assert.equal(markdown, "");
+});
+
+test("pushes an existing event only when its registration newly opens", () => {
+  const previous = {
+    announcements: [],
+    events: [{
+      id: "opening-event",
+      category: "junior",
+      name: "青少年报名开放测试赛",
+      startDate: "2026-08-20",
+      endDate: "2026-08-21",
+      registrationOpen: false
+    }]
+  };
+  const current = {
+    ...previous,
+    generatedAt: "2026-07-20T02:00:00.000Z",
+    events: [{
+      ...previous.events[0],
+      registrationOpen: true,
+      signupUrl: "https://example.com/signup"
+    }]
+  };
+  const markdown = buildChangeNotification(previous, current);
+  assert.match(markdown, /高尔夫赛事报名开始提醒/);
+  assert.match(markdown, /新开放报名 1 场/);
+  assert.match(markdown, /青少年报名开放测试赛/);
+  assert.match(markdown, /https:\/\/example\.com\/signup/);
+});
+
+test("pushes a newly discovered event only when registration is already open", () => {
+  const previous = { announcements: [], events: [] };
+  const closed = {
+    generatedAt: "2026-07-20T02:00:00.000Z",
+    announcements: [],
+    events: [{
+      id: "new-event",
+      category: "junior",
+      name: "新发现赛事",
+      startDate: "2026-08-20",
+      registrationOpen: false
+    }]
+  };
+  assert.equal(buildChangeNotification(previous, closed), "");
+  const markdown = buildChangeNotification(previous, {
+    ...closed,
+    events: [{ ...closed.events[0], registrationOpen: true }]
+  });
+  assert.match(markdown, /新开放报名 1 场/);
 });

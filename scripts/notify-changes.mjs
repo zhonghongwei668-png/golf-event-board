@@ -73,11 +73,6 @@ function formatDateRange(event) {
   return `${event.startDate} 至 ${event.endDate}`;
 }
 
-function formatEvent(event) {
-  const label = event.categoryLabel || event.category || "赛事";
-  return `- ${label}｜${event.name}｜${formatDateRange(event)}`;
-}
-
 function formatPriorityOpenEvent(event) {
   const signup = event.signupUrl ? `，[报名入口](${event.signupUrl})` : "";
   return `- **【重点】新开放报名｜${formatDateRange(event)}｜${event.name}${signup}**`;
@@ -247,21 +242,6 @@ export function diffDazhengAnnouncements(previousPayload, currentPayload, option
   return diffOfficialAnnouncements(previousPayload, currentPayload, options);
 }
 
-function announcementLabel(kind) {
-  if (kind === "open") return "报名开放";
-  if (kind === "deadline") return "报名截止提醒";
-  if (kind === "supplemental") return "补录/名额";
-  if (kind === "regulation") return "竞赛规程/资格";
-  return "赛事公告";
-}
-
-function formatAnnouncement(announcement, currentPayload) {
-  const eventsById = new Map((currentPayload?.events || []).map((event) => [event.id, event]));
-  const matched = (announcement.matchedEventIds || []).map((id) => eventsById.get(id)).find(Boolean);
-  const signup = matched?.signupUrl ? `｜[报名入口](${matched.signupUrl})` : "";
-  return `- **【${announcementLabel(announcement.kind)}】${announcement.title}**｜${announcement.publishedAt}${signup}｜[官方公告](${announcement.url})`;
-}
-
 function topItems(items, formatter, limit = 8) {
   const visible = items.slice(0, limit).map(formatter);
   if (items.length > limit) visible.push(`- 另有 ${items.length - limit} 条，打开赛历查看`);
@@ -269,43 +249,17 @@ function topItems(items, formatter, limit = 8) {
 }
 
 function buildMarkdown(diff, currentPayload) {
-  const sections = [];
-  const priorityOpenKeys = new Set((diff.priorityOpen || []).map(eventKey));
-  const regularAdded = diff.added.filter((event) => !priorityOpenKeys.has(eventKey(event)));
-  const regularChanged = diff.changed.filter(({ event }) => !priorityOpenKeys.has(eventKey(event)));
-
-  if (diff.announcements?.length) {
-    sections.push(`**【重点】官方赛事公告 ${diff.announcements.length} 条**\n${topItems(diff.announcements, (item) => formatAnnouncement(item, currentPayload), 10)}`);
-  }
-
-  if (diff.priorityOpen?.length) {
-    sections.push(`**【重点】新开放报名 ${diff.priorityOpen.length} 场**\n${topItems(diff.priorityOpen, formatPriorityOpenEvent, 10)}`);
-  }
-  if (regularAdded.length) {
-    if (regularAdded.length > 40) {
-      sections.push(`**官方赛历资料补录 ${regularAdded.length} 场**\n本次扩展了官方年历覆盖，资料已写入赛历；为避免刷屏不逐场列出，新开放报名仍在上方重点提醒。`);
-    } else {
-      sections.push(`**新增赛事 ${regularAdded.length} 场**\n${topItems(regularAdded, formatEvent)}`);
-    }
-  }
-  if (regularChanged.length) {
-    sections.push(`**报名/日期/入口变化 ${regularChanged.length} 条**\n${topItems(regularChanged, ({ event, fields }) => `${formatEvent(event)}，变化：${fields.join("、")}`)}`);
-  }
-  if (diff.removed.length) {
-    sections.push(`**赛事下架/消失 ${diff.removed.length} 条**\n${topItems(diff.removed, formatEvent)}\n需人工核验是否取消、改名或官方接口暂时缺失。`);
-  }
-
-  if (!sections.length) return "";
+  if (!diff.priorityOpen?.length) return "";
 
   const generatedAt = currentPayload?.generatedAt
     ? new Date(currentPayload.generatedAt).toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" })
     : new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" });
 
   return [
-    "### 高尔夫赛事报名信息更新",
+    "### 高尔夫赛事报名开始提醒",
     `更新时间：${generatedAt}`,
     "",
-    sections.join("\n\n"),
+    `**新开放报名 ${diff.priorityOpen.length} 场**\n${topItems(diff.priorityOpen, formatPriorityOpenEvent, 10)}`,
     "",
     `[打开赛事日历](${siteUrl})`,
   ].join("\n");
@@ -313,7 +267,6 @@ function buildMarkdown(diff, currentPayload) {
 
 export function buildChangeNotification(previousPayload, currentPayload) {
   const diff = diffEvents(previousPayload, currentPayload);
-  diff.announcements = diffOfficialAnnouncements(previousPayload, currentPayload);
   return buildMarkdown(diff, currentPayload);
 }
 
@@ -587,7 +540,7 @@ async function main() {
       `测试时间：${new Date().toLocaleString("zh-CN", { timeZone: "Asia/Shanghai" })}`,
       "",
       "- 钉钉机器人已接入赛事报名日历。",
-      "- 后续发现新增赛事、可报名、报名入口变化、赛事下架时，会自动推送摘要。",
+      "- 后续只在发现新的赛事报名开始时推送消息。",
       "",
       `[打开赛事日历](${siteUrl})`,
     ].join("\n");

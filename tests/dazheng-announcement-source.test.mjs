@@ -73,7 +73,7 @@ test("does not notify the initial announcement baseline twice", () => {
   assert.deepEqual(diffDazhengAnnouncements(current, current), []);
 });
 
-test("formats a new App announcement with its matched signup link", () => {
+test("does not push an App announcement without a newly open event", () => {
   const previous = { announcements: [], events: [] };
   const current = {
     generatedAt: "2026-07-11T12:00:00.000Z",
@@ -92,8 +92,5 @@ test("formats a new App announcement with its matched signup link", () => {
     }]
   };
   const markdown = buildChangeNotification(previous, current);
-
-  assert.match(markdown, /【重点】官方赛事公告 1 条/);
-  assert.match(markdown, /【报名开放】测试青少年高尔夫公开赛报名开启/);
-  assert.match(markdown, /\[报名入口\]\(https:\/\/www\.bwvip\.com\/signup-2\)/);
+  assert.equal(markdown, "");
 });
