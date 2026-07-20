@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T09:50:39.615Z",
+  "generatedAt": "2026-07-20T10:31:19.197Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -367,7 +367,7 @@
       "name": "2026广东省青少年巡回赛 第1站 揭幕赛",
       "startDate": "2026-02-07",
       "endDate": "2026-02-08",
-      "location": "东莞·观澜湖·利百特",
+      "location": "东莞观澜湖高尔夫球会·利百特球场",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -1098,7 +1098,7 @@
       "name": "2026广东省青少年巡回赛 第2站",
       "startDate": "2026-03-28",
       "endDate": "2026-03-29",
-      "location": "肇庆·金立",
+      "location": "广东·肇庆",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
