@@ -582,7 +582,7 @@ async function main() {
 
   const markdown = buildChangeNotification(previousPayload, currentPayload);
   if (!markdown) {
-    console.log("No event changes worth notifying.");
+    console.log("No newly open registrations to notify.");
     return;
   }
 
@@ -592,7 +592,7 @@ async function main() {
   }
 
   const results = await Promise.allSettled([
-    notifyDingTalk(markdown, { kind: "event-change", title: "高尔夫赛事报名信息更新" }),
+    notifyDingTalk(markdown, { kind: "event-change", title: "高尔夫赛事报名开始提醒" }),
     notifyWeWork(markdown),
   ]);
   const sent = results.some((result) => result.status === "fulfilled" && result.value);
