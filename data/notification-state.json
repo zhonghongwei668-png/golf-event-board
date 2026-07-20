@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-20T11:10:50.068Z",
+  "updatedAt": "2026-07-20T14:51:06.937Z",
   "messages": {
-    "c8acdd42cd05edd18e7886b3b7053ee499d6920b35738861950dbdf74d4b175b": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/13 15:30:42\n\n**【重点】官方赛事公告 1 条**\n- **【报名截止提醒】倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！**｜2026-06-11 17:36｜[官方公告](https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946)\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-13T07:30:43.217Z",
-      "updatedAt": "2026-07-13T07:30:45.170Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-13T07:30:44.602Z",
-          "sentAt": "2026-07-13T07:30:44.602Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-13T07:30:45.170Z",
-          "sentAt": "2026-07-13T07:30:45.170Z",
-          "error": ""
-        }
-      }
-    },
     "408b6350acbee66a7f7589fbf5e9fc29077026443cb98ae72c0c58e19eb04b22": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-20T11:10:50.068Z",
           "sentAt": "2026-07-20T11:10:50.068Z",
+          "error": ""
+        }
+      }
+    },
+    "c8f8ef857a7030812fd12ffab1e81128559160c3005be2a851b4ef46c3f208ad": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/20 22:51:04\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-08-22 至 2026-08-23｜2026“运动荟”天津青少年高尔夫球巡回赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5098)**\n- **【重点】新开放报名｜2026-09-12 至 2026-09-13｜GCCT青少年高尔夫球技能等级二级赛-广东站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5099)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-20T14:51:05.621Z",
+      "updatedAt": "2026-07-20T14:51:06.937Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-20T14:51:06.376Z",
+          "sentAt": "2026-07-20T14:51:06.376Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-20T14:51:06.937Z",
+          "sentAt": "2026-07-20T14:51:06.937Z",
           "error": ""
         }
       }
