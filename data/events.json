@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T12:10:46.463Z",
+  "generatedAt": "2026-07-20T12:50:42.454Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -2550,7 +2550,7 @@
       "name": "第12届深圳青少年公开赛 第2站",
       "startDate": "2026-04-25",
       "endDate": "2026-04-26",
-      "location": "东莞·观澜湖·安妮卡",
+      "location": "广东·东莞",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -3393,7 +3393,7 @@
       "name": "第12届深圳青少年公开赛 第3站",
       "startDate": "2026-05-16",
       "endDate": "2026-05-17",
-      "location": "东莞·观澜湖·罗保",
+      "location": "广东·东莞",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -5222,7 +5222,7 @@
       "name": "第12届深圳青少年公开赛 第4站",
       "startDate": "2026-06-13",
       "endDate": "2026-06-14",
-      "location": "东莞·观澜湖·安妮卡",
+      "location": "广东·东莞",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
