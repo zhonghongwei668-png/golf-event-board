@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T18:06:29.054Z",
+  "updatedAt": "2026-07-20T02:57:56.087Z",
   "messages": {
     "3d5686092956abbe3ded1d801659219b7682e73f834ddf481635adeb45440eea": {
       "kind": "event-change",
@@ -1448,6 +1448,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-19T18:06:29.054Z",
           "sentAt": "2026-07-19T18:06:29.054Z",
+          "error": ""
+        }
+      }
+    },
+    "46b68047b237dedf8ca8717b890fb72ccf2ca6e375e66eb794d6676fa0e2cccc": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/20 10:57:52\n\n**报名/日期/入口变化 2 条**\n- 青少年赛｜“MAX彩渱”2026年山东省青少年高尔夫球巡回赛-第一站 暨2026WHS（中国区）青少年高尔夫差点巡回赛·山东赛｜2026-07-21 至 2026-07-23，变化：报名方式\n- 青少年赛｜S10 东青巡 ·星启航积分巡回赛 ·STATION 4｜2026-07-21，变化：报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-20T02:57:53.874Z",
+      "updatedAt": "2026-07-20T02:57:56.087Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-20T02:57:55.541Z",
+          "sentAt": "2026-07-20T02:57:55.541Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-20T02:57:56.087Z",
+          "sentAt": "2026-07-20T02:57:56.087Z",
           "error": ""
         }
       }
