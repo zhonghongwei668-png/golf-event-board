@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-20T14:51:06.937Z",
+  "updatedAt": "2026-07-20T17:07:09.724Z",
   "messages": {
-    "408b6350acbee66a7f7589fbf5e9fc29077026443cb98ae72c0c58e19eb04b22": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/13 16:50:45\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-29 至 2026-08-30｜2026 U.S. Kids Golf China 青岛夏季系列赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5078)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-13T08:50:46.078Z",
-      "updatedAt": "2026-07-13T08:50:47.885Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-13T08:50:47.312Z",
-          "sentAt": "2026-07-13T08:50:47.312Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-13T08:50:47.885Z",
-          "sentAt": "2026-07-13T08:50:47.885Z",
-          "error": ""
-        }
-      }
-    },
     "e886560d43345e522df989bb4ce9c1cc585a09d3f7acceb5e59654482a043b84": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-20T14:51:06.937Z",
           "sentAt": "2026-07-20T14:51:06.937Z",
+          "error": ""
+        }
+      }
+    },
+    "85b0346ce1661da51e623d1ceecf3f558fd67dd31faedc2cee082cef6d78f383": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/21 01:07:06\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-22 至 2026-08-23｜2026风神·广东省青少年高尔夫球精英赛-第四站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5100)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-20T17:07:07.430Z",
+      "updatedAt": "2026-07-20T17:07:09.724Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-20T17:07:09.161Z",
+          "sentAt": "2026-07-20T17:07:09.161Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-20T17:07:09.724Z",
+          "sentAt": "2026-07-20T17:07:09.724Z",
           "error": ""
         }
       }
