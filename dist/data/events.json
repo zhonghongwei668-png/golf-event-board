@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T07:50:44.434Z",
+  "generatedAt": "2026-07-20T09:50:39.615Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -11120,6 +11120,43 @@
       "notes": ""
     },
     {
+      "id": "dazheng-5027",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026珠海·横琴Parteen标杆少年高尔夫球系列赛第二站",
+      "startDate": "2026-08-20",
+      "endDate": "2026-08-21",
+      "location": "珠海东方高尔夫球会",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5027",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5027"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5027",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-06-18 至 2026-08-19。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-06-18",
+      "registrationEnd": "2026-08-19",
+      "registrationText": "2026年06月18日 ~ 08月19日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5027"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "dazheng-5096",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -11152,43 +11189,6 @@
       "seriesLabel": "青少赛-嘉年华挑战赛",
       "externalIds": {
         "dazheng": "5096"
-      },
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "dazheng-5027",
-      "category": "women_development",
-      "categoryLabel": "女子二级",
-      "color": "#7a4bc2",
-      "name": "起点中巡外卡资格赛暨2026珠海·横琴Parteen标杆少年高尔夫球系列赛第二站",
-      "startDate": "2026-08-20",
-      "endDate": "2026-08-21",
-      "location": "珠海东方高尔夫球会",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5027",
-      "sourceLinks": [
-        {
-          "label": "大正赛事详情",
-          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5027"
-        }
-      ],
-      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5027",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-06-18 至 2026-08-19。",
-      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
-      "registrationStart": "2026-06-18",
-      "registrationEnd": "2026-08-19",
-      "registrationText": "2026年06月18日 ~ 08月19日",
-      "registrationOpen": true,
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": true,
-      "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
-      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
-      "scheduleAuthority": "signup_detail",
-      "seriesLabel": "青少赛-大正高尔夫",
-      "externalIds": {
-        "dazheng": "5027"
       },
       "updatedFromOfficial": true,
       "notes": ""
