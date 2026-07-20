@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-20T07:10:49.094Z",
+  "updatedAt": "2026-07-20T07:50:47.488Z",
   "messages": {
-    "d9740a8394924514ee325439bb690aacf161314759539f10b46042d06f7f3fca": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/13 14:46:05\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜fetch failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-13T06:46:23.945Z",
-      "updatedAt": "2026-07-13T06:46:26.271Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-13T06:46:25.746Z",
-          "sentAt": "2026-07-13T06:46:25.746Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-13T06:46:26.271Z",
-          "sentAt": "2026-07-13T06:46:26.271Z",
-          "error": ""
-        }
-      }
-    },
     "a76ebdd9a3ca0a18dd9256e0e5f5a2a9126f8973ea2be91ceeec54c44bd4fe7e": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-20T07:10:49.094Z",
           "sentAt": "2026-07-20T07:10:49.094Z",
+          "error": ""
+        }
+      }
+    },
+    "bc97e7318afcd52b06ee59745d366b3d8bec49bedd1c8cc2559ac15f9e20fbf4": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名信息更新",
+      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/20 15:50:44\n\n**报名/日期/入口变化 1 条**\n- 女子二级｜起点中巡外卡资格赛暨2026珠海·横琴Parteen标杆少年高尔夫球系列赛第二站｜2026-08-20 至 2026-08-21，变化：赛事名称、报名方式、比赛开始、比赛结束\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-20T07:50:45.531Z",
+      "updatedAt": "2026-07-20T07:50:47.488Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-20T07:50:46.889Z",
+          "sentAt": "2026-07-20T07:50:46.889Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-20T07:50:47.488Z",
+          "sentAt": "2026-07-20T07:50:47.488Z",
           "error": ""
         }
       }
