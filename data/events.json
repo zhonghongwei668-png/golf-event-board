@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T11:10:47.643Z",
+  "generatedAt": "2026-07-20T12:10:46.463Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -821,7 +821,7 @@
       "name": "第12届深圳青少年公开赛 第1站 揭幕赛",
       "startDate": "2026-03-14",
       "endDate": "2026-03-15",
-      "location": "东莞·观澜湖·利百特",
+      "location": "广东·东莞",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4848,7 +4848,7 @@
       "name": "2026广东省青少年巡回赛 第5站",
       "startDate": "2026-06-06",
       "endDate": "2026-06-07",
-      "location": "东莞·观澜湖·格诺曼",
+      "location": "广东·东莞",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -6554,40 +6554,6 @@
       "notes": ""
     },
     {
-      "id": "2026-北京高协-北京青少年高尔夫球邀请赛-第三站-2026-07-05",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第三站",
-      "startDate": "2026-07-05",
-      "endDate": "2026-07-06",
-      "location": "待定/年历未列",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "2026年全国业余高尔夫球精英赛系列赛第二场-2026-07-06",
       "category": "amateur",
       "categoryLabel": "业余赛",
@@ -7531,6 +7497,40 @@
       "externalIds": {
         "dazheng": "4995"
       },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "2026-北京高协-北京青少年高尔夫球邀请赛-第三站-2026-07-18",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第三站",
+      "startDate": "2026-07-18",
+      "endDate": "2026-07-19",
+      "location": "北京",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -9053,6 +9053,40 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "6",
+      "statusCode": "watch",
+      "statusLabel": "关注公告",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "2026-北京高协-北京青少年高尔夫球邀请赛-第四战-2026-08-01",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第四战",
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-02",
+      "location": "待定/年历未列",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
       "statusCode": "watch",
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历接口",
@@ -12803,40 +12837,6 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "4",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "2026-北京高协-北京青少年高尔夫球邀请赛-第四战-2026-09-05",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第四战",
-      "startDate": "2026-09-05",
-      "endDate": "2026-09-06",
-      "location": "待定/年历未列",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
       "statusCode": "watch",
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历接口",
