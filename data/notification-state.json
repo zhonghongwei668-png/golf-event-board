@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-21T13:40:45.559Z",
+  "updatedAt": "2026-07-21T14:20:41.874Z",
   "messages": {
-    "c0335e94da204231722724f35b9fd1b089a4695a621684bda175ea2618838ff7": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/14 15:01:08\n\n**【恢复】3 个信息源已恢复**\n- 大正高尔夫｜本次抓取 80 条\n- 大正官方公告｜本次抓取 2 条\n- 中高协官方公告｜本次抓取 10 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-14T07:01:31.474Z",
-      "updatedAt": "2026-07-14T07:01:33.029Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-14T07:01:32.480Z",
-          "sentAt": "2026-07-14T07:01:32.480Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-14T07:01:33.029Z",
-          "sentAt": "2026-07-14T07:01:33.029Z",
-          "error": ""
-        }
-      }
-    },
     "a5fa6f73736d48a1a19270c03a01dc040317a3e26537cc8f86eefc535f5241e4": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-21T13:40:45.559Z",
           "sentAt": "2026-07-21T13:40:45.559Z",
+          "error": ""
+        }
+      }
+    },
+    "daaed439f45b73feb6483c4e2dc9c357cb44c50dd844348e763ba9aa5c1d91cc": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/21 22:20:38\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-17 至 2026-08-18｜FVF GOLF 2026河北省青少年高尔夫球巡回赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5104)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-21T14:20:39.951Z",
+      "updatedAt": "2026-07-21T14:20:41.874Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-21T14:20:41.307Z",
+          "sentAt": "2026-07-21T14:20:41.307Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-21T14:20:41.874Z",
+          "sentAt": "2026-07-21T14:20:41.874Z",
           "error": ""
         }
       }
