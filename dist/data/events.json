@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T03:20:40.159Z",
+  "generatedAt": "2026-07-21T04:00:39.569Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -155,7 +155,7 @@
       "name": "2026上海市青少年高尔夫球挑战赛 第一站",
       "startDate": "2026-01-18",
       "endDate": "2026-01-18",
-      "location": "协和",
+      "location": "上海协和高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4266,7 +4266,7 @@
       "name": "2026“少青杯”广州市青少年高尔夫球积分巡回赛第三站",
       "startDate": "2026-05-30",
       "endDate": "2026-05-31",
-      "location": "清远狮子湖乡村俱乐部",
+      "location": "清远狮子湖乡村俱乐部(AB场)",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
