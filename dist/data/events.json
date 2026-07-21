@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T04:40:38.338Z",
+  "generatedAt": "2026-07-21T05:20:42.589Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -6874,7 +6874,7 @@
       "name": "2026“九鹤岩茶杯”福建省武夷山青少年高尔夫球系列赛-第二站",
       "startDate": "2026-07-13",
       "endDate": "2026-07-14",
-      "location": "武夷山太伟风景高尔夫俱乐部",
+      "location": "中国厦门",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -7953,17 +7953,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5043",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-06-25 至 2026-07-22。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-06-25 至 2026-07-22。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-06-25",
       "registrationEnd": "2026-07-22",
       "registrationText": "2026年06月25日 ~ 07月22日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-GCCT",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-GCCT",
