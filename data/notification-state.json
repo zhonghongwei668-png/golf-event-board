@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-20T17:07:09.724Z",
+  "updatedAt": "2026-07-21T06:41:33.949Z",
   "messages": {
-    "e886560d43345e522df989bb4ce9c1cc585a09d3f7acceb5e59654482a043b84": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/13 17:31:26\n\n**【重点】新开放报名 5 场**\n- **【重点】新开放报名｜2026-08-07｜2026迈阅青少年高尔夫巡回赛·上海旭宝站，报名截止 2026-08-06，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5083)**\n- **【重点】新开放报名｜2026-08-11｜2026迈阅青少年高尔夫巡回赛·青岛华山站（第三站），报名截止 2026-08-09，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5079)**\n- **【重点】新开放报名｜2026-08-18 至 2026-08-19｜“Uswing果岭阅读魔镜” 2026广东省青少年巡回赛 西丽站（WAGR积分赛），报名截止 2026-08-17，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5084)**\n- **【重点】新开放报名｜2026-08-24 至 2026-08-25｜“Uswing果岭阅读魔镜”第12届深圳青少年公开赛·西丽站，报名截止 2026-08-22，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5081)**\n- **【重点】新开放报名｜2026-08-24｜2026迈阅青少年高尔夫巡回赛·杭州九桥站，报名截止 2026-08-23，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5082)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-13T09:31:27.929Z",
-      "updatedAt": "2026-07-13T09:31:29.985Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-13T09:31:29.450Z",
-          "sentAt": "2026-07-13T09:31:29.450Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-13T09:31:29.985Z",
-          "sentAt": "2026-07-13T09:31:29.985Z",
-          "error": ""
-        }
-      }
-    },
     "167d27509502a91c73cd99907c4bdec58254dace24e34c5bb8e5dfcf35c739c6": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-20T17:07:09.724Z",
           "sentAt": "2026-07-20T17:07:09.724Z",
+          "error": ""
+        }
+      }
+    },
+    "6b6521eb03ac7912605d9163ee48e61a3f3116a5917c800c6f184b55eaf390aa": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/21 14:40:22\n\n**【报警】1 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜5 个详情页读取失败：5100: The operation was aborted due to timeout；5088: The operation was aborted due to timeout；5083: The operation was aborted due to timeout\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-21T06:41:32.732Z",
+      "updatedAt": "2026-07-21T06:41:33.949Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-21T06:41:33.423Z",
+          "sentAt": "2026-07-21T06:41:33.423Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-21T06:41:33.949Z",
+          "sentAt": "2026-07-21T06:41:33.949Z",
           "error": ""
         }
       }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T06:00:50.272Z",
+  "generatedAt": "2026-07-21T06:41:32.156Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,7 +12,9 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [],
+  "warnings": [
+    "大正高尔夫: 5 个详情页读取失败：5100: The operation was aborted due to timeout；5088: The operation was aborted due to timeout；5083: The operation was aborted due to timeout"
+  ],
   "categories": {
     "women": {
       "label": "女子赛",
@@ -2762,7 +2764,7 @@
       "name": "第19届观澜湖杰克·尼克劳斯青少年锦标赛",
       "startDate": "2026-05-01",
       "endDate": "2026-05-03",
-      "location": "东莞观澜湖·格诺曼",
+      "location": "广东·东莞",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -6830,6 +6832,40 @@
       "notes": ""
     },
     {
+      "id": "观澜湖女子高尔夫球邀请赛暨观澜湖青少年系列赛-第3站-2026-07-11",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "观澜湖女子高尔夫球邀请赛暨观澜湖青少年系列赛-第3站",
+      "startDate": "2026-07-11",
+      "endDate": "2026-07-12",
+      "location": "广东·东莞",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "6",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026年南山全国业余高尔夫球锦标赛第二站-2026-07-13",
       "category": "amateur",
       "categoryLabel": "业余赛",
@@ -6943,40 +6979,6 @@
       "startDate": "2026-07-13",
       "endDate": "2026-07-14",
       "location": "金立·广州仙村高尔夫球会",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "6",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "观澜湖青少年女子邀请赛-2026-07-13",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "观澜湖青少年女子邀请赛",
-      "startDate": "2026-07-13",
-      "endDate": "2026-07-15",
-      "location": "观澜湖",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -7224,7 +7226,7 @@
       "name": "2026上海市青少年高尔夫球挑战赛 暨“東莊杯”LEAZEN高尔夫精英赛 第三站",
       "startDate": "2026-07-16",
       "endDate": "2026-07-16",
-      "location": "东庄（园景场）",
+      "location": "東莊海岸高尔夫俱乐部（园景场）",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
