@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T05:20:42.589Z",
+  "generatedAt": "2026-07-21T06:00:50.272Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -121,7 +121,7 @@
       "name": "2026年观澜湖青少年系列赛第一站",
       "startDate": "2026-01-17",
       "endDate": "2026-01-18",
-      "location": "广东·东莞",
+      "location": "观澜湖·格诺曼",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -855,7 +855,7 @@
       "name": "2026福建省青少年高尔夫球公开赛-第一站",
       "startDate": "2026-03-21",
       "endDate": "2026-03-22",
-      "location": "东方（厦门）高尔夫乡村俱乐部",
+      "location": "中国厦门",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -2762,7 +2762,7 @@
       "name": "第19届观澜湖杰克·尼克劳斯青少年锦标赛",
       "startDate": "2026-05-01",
       "endDate": "2026-05-03",
-      "location": "观澜湖",
+      "location": "东莞观澜湖·格诺曼",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
