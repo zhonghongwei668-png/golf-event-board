@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-21T08:11:13.822Z",
+  "updatedAt": "2026-07-21T08:21:06.485Z",
   "messages": {
-    "8259d6264faacfd7d612b1674d4983d5db3b0daffba9e0b9ed6594a66c5ab060": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/14 10:42:21\n\n**【重点】官方赛事公告 1 条**\n- **【报名截止提醒】倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！**｜2026-06-11 17:36｜[官方公告](https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946)\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-13 至 2026-08-14｜2026“京津冀鲁辽”青少年高尔夫球巡回赛（二级一档），报名截止 2026-08-12，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5086)**\n\n**赛事下架/消失 1 条**\n- 青少年赛｜2026“京津冀鲁辽”青少年高尔夫球巡回赛｜2026-08-13 至 2026-08-14，报名截止 2026-08-12\n需人工核验是否取消、改名或官方接口暂时缺失。\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-14T02:42:22.843Z",
-      "updatedAt": "2026-07-14T02:42:25.077Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-14T02:42:24.479Z",
-          "sentAt": "2026-07-14T02:42:24.479Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-14T02:42:25.077Z",
-          "sentAt": "2026-07-14T02:42:25.077Z",
-          "error": ""
-        }
-      }
-    },
     "a73442f593b1e7df5baff79f42015c80a2e5ea4f19e683fd2a703615a294aeca": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-21T08:11:13.822Z",
           "sentAt": "2026-07-21T08:11:13.822Z",
+          "error": ""
+        }
+      }
+    },
+    "2828ae08348e54d213a0e9f4f541c1dda148d23944318c81edb39f8bf444917a": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/21 16:20:21\n\n**【恢复】1 个信息源已恢复**\n- 大正高尔夫｜本次抓取 93 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-21T08:21:04.749Z",
+      "updatedAt": "2026-07-21T08:21:06.485Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-21T08:21:05.993Z",
+          "sentAt": "2026-07-21T08:21:05.993Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-21T08:21:06.485Z",
+          "sentAt": "2026-07-21T08:21:06.485Z",
           "error": ""
         }
       }
