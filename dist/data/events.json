@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T06:50:40.943Z",
+  "generatedAt": "2026-07-21T08:11:11.123Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,7 +12,9 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [],
+  "warnings": [
+    "大正高尔夫: 2 个详情页读取失败：5051: The operation was aborted due to timeout；5021: The operation was aborted due to timeout"
+  ],
   "categories": {
     "women": {
       "label": "女子赛",
