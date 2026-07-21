@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-21T08:21:06.485Z",
+  "updatedAt": "2026-07-21T09:37:00.316Z",
   "messages": {
-    "a73442f593b1e7df5baff79f42015c80a2e5ea4f19e683fd2a703615a294aeca": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/14 14:51:08\n\n**【报警】3 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜fetch failed\n- 大正官方公告｜连续失败 1 次｜Dazheng announcement pages all failed\n- 中高协官方公告｜连续失败 1 次｜fetch failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-14T06:52:53.393Z",
-      "updatedAt": "2026-07-14T06:52:54.897Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-14T06:52:54.389Z",
-          "sentAt": "2026-07-14T06:52:54.389Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-14T06:52:54.897Z",
-          "sentAt": "2026-07-14T06:52:54.897Z",
-          "error": ""
-        }
-      }
-    },
     "3d51e612cf44ecb198df4ac06eeb77b5f8e6535eba44729bf08fd434e4988cab": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-21T08:21:06.485Z",
           "sentAt": "2026-07-21T08:21:06.485Z",
+          "error": ""
+        }
+      }
+    },
+    "8238cea9ed848e63bea47e9c00adc127259c25975ad0bd032bdd57c4eddb09de": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/21 17:36:56\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-08-26 至 2026-08-27｜2026“CWJPGA”嘉年华青少年高尔夫WAGR世界业余积分开卡挑战赛—北京赛区第三站（WAGR+JGS积分赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5101)**\n- **【重点】新开放报名｜2026-08-28｜NSP -2026年青少年高尔夫嘉年华挑战赛陕西赛区第二站-西安秦岭站（亲子/师徒赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5102)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-21T09:36:57.801Z",
+      "updatedAt": "2026-07-21T09:37:00.316Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-21T09:36:59.704Z",
+          "sentAt": "2026-07-21T09:36:59.704Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-21T09:37:00.316Z",
+          "sentAt": "2026-07-21T09:37:00.316Z",
           "error": ""
         }
       }
