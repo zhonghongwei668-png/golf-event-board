@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T04:00:39.569Z",
+  "generatedAt": "2026-07-21T04:40:38.338Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1751,7 +1751,7 @@
       "name": "S10东青巡·星启航积分巡回赛station1",
       "startDate": "2026-04-11",
       "endDate": "2026-04-11",
-      "location": "广东东莞峰景高尔夫球会",
+      "location": "广东·东莞",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -2235,7 +2235,7 @@
       "name": "东方精英少年赛第一站",
       "startDate": "2026-04-19",
       "endDate": "2026-04-19",
-      "location": "东方（厦门）高尔夫乡村俱乐部",
+      "location": "福建厦门",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -3912,7 +3912,7 @@
       "name": "S10东青巡·星启航积分巡回赛station2",
       "startDate": "2026-05-23",
       "endDate": "2026-05-23",
-      "location": "广东东莞峰景高尔夫球会",
+      "location": "峰景高尔夫球会",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -5256,7 +5256,7 @@
       "name": "S10东青巡·星启航积分巡回赛station3",
       "startDate": "2026-06-13",
       "endDate": "2026-06-13",
-      "location": "广东东莞峰景高尔夫球会",
+      "location": "广东·东莞",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
