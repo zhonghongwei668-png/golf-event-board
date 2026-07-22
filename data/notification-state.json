@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-22T00:00:40.447Z",
+  "updatedAt": "2026-07-22T06:00:46.494Z",
   "messages": {
-    "25d0f0e93cfb840eb4e9c841000ad2cd46bea1eaae805735b07fb9984d03c6ff": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/14 15:26:45\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026华东青少年球队争霸赛-协和站｜2026-07-15，报名截止 2026-07-14，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-14T07:26:46.695Z",
-      "updatedAt": "2026-07-14T07:26:49.196Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-14T07:26:48.641Z",
-          "sentAt": "2026-07-14T07:26:48.641Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-14T07:26:49.196Z",
-          "sentAt": "2026-07-14T07:26:49.196Z",
-          "error": ""
-        }
-      }
-    },
     "7e6e6ef130ef532b949dfe4c474e08191438d865a21d42c4143a0134cbf61f32": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-22T00:00:40.447Z",
           "sentAt": "2026-07-22T00:00:40.447Z",
+          "error": ""
+        }
+      }
+    },
+    "011a8cdeecc090a394584a6de8aa01e46dac90e7ec96f54c6b93f00e46b9ae70": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/22 14:00:43\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-28｜FVF-2026 CWJPGA青少年高尔夫嘉年华挑战赛浙江赛区第八站（宁波东方站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5106)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-22T06:00:44.924Z",
+      "updatedAt": "2026-07-22T06:00:46.494Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-22T06:00:45.898Z",
+          "sentAt": "2026-07-22T06:00:45.898Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-22T06:00:46.494Z",
+          "sentAt": "2026-07-22T06:00:46.494Z",
           "error": ""
         }
       }
