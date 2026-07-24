@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T05:20:39.706Z",
+  "generatedAt": "2026-07-24T07:20:40.920Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -18829,16 +18829,6 @@
       "kind": "open",
       "source": "如歌高尔夫官方赛事新闻",
       "url": "https://www.rungolf.com/news/info/2586",
-      "matchedEventIds": []
-    },
-    {
-      "id": "rungolf-announcement-2568",
-      "sourceId": "2568",
-      "title": "如歌高尔夫中国青少年邀请赛首批名单，线上赛6个正赛名额静待得主",
-      "publishedAt": "2026-03-23",
-      "kind": "supplemental",
-      "source": "如歌高尔夫官方赛事新闻",
-      "url": "https://www.rungolf.com/news/info/2568",
       "matchedEventIds": []
     }
   ]
