@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-24T08:40:44.975Z",
+  "updatedAt": "2026-07-24T09:12:44.585Z",
   "messages": {
-    "72e37b029983d63bb42d69c97828937daecc4f82d47d2421b57008e8dc3b9835": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/15 10:00:29\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026CWJPGA嘉年华挑战赛WAGR邀请赛珠海第5站-国际站（WAGR+JGS）｜2026-07-16 至 2026-07-17，报名截止 2026-07-15，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-15T02:00:29.976Z",
-      "updatedAt": "2026-07-15T02:00:31.488Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-15T02:00:30.924Z",
-          "sentAt": "2026-07-15T02:00:30.924Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-15T02:00:31.488Z",
-          "sentAt": "2026-07-15T02:00:31.488Z",
-          "error": ""
-        }
-      }
-    },
     "2a1927bb368bf7fc327e15c8137a98a9e4ff463e3657655bc5db2dffd207fe71": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-24T08:40:44.975Z",
           "sentAt": "2026-07-24T08:40:44.975Z",
+          "error": ""
+        }
+      }
+    },
+    "12649b45d14a678966f9dd155aa7bfb41f4c2f1f826d0940cb5d0a857ac81363": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/24 17:12:42\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-18 至 2026-09-20｜太平松体育锦标赛暨AJGA IPS系列赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5110)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-24T09:12:43.362Z",
+      "updatedAt": "2026-07-24T09:12:44.585Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-24T09:12:44.063Z",
+          "sentAt": "2026-07-24T09:12:44.063Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-24T09:12:44.585Z",
+          "sentAt": "2026-07-24T09:12:44.585Z",
           "error": ""
         }
       }
