@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-24T09:12:44.585Z",
+  "updatedAt": "2026-07-26T04:10:45.477Z",
   "messages": {
-    "2a1927bb368bf7fc327e15c8137a98a9e4ff463e3657655bc5db2dffd207fe71": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/15 10:40:37\n\n**报名/日期/入口变化 1 条**\n- 女子二级｜起点中巡外卡资格赛暨2026珠海·横琴Parteen标杆少年高尔夫球系列赛第一站｜2026-07-16 至 2026-07-17，报名截止 2026-07-15，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-15T02:40:38.254Z",
-      "updatedAt": "2026-07-15T02:40:40.051Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-15T02:40:39.539Z",
-          "sentAt": "2026-07-15T02:40:39.539Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-15T02:40:40.051Z",
-          "sentAt": "2026-07-15T02:40:40.051Z",
-          "error": ""
-        }
-      }
-    },
     "5b627657e80139445cc45f159e30ba103a7e451efc578abdaa88c5b13ef9695e": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-24T09:12:44.585Z",
           "sentAt": "2026-07-24T09:12:44.585Z",
+          "error": ""
+        }
+      }
+    },
+    "e8ed45bcd3462305bde87d1cb2adede948cfc9cf620e3ca418c05107dfe0e647": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/26 12:10:41\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-08-02｜2026 “北京高协”北京青少年高尔夫成长系列赛 （8.2拉斐特站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5111)**\n- **【重点】新开放报名｜2026-08-09｜2026 “北京高协”北京青少年高尔夫成长系列赛 （8.9东方天星站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5112)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-26T04:10:42.705Z",
+      "updatedAt": "2026-07-26T04:10:45.477Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-26T04:10:44.910Z",
+          "sentAt": "2026-07-26T04:10:44.910Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-26T04:10:45.477Z",
+          "sentAt": "2026-07-26T04:10:45.477Z",
           "error": ""
         }
       }
