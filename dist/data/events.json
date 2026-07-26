@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T00:00:38.935Z",
+  "generatedAt": "2026-07-26T02:50:43.192Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -6520,40 +6520,6 @@
       "notes": ""
     },
     {
-      "id": "2026浙江省青少年高尔夫球巡回赛第四站-2026-07-04",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026浙江省青少年高尔夫球巡回赛第四站",
-      "startDate": "2026-07-04",
-      "endDate": "2026-07-05",
-      "location": "安吉龙王溪高尔夫球场",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "2026年全国业余高尔夫球精英赛系列赛第二场-2026-07-06",
       "category": "amateur",
       "categoryLabel": "业余赛",
@@ -12559,6 +12525,40 @@
       "externalIds": {
         "dazheng": "5107"
       },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "2026浙江省青少年高尔夫球巡回赛第四站-2026-08-29",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026浙江省青少年高尔夫球巡回赛第四站",
+      "startDate": "2026-08-29",
+      "endDate": "2026-08-30",
+      "location": "金华横店高尔夫球场",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
+      "statusCode": "watch",
+      "statusLabel": "关注公告",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
       "updatedFromOfficial": true,
       "notes": ""
     },
