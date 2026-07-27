@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T09:20:31.865Z",
+  "generatedAt": "2026-07-27T10:00:32.857Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -19033,6 +19033,16 @@
       "matchedEventIds": [
         "clpga-8114"
       ]
+    },
+    {
+      "id": "dazheng-announcement-44946",
+      "sourceId": "44946",
+      "title": "倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！",
+      "publishedAt": "2026-06-11 17:36",
+      "kind": "deadline",
+      "source": "大正高尔夫官方公告",
+      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946",
+      "matchedEventIds": []
     },
     {
       "id": "rungolf-announcement-2586",
