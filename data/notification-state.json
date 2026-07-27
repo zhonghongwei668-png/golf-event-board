@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-27T02:40:32.522Z",
+  "updatedAt": "2026-07-27T03:20:32.693Z",
   "messages": {
-    "a069f08fcbd513fe4ed2963297a2522bb03dc781a0ce566fa6432179cf465534": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/15 18:50:34\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026 U.S. Kids Golf China 青岛夏季系列赛（二三）｜2026-08-29 至 2026-08-30，变化：赛事名称\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-15T10:50:35.786Z",
-      "updatedAt": "2026-07-15T10:50:37.994Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-15T10:50:37.447Z",
-          "sentAt": "2026-07-15T10:50:37.447Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-15T10:50:37.994Z",
-          "sentAt": "2026-07-15T10:50:37.994Z",
-          "error": ""
-        }
-      }
-    },
     "bf6182720aa5efda81d56ecb83cece2a96d679c38b654ab5453e68e9915540c9": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-27T02:40:32.522Z",
           "sentAt": "2026-07-27T02:40:32.522Z",
+          "error": ""
+        }
+      }
+    },
+    "2ce0f372ee3685b4606fffdb603fba0e1333a6eaf0cf2a0c7fadafaaeb415ecc": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/27 11:20:29\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-15｜2026北京青少年成长赛（第四站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5114)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-27T03:20:30.624Z",
+      "updatedAt": "2026-07-27T03:20:32.693Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-27T03:20:32.110Z",
+          "sentAt": "2026-07-27T03:20:32.110Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-27T03:20:32.693Z",
+          "sentAt": "2026-07-27T03:20:32.693Z",
           "error": ""
         }
       }
