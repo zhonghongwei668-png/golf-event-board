@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T07:30:31.496Z",
+  "generatedAt": "2026-07-28T08:10:30.381Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1717,7 +1717,7 @@
       "name": "2026风神·广东省青少年高尔夫球精英赛第一站",
       "startDate": "2026-04-11",
       "endDate": "2026-04-12",
-      "location": "广州风神高尔夫俱乐部-戴伊场",
+      "location": "广东·广州",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -1853,7 +1853,7 @@
       "name": "2026上海市青少年高尔夫球挑战赛 暨 上海平安人寿杯 第二站",
       "startDate": "2026-04-12",
       "endDate": "2026-04-12",
-      "location": "PGA安灜（森林）",
+      "location": "上海PGA安瀛高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -3776,7 +3776,7 @@
       "name": "2026风神·广东省青少年高尔夫球精英赛第二站",
       "startDate": "2026-05-23",
       "endDate": "2026-05-24",
-      "location": "广州风神高尔夫戴伊球场",
+      "location": "广东·广州",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -7443,7 +7443,7 @@
       "name": "2026风神·广东省青少年高尔夫球精英赛第三站",
       "startDate": "2026-07-18",
       "endDate": "2026-07-19",
-      "location": "广州风神高尔夫戴伊球场",
+      "location": "广东·广州",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
