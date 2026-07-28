@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T06:50:37.480Z",
+  "generatedAt": "2026-07-28T07:30:31.496Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -787,7 +787,7 @@
       "name": "2026上海市青少年高尔夫球挑战赛 暨 上海平安人寿杯 第一站",
       "startDate": "2026-03-08",
       "endDate": "2026-03-08",
-      "location": "PGA安灜（森林）",
+      "location": "上海PGA安瀛高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -923,7 +923,7 @@
       "name": "2026福建省青少年高尔夫球公开赛-第一站",
       "startDate": "2026-03-21",
       "endDate": "2026-03-22",
-      "location": "中国厦门",
+      "location": "东方（厦门）高尔夫乡村俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -1683,7 +1683,7 @@
       "name": "2026“九鹤岩茶杯”福建省武夷山青少年高尔夫球系列赛-第一站",
       "startDate": "2026-04-11",
       "endDate": "2026-04-12",
-      "location": "武夷山太伟风景高尔夫俱乐部",
+      "location": "中国厦门",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -1717,7 +1717,7 @@
       "name": "2026风神·广东省青少年高尔夫球精英赛第一站",
       "startDate": "2026-04-11",
       "endDate": "2026-04-12",
-      "location": "广州风神高尔夫戴伊球场",
+      "location": "广州风神高尔夫俱乐部-戴伊场",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -5942,40 +5942,6 @@
       "notes": ""
     },
     {
-      "id": "2026风神-广东省青少年高尔夫球精英赛第三站-2026-06-27",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026风神·广东省青少年高尔夫球精英赛第三站",
-      "startDate": "2026-06-27",
-      "endDate": "2026-06-28",
-      "location": "广州风神高尔夫戴伊球场",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "2026迈阅青少年高尔夫巡回赛第一站-2026-06-27",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -7470,6 +7436,40 @@
       "notes": ""
     },
     {
+      "id": "2026风神-广东省青少年高尔夫球精英赛第三站-2026-07-18",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026风神·广东省青少年高尔夫球精英赛第三站",
+      "startDate": "2026-07-18",
+      "endDate": "2026-07-19",
+      "location": "广州风神高尔夫戴伊球场",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026迈阅青少年高尔夫巡回赛第二站-2026-07-18",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -7876,7 +7876,7 @@
       "name": "S10东青巡·星启航积分巡回赛station4",
       "startDate": "2026-07-21",
       "endDate": "2026-07-21",
-      "location": "东莞凤凰山高尔夫球会",
+      "location": "广东·东莞",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
