@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-28T03:32:36.150Z",
+  "updatedAt": "2026-07-28T08:50:37.411Z",
   "messages": {
-    "a81b29ac88670c3835e802a71a4ade46930ee098e747b7d467cc8255529669a4": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/16 11:20:33\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-07-27 至 2026-07-28｜“魅力江苏 最美体育”-“挥杆未来”2026江苏省青少年高尔夫球巡回赛-苏州光明站，报名截止 2026-07-25，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5089)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-16T03:20:34.264Z",
-      "updatedAt": "2026-07-16T03:20:36.219Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-16T03:20:35.643Z",
-          "sentAt": "2026-07-16T03:20:35.643Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-16T03:20:36.219Z",
-          "sentAt": "2026-07-16T03:20:36.219Z",
-          "error": ""
-        }
-      }
-    },
     "3ff7448d032ab99b95eb5d7b378883ab099a7c3c7d98e521c9feb10070fe80a3": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-28T03:32:36.150Z",
           "sentAt": "2026-07-28T03:32:36.150Z",
+          "error": ""
+        }
+      }
+    },
+    "eee6eacdab2652b213fa5ecb5cdfefca800d555ff360632c6ee21dc6fcebd53c": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/28 16:50:35\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-20 至 2026-08-23｜“奔跑吧·少年”2026年河南省青少年高尔夫球锦标赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5117)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-28T08:50:36.138Z",
+      "updatedAt": "2026-07-28T08:50:37.411Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-28T08:50:36.861Z",
+          "sentAt": "2026-07-28T08:50:36.861Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-28T08:50:37.411Z",
+          "sentAt": "2026-07-28T08:50:37.411Z",
           "error": ""
         }
       }
