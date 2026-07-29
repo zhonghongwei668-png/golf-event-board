@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-28T15:54:47.488Z",
+  "updatedAt": "2026-07-29T07:40:40.620Z",
   "messages": {
-    "b9de34f3c00c7bb60d4990cbecba1a3241ada67a9ebf004af198ea78c24fe0f4": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/16 14:00:41\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-25 至 2026-08-26｜2026FALA·长三角青少年高尔夫球员精英赛-第五站，报名截止 2026-08-18，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5091)**\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜“魅力江苏 最美体育”-“挥杆未来”2026江苏省青少年高尔夫球巡回赛-苏州光明站｜2026-07-27 至 2026-07-28，报名截止 2026-07-25，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-16T06:00:42.960Z",
-      "updatedAt": "2026-07-16T06:00:44.778Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-16T06:00:44.279Z",
-          "sentAt": "2026-07-16T06:00:44.279Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-16T06:00:44.778Z",
-          "sentAt": "2026-07-16T06:00:44.778Z",
-          "error": ""
-        }
-      }
-    },
     "d3d97a41d386b15ed72f5c47ccee03d9a601fe1645d10a291ce1406a4f6c37b5": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-28T15:54:47.488Z",
           "sentAt": "2026-07-28T15:54:47.488Z",
+          "error": ""
+        }
+      }
+    },
+    "a704fc516089a26ba122e1e9991d68d0372370ce47b8cf845c4535161a64301f": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/29 15:40:14\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜430 Unknown Status for https://www.cgagolf.org.cn/society/c-_detailId%3D19827639.html\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-29T07:40:38.374Z",
+      "updatedAt": "2026-07-29T07:40:40.620Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-29T07:40:40.112Z",
+          "sentAt": "2026-07-29T07:40:40.112Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-29T07:40:40.620Z",
+          "sentAt": "2026-07-29T07:40:40.620Z",
           "error": ""
         }
       }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T07:00:38.857Z",
+  "generatedAt": "2026-07-29T07:40:37.641Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,7 +12,9 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [],
+  "warnings": [
+    "中高协官方公告: 430 Unknown Status for https://www.cgagolf.org.cn/society/c-_detailId%3D19827639.html"
+  ],
   "categories": {
     "women": {
       "label": "女子赛",
@@ -1302,7 +1304,7 @@
       "name": "湖南省青少年高尔夫球公开赛暨U系列赛第一站",
       "startDate": "2026-03-28",
       "endDate": "2026-03-29",
-      "location": "长沙",
+      "location": "湖南长沙星河湾国际高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -1318,7 +1320,7 @@
       "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
-      "competitionGrade": "4",
+      "competitionGrade": "5",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历接口",
@@ -3284,7 +3286,7 @@
       "name": "2026上海市青少年高尔夫球挑战赛 第五站",
       "startDate": "2026-05-10",
       "endDate": "2026-05-10",
-      "location": "旭宝（东中）",
+      "location": "上海旭宝高尔夫俱乐部（东中场）",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4504,7 +4506,7 @@
       "name": "湖南省青少年高尔夫球公开赛暨U系列赛第二站",
       "startDate": "2026-05-30",
       "endDate": "2026-05-31",
-      "location": "长沙",
+      "location": "张家界旭生高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4520,7 +4522,7 @@
       "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
-      "competitionGrade": "4",
+      "competitionGrade": "5",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历接口",
@@ -10460,7 +10462,7 @@
       "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
-      "competitionGrade": "4",
+      "competitionGrade": "5",
       "statusCode": "watch",
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历接口",
@@ -16064,7 +16066,7 @@
       "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
-      "competitionGrade": "4",
+      "competitionGrade": "5",
       "statusCode": "watch",
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历接口",
