@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T00:00:34.155Z",
+  "generatedAt": "2026-07-29T02:00:30.666Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -8918,43 +8918,6 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5097",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026 “北京高协”北京青少年高尔夫球邀请赛 (8.1-2天安假日站）",
-      "startDate": "2026-08-01",
-      "endDate": "2026-08-02",
-      "location": "天安假日高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5097",
-      "sourceLinks": [
-        {
-          "label": "大正赛事详情",
-          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5097"
-        }
-      ],
-      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5097",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-18 至 2026-07-31。",
-      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
-      "registrationStart": "2026-07-18",
-      "registrationEnd": "2026-07-31",
-      "registrationText": "2026年07月18 ~ 31日",
-      "registrationOpen": true,
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": true,
-      "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
-      "sourceSystem": "大正高尔夫 · 协会赛-北京高协",
-      "scheduleAuthority": "signup_detail",
-      "seriesLabel": "协会赛-北京高协",
-      "externalIds": {
-        "dazheng": "5097"
-      },
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "2026-广西青少年巡回赛第四站-2026-08-01",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -10653,6 +10616,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5097",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026 “北京高协”北京青少年高尔夫球邀请赛(8.15-16天安假日站）",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-16",
+      "location": "天安假日高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5097",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5097"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5097",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-18 至 2026-08-15。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-07-18",
+      "registrationEnd": "2026-08-15",
+      "registrationText": "2026年07月18日 ~ 08月15日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 协会赛-北京高协",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "协会赛-北京高协",
+      "externalIds": {
+        "dazheng": "5097"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
