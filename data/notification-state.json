@@ -1,32 +1,7 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-29T07:40:40.620Z",
+  "updatedAt": "2026-07-29T07:50:35.088Z",
   "messages": {
-    "d3d97a41d386b15ed72f5c47ccee03d9a601fe1645d10a291ce1406a4f6c37b5": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/16 14:40:35\n\n**【重点】官方赛事公告 2 条**\n- **【竞赛规程/资格】中国高尔夫球协会关于印发2026海峡杯·青少年 高尔夫球厦门公开赛竞赛规程的通知**｜2026-07-16｜[官方公告](https://www.cgagolf.org.cn/xnews_details/2422.html)\n- **【竞赛规程/资格】中国高尔夫球协会关于印发2026全国青少年高尔夫球公开赛·西北地区竞赛规程的通知**｜2026-07-16｜[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5070)｜[官方公告](https://www.cgagolf.org.cn/xnews_details/2421.html)\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-16T06:40:36.501Z",
-      "updatedAt": "2026-07-16T06:40:38.984Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-16T06:40:38.423Z",
-          "sentAt": "2026-07-16T06:40:38.423Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-16T06:40:38.984Z",
-          "sentAt": "2026-07-16T06:40:38.984Z",
-          "error": ""
-        }
-      }
-    },
     "67fc6f75cf8385fb6cc91d347d107fd97785571d1082c89c8497f40d6e100350": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1498,6 +1473,31 @@
           "status": "sent",
           "attemptedAt": "2026-07-29T07:40:40.620Z",
           "sentAt": "2026-07-29T07:40:40.620Z",
+          "error": ""
+        }
+      }
+    },
+    "e8b838e6d6791ae6510ec7317a710ad9c46f34cdb7ccafe448bb191632d59022": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/29 15:50:15\n\n**【恢复】1 个信息源已恢复**\n- 中高协官方公告｜本次抓取 5 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-07-29T07:50:33.049Z",
+      "updatedAt": "2026-07-29T07:50:35.088Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-29T07:50:34.469Z",
+          "sentAt": "2026-07-29T07:50:34.469Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-07-29T07:50:35.088Z",
+          "sentAt": "2026-07-29T07:50:35.088Z",
           "error": ""
         }
       }
