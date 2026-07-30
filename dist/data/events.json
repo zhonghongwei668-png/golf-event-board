@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T02:40:29.806Z",
+  "generatedAt": "2026-07-30T03:20:26.782Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -4504,7 +4504,7 @@
       "name": "湖南省青少年高尔夫球公开赛暨U系列赛第二站",
       "startDate": "2026-05-30",
       "endDate": "2026-05-31",
-      "location": "张家界旭生高尔夫俱乐部",
+      "location": "长沙",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -19225,16 +19225,6 @@
       "matchedEventIds": [
         "clpga-8114"
       ]
-    },
-    {
-      "id": "dazheng-announcement-44946",
-      "sourceId": "44946",
-      "title": "倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！",
-      "publishedAt": "2026-06-11 17:36",
-      "kind": "deadline",
-      "source": "大正高尔夫官方公告",
-      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946",
-      "matchedEventIds": []
     },
     {
       "id": "rungolf-announcement-2586",
