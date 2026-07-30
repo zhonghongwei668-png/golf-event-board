@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T03:25:34.297Z",
+  "generatedAt": "2026-07-30T04:10:29.519Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1435,40 +1435,6 @@
       "notes": ""
     },
     {
-      "id": "苏州市青少年高尔夫球巡回赛第一站-2026-04-01",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "苏州市青少年高尔夫球巡回赛第一站",
-      "startDate": "2026-04-01",
-      "endDate": "2026-04-30",
-      "location": "江苏省苏州市/太仓新东海高尔夫",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "7",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "2026年全国业余高尔夫球希望赛第二站暨2026中国业余高尔夫球冠军赛选拔赛-2026-04-03",
       "category": "amateur",
       "categoryLabel": "业余赛",
@@ -1598,6 +1564,40 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "5",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "苏州市青少年高尔夫球巡回赛第一站-2026-04-06",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "苏州市青少年高尔夫球巡回赛第一站",
+      "startDate": "2026-04-06",
+      "endDate": "2026-04-06",
+      "location": "苏州",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "7",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历接口",
@@ -2823,40 +2823,6 @@
       "notes": ""
     },
     {
-      "id": "苏州市青少年高尔夫球巡回赛第二站-2026-05-01",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "苏州市青少年高尔夫球巡回赛第二站",
-      "startDate": "2026-05-01",
-      "endDate": "2026-05-31",
-      "location": "江苏省苏州市/张家港双山高尔夫",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "7",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "盐城市青少年高尔夫球精英赛-第一站-2026-05-01",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -3111,6 +3077,40 @@
       "startDate": "2026-05-05",
       "endDate": "2026-05-05",
       "location": "天安假日高尔夫俱乐部",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "7",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "苏州市青少年高尔夫球巡回赛第二站-2026-05-05",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "苏州市青少年高尔夫球巡回赛第二站",
+      "startDate": "2026-05-05",
+      "endDate": "2026-05-05",
+      "location": "张家港双山高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4633,40 +4633,6 @@
       "notes": ""
     },
     {
-      "id": "苏州市青少年高尔夫球巡回赛第三站-2026-06-01",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "苏州市青少年高尔夫球巡回赛第三站",
-      "startDate": "2026-06-01",
-      "endDate": "2026-06-30",
-      "location": "江苏省苏州市/常熟尚湖高尔夫",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "7",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "盐城市青少年高尔夫球精英赛-第二站-2026-06-01",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -4732,6 +4698,40 @@
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "苏州市青少年高尔夫球巡回赛第三站-2026-06-05",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "苏州市青少年高尔夫球巡回赛第三站",
+      "startDate": "2026-06-05",
+      "endDate": "2026-06-05",
+      "location": "苏州",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "7",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
@@ -5324,7 +5324,7 @@
       "name": "2026上海市青少年高尔夫球挑战赛 第八站",
       "startDate": "2026-06-14",
       "endDate": "2026-06-14",
-      "location": "新东海",
+      "location": "新东海高尔夫乡村俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -6306,40 +6306,6 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "6",
-      "statusCode": "running",
-      "statusLabel": "比赛中",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "苏州市青少年高尔夫球巡回赛第四站-2026-07-01",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "苏州市青少年高尔夫球巡回赛第四站",
-      "startDate": "2026-07-01",
-      "endDate": "2026-07-31",
-      "location": "江苏省苏州市/太湖高尔夫",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "7",
       "statusCode": "running",
       "statusLabel": "比赛中",
       "sourceSystem": "中高协年历接口",
@@ -7832,6 +7798,40 @@
       "notes": ""
     },
     {
+      "id": "苏州市青少年高尔夫球巡回赛第四站-2026-07-21",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "苏州市青少年高尔夫球巡回赛第四站",
+      "startDate": "2026-07-21",
+      "endDate": "2026-07-21",
+      "location": "苏州太湖国际高尔夫俱乐部",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "7",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "dazheng-4990",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -8413,7 +8413,7 @@
       "name": "江苏省高尔夫球巡回赛第二站",
       "startDate": "2026-07-27",
       "endDate": "2026-07-28",
-      "location": "苏州光明球场",
+      "location": "江苏省苏州市",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -9002,17 +9002,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5050",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-06-30 至 2026-07-30。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-06-30 至 2026-07-30。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-06-30",
       "registrationEnd": "2026-07-30",
       "registrationText": "2026年06月30日 ~ 07月30日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
