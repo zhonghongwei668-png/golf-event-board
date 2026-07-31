@@ -3,7 +3,7 @@ import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 export function emptyNotificationState() {
-  return { version: 1, updatedAt: "", messages: {} };
+  return { version: 2, updatedAt: "", seenOpenEventKeys: {}, messages: {} };
 }
 
 export function notificationFingerprint(kind, markdown) {
@@ -14,14 +14,33 @@ export async function readNotificationState(filePath) {
   try {
     const parsed = JSON.parse(await readFile(filePath, "utf8"));
     return {
-      version: 1,
+      version: 2,
       updatedAt: parsed.updatedAt || "",
+      seenOpenEventKeys: parsed.seenOpenEventKeys && typeof parsed.seenOpenEventKeys === "object"
+        ? parsed.seenOpenEventKeys
+        : {},
       messages: parsed.messages && typeof parsed.messages === "object" ? parsed.messages : {}
     };
   } catch (error) {
     if (error.code === "ENOENT") return emptyNotificationState();
     throw error;
   }
+}
+
+export function hasSeenOpenEvent(state, keys = []) {
+  return keys.some((key) => Boolean(state?.seenOpenEventKeys?.[key]));
+}
+
+export function markOpenEventSeen(state, keys = [], now = new Date().toISOString()) {
+  state.seenOpenEventKeys ||= {};
+  let changed = false;
+  for (const key of keys) {
+    if (!key || state.seenOpenEventKeys[key]) continue;
+    state.seenOpenEventKeys[key] = now;
+    changed = true;
+  }
+  if (changed) state.updatedAt = now;
+  return changed;
 }
 
 export function ensureNotificationMessage(state, { kind, title, markdown, targetIds, now = new Date().toISOString() }) {

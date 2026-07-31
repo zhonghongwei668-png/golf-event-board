@@ -3,6 +3,8 @@ import test from "node:test";
 import {
   emptyNotificationState,
   ensureNotificationMessage,
+  hasSeenOpenEvent,
+  markOpenEventSeen,
   markNotificationDelivery,
   pendingNotificationMessages,
   pruneNotificationState
@@ -43,4 +45,14 @@ test("pruning keeps pending deliveries while limiting completed history", () => 
   pruneNotificationState(state, 1);
   assert.equal(Object.keys(state.messages).length, 2);
   assert.equal(pendingNotificationMessages(state).length, 1);
+});
+
+test("keeps a permanent history of events that have already opened", () => {
+  const state = emptyNotificationState();
+  assert.equal(hasSeenOpenEvent(state, ["id:event-1"]), false);
+  assert.equal(markOpenEventSeen(state, ["id:event-1", "external:dazheng:5050"], "2026-07-01T00:00:00.000Z"), true);
+  assert.equal(hasSeenOpenEvent(state, ["external:dazheng:5050"]), true);
+  assert.equal(markOpenEventSeen(state, ["id:event-1"], "2026-07-31T00:00:00.000Z"), false);
+  pruneNotificationState(state, 0);
+  assert.equal(hasSeenOpenEvent(state, ["id:event-1"]), true);
 });

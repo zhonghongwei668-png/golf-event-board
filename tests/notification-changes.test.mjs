@@ -3,7 +3,8 @@ import test from "node:test";
 import {
   buildChangeNotification,
   diffOfficialAnnouncements,
-  isAnnouncementFresh
+  isAnnouncementFresh,
+  openHistoryKeys
 } from "../scripts/notify-changes.mjs";
 
 test("suppresses historical event backfill from change notifications", () => {
@@ -250,4 +251,45 @@ test("pushes a newly discovered event only when registration is already open", (
     events: [{ ...closed.events[0], registrationOpen: true }]
   });
   assert.match(markdown, /新开放报名 1 场/);
+});
+
+test("does not push a registration that closes and later reopens", () => {
+  const previous = {
+    announcements: [],
+    events: [{
+      id: "dazheng-5050",
+      category: "junior",
+      name: "佛山云东海站",
+      startDate: "2026-08-01",
+      registrationOpen: false,
+      registrationClosed: true,
+      externalIds: { dazheng: "5050" }
+    }]
+  };
+  const current = {
+    ...previous,
+    generatedAt: "2026-07-31T01:20:29.468Z",
+    events: [{
+      ...previous.events[0],
+      registrationOpen: true,
+      registrationClosed: false
+    }]
+  };
+  const seen = new Set(["external:dazheng:5050"]);
+  assert.equal(buildChangeNotification(previous, current, {
+    wasOpenBefore: (event) => openHistoryKeys(event).some((key) => seen.has(key))
+  }), "");
+});
+
+test("recognizes previously open events after an ID or name variation", () => {
+  const event = {
+    id: "renamed-event",
+    category: "junior",
+    name: "太平松体育锦标赛暨AJGA IPS系列赛（二级一档）",
+    externalIds: { dazheng: "5110" },
+    registrationOpen: true
+  };
+  assert.equal(buildChangeNotification({ events: [] }, { events: [event] }, {
+    wasOpenBefore: (candidate) => openHistoryKeys(candidate).includes("external:dazheng:5110")
+  }), "");
 });

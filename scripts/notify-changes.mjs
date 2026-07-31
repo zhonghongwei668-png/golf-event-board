@@ -8,6 +8,8 @@ import { isRegistrationOpenAt, shanghaiDateString } from "../event-logic.js";
 import { shouldAlertFailure } from "./lib/source-health.mjs";
 import {
   ensureNotificationMessage,
+  hasSeenOpenEvent,
+  markOpenEventSeen,
   markNotificationDelivery,
   pendingNotificationMessages,
   readNotificationState,
@@ -58,6 +60,21 @@ function eventIdentity(event) {
     .replace(/[（(]\s*(?:青少|业余)?[一二三四五]级(?:[一二三四]档)?赛?\s*[）)]/gu, "")
     .replace(/[\s\p{P}\p{S}]/gu, "");
   return `${event.category || ""}:${normalizedName}`;
+}
+
+export function openHistoryKeys(event) {
+  const keys = [
+    event.id ? `id:${event.id}` : "",
+    `identity:${eventIdentity(event)}`
+  ];
+  for (const [source, value] of Object.entries(event.externalIds || {})) {
+    if (value !== undefined && value !== null && String(value)) {
+      keys.push(`external:${source}:${value}`);
+    }
+  }
+  const dazhengId = String(event.signupUrl || event.sourceUrl || "").match(/[?&]event_id=(\d+)/)?.[1];
+  if (dazhengId) keys.push(`external:dazheng:${dazhengId}`);
+  return [...new Set(keys.filter(Boolean))];
 }
 
 function dateDistanceDays(left, right) {
@@ -135,7 +152,7 @@ function eventIsHistorical(event, today) {
   return Boolean(lastDate && lastDate < today);
 }
 
-function diffEvents(previousPayload, currentPayload) {
+function diffEvents(previousPayload, currentPayload, options = {}) {
   const previousEvents = previousPayload?.events || [];
   const currentEvents = currentPayload?.events || [];
   const previousByKey = new Map(previousEvents.map((event) => [eventKey(event), event]));
@@ -171,7 +188,7 @@ function diffEvents(previousPayload, currentPayload) {
         continue;
       }
       added.push(event);
-      if (isOpenRegistration(event)) priorityOpen.push(event);
+      if (isOpenRegistration(event) && !options.wasOpenBefore?.(event)) priorityOpen.push(event);
       continue;
     }
     matchedPrevious.add(previous);
@@ -182,7 +199,7 @@ function diffEvents(previousPayload, currentPayload) {
     }
     if (!isOpenRegistration(previous) && isOpenRegistration(event)) {
       opened.push(event);
-      priorityOpen.push(event);
+      if (!options.wasOpenBefore?.(event)) priorityOpen.push(event);
     }
   }
 
@@ -265,8 +282,8 @@ function buildMarkdown(diff, currentPayload) {
   ].join("\n");
 }
 
-export function buildChangeNotification(previousPayload, currentPayload) {
-  const diff = diffEvents(previousPayload, currentPayload);
+export function buildChangeNotification(previousPayload, currentPayload, options = {}) {
+  const diff = diffEvents(previousPayload, currentPayload, options);
   return buildMarkdown(diff, currentPayload);
 }
 
@@ -580,7 +597,19 @@ async function main() {
     return;
   }
 
-  const markdown = buildChangeNotification(previousPayload, currentPayload);
+  const notificationState = await readNotificationState(notificationStatePath);
+  const markdown = buildChangeNotification(previousPayload, currentPayload, {
+    wasOpenBefore: (event) => hasSeenOpenEvent(notificationState, openHistoryKeys(event))
+  });
+  const seenAt = currentPayload.generatedAt || new Date().toISOString();
+  let openHistoryChanged = false;
+  for (const event of (currentPayload.events || []).filter((item) => isOpenRegistration(item))) {
+    openHistoryChanged = markOpenEventSeen(notificationState, openHistoryKeys(event), seenAt) || openHistoryChanged;
+  }
+  if (openHistoryChanged && process.env.NOTIFY_DRY_RUN !== "1") {
+    await writeNotificationState(notificationStatePath, notificationState);
+  }
+
   if (!markdown) {
     console.log("No newly open registrations to notify.");
     return;
