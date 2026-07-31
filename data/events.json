@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T05:50:59.996Z",
+  "generatedAt": "2026-07-31T06:31:03.522Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -1370,7 +1370,7 @@
       "name": "四季高尔夫青少年挑战赛第一站",
       "startDate": "2026-03-29",
       "endDate": "2026-03-29",
-      "location": "上海市银涛高尔夫俱乐部",
+      "location": "上海银涛高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -9345,17 +9345,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5038",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-06-23 至 2026-07-31。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-06-23 至 2026-07-31。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-06-23",
       "registrationEnd": "2026-07-31",
       "registrationText": "2026年06月23日 ~ 07月31日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-嘉年华挑战赛",
