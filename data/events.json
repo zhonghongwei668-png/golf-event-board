@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T08:47:26.244Z",
+  "generatedAt": "2026-07-31T00:00:37.092Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -8800,8 +8800,8 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "6",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "中高协年历接口",
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
@@ -8835,8 +8835,8 @@
       "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "closed",
-      "statusLabel": "报名截止",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-嘉年华挑战赛",
