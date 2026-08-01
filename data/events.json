@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T09:41:51.910Z",
+  "generatedAt": "2026-08-01T09:51:24.173Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,9 +12,7 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [
-    "如歌官方赛事新闻: fetch failed"
-  ],
+  "warnings": [],
   "categories": {
     "women": {
       "label": "女子赛",
@@ -8717,7 +8715,7 @@
       "name": "2026迈阅青少年高尔夫巡回赛（天津第二站）",
       "startDate": "2026-07-30",
       "endDate": "2026-07-31",
-      "location": "天津27人高尔夫俱乐部",
+      "location": "天津",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
