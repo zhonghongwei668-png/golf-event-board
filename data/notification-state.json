@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-01T09:51:26.458Z",
+  "updatedAt": "2026-08-03T00:42:59.420Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -323,31 +323,6 @@
     "external:dazheng:5120": "2026-08-01T02:01:28.358Z"
   },
   "messages": {
-    "a6ffd2b53be3139e3e9103019621339bcbdf66ba6f44f446ab550506e1e02214": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/17 01:48:30\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026迈阅青少年高尔夫巡回赛·上海新天鸿名人站｜2026-07-17，报名截止 2026-07-16，变化：状态\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-16T17:48:31.482Z",
-      "updatedAt": "2026-07-16T17:48:33.669Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-16T17:48:33.098Z",
-          "sentAt": "2026-07-16T17:48:33.098Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-16T17:48:33.669Z",
-          "sentAt": "2026-07-16T17:48:33.669Z",
-          "error": ""
-        }
-      }
-    },
     "88d08afe98159aa9bafe18cf45fc7797caf6182e70d5a84e4a3fba7ed222fae7": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -1819,6 +1794,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-01T09:51:26.458Z",
           "sentAt": "2026-08-01T09:51:26.458Z",
+          "error": ""
+        }
+      }
+    },
+    "bf86dd8f36bf5cfb152df44a92a78153e5e4a02c8ece64a2cfc1f3c770b10aa2": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/3 08:41:00\n\n**【报警】1 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜6 个详情页读取失败：5056: The operation was aborted due to timeout；5055: The operation was aborted due to timeout；5046: The operation was aborted due to timeout\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-03T00:42:57.631Z",
+      "updatedAt": "2026-08-03T00:42:59.420Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-03T00:42:58.872Z",
+          "sentAt": "2026-08-03T00:42:58.872Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-03T00:42:59.420Z",
+          "sentAt": "2026-08-03T00:42:59.420Z",
           "error": ""
         }
       }
