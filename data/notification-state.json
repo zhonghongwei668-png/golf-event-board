@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-03T00:42:59.420Z",
+  "updatedAt": "2026-08-03T00:51:20.561Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -323,31 +323,6 @@
     "external:dazheng:5120": "2026-08-01T02:01:28.358Z"
   },
   "messages": {
-    "88d08afe98159aa9bafe18cf45fc7797caf6182e70d5a84e4a3fba7ed222fae7": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/17 08:01:06\n\n**【报警】1 个信息源更新异常**\n- CLPGA｜连续失败 1 次｜The operation was aborted due to timeout\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-17T00:02:03.794Z",
-      "updatedAt": "2026-07-17T00:02:06.006Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T00:02:05.375Z",
-          "sentAt": "2026-07-17T00:02:05.375Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T00:02:06.006Z",
-          "sentAt": "2026-07-17T00:02:06.006Z",
-          "error": ""
-        }
-      }
-    },
     "01b95d6e10d0b3c6d41819066d419ab173b6fc48d7352c45eb54b80631813ce2": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -1819,6 +1794,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-03T00:42:59.420Z",
           "sentAt": "2026-08-03T00:42:59.420Z",
+          "error": ""
+        }
+      }
+    },
+    "3e1f91972898fc0dff95b52ce0d7b9143a92c38d95a918b221e19fecdbf08750": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/3 08:51:04\n\n**【恢复】1 个信息源已恢复**\n- 大正高尔夫｜本次抓取 113 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-03T00:51:18.450Z",
+      "updatedAt": "2026-08-03T00:51:20.561Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-03T00:51:20.010Z",
+          "sentAt": "2026-08-03T00:51:20.010Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-03T00:51:20.561Z",
+          "sentAt": "2026-08-03T00:51:20.561Z",
           "error": ""
         }
       }
