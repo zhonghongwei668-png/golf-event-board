@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T08:22:10.410Z",
+  "generatedAt": "2026-08-03T10:57:54.088Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -9819,17 +9819,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5116",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-28 至 2026-08-06。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-07-28 至 2026-08-06。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-07-28",
       "registrationEnd": "2026-08-06",
       "registrationText": "2026年07月28日 ~ 08月06日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -11226,6 +11226,43 @@
       "seriesLabel": "青少赛-大正高尔夫",
       "externalIds": {
         "dazheng": "5064"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5124",
+      "category": "amateur",
+      "categoryLabel": "业余赛",
+      "color": "#167e75",
+      "name": "燕口福杯•2026广东省业余高尔夫球巡回赛-全国积分赛#3",
+      "startDate": "2026-08-19",
+      "endDate": "2026-08-21",
+      "location": "惠州山海半岛高尔夫球会",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5124",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5124"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5124",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-08-03 至 2026-08-17。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-08-03",
+      "registrationEnd": "2026-08-17",
+      "registrationText": "2026年08月03 ~ 17日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 业余赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "业余赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5124"
       },
       "updatedFromOfficial": true,
       "notes": ""

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-03T08:22:13.614Z",
+  "updatedAt": "2026-08-03T10:57:56.847Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -326,34 +326,12 @@
     "external:dazheng:5121": "2026-08-03T08:22:10.410Z",
     "id:dazheng-5123": "2026-08-03T08:22:10.410Z",
     "identity:amateur:2026超级荔枝全国业余高尔夫球希望赛河北站": "2026-08-03T08:22:10.410Z",
-    "external:dazheng:5123": "2026-08-03T08:22:10.410Z"
+    "external:dazheng:5123": "2026-08-03T08:22:10.410Z",
+    "id:dazheng-5124": "2026-08-03T10:57:54.088Z",
+    "identity:amateur:燕口福杯2026广东省业余高尔夫球巡回赛全国积分赛3": "2026-08-03T10:57:54.088Z",
+    "external:dazheng:5124": "2026-08-03T10:57:54.088Z"
   },
   "messages": {
-    "be1892d93f5b395763b756a4f1182070c8c2f7507734b532f79083564d2e68f2": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/17 08:31:03\n\n**【恢复】1 个信息源已恢复**\n- CLPGA｜本次抓取 16 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-17T00:31:21.994Z",
-      "updatedAt": "2026-07-17T00:31:23.919Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T00:31:23.424Z",
-          "sentAt": "2026-07-17T00:31:23.424Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T00:31:23.919Z",
-          "sentAt": "2026-07-17T00:31:23.919Z",
-          "error": ""
-        }
-      }
-    },
     "c29d44ec4c8bfce95a1f937c907c741bf9626541f283d951123d07dd24155f21": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -1825,6 +1803,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-03T08:22:13.614Z",
           "sentAt": "2026-08-03T08:22:13.614Z",
+          "error": ""
+        }
+      }
+    },
+    "834943d41c794a701880291bc2cd60888a56b4a9755cdc043d93ca1bf00a9d1e": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/3 18:57:54\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-19 至 2026-08-21｜燕口福杯•2026广东省业余高尔夫球巡回赛-全国积分赛#3，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5124)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-03T10:57:55.223Z",
+      "updatedAt": "2026-08-03T10:57:56.847Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-03T10:57:56.282Z",
+          "sentAt": "2026-08-03T10:57:56.282Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-03T10:57:56.847Z",
+          "sentAt": "2026-08-03T10:57:56.847Z",
           "error": ""
         }
       }
