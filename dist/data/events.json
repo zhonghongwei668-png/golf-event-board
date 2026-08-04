@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T00:01:19.740Z",
+  "generatedAt": "2026-08-04T02:01:18.439Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -19215,6 +19215,16 @@
     }
   ],
   "announcements": [
+    {
+      "id": "cga-announcement-2436",
+      "sourceId": "2436",
+      "title": "中国高尔夫球协会关于印发2026年汇丰全国青少年高尔夫球冠军赛竞赛总规程的通知",
+      "publishedAt": "2026-08-04",
+      "kind": "regulation",
+      "source": "中国高尔夫球协会官方公告",
+      "url": "https://www.cgagolf.org.cn/xnews_details/2436.html",
+      "matchedEventIds": []
+    },
     {
       "id": "cga-announcement-2431",
       "sourceId": "2431",
