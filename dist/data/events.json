@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T02:01:18.439Z",
+  "generatedAt": "2026-08-04T02:41:16.880Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -2134,40 +2134,6 @@
       "startDate": "2026-04-18",
       "endDate": "2026-04-19",
       "location": "艾力枫社高尔夫球场",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "gcct青少年高尔夫球技能等级二级赛-河北站-2026-04-18",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "GCCT青少年高尔夫球技能等级二级赛-河北站",
-      "startDate": "2026-04-18",
-      "endDate": "2026-04-19",
-      "location": "河北廊坊",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -11240,7 +11206,7 @@
       "categoryLabel": "业余赛",
       "color": "#167e75",
       "name": "燕口福杯•2026广东省业余高尔夫球巡回赛-全国积分赛#3",
-      "startDate": "2026-08-19",
+      "startDate": "2026-08-20",
       "endDate": "2026-08-21",
       "location": "惠州山海半岛高尔夫球会",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5124",
@@ -15321,6 +15287,40 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "8",
+      "statusCode": "watch",
+      "statusLabel": "关注公告",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "gcct青少年高尔夫球技能等级二级赛-河北站-2026-10-01",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "GCCT青少年高尔夫球技能等级二级赛-河北站",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-31",
+      "location": "河北廊坊艾力枫社高尔夫俱乐部",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
       "statusCode": "watch",
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历接口",
