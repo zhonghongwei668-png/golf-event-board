@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T16:01:05.851Z",
+  "generatedAt": "2026-08-05T01:21:22.501Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,7 +12,9 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [],
+  "warnings": [
+    "中高协官方公告: CGA announcement page returned no actionable 2026 notices"
+  ],
   "categories": {
     "women": {
       "label": "女子赛",
@@ -2516,7 +2518,7 @@
       "name": "2026年辽宁省青少年高尔夫球巡回赛第一站",
       "startDate": "2026-04-25",
       "endDate": "2026-04-26",
-      "location": "辽阳太子河球场",
+      "location": "辽宁省辽阳市",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -4368,7 +4370,7 @@
       "name": "2026年辽宁省青少年高尔夫球巡回赛第二站",
       "startDate": "2026-05-30",
       "endDate": "2026-05-31",
-      "location": "沈阳盛京高尔夫球场",
+      "location": "辽宁沈阳",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -5672,7 +5674,7 @@
       "name": "2026年辽宁省青少年高尔夫球巡回赛第三站",
       "startDate": "2026-06-20",
       "endDate": "2026-06-21",
-      "location": "大连西郊高尔夫球会",
+      "location": "大连",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -6949,7 +6951,7 @@
       "name": "2026年辽宁省青少年高尔夫球巡回赛第四站",
       "startDate": "2026-07-15",
       "endDate": "2026-07-16",
-      "location": "铁岭龙山国际高尔夫培训俱乐部",
+      "location": "辽阳太子河高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {

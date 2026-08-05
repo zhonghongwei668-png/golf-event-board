@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-04T09:51:38.973Z",
+  "updatedAt": "2026-08-05T01:21:25.300Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -345,31 +345,6 @@
     "external:dazheng:5126": "2026-08-04T09:51:36.477Z"
   },
   "messages": {
-    "5b13e71a8e0191104f1ea3d145c0576bbb1c287e8aaff181c1e364c14ff2c72a": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/17 09:12:05\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026全国青少年高尔夫球公开赛·中部地区｜2026-08-12 至 2026-08-15，报名截止 2026-07-17，变化：报名截止\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-17T01:12:07.998Z",
-      "updatedAt": "2026-07-17T01:12:09.122Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T01:12:08.632Z",
-          "sentAt": "2026-07-17T01:12:08.632Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T01:12:09.122Z",
-          "sentAt": "2026-07-17T01:12:09.122Z",
-          "error": ""
-        }
-      }
-    },
     "5877d8827d2166d658490a3ef60b742c5823414a4be7950064fc1ba21edca859": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -1841,6 +1816,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-04T09:51:38.973Z",
           "sentAt": "2026-08-04T09:51:38.973Z",
+          "error": ""
+        }
+      }
+    },
+    "ba56f589c0691e070a6e7b9b9f1581fca10b7e6652180e816d55c9c3af6b75b7": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/5 09:21:08\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜CGA announcement page returned no actionable 2026 notices\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-05T01:21:23.243Z",
+      "updatedAt": "2026-08-05T01:21:25.300Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-05T01:21:24.747Z",
+          "sentAt": "2026-08-05T01:21:24.747Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-05T01:21:25.300Z",
+          "sentAt": "2026-08-05T01:21:25.300Z",
           "error": ""
         }
       }
