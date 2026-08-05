@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T04:50:52.043Z",
+  "generatedAt": "2026-08-05T05:32:13.566Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,7 +12,11 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [],
+  "warnings": [
+    "大正高尔夫: fetch failed",
+    "大正官方公告: Dazheng announcement pages all failed",
+    "中高协官方公告: fetch failed"
+  ],
   "categories": {
     "women": {
       "label": "女子赛",
@@ -7663,7 +7667,7 @@
       "name": "2026第九届大连全国青少年高尔夫球公开赛",
       "startDate": "2026-07-21",
       "endDate": "2026-07-23",
-      "location": "辽宁大连长兴岛高尔夫俱乐部",
+      "location": "辽宁省、大连市",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2411.html",
       "sourceLinks": [
         {
@@ -8312,7 +8316,7 @@
       "name": "2026第三十二届全国青少年高尔夫球锦标赛",
       "startDate": "2026-07-27",
       "endDate": "2026-08-02",
-      "location": "广东阳江涛景高尔夫度假村CD场",
+      "location": "广东省",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2410.html",
       "sourceLinks": [
         {
@@ -8454,7 +8458,7 @@
       "name": "2026海峡杯·青少年厦门公开赛",
       "startDate": "2026-07-28",
       "endDate": "2026-07-31",
-      "location": "福建厦门东方高尔夫俱乐部",
+      "location": "福建省",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -8499,7 +8503,7 @@
       "name": "GCCT青少年高尔夫球技能等级二级赛-山东第一站",
       "startDate": "2026-07-28",
       "endDate": "2026-07-29",
-      "location": "青岛嶺海温泉高尔夫俱乐部",
+      "location": "山东青岛",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=4919",
       "sourceLinks": [
         {
@@ -9451,7 +9455,7 @@
       "name": "2026年南山全国业余高尔夫球锦标赛第三站",
       "startDate": "2026-08-03",
       "endDate": "2026-08-06",
-      "location": "山东烟台南山国际高尔夫俱乐部",
+      "location": "南山丹岭翠谷球场",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2378.html",
       "sourceLinks": [
         {
@@ -12545,7 +12549,7 @@
       "name": "GCCT青少年高尔夫球技能等级二级赛-陕西站",
       "startDate": "2026-08-26",
       "endDate": "2026-08-27",
-      "location": "西安秦岭国际高尔夫俱乐部",
+      "location": "陕西西安秦岭高尔夫俱乐部",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5055",
       "sourceLinks": [
         {
@@ -14369,7 +14373,7 @@
       "name": "GCCT青少年高尔夫球技能等级二级赛-广东站",
       "startDate": "2026-09-12",
       "endDate": "2026-09-13",
-      "location": "广州南沙高尔夫球会",
+      "location": "广东",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5099",
       "sourceLinks": [
         {

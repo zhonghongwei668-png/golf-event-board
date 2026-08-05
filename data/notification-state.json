@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-05T01:31:22.652Z",
+  "updatedAt": "2026-08-05T05:32:17.016Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -345,31 +345,6 @@
     "external:dazheng:5126": "2026-08-04T09:51:36.477Z"
   },
   "messages": {
-    "e699f5f4152e5df859162d77d1c6a45097a534aa5140a52d362444e2225e1921": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/17 10:41:38\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜NSP-2026青少年高尔夫嘉年华挑战赛广州赛区第七站-金立肇庆站（JGS积分）（亲子/师徒/好朋友配对赛+个人赛+团队赛）｜2026-07-18 至 2026-07-19，报名截止 2026-07-17，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-17T02:41:39.754Z",
-      "updatedAt": "2026-07-17T02:41:41.344Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T02:41:40.773Z",
-          "sentAt": "2026-07-17T02:41:40.773Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T02:41:41.344Z",
-          "sentAt": "2026-07-17T02:41:41.344Z",
-          "error": ""
-        }
-      }
-    },
     "6e9f709ec740bde06db0fc6c7fc2aa7f7137d406b9cc2cc8aebb9ea593290bce": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1841,6 +1816,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-05T01:31:22.652Z",
           "sentAt": "2026-08-05T01:31:22.652Z",
+          "error": ""
+        }
+      }
+    },
+    "39854ed9e7dd6aaf88cf6f6bac48259c9a6195cd81dab2d475d046eb5fe655ad": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/5 13:30:29\n\n**【报警】3 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜fetch failed\n- 大正官方公告｜连续失败 1 次｜Dazheng announcement pages all failed\n- 中高协官方公告｜连续失败 1 次｜fetch failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-05T05:32:14.311Z",
+      "updatedAt": "2026-08-05T05:32:17.016Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-05T05:32:16.485Z",
+          "sentAt": "2026-08-05T05:32:16.485Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-05T05:32:17.016Z",
+          "sentAt": "2026-08-05T05:32:17.016Z",
           "error": ""
         }
       }
