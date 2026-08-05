@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T05:32:13.566Z",
+  "generatedAt": "2026-08-05T05:40:42.756Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,11 +12,7 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [
-    "大正高尔夫: fetch failed",
-    "大正官方公告: Dazheng announcement pages all failed",
-    "中高协官方公告: fetch failed"
-  ],
+  "warnings": [],
   "categories": {
     "women": {
       "label": "女子赛",
@@ -12549,7 +12545,7 @@
       "name": "GCCT青少年高尔夫球技能等级二级赛-陕西站",
       "startDate": "2026-08-26",
       "endDate": "2026-08-27",
-      "location": "陕西西安秦岭高尔夫俱乐部",
+      "location": "西安秦岭国际高尔夫俱乐部",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5055",
       "sourceLinks": [
         {
@@ -14373,7 +14369,7 @@
       "name": "GCCT青少年高尔夫球技能等级二级赛-广东站",
       "startDate": "2026-09-12",
       "endDate": "2026-09-13",
-      "location": "广东",
+      "location": "广州南沙高尔夫球会",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5099",
       "sourceLinks": [
         {
