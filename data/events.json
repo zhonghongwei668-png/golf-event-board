@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T02:40:43.801Z",
+  "generatedAt": "2026-08-06T03:20:44.857Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -787,7 +787,7 @@
       "name": "《2026WHS（中国区）青少年高尔夫差点巡回赛·广西赛》 第一站",
       "startDate": "2026-03-14",
       "endDate": "2026-03-14",
-      "location": "北京",
+      "location": "南宁青秀山球会",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -1200,7 +1200,7 @@
       "name": "2026年河南省第十三届青少年高尔夫巡回赛-第一站",
       "startDate": "2026-03-28",
       "endDate": "2026-03-29",
-      "location": "河南省郑州市思念国际高尔夫球会",
+      "location": "河南郑州",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -3182,7 +3182,7 @@
       "name": "《2026WHS（中国区）青少年高尔夫差点巡回赛•北京赛》 第一站",
       "startDate": "2026-05-10",
       "endDate": "2026-05-10",
-      "location": "北京",
+      "location": "北京净山湖球会",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -3495,7 +3495,7 @@
       "name": "《2026WHS（中国区）青少年高尔夫差点巡回赛 ·广西赛》 第二站",
       "startDate": "2026-05-17",
       "endDate": "2026-05-17",
-      "location": "南宁青秀山国际高尔夫球会",
+      "location": "南宁青秀山球会",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
