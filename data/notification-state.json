@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-07T03:13:49.466Z",
+  "updatedAt": "2026-08-07T03:50:43.174Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -354,34 +354,12 @@
     "external:dazheng:5132": "2026-08-07T02:00:45.636Z",
     "id:dazheng-5134": "2026-08-07T03:13:45.487Z",
     "identity:junior:2026青少年高尔夫嘉年华挑战赛上海赛区第十一站上海银涛个人赛亲子赛团队赛": "2026-08-07T03:13:45.487Z",
-    "external:dazheng:5134": "2026-08-07T03:13:45.487Z"
+    "external:dazheng:5134": "2026-08-07T03:13:45.487Z",
+    "id:dazheng-5135": "2026-08-07T03:50:40.115Z",
+    "identity:junior:2026freetee青少年高尔夫系列赛上海林克司站": "2026-08-07T03:50:40.115Z",
+    "external:dazheng:5135": "2026-08-07T03:50:40.115Z"
   },
   "messages": {
-    "d45ae9c4c9eb2a48703ba9bc8d47ba647ad70326034bf7748a11778598a8502e": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/17 15:36:05\n\n**【重点】新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-06 至 2026-08-07｜2026“九鹤岩茶杯”福建省武夷山青少年高尔夫球系列赛·总决赛，报名截止 2026-08-05，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5095)**\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜第26届尤尼克斯“张连伟”杯国际青少年高尔夫球邀请赛｜2026-08-11 至 2026-08-15，报名截止 2026-07-17，变化：报名截止、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-17T07:36:06.564Z",
-      "updatedAt": "2026-07-17T07:36:08.367Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T07:36:07.825Z",
-          "sentAt": "2026-07-17T07:36:07.825Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T07:36:08.367Z",
-          "sentAt": "2026-07-17T07:36:08.367Z",
-          "error": ""
-        }
-      }
-    },
     "d34b1f4499ce5e9f8d5f04f4d3b79d0041f354d9e76f9028ecaf6a7f0c427eb1": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1853,6 +1831,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-07T03:13:49.466Z",
           "sentAt": "2026-08-07T03:13:49.466Z",
+          "error": ""
+        }
+      }
+    },
+    "284e6c33a06e7b85c3c76db7687dc06ea28522fc6c36f2f5e1bb747f5087d240": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/7 11:50:40\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-19｜2026 FreeTee青少年高尔夫系列赛-上海林克司站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5135)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-07T03:50:40.910Z",
+      "updatedAt": "2026-08-07T03:50:43.174Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-07T03:50:42.566Z",
+          "sentAt": "2026-08-07T03:50:42.566Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-07T03:50:43.174Z",
+          "sentAt": "2026-08-07T03:50:43.174Z",
           "error": ""
         }
       }
