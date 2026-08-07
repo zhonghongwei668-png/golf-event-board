@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T09:20:42.348Z",
+  "generatedAt": "2026-08-07T09:40:08.251Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -9956,43 +9956,6 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5112",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026 “北京高协”北京青少年高尔夫成长系列赛（8.23东方天星站）",
-      "startDate": "2026-08-09",
-      "endDate": "2026-08-09",
-      "location": "北京东方天星高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5112",
-      "sourceLinks": [
-        {
-          "label": "大正赛事详情",
-          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5112"
-        }
-      ],
-      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5112",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-26 至 2026-08-23，该日期晚于单场赛期，截止以详情实时状态为准。",
-      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
-      "registrationStart": "2026-07-26",
-      "registrationEnd": "",
-      "registrationText": "2026年07月26日 ~ 08月23日",
-      "registrationOpen": true,
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": true,
-      "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
-      "sourceSystem": "大正高尔夫 · 协会赛-北京高协",
-      "scheduleAuthority": "signup_detail",
-      "seriesLabel": "协会赛-北京高协",
-      "externalIds": {
-        "dazheng": "5112"
-      },
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "dazheng-5115",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -11858,6 +11821,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5112",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026 “北京高协”北京青少年高尔夫成长系列赛（8.23东方天星站）",
+      "startDate": "2026-08-23",
+      "endDate": "2026-08-23",
+      "location": "北京东方天星高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5112",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5112"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5112",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-26 至 2026-08-23。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-07-26",
+      "registrationEnd": "2026-08-23",
+      "registrationText": "2026年07月26日 ~ 08月23日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 协会赛-北京高协",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "协会赛-北京高协",
+      "externalIds": {
+        "dazheng": "5112"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
