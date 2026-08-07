@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T16:04:28.824Z",
+  "generatedAt": "2026-08-07T00:00:51.796Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -19590,16 +19590,6 @@
       "matchedEventIds": [
         "2026第九届大连全国青少年高尔夫球公开赛-2026-07-21"
       ]
-    },
-    {
-      "id": "dazheng-announcement-44946",
-      "sourceId": "44946",
-      "title": "倒计时最后1天｜张连伟杯昆明站报名即将截止，缴费锁定你的参赛席位！",
-      "publishedAt": "2026-06-11 17:36",
-      "kind": "deadline",
-      "source": "大正高尔夫官方公告",
-      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=44946",
-      "matchedEventIds": []
     },
     {
       "id": "rungolf-announcement-2586",
