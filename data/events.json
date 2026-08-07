@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T05:40:56.452Z",
+  "generatedAt": "2026-08-07T07:00:39.997Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -6524,40 +6524,6 @@
       "notes": ""
     },
     {
-      "id": "2026广东省青少年高尔夫球冠军巡回赛-第二站-2026-07-10",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026广东省青少年高尔夫球冠军巡回赛·第二站",
-      "startDate": "2026-07-10",
-      "endDate": "2026-07-12",
-      "location": "待定/年历未列",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "6",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "2026海南省青少年高尔夫球巡回赛冠军赛-第四站-2026-07-11",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -7700,7 +7666,7 @@
       "name": "2026广东省青少年高尔夫球公开赛",
       "startDate": "2026-07-21",
       "endDate": "2026-07-22",
-      "location": "佛山·佛高",
+      "location": "佛山高尔夫球会",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -8993,6 +8959,40 @@
       "notes": ""
     },
     {
+      "id": "2026广东省青少年巡回赛-第6站-2026-08-01",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026广东省青少年巡回赛 第6站",
+      "startDate": "2026-08-01",
+      "endDate": "2026-08-02",
+      "location": "梅州麓湖山国际高尔夫球会",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "6",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026年-朝阳杯-北京市朝阳区青少年高尔夫球系列赛第一站-2026-08-01",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -9597,6 +9597,40 @@
       "notes": ""
     },
     {
+      "id": "2026广东省青少年高尔夫球冠军巡回赛-第二站-2026-08-04",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026广东省青少年高尔夫球冠军巡回赛·第二站",
+      "startDate": "2026-08-04",
+      "endDate": "2026-08-05",
+      "location": "惠州山海半岛高尔夫球会",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "6",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026上海市青少年高尔夫球系列赛-暨-fala长三角球员精英赛-江苏站-2026-06-06",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -9836,40 +9870,6 @@
       "competitionGrade": "4",
       "statusCode": "running",
       "statusLabel": "比赛中",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "2026广东省青少年巡回赛-第6站-2026-08-08",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026广东省青少年巡回赛 第6站",
-      "startDate": "2026-08-08",
-      "endDate": "2026-08-09",
-      "location": "梅州麓湖",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "6",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
       "sourceSystem": "中高协年历接口",
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
