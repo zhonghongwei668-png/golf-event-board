@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T07:00:39.997Z",
+  "generatedAt": "2026-08-07T07:40:43.282Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -7659,40 +7659,6 @@
       "notes": ""
     },
     {
-      "id": "2026广东省青少年高尔夫球公开赛-2026-07-21",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026广东省青少年高尔夫球公开赛",
-      "startDate": "2026-07-21",
-      "endDate": "2026-07-22",
-      "location": "佛山高尔夫球会",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "dazheng-4983",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -9523,34 +9489,38 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5032",
+      "id": "2026广东省青少年高尔夫球公开赛-2026-08-04",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
-      "name": "“Uswing果岭阅读魔镜” 2026广东省青少年高尔夫球公开赛（WAGR积分赛）",
+      "name": "2026广东省青少年高尔夫球公开赛",
       "startDate": "2026-08-04",
       "endDate": "2026-08-05",
       "location": "广东佛山高尔夫球会",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5032",
       "sourceLinks": [
         {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        },
+        {
           "label": "大正赛事详情",
           "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5032"
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5032",
-      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-06-22 至 2026-08-03。",
-      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
       "registrationStart": "2026-06-22",
       "registrationEnd": "2026-08-03",
       "registrationText": "2026年06月22日 ~ 08月03日",
       "registrationOpen": false,
       "registrationClosed": true,
       "registrationStatusAuthoritative": true,
-      "competitionGrade": "",
+      "competitionGrade": "5",
       "statusCode": "past",
       "statusLabel": "已结束",
-      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "sourceSystem": "中高协年历接口 + 大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
       "externalIds": {
