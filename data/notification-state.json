@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-07T09:20:42.348Z",
+  "updatedAt": "2026-08-09T10:31:57.172Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -361,31 +361,6 @@
     "identity:junior:2026北京高协北京青少年高尔夫成长系列赛823东方天星站": "2026-08-07T09:20:42.348Z"
   },
   "messages": {
-    "d34b1f4499ce5e9f8d5f04f4d3b79d0041f354d9e76f9028ecaf6a7f0c427eb1": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/17 16:21:27\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜NSP-2026青少年高尔夫嘉年华挑战赛广州赛区第七站-金立肇庆站（JGS积分）（亲子/师徒/好朋友配对赛+个人赛+团队赛）｜2026-07-18 至 2026-07-19，报名截止 2026-07-17，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-17T08:21:28.596Z",
-      "updatedAt": "2026-07-17T08:21:30.502Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T08:21:29.996Z",
-          "sentAt": "2026-07-17T08:21:29.996Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T08:21:30.502Z",
-          "sentAt": "2026-07-17T08:21:30.502Z",
-          "error": ""
-        }
-      }
-    },
     "7abfe0b8a5d61f871b1ad74d1a9ea6b7e379186a73fa08ad572ec6f2a2b7e643": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1857,6 +1832,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-07T03:50:43.174Z",
           "sentAt": "2026-08-07T03:50:43.174Z",
+          "error": ""
+        }
+      }
+    },
+    "f08cdf85a2e31a3529c6cdd5a86a37baeefe738b4ca330480fbcdcb6d2483d4b": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/9 18:31:03\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜fetch failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-09T10:31:55.920Z",
+      "updatedAt": "2026-08-09T10:31:57.172Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-09T10:31:56.649Z",
+          "sentAt": "2026-08-09T10:31:56.649Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-09T10:31:57.172Z",
+          "sentAt": "2026-08-09T10:31:57.172Z",
           "error": ""
         }
       }
