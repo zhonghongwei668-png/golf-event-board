@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-09T10:31:57.172Z",
+  "updatedAt": "2026-08-09T10:41:23.336Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -361,31 +361,6 @@
     "identity:junior:2026北京高协北京青少年高尔夫成长系列赛823东方天星站": "2026-08-07T09:20:42.348Z"
   },
   "messages": {
-    "7abfe0b8a5d61f871b1ad74d1a9ea6b7e379186a73fa08ad572ec6f2a2b7e643": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/17 17:01:28\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜第26届尤尼克斯“张连伟”杯国际青少年高尔夫球邀请赛｜2026-08-11 至 2026-08-15，报名截止 2026-07-17，变化：状态、报名状态、报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-17T09:01:29.491Z",
-      "updatedAt": "2026-07-17T09:01:30.825Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T09:01:30.260Z",
-          "sentAt": "2026-07-17T09:01:30.260Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T09:01:30.825Z",
-          "sentAt": "2026-07-17T09:01:30.825Z",
-          "error": ""
-        }
-      }
-    },
     "db6d3279e4cf06717369ebb31b2fb9d413c58d34eab1d9e6f3cd2368673b6106": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1857,6 +1832,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-09T10:31:57.172Z",
           "sentAt": "2026-08-09T10:31:57.172Z",
+          "error": ""
+        }
+      }
+    },
+    "bd9c1fa76646138ac7b86b3a3a7571ec1058f44407c4c36f19d7e7ef4c392768": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/9 18:41:01\n\n**【恢复】1 个信息源已恢复**\n- 中高协官方公告｜本次抓取 2 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-09T10:41:20.975Z",
+      "updatedAt": "2026-08-09T10:41:23.336Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-09T10:41:22.775Z",
+          "sentAt": "2026-08-09T10:41:22.775Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-09T10:41:23.336Z",
+          "sentAt": "2026-08-09T10:41:23.336Z",
           "error": ""
         }
       }
