@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T00:01:23.156Z",
+  "generatedAt": "2026-08-09T07:51:20.236Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -10059,12 +10059,12 @@
       "registrationStart": "2026-07-09",
       "registrationEnd": "2026-08-09",
       "registrationText": "2026年07月09日 ~ 08月09日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "3",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
