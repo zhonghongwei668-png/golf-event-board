@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T10:41:20.249Z",
+  "generatedAt": "2026-08-10T00:00:35.490Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -9767,8 +9767,8 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "5",
-      "statusCode": "running",
-      "statusLabel": "比赛中",
+      "statusCode": "past",
+      "statusLabel": "已结束",
       "sourceSystem": "中高协年历接口",
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
@@ -9909,8 +9909,8 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "5",
-      "statusCode": "running",
-      "statusLabel": "比赛中",
+      "statusCode": "past",
+      "statusLabel": "已结束",
       "sourceSystem": "中高协年历接口",
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
@@ -9944,8 +9944,8 @@
       "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "running",
-      "statusLabel": "比赛中",
+      "statusCode": "past",
+      "statusLabel": "已结束",
       "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-嘉年华挑战赛",
@@ -9981,8 +9981,8 @@
       "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "closed",
-      "statusLabel": "报名截止",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -19648,28 +19648,6 @@
       "url": "https://www.cgagolf.org.cn/xnews_details/2413.html",
       "matchedEventIds": [
         "2026北京青少年高尔夫球公开赛-2026-08-18"
-      ]
-    },
-    {
-      "id": "cga-announcement-2412",
-      "sourceId": "2412",
-      "title": "中国高尔夫球协会关于印发2026“九鹤岩茶杯”武夷山全国青少年高尔夫球公开赛竞赛规程的通知",
-      "publishedAt": "2026-06-25",
-      "kind": "regulation",
-      "source": "中国高尔夫球协会官方公告",
-      "url": "https://www.cgagolf.org.cn/xnews_details/2412.html",
-      "matchedEventIds": []
-    },
-    {
-      "id": "cga-announcement-2411",
-      "sourceId": "2411",
-      "title": "中国高尔夫球协会关于印发2026第九届大连全国青少年高尔夫球公开赛竞赛规程的通知",
-      "publishedAt": "2026-06-25",
-      "kind": "regulation",
-      "source": "中国高尔夫球协会官方公告",
-      "url": "https://www.cgagolf.org.cn/xnews_details/2411.html",
-      "matchedEventIds": [
-        "2026第九届大连全国青少年高尔夫球公开赛-2026-07-21"
       ]
     },
     {
