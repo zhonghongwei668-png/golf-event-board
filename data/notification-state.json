@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-10T04:17:36.045Z",
+  "updatedAt": "2026-08-10T08:40:37.336Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -364,34 +364,12 @@
     "external:dazheng:5136": "2026-08-10T02:31:55.591Z",
     "id:dazheng-5137": "2026-08-10T04:17:32.905Z",
     "identity:junior:2026cwjpga嘉年华挑战赛wagr开卡赛珠海第6站国际站wagrjgs": "2026-08-10T04:17:32.905Z",
-    "external:dazheng:5137": "2026-08-10T04:17:32.905Z"
+    "external:dazheng:5137": "2026-08-10T04:17:32.905Z",
+    "id:dazheng-5138": "2026-08-10T08:40:34.019Z",
+    "identity:junior:sportsjourneyroadtocollegechampionshipqualifierwagrjgs南昌保利站": "2026-08-10T08:40:34.019Z",
+    "external:dazheng:5138": "2026-08-10T08:40:34.019Z"
   },
   "messages": {
-    "e9990928ae25f05ebc560319587cd4045d9f7c95d30e54d675b6d8c16b78bcb8": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/17 21:31:09\n\n**【恢复】1 个信息源已恢复**\n- 中高协官方公告｜本次抓取 11 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-17T13:31:28.878Z",
-      "updatedAt": "2026-07-17T13:31:30.329Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T13:31:29.795Z",
-          "sentAt": "2026-07-17T13:31:29.795Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T13:31:30.329Z",
-          "sentAt": "2026-07-17T13:31:30.329Z",
-          "error": ""
-        }
-      }
-    },
     "2d85a949039e97b79018fe75b63a3a947384bfb582842b6fd4c79d579d3178cd": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1863,6 +1841,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-10T04:17:36.045Z",
           "sentAt": "2026-08-10T04:17:36.045Z",
+          "error": ""
+        }
+      }
+    },
+    "c5189c589c1be987f6e7c380782e8434bdb9ca4742871151c74b0ecd018eed59": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/10 16:40:34\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-26 至 2026-09-27｜Sports Journey Road To College Championship Qualifier（WAGR/JGS）-南昌保利站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5138)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-10T08:40:35.597Z",
+      "updatedAt": "2026-08-10T08:40:37.336Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-10T08:40:36.834Z",
+          "sentAt": "2026-08-10T08:40:36.834Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-10T08:40:37.336Z",
+          "sentAt": "2026-08-10T08:40:37.336Z",
           "error": ""
         }
       }

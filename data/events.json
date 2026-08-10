@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T07:20:35.872Z",
+  "generatedAt": "2026-08-10T08:40:34.019Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -15191,6 +15191,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5138",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "Sports Journey Road To College Championship Qualifier（WAGR/JGS）-南昌保利站",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-27",
+      "location": "江西南昌保利高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5138",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5138"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5138",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-08-10 至 2026-09-25。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-08-10",
+      "registrationEnd": "2026-09-25",
+      "registrationText": "2026年08月10日 ~ 09月25日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-嘉年华挑战赛",
+      "externalIds": {
+        "dazheng": "5138"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
