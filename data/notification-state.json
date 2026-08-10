@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-10T02:31:58.084Z",
+  "updatedAt": "2026-08-10T04:17:36.045Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -361,34 +361,12 @@
     "identity:junior:2026北京高协北京青少年高尔夫成长系列赛823东方天星站": "2026-08-07T09:20:42.348Z",
     "id:dazheng-5136": "2026-08-10T02:31:55.591Z",
     "identity:junior:2026slgsfcg中国区青少年系列赛广东第7站wagrjgs积分": "2026-08-10T02:31:55.591Z",
-    "external:dazheng:5136": "2026-08-10T02:31:55.591Z"
+    "external:dazheng:5136": "2026-08-10T02:31:55.591Z",
+    "id:dazheng-5137": "2026-08-10T04:17:32.905Z",
+    "identity:junior:2026cwjpga嘉年华挑战赛wagr开卡赛珠海第6站国际站wagrjgs": "2026-08-10T04:17:32.905Z",
+    "external:dazheng:5137": "2026-08-10T04:17:32.905Z"
   },
   "messages": {
-    "606ade70c782311551b0615acf0a4b549f0091a7fdd8fd10695ddf39e0e3e772": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/17 21:21:08\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜430 Unknown Status for https://www.cgagolf.org.cn/society/c-_detailId%3D19827639.html\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-17T13:21:23.390Z",
-      "updatedAt": "2026-07-17T13:21:24.764Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T13:21:24.143Z",
-          "sentAt": "2026-07-17T13:21:24.143Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-17T13:21:24.764Z",
-          "sentAt": "2026-07-17T13:21:24.764Z",
-          "error": ""
-        }
-      }
-    },
     "e9990928ae25f05ebc560319587cd4045d9f7c95d30e54d675b6d8c16b78bcb8": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -1860,6 +1838,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-10T02:31:58.084Z",
           "sentAt": "2026-08-10T02:31:58.084Z",
+          "error": ""
+        }
+      }
+    },
+    "341155cf8978c639f54e09fe8ee818625ce55f661b564ba91f6a8b44e0ba8204": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/10 12:17:32\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-12 至 2026-09-13｜2026CWJPGA嘉年华挑战赛WAGR开卡赛珠海第6站-国际站（WAGR+JGS），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5137)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-10T04:17:34.153Z",
+      "updatedAt": "2026-08-10T04:17:36.045Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-10T04:17:35.470Z",
+          "sentAt": "2026-08-10T04:17:35.470Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-10T04:17:36.045Z",
+          "sentAt": "2026-08-10T04:17:36.045Z",
           "error": ""
         }
       }
