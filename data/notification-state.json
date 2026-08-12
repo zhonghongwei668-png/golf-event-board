@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-11T09:11:42.106Z",
+  "updatedAt": "2026-08-12T02:01:38.227Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -376,31 +376,6 @@
     "external:dazheng:5140": "2026-08-11T09:11:39.727Z"
   },
   "messages": {
-    "72e9845e8569094d9661e678570632e95e1cdb2eb7d2ef7219b89347c4e2edab": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/19 09:21:21\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026上海市青少年高尔夫球精英赛-旭宝站｜2026-07-20 至 2026-07-21，变化：报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-19T01:21:22.892Z",
-      "updatedAt": "2026-07-19T01:21:24.829Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-19T01:21:24.259Z",
-          "sentAt": "2026-07-19T01:21:24.259Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-19T01:21:24.829Z",
-          "sentAt": "2026-07-19T01:21:24.829Z",
-          "error": ""
-        }
-      }
-    },
     "3d91919c22c0e5657c5b4a199ca2a5df8016f2e674ee7cece7c3fb03967c0339": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1872,6 +1847,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-11T09:11:42.106Z",
           "sentAt": "2026-08-11T09:11:42.106Z",
+          "error": ""
+        }
+      }
+    },
+    "6e9cf7268e92a5891f30e642e58b83e2d40837b4ac070d13d4708aadfcaf8ce0": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/12 10:01:11\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜CGA announcement page returned no actionable 2026 notices\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-12T02:01:36.598Z",
+      "updatedAt": "2026-08-12T02:01:38.227Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-12T02:01:37.738Z",
+          "sentAt": "2026-08-12T02:01:37.738Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-12T02:01:38.227Z",
+          "sentAt": "2026-08-12T02:01:38.227Z",
           "error": ""
         }
       }
