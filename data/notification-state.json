@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-12T02:01:38.227Z",
+  "updatedAt": "2026-08-12T02:11:35.871Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -376,31 +376,6 @@
     "external:dazheng:5140": "2026-08-11T09:11:39.727Z"
   },
   "messages": {
-    "3d91919c22c0e5657c5b4a199ca2a5df8016f2e674ee7cece7c3fb03967c0339": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/19 10:41:20\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026迈阅青少年高尔夫巡回赛·东莞观澜湖站｜2026-07-25 至 2026-07-26，变化：报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-19T02:41:20.934Z",
-      "updatedAt": "2026-07-19T02:41:23.717Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-19T02:41:23.131Z",
-          "sentAt": "2026-07-19T02:41:23.131Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-19T02:41:23.717Z",
-          "sentAt": "2026-07-19T02:41:23.717Z",
-          "error": ""
-        }
-      }
-    },
     "712fec28ca2191ff7f5496146cce88f5927393c8e3d4a4dd26f4f7c8537b629e": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1872,6 +1847,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-12T02:01:38.227Z",
           "sentAt": "2026-08-12T02:01:38.227Z",
+          "error": ""
+        }
+      }
+    },
+    "a7053ad6d5c48d05afa3c72ab306807c6e1d9e66050d4f546b2aba6cc615f4ae": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/12 10:11:10\n\n**【恢复】1 个信息源已恢复**\n- 中高协官方公告｜本次抓取 2 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-12T02:11:33.768Z",
+      "updatedAt": "2026-08-12T02:11:35.871Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-12T02:11:35.407Z",
+          "sentAt": "2026-08-12T02:11:35.407Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-12T02:11:35.871Z",
+          "sentAt": "2026-08-12T02:11:35.871Z",
           "error": ""
         }
       }
