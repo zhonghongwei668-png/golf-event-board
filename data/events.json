@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T02:42:07.464Z",
+  "generatedAt": "2026-08-12T03:21:30.104Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12664,43 +12664,6 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5105",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026WAGC青少年高尔夫争霸赛-上海（旭宝站）",
-      "startDate": "2026-08-27",
-      "endDate": "2026-08-27",
-      "location": "上海旭宝高尔夫球俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5105",
-      "sourceLinks": [
-        {
-          "label": "大正赛事详情",
-          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5105"
-        }
-      ],
-      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5105",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-22 至 2026-08-26。",
-      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
-      "registrationStart": "2026-07-22",
-      "registrationEnd": "2026-08-26",
-      "registrationText": "2026年07月22日 ~ 08月26日",
-      "registrationOpen": true,
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": true,
-      "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
-      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
-      "scheduleAuthority": "signup_detail",
-      "seriesLabel": "青少赛-大正高尔夫",
-      "externalIds": {
-        "dazheng": "5105"
-      },
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "dazheng-5127",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -16373,6 +16336,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5105",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026WAGC青少年高尔夫争霸赛-上海（旭宝站）",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "location": "上海旭宝高尔夫球俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5105",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5105"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5105",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-22 至 2026-10-10。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-07-22",
+      "registrationEnd": "2026-10-10",
+      "registrationText": "2026年07月22日 ~ 10月10日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5105"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
