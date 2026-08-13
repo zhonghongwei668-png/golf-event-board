@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-13T06:41:29.689Z",
+  "updatedAt": "2026-08-13T10:11:21.435Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -393,34 +393,15 @@
     "identity:junior:sportsjourneyroadtocollegechampionshipqualifierwagrjgs江西南昌保利站": "2026-08-13T05:51:38.784Z",
     "id:dazheng-5144": "2026-08-13T06:41:26.468Z",
     "identity:junior:2026运动荟天津青少年高尔夫球巡回赛第二站": "2026-08-13T06:41:26.468Z",
-    "external:dazheng:5144": "2026-08-13T06:41:26.468Z"
+    "external:dazheng:5144": "2026-08-13T06:41:26.468Z",
+    "id:dazheng-5145": "2026-08-13T10:11:17.878Z",
+    "identity:junior:2026jgs中国西南区青少年高尔夫精英积分赛": "2026-08-13T10:11:17.878Z",
+    "external:dazheng:5145": "2026-08-13T10:11:17.878Z",
+    "id:dazheng-5146": "2026-08-13T10:11:17.878Z",
+    "identity:junior:2026九利佳青少年高尔夫积分赛重庆第三站": "2026-08-13T10:11:17.878Z",
+    "external:dazheng:5146": "2026-08-13T10:11:17.878Z"
   },
   "messages": {
-    "e0fc5ac6a1abdef2d69c2068fe616c64f223e6c365ee4be07ac2737e38ac9972": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/20 17:50:39\n\n**报名/日期/入口变化 1 条**\n- 青少年赛｜2026珠海·横琴Parteen标杆少年高尔夫球系列赛第二站｜2026-08-20 至 2026-08-21，变化：赛事名称\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-20T09:50:40.599Z",
-      "updatedAt": "2026-07-20T09:50:41.840Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-20T09:50:41.293Z",
-          "sentAt": "2026-07-20T09:50:41.293Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-20T09:50:41.840Z",
-          "sentAt": "2026-07-20T09:50:41.840Z",
-          "error": ""
-        }
-      }
-    },
     "bede4dea3528c8ecea73f0562739db80aa682f811fe338d12f49ea07a1f33713": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1892,6 +1873,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-13T06:41:29.689Z",
           "sentAt": "2026-08-13T06:41:29.689Z",
+          "error": ""
+        }
+      }
+    },
+    "5e4fa4df6ce6e5c9ffd3c429fc92fb37280a62b77006bea4f34d68fc1e34892d": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/13 18:11:17\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-09-12 至 2026-09-13｜2026JGS中国西南区青少年高尔夫精英积分赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5145)**\n- **【重点】新开放报名｜2026-09-19 至 2026-09-20｜2026九利佳青少年高尔夫积分赛重庆第三站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5146)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-13T10:11:20.019Z",
+      "updatedAt": "2026-08-13T10:11:21.435Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-13T10:11:20.930Z",
+          "sentAt": "2026-08-13T10:11:20.930Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-13T10:11:21.435Z",
+          "sentAt": "2026-08-13T10:11:21.435Z",
           "error": ""
         }
       }
