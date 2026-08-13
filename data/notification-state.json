@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-13T03:21:24.284Z",
+  "updatedAt": "2026-08-13T05:11:31.593Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -386,34 +386,12 @@
     "external:dazheng:4987": "2026-08-13T02:21:17.236Z",
     "id:dazheng-5000": "2026-08-13T03:21:21.442Z",
     "identity:junior:2026whs中国区青少年高尔夫差点巡回赛北京赛暨星途逐梦青少年高尔夫系列赛天星站": "2026-08-13T03:21:21.442Z",
-    "external:dazheng:5000": "2026-08-13T03:21:21.442Z"
+    "external:dazheng:5000": "2026-08-13T03:21:21.442Z",
+    "id:dazheng-5143": "2026-08-13T05:11:29.119Z",
+    "identity:junior:2026whs中国区青少年高尔夫差点巡回赛北京赛暨星途逐梦青少年高尔夫系列赛明珠站": "2026-08-13T05:11:29.119Z",
+    "external:dazheng:5143": "2026-08-13T05:11:29.119Z"
   },
   "messages": {
-    "fc454b7e3fbc75468f897d93df440837e9ad7de4a753bc12e7bcfc9cf5fda017": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名信息更新\n更新时间：2026/7/20 15:10:45\n\n**报名/日期/入口变化 2 条**\n- 青少年赛｜2026CWJPGA嘉年华挑战赛WAGR邀请赛大连第4站-西郊站（WAGR+JGS）｜2026-07-21 至 2026-07-22，变化：报名方式\n- 女子二级｜起点中巡外卡资格赛暨2026珠海·横琴Parteen标杆少年高尔夫球系列赛第一站｜2026-07-23 至 2026-07-24，变化：报名方式\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-20T07:10:46.769Z",
-      "updatedAt": "2026-07-20T07:10:49.094Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-20T07:10:48.522Z",
-          "sentAt": "2026-07-20T07:10:48.522Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-20T07:10:49.094Z",
-          "sentAt": "2026-07-20T07:10:49.094Z",
-          "error": ""
-        }
-      }
-    },
     "bc97e7318afcd52b06ee59745d366b3d8bec49bedd1c8cc2559ac15f9e20fbf4": {
       "kind": "event-change",
       "title": "高尔夫赛事报名信息更新",
@@ -1885,6 +1863,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-13T03:21:24.284Z",
           "sentAt": "2026-08-13T03:21:24.284Z",
+          "error": ""
+        }
+      }
+    },
+    "80baf7732b0eb86e4327389edf0c7e1dfb0581787536457b2fceba85ddb921a7": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/13 13:11:29\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-12｜2026WHS（中国区）青少年高尔夫差点巡回赛·北京赛暨星途逐梦青少年高尔夫系列赛（明珠站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5143)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-13T05:11:30.280Z",
+      "updatedAt": "2026-08-13T05:11:31.593Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-13T05:11:31.084Z",
+          "sentAt": "2026-08-13T05:11:31.084Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-13T05:11:31.593Z",
+          "sentAt": "2026-08-13T05:11:31.593Z",
           "error": ""
         }
       }
