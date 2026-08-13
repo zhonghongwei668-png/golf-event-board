@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T02:21:17.236Z",
+  "generatedAt": "2026-08-13T03:21:21.442Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -13888,6 +13888,43 @@
       "seriesLabel": "青少赛-嘉年华挑战赛",
       "externalIds": {
         "dazheng": "5126"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5000",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026WHS（中国区）青少年高尔夫差点巡回赛·北京赛暨星途逐梦青少年高尔夫系列赛（天星站）",
+      "startDate": "2026-09-05",
+      "endDate": "2026-09-05",
+      "location": "北京东方天星高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5000",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5000"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5000",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-06-06 至 2026-09-04。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-06-06",
+      "registrationEnd": "2026-09-04",
+      "registrationText": "2026年06月06日 ~ 09月04日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5000"
       },
       "updatedFromOfficial": true,
       "notes": ""
