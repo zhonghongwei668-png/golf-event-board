@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-14T11:21:32.253Z",
+  "updatedAt": "2026-08-17T13:26:02.829Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -403,34 +403,19 @@
     "identity:junior:2026九利佳青少年高尔夫wagr世界业余积分赛重庆第三站": "2026-08-14T01:21:16.713Z",
     "identity:junior:2026华东青少年球队校队争霸赛旭宝站": "2026-08-14T03:21:18.625Z",
     "identity:junior:第14届校园高尔夫球锦标赛暨英美青少年高尔夫选拔赛": "2026-08-14T03:21:18.625Z",
-    "identity:junior:2026运动荟天津青少年高尔夫球巡回赛27人站": "2026-08-14T11:21:32.253Z"
+    "identity:junior:2026运动荟天津青少年高尔夫球巡回赛27人站": "2026-08-14T11:21:32.253Z",
+    "id:dazheng-5149": "2026-08-17T13:25:59.403Z",
+    "id:dazheng-5147": "2026-08-17T13:25:59.403Z",
+    "identity:junior:2026北京高协北京青少年高尔夫成长系列赛829拉斐特站": "2026-08-17T13:25:59.403Z",
+    "external:dazheng:5147": "2026-08-17T13:25:59.403Z",
+    "id:dazheng-5148": "2026-08-17T13:25:59.403Z",
+    "identity:junior:s10东青巡星启航积分巡回赛station6": "2026-08-17T13:25:59.403Z",
+    "external:dazheng:5148": "2026-08-17T13:25:59.403Z",
+    "id:dazheng-5151": "2026-08-17T13:25:59.403Z",
+    "identity:junior:pga青少年系列赛广州站": "2026-08-17T13:25:59.403Z",
+    "external:dazheng:5151": "2026-08-17T13:25:59.403Z"
   },
   "messages": {
-    "bede4dea3528c8ecea73f0562739db80aa682f811fe338d12f49ea07a1f33713": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名信息更新",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/20 19:10:47\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-02 至 2026-09-04｜2026海峡杯女子菁英赛，[报名入口](https://www.clpga.org/SignUp?lang=cn&mt_id=8155)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-20T11:10:48.720Z",
-      "updatedAt": "2026-07-20T11:10:50.068Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-20T11:10:49.528Z",
-          "sentAt": "2026-07-20T11:10:49.528Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-20T11:10:50.068Z",
-          "sentAt": "2026-07-20T11:10:50.068Z",
-          "error": ""
-        }
-      }
-    },
     "c8f8ef857a7030812fd12ffab1e81128559160c3005be2a851b4ef46c3f208ad": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -1902,6 +1887,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-13T10:11:21.435Z",
           "sentAt": "2026-08-13T10:11:21.435Z",
+          "error": ""
+        }
+      }
+    },
+    "3f837052daa019b2b7e7d3ee494befcf15bfdef5794440fc8dc06cc2f07a4070": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/17 21:25:59\n\n**新开放报名 3 场**\n- **【重点】新开放报名｜2026-08-29｜2026 “北京高协”北京青少年高尔夫成长系列赛 （8.29拉斐特站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5147)**\n- **【重点】新开放报名｜2026-09-12｜S10 东青巡 ·星启航积分巡回赛 ·STATION 6，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5148)**\n- **【重点】新开放报名｜2026-10-05 至 2026-10-07｜PGA青少年系列赛-广州站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5151)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-17T13:26:00.527Z",
+      "updatedAt": "2026-08-17T13:26:02.829Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-17T13:26:02.343Z",
+          "sentAt": "2026-08-17T13:26:02.343Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-17T13:26:02.829Z",
+          "sentAt": "2026-08-17T13:26:02.829Z",
           "error": ""
         }
       }
