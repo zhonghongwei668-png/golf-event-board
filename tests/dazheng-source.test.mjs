@@ -157,6 +157,11 @@ test("rechecks a previously seen detail that is absent from the current list", a
     return new Response(openDetail(id, `2026测试青少年系列赛第${id === "7002" ? "二" : "一"}站`), { status: 200 });
   };
 
-  const events = await fetchDazhengEvents(previous, { fetchImpl, concurrency: 2 });
+  const events = await fetchDazhengEvents(previous, {
+    fetchImpl,
+    concurrency: 2,
+    // 固定“今天”为 8-01（早于事件 endDate 8-15），避免真实时间推移导致该用例随日期失效
+    now: new Date("2026-08-01T00:00:00+08:00")
+  });
   assert.equal(events.find((event) => event.externalIds.dazheng === "7002").registrationOpen, true);
 });
