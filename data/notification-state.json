@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-18T06:00:57.007Z",
+  "updatedAt": "2026-08-18T06:41:03.935Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -419,34 +419,21 @@
     "external:dazheng:5152": "2026-08-18T01:48:47.913Z",
     "id:dazheng-5153": "2026-08-18T06:00:54.179Z",
     "identity:junior:2026fala启梦之路u12高尔夫球北方区挑战赛辽阳太子河站": "2026-08-18T06:00:54.179Z",
-    "external:dazheng:5153": "2026-08-18T06:00:54.179Z"
+    "external:dazheng:5153": "2026-08-18T06:00:54.179Z",
+    "id:dazheng-5154": "2026-08-18T06:41:01.153Z",
+    "identity:junior:魅力江苏最美体育挥杆未来2026江苏省青少年高尔夫巡回赛镇江站": "2026-08-18T06:41:01.153Z",
+    "external:dazheng:5154": "2026-08-18T06:41:01.153Z",
+    "id:dazheng-5156": "2026-08-18T06:41:01.153Z",
+    "identity:junior:2026青少年高尔夫嘉年华挑战赛上海赛区第十三站上海银涛站个人赛亲子赛团队赛": "2026-08-18T06:41:01.153Z",
+    "external:dazheng:5156": "2026-08-18T06:41:01.153Z",
+    "id:dazheng-5157": "2026-08-18T06:41:01.153Z",
+    "identity:junior:fvf2026青少年高尔夫嘉年华挑战赛浙江赛区第九站宁波东方站个人赛亲子赛团队赛": "2026-08-18T06:41:01.153Z",
+    "external:dazheng:5157": "2026-08-18T06:41:01.153Z",
+    "id:dazheng-5155": "2026-08-18T06:41:01.153Z",
+    "identity:junior:fvf2026青少年高尔夫嘉年华挑战赛上海赛区第十五站个人赛亲子赛团队赛": "2026-08-18T06:41:01.153Z",
+    "external:dazheng:5155": "2026-08-18T06:41:01.153Z"
   },
   "messages": {
-    "6b6521eb03ac7912605d9163ee48e61a3f3116a5917c800c6f184b55eaf390aa": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/21 14:40:22\n\n**【报警】1 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜5 个详情页读取失败：5100: The operation was aborted due to timeout；5088: The operation was aborted due to timeout；5083: The operation was aborted due to timeout\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-21T06:41:32.732Z",
-      "updatedAt": "2026-07-21T06:41:33.949Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T06:41:33.423Z",
-          "sentAt": "2026-07-21T06:41:33.423Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T06:41:33.949Z",
-          "sentAt": "2026-07-21T06:41:33.949Z",
-          "error": ""
-        }
-      }
-    },
     "ee431395169bb231f9fd650c1e00bfc40ae6837395d0d5e21d527ed54a434663": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -1918,6 +1905,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-18T06:00:57.007Z",
           "sentAt": "2026-08-18T06:00:57.007Z",
+          "error": ""
+        }
+      }
+    },
+    "215ba4433e0917b7fc9cf6b46a9a3094173e8c5b846c33164e96f3aaa12962e1": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/18 14:41:01\n\n**新开放报名 4 场**\n- **【重点】新开放报名｜2026-08-27 至 2026-08-28｜“魅力江苏 最美体育”-“挥杆未来” 2026江苏省青少年高尔夫巡回赛-镇江站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5154)**\n- **【重点】新开放报名｜2026-09-13｜2026青少年高尔夫嘉年华挑战赛上海赛区第十三站-上海银涛站（个人赛、亲子赛、团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5156)**\n- **【重点】新开放报名｜2026-09-13｜FVF-2026青少年高尔夫嘉年华挑战赛浙江赛区第九站-宁波东方站（个人赛&亲子赛&团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5157)**\n- **【重点】新开放报名｜2026-09-27｜FVF-2026青少年高尔夫嘉年华挑战赛上海赛区第十五站（个人赛&亲子赛&团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5155)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-18T06:41:02.251Z",
+      "updatedAt": "2026-08-18T06:41:03.935Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-18T06:41:03.437Z",
+          "sentAt": "2026-08-18T06:41:03.437Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-18T06:41:03.935Z",
+          "sentAt": "2026-08-18T06:41:03.935Z",
           "error": ""
         }
       }
