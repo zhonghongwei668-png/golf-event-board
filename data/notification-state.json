@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-18T06:41:03.935Z",
+  "updatedAt": "2026-08-18T08:52:07.955Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -431,34 +431,15 @@
     "external:dazheng:5157": "2026-08-18T06:41:01.153Z",
     "id:dazheng-5155": "2026-08-18T06:41:01.153Z",
     "identity:junior:fvf2026青少年高尔夫嘉年华挑战赛上海赛区第十五站个人赛亲子赛团队赛": "2026-08-18T06:41:01.153Z",
-    "external:dazheng:5155": "2026-08-18T06:41:01.153Z"
+    "external:dazheng:5155": "2026-08-18T06:41:01.153Z",
+    "id:dazheng-5158": "2026-08-18T08:52:04.412Z",
+    "identity:junior:2026北京高协北京青少年高尔夫球邀请赛956乡村站": "2026-08-18T08:52:04.412Z",
+    "external:dazheng:5158": "2026-08-18T08:52:04.412Z",
+    "id:dazheng-5159": "2026-08-18T08:52:04.412Z",
+    "identity:junior:2026北京高协北京青少年高尔夫成长系列赛913天安站": "2026-08-18T08:52:04.412Z",
+    "external:dazheng:5159": "2026-08-18T08:52:04.412Z"
   },
   "messages": {
-    "ee431395169bb231f9fd650c1e00bfc40ae6837395d0d5e21d527ed54a434663": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/21 14:50:21\n\n**【恢复】1 个信息源已恢复**\n- 大正高尔夫｜本次抓取 93 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-21T06:50:41.688Z",
-      "updatedAt": "2026-07-21T06:50:42.948Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T06:50:42.412Z",
-          "sentAt": "2026-07-21T06:50:42.412Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T06:50:42.948Z",
-          "sentAt": "2026-07-21T06:50:42.948Z",
-          "error": ""
-        }
-      }
-    },
     "2d407ac2a97d8b76e742dbf6f1f6f3ca74977012fb6b9a02e6a7c49aee40ac0c": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -1930,6 +1911,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-18T06:41:03.935Z",
           "sentAt": "2026-08-18T06:41:03.935Z",
+          "error": ""
+        }
+      }
+    },
+    "d68578a1144620784648bc50f6bf4bda8a8d11625afa4ebeae9c57901f328124": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/18 16:52:04\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-09-05 至 2026-09-06｜2026 “北京高协”北京青少年高尔夫球邀请赛 (9.5-6乡村站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5158)**\n- **【重点】新开放报名｜2026-09-13｜2026 “北京高协”北京青少年高尔夫成长系列赛 （9.13天安站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5159)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-18T08:52:05.513Z",
+      "updatedAt": "2026-08-18T08:52:07.955Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-18T08:52:07.482Z",
+          "sentAt": "2026-08-18T08:52:07.482Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-18T08:52:07.955Z",
+          "sentAt": "2026-08-18T08:52:07.955Z",
           "error": ""
         }
       }
