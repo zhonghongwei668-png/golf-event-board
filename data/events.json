@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T13:25:59.403Z",
+  "generatedAt": "2026-08-18T00:01:03.972Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -2133,7 +2133,7 @@
       "name": "GCCT青少年高尔夫俱乐部冠军赛",
       "startDate": "2026-04-18",
       "endDate": "2026-04-19",
-      "location": "艾力枫社高尔夫球场",
+      "location": "河北廊坊",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -8786,40 +8786,6 @@
       "notes": ""
     },
     {
-      "id": "2026-北京高协-北京青少年高尔夫球邀请赛-第四战-2026-08-01",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第四战",
-      "startDate": "2026-08-01",
-      "endDate": "2026-08-02",
-      "location": "待定/年历未列",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "dazheng-5050",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -10557,6 +10523,40 @@
       "notes": ""
     },
     {
+      "id": "2026-北京高协-北京青少年高尔夫球邀请赛-第四战-2026-08-15",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第四战",
+      "startDate": "2026-08-15",
+      "endDate": "2026-08-16",
+      "location": "北京",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "dazheng-5114",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -10978,8 +10978,8 @@
       "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "closed",
-      "statusLabel": "报名截止",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -11015,8 +11015,8 @@
       "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "closed",
-      "statusLabel": "报名截止",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
