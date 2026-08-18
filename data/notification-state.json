@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-18T08:52:07.955Z",
+  "updatedAt": "2026-08-18T11:02:40.273Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -440,31 +440,6 @@
     "external:dazheng:5159": "2026-08-18T08:52:04.412Z"
   },
   "messages": {
-    "2d407ac2a97d8b76e742dbf6f1f6f3ca74977012fb6b9a02e6a7c49aee40ac0c": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/21 16:10:24\n\n**【报警】1 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜2 个详情页读取失败：5051: The operation was aborted due to timeout；5021: The operation was aborted due to timeout\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-21T08:11:11.878Z",
-      "updatedAt": "2026-07-21T08:11:13.822Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T08:11:13.257Z",
-          "sentAt": "2026-07-21T08:11:13.257Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T08:11:13.822Z",
-          "sentAt": "2026-07-21T08:11:13.822Z",
-          "error": ""
-        }
-      }
-    },
     "2828ae08348e54d213a0e9f4f541c1dda148d23944318c81edb39f8bf444917a": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -1936,6 +1911,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-18T08:52:07.955Z",
           "sentAt": "2026-08-18T08:52:07.955Z",
+          "error": ""
+        }
+      }
+    },
+    "20bcf9e5dcd3de24620475415519e658ce0793e3fca98b46a9a5b0075d92af8f": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/18 19:02:19\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜CGA announcement page returned no actionable 2026 notices\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-18T11:02:38.509Z",
+      "updatedAt": "2026-08-18T11:02:40.273Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-18T11:02:39.735Z",
+          "sentAt": "2026-08-18T11:02:39.735Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-18T11:02:40.273Z",
+          "sentAt": "2026-08-18T11:02:40.273Z",
           "error": ""
         }
       }
