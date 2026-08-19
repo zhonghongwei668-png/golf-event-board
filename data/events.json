@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T04:41:01.568Z",
+  "generatedAt": "2026-08-19T07:42:42.545Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12,7 +12,11 @@
     "dazheng": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list",
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
-  "warnings": [],
+  "warnings": [
+    "大正高尔夫: fetch failed",
+    "大正官方公告: Dazheng announcement pages all failed",
+    "中高协官方公告: fetch failed"
+  ],
   "categories": {
     "women": {
       "label": "女子赛",
@@ -9312,7 +9316,7 @@
       "name": "2026山西省高尔夫球冠军赛",
       "startDate": "2026-08-02",
       "endDate": "2026-08-03",
-      "location": "山西太原辰憬高尔夫俱乐部",
+      "location": "山西省",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5049",
       "sourceLinks": [
         {
@@ -9432,7 +9436,7 @@
       "name": "2026广东省青少年高尔夫球公开赛",
       "startDate": "2026-08-04",
       "endDate": "2026-08-05",
-      "location": "广东佛山高尔夫球会",
+      "location": "广东·佛山",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5032",
       "sourceLinks": [
         {
@@ -10093,7 +10097,7 @@
       "name": "2026全国青少年高尔夫球公开赛·中部地区",
       "startDate": "2026-08-12",
       "endDate": "2026-08-15",
-      "location": "江西庐山国际高尔夫球会",
+      "location": "江西省",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2417.html",
       "sourceLinks": [
         {
@@ -12375,7 +12379,7 @@
       "name": "GCCT青少年高尔夫球技能等级二级赛-陕西站",
       "startDate": "2026-08-26",
       "endDate": "2026-08-27",
-      "location": "西安秦岭国际高尔夫俱乐部",
+      "location": "陕西西安秦岭高尔夫俱乐部",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5055",
       "sourceLinks": [
         {
@@ -14717,7 +14721,7 @@
       "name": "GCCT青少年高尔夫球技能等级二级赛-广东站",
       "startDate": "2026-09-12",
       "endDate": "2026-09-13",
-      "location": "广州南沙高尔夫球会",
+      "location": "广东",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5099",
       "sourceLinks": [
         {

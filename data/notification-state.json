@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-19T02:31:01.864Z",
+  "updatedAt": "2026-08-19T07:42:44.993Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -441,31 +441,6 @@
     "identity:junior:seripakinvitationalasiawagr积分赛kga官方青少年赛事": "2026-08-19T02:31:01.864Z"
   },
   "messages": {
-    "8238cea9ed848e63bea47e9c00adc127259c25975ad0bd032bdd57c4eddb09de": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/21 17:36:56\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-08-26 至 2026-08-27｜2026“CWJPGA”嘉年华青少年高尔夫WAGR世界业余积分开卡挑战赛—北京赛区第三站（WAGR+JGS积分赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5101)**\n- **【重点】新开放报名｜2026-08-28｜NSP -2026年青少年高尔夫嘉年华挑战赛陕西赛区第二站-西安秦岭站（亲子/师徒赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5102)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-21T09:36:57.801Z",
-      "updatedAt": "2026-07-21T09:37:00.316Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T09:36:59.704Z",
-          "sentAt": "2026-07-21T09:36:59.704Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T09:37:00.316Z",
-          "sentAt": "2026-07-21T09:37:00.316Z",
-          "error": ""
-        }
-      }
-    },
     "c6a6837771f23185a599b58f771863068e82c960a94eb1270530a1732fee8b91": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -1937,6 +1912,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-18T11:21:04.360Z",
           "sentAt": "2026-08-18T11:21:04.360Z",
+          "error": ""
+        }
+      }
+    },
+    "9033df664541db236e2c59842706ff3db954dea566ef9cdd2983871ad667525a": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/19 15:40:58\n\n**【报警】3 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜fetch failed\n- 大正官方公告｜连续失败 1 次｜Dazheng announcement pages all failed\n- 中高协官方公告｜连续失败 1 次｜fetch failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-19T07:42:43.293Z",
+      "updatedAt": "2026-08-19T07:42:44.993Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-19T07:42:44.494Z",
+          "sentAt": "2026-08-19T07:42:44.494Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-19T07:42:44.993Z",
+          "sentAt": "2026-08-19T07:42:44.993Z",
           "error": ""
         }
       }
