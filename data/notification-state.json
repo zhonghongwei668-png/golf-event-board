@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-19T07:42:44.993Z",
+  "updatedAt": "2026-08-19T07:51:05.773Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -441,31 +441,6 @@
     "identity:junior:seripakinvitationalasiawagr积分赛kga官方青少年赛事": "2026-08-19T02:31:01.864Z"
   },
   "messages": {
-    "c6a6837771f23185a599b58f771863068e82c960a94eb1270530a1732fee8b91": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/21 21:40:43\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-04 至 2026-08-05｜2026广东省青少年高尔夫球冠军巡回赛-#2，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5103)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-21T13:40:44.191Z",
-      "updatedAt": "2026-07-21T13:40:45.559Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T13:40:45.021Z",
-          "sentAt": "2026-07-21T13:40:45.021Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-21T13:40:45.559Z",
-          "sentAt": "2026-07-21T13:40:45.559Z",
-          "error": ""
-        }
-      }
-    },
     "daaed439f45b73feb6483c4e2dc9c357cb44c50dd844348e763ba9aa5c1d91cc": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -1937,6 +1912,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-19T07:42:44.993Z",
           "sentAt": "2026-08-19T07:42:44.993Z",
+          "error": ""
+        }
+      }
+    },
+    "de80c3015d0b32f6636badb65ee9f9f82dde319c5c0ebacc0925ae8798775d83": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/19 15:50:43\n\n**【恢复】2 个信息源已恢复**\n- 大正高尔夫｜本次抓取 151 条\n- 大正官方公告｜本次抓取 2 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-19T07:51:04.188Z",
+      "updatedAt": "2026-08-19T07:51:05.773Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-19T07:51:05.283Z",
+          "sentAt": "2026-08-19T07:51:05.283Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-19T07:51:05.773Z",
+          "sentAt": "2026-08-19T07:51:05.773Z",
           "error": ""
         }
       }
