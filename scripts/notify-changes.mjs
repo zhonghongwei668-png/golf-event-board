@@ -119,8 +119,8 @@ function formatOpenDigestRow(event) {
   return `| ${compactDateRange(event)} | ${compactTableText(event.name)} |`;
 }
 
-function isOpenRegistration(event) {
-  return isRegistrationOpenAt(event);
+function isOpenRegistration(event, now) {
+  return isRegistrationOpenAt(event, now);
 }
 
 function changedFields(before, after) {
@@ -169,7 +169,8 @@ function diffEvents(previousPayload, currentPayload, options = {}) {
   const changed = [];
   const removed = [];
   const historicalBackfill = [];
-  const today = shanghaiDateString(new Date());
+  const today = options.today || shanghaiDateString(new Date());
+  const todayNow = options.today ? new Date(`${options.today}T00:00:00+08:00`) : new Date();
 
   for (const event of currentEvents) {
     const exact = previousByKey.get(eventKey(event));
@@ -188,7 +189,7 @@ function diffEvents(previousPayload, currentPayload, options = {}) {
         continue;
       }
       added.push(event);
-      if (isOpenRegistration(event) && !options.wasOpenBefore?.(event)) priorityOpen.push(event);
+      if (isOpenRegistration(event, todayNow) && !options.wasOpenBefore?.(event)) priorityOpen.push(event);
       continue;
     }
     matchedPrevious.add(previous);
@@ -197,7 +198,7 @@ function diffEvents(previousPayload, currentPayload, options = {}) {
     if (fields.length) {
       changed.push({ event, fields });
     }
-    if (!isOpenRegistration(previous) && isOpenRegistration(event)) {
+    if (!isOpenRegistration(previous, todayNow) && isOpenRegistration(event, todayNow)) {
       opened.push(event);
       if (!options.wasOpenBefore?.(event)) priorityOpen.push(event);
     }

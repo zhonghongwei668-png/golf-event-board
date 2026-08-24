@@ -225,7 +225,7 @@ test("pushes an existing event only when its registration newly opens", () => {
       signupUrl: "https://example.com/signup"
     }]
   };
-  const markdown = buildChangeNotification(previous, current);
+  const markdown = buildChangeNotification(previous, current, { today: "2026-08-10" });
   assert.match(markdown, /高尔夫赛事报名开始提醒/);
   assert.match(markdown, /新开放报名 1 场/);
   assert.match(markdown, /青少年报名开放测试赛/);
@@ -249,7 +249,7 @@ test("pushes a newly discovered event only when registration is already open", (
   const markdown = buildChangeNotification(previous, {
     ...closed,
     events: [{ ...closed.events[0], registrationOpen: true }]
-  });
+  }, { today: "2026-08-10" });
   assert.match(markdown, /新开放报名 1 场/);
 });
 
