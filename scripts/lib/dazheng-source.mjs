@@ -3,6 +3,10 @@ import { fetchWithRetry } from "./fetch-with-retry.mjs";
 const DAZHENG_BASE = "https://www.bwvip.com";
 export const DAZHENG_LIST_URL = `${DAZHENG_BASE}/default.php?g=m&m=baoming&a=baoming_list`;
 
+/** 当前赛季年份（避免硬编码 2026 在跨年后静默过滤掉新赛季赛事）。 */
+const CURRENT_YEAR = new Date().getFullYear();
+const SEASON_PREFIX = `${CURRENT_YEAR}-`;
+
 function decodeHtml(value = "") {
   return String(value)
     .replace(/<[^>]+>/g, " ")
@@ -123,7 +127,7 @@ export function classifyDazhengEvent(name = "") {
 
 export function isEligibleDazhengEvent(event = {}) {
   const name = decodeHtml(event.name);
-  if (!event.startDate?.startsWith("2026-")) return false;
+  if (!event.startDate?.startsWith(SEASON_PREFIX)) return false;
   if (/会员招募|教练员|继续教育|等级标准.*考试|培训班|训练营/.test(name)) return false;
   if (/马来西亚|新加坡|泰国|越南|日本|韩国|海外站/.test(`${name} ${event.location || ""}`)) return false;
   return true;
@@ -233,7 +237,7 @@ export async function fetchDazhengEvents(previousEvents = [], options = {}) {
     day: "2-digit"
   }).format(options.now || new Date());
   for (const [eventId, previous] of previousById) {
-    if (listedIds.has(eventId) || !previous.startDate?.startsWith("2026-")) continue;
+    if (listedIds.has(eventId) || !previous.startDate?.startsWith(SEASON_PREFIX)) continue;
     if (previous.endDate && previous.endDate < today) {
       preservedPast.push(previous);
       continue;

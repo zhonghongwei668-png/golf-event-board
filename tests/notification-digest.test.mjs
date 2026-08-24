@@ -3,7 +3,7 @@ import test from "node:test";
 import { buildOpenRegistrationDigest } from "../scripts/notify-changes.mjs";
 
 test("open registration digest is a compact table sorted by competition date", () => {
-  const digest = buildOpenRegistrationDigest({
+  const digest = buildOpenRegistrationDigest({ // time-agnostic（事件日期 2099 远未来）
     generatedAt: "2026-07-10T08:00:00.000Z",
     events: [
       {

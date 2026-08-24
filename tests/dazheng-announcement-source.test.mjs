@@ -91,6 +91,6 @@ test("does not push an App announcement without a newly open event", () => {
       signupUrl: "https://www.bwvip.com/signup-2"
     }]
   };
-  const markdown = buildChangeNotification(previous, current);
+  const markdown = buildChangeNotification(previous, current, { today: "2026-07-14" });
   assert.equal(markdown, "");
 });

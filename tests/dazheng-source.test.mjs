@@ -10,6 +10,8 @@ import {
   parseDazhengRegistrationWindow
 } from "../scripts/lib/dazheng-source.mjs";
 
+const YEAR = new Date().getFullYear();
+
 test("parses Dazheng list entries and direct signup URLs", () => {
   const html = `
     <li class="event_baoming_list">
@@ -77,10 +79,10 @@ test("classifies user-requested Dazheng series", () => {
 });
 
 test("excludes non-tournaments and overseas events", () => {
-  assert.equal(isEligibleDazhengEvent({ name: "北京高尔夫球运动协会-会员招募", startDate: "2026-07-10" }), false);
-  assert.equal(isEligibleDazhengEvent({ name: "中高协教练员继续教育系列活动", startDate: "2026-07-17" }), false);
-  assert.equal(isEligibleDazhengEvent({ name: "中国海南国际青少年巡回赛-马来西亚站", startDate: "2026-08-13" }), false);
-  assert.equal(isEligibleDazhengEvent({ name: "PCGC-CWJPGA INTERNATIONAL JUNIOR GOLF CHAMPIONSHIP", startDate: "2026-10-02" }), true);
+  assert.equal(isEligibleDazhengEvent({ name: "北京高尔夫球运动协会-会员招募", startDate: `${YEAR}-07-10` }), false);
+  assert.equal(isEligibleDazhengEvent({ name: "中高协教练员继续教育系列活动", startDate: `${YEAR}-07-17` }), false);
+  assert.equal(isEligibleDazhengEvent({ name: "中国海南国际青少年巡回赛-马来西亚站", startDate: `${YEAR}-08-13` }), false);
+  assert.equal(isEligibleDazhengEvent({ name: "PCGC-CWJPGA INTERNATIONAL JUNIOR GOLF CHAMPIONSHIP", startDate: `${YEAR}-10-02` }), true);
 });
 
 test("live fetch keeps other events when one detail page fails", async () => {
@@ -119,6 +121,7 @@ test("live fetch keeps other events when one detail page fails", async () => {
     const events = await fetchDazhengEvents(previous, {
       fetchImpl,
       concurrency: 2,
+      now: new Date("2026-07-20T00:00:00+08:00"),
       onWarnings: (incoming) => { warnings = incoming; }
     });
     assert.equal(events.length, 2);
@@ -143,8 +146,8 @@ test("rechecks a previously seen detail that is absent from the current list", a
     id: "dazheng-7002",
     category: "junior",
     name: "2026测试青少年系列赛第二站",
-    startDate: "2026-08-15",
-    endDate: "2026-08-15",
+    startDate: `${YEAR}-08-15`,
+    endDate: `${YEAR}-08-15`,
     location: "北京测试高尔夫球会",
     registrationOpen: false,
     registrationClosed: false,
@@ -161,7 +164,7 @@ test("rechecks a previously seen detail that is absent from the current list", a
     fetchImpl,
     concurrency: 2,
     // 固定“今天”为 8-01（早于事件 endDate 8-15），避免真实时间推移导致该用例随日期失效
-    now: new Date("2026-08-01T00:00:00+08:00")
+    now: new Date(`${YEAR}-08-01T00:00:00+08:00`)
   });
   assert.equal(events.find((event) => event.externalIds.dazheng === "7002").registrationOpen, true);
 });

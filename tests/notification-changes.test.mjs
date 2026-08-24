@@ -18,7 +18,7 @@ test("suppresses historical event backfill from change notifications", () => {
       startDate: "2026-03-01",
       endDate: "2026-03-02"
     }]
-  });
+  }, { today: "2026-07-14" });
   assert.equal(markdown, "");
 });
 
@@ -129,7 +129,7 @@ test("does not push registration deadline or closed-status-only changes", () => 
       registrationEnd: "2026-07-19"
     }]
   };
-  assert.equal(buildChangeNotification(previous, current), "");
+  assert.equal(buildChangeNotification(previous, current, { today: "2026-07-14" }), "");
 });
 
 test("does not push location or eligibility changes", () => {
@@ -150,7 +150,7 @@ test("does not push location or eligibility changes", () => {
     generatedAt: "2026-07-13T00:00:00.000Z",
     events: [{ ...before.events[0], location: "苏州", requirement: "A、B组" }]
   };
-  const markdown = buildChangeNotification(before, after);
+  const markdown = buildChangeNotification(before, after, { today: "2026-07-14" });
   assert.equal(markdown, "");
 });
 
@@ -175,7 +175,7 @@ test("does not push competition start or end changes", () => {
       endDate: "2026-07-22"
     }]
   };
-  const markdown = buildChangeNotification(previous, current);
+  const markdown = buildChangeNotification(previous, current, { today: "2026-07-14" });
   assert.equal(markdown, "");
 });
 
@@ -200,7 +200,7 @@ test("does not push a name or competition-grade change", () => {
       name: "2026京津冀鲁辽青少年高尔夫球巡回赛（二级一档）"
     }]
   };
-  const markdown = buildChangeNotification(previous, current);
+  const markdown = buildChangeNotification(previous, current, { today: "2026-07-14" });
   assert.equal(markdown, "");
 });
 
@@ -277,7 +277,8 @@ test("does not push a registration that closes and later reopens", () => {
   };
   const seen = new Set(["external:dazheng:5050"]);
   assert.equal(buildChangeNotification(previous, current, {
-    wasOpenBefore: (event) => openHistoryKeys(event).some((key) => seen.has(key))
+    wasOpenBefore: (event) => openHistoryKeys(event).some((key) => seen.has(key)),
+    today: "2026-07-14"
   }), "");
 });
 
@@ -290,6 +291,7 @@ test("recognizes previously open events after an ID or name variation", () => {
     registrationOpen: true
   };
   assert.equal(buildChangeNotification({ events: [] }, { events: [event] }, {
-    wasOpenBefore: (candidate) => openHistoryKeys(candidate).includes("external:dazheng:5110")
+    wasOpenBefore: (candidate) => openHistoryKeys(candidate).includes("external:dazheng:5110"),
+    today: "2026-07-14"
   }), "");
 });
