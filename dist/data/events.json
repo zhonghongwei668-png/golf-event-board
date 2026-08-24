@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T08:25:24.676Z",
+  "generatedAt": "2026-08-24T09:28:52.814Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -4368,7 +4368,7 @@
       "name": "2026年辽宁省青少年高尔夫球巡回赛第二站",
       "startDate": "2026-05-30",
       "endDate": "2026-05-31",
-      "location": "沈阳盛京高尔夫球场",
+      "location": "辽宁沈阳",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -12158,17 +12158,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5125",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-08-04 至 2026-08-24。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-08-04 至 2026-08-24。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-08-04",
       "registrationEnd": "2026-08-24",
       "registrationText": "2026年08月04 ~ 24日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-嘉年华挑战赛",
@@ -12909,7 +12909,7 @@
       "name": "2026迈阅青少年高尔夫巡回赛·上海协和站（第八站）",
       "startDate": "2026-08-30",
       "endDate": "2026-08-30",
-      "location": "上海银涛高尔夫俱乐部",
+      "location": "上海协和高尔夫俱乐部",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5128",
       "sourceLinks": [
         {
@@ -16512,6 +16512,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5173",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026 费度杯 · 深圳锦标赛",
+      "startDate": "2026-09-30",
+      "endDate": "2026-10-03",
+      "location": "东莞观澜湖-利百特球场",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5173",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5173"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5173",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-08-24 至 2026-09-29。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-08-24",
+      "registrationEnd": "2026-09-29",
+      "registrationText": "2026年08月24日 ~ 09月29日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5173"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
