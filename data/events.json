@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T07:06:52.119Z",
+  "generatedAt": "2026-08-25T07:56:48.539Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -11141,7 +11141,7 @@
       "name": "2026“少青杯”广州市青少年高尔夫球积分巡回赛第四站",
       "startDate": "2026-08-20",
       "endDate": "2026-08-21",
-      "location": "广州九龙湖高尔夫球会",
+      "location": "广东·广州",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -21254,18 +21254,6 @@
       "matchedEventIds": [
         "第26届尤尼克斯-张连伟-杯国际青少年高尔夫球邀请赛-预选赛-南昌站-暨2026保利青少年高尔夫球巡回赛-第一站-2026-05-22",
         "第26-届尤尼克斯-张连伟-杯国际青少年高尔夫球邀请赛-预选赛-六安站-2026-06-07",
-        "dazheng-5069"
-      ]
-    },
-    {
-      "id": "dazheng-announcement-45003",
-      "sourceId": "45003",
-      "title": "第26届尤尼克斯“张连伟”杯国际青少年高尔夫球邀请赛明日12:00开启",
-      "publishedAt": "2026-07-09 09:11",
-      "kind": "open",
-      "source": "大正高尔夫官方公告",
-      "url": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_detail&arc_id=45003",
-      "matchedEventIds": [
         "dazheng-5069"
       ]
     }
