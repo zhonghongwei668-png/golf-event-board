@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T01:50:31.357Z",
+  "generatedAt": "2026-08-25T03:12:24.765Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -10851,7 +10851,7 @@
       "name": "2026广东省青少年巡回赛 第7站",
       "startDate": "2026-08-18",
       "endDate": "2026-08-19",
-      "location": "西丽乡村高尔夫俱乐部",
+      "location": "广东·深圳",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -16012,6 +16012,43 @@
       "notes": ""
     },
     {
+      "id": "dazheng-5174",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026 “北京高协”北京青少年高尔夫球邀请赛 (9.25-26东方天星站）",
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-26",
+      "location": "北京东方天星高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5174",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5174"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5174",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-08-25 至 2026-09-25。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-08-25",
+      "registrationEnd": "2026-09-25",
+      "registrationText": "2026年08月25日 ~ 09月25日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 协会赛-北京高协",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "协会赛-北京高协",
+      "externalIds": {
+        "dazheng": "5174"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026广东省青少年高尔夫球冠军巡回赛-第五站-2026-09-25",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -16127,7 +16164,7 @@
       "name": "2026“少青杯”广州市青少年高尔夫球积分巡回赛-总决赛",
       "startDate": "2026-09-26",
       "endDate": "2026-09-27",
-      "location": "广东省广州九龙湖高尔夫球会",
+      "location": "顺德均安碧桂园高尔夫球会",
       "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5169",
       "sourceLinks": [
         {
