@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-25T08:58:08.797Z",
+  "updatedAt": "2026-08-26T01:56:50.834Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -490,34 +490,12 @@
     "id:dazheng-5175": "2026-08-25T06:04:12.609Z",
     "identity:junior:2026年度苏州市大众体育联赛苏州市中小学青少年高尔夫校际联赛": "2026-08-25T06:04:12.609Z",
     "external:dazheng:5175": "2026-08-25T06:04:12.609Z",
-    "identity:junior:2026华东青少年球队校队争霸赛协和站": "2026-08-25T08:58:08.797Z"
+    "identity:junior:2026华东青少年球队校队争霸赛协和站": "2026-08-25T08:58:08.797Z",
+    "id:dazheng-5176": "2026-08-26T01:56:48.797Z",
+    "identity:junior:2026安徽省青少年高尔夫锦标赛": "2026-08-26T01:56:48.797Z",
+    "external:dazheng:5176": "2026-08-26T01:56:48.797Z"
   },
   "messages": {
-    "1a799975096878ed13d4576f6d521472850ad7746aa3f30ac7ed8b3dcb0c4c53": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/27 10:40:29\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-17 至 2026-08-19｜“MAX彩渱”2026年山东省青少年高尔夫球巡回赛-第二站暨2026WHS（中国区）青少年高尔夫差点巡回赛·山东赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5113)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-27T02:40:31.026Z",
-      "updatedAt": "2026-07-27T02:40:32.522Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-27T02:40:31.964Z",
-          "sentAt": "2026-07-27T02:40:31.964Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-27T02:40:32.522Z",
-          "sentAt": "2026-07-27T02:40:32.522Z",
-          "error": ""
-        }
-      }
-    },
     "2ce0f372ee3685b4606fffdb603fba0e1333a6eaf0cf2a0c7fadafaaeb415ecc": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -1989,6 +1967,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-25T06:04:15.338Z",
           "sentAt": "2026-08-25T06:04:15.338Z",
+          "error": ""
+        }
+      }
+    },
+    "0faae9311467baf80bbc01198eaf1c57f438b3d2d72db587e5d98cbfc2740978": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/26 09:56:48\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-26 至 2026-09-27｜2026安徽省青少年高尔夫锦标赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5176)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-26T01:56:49.634Z",
+      "updatedAt": "2026-08-26T01:56:50.834Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-26T01:56:50.315Z",
+          "sentAt": "2026-08-26T01:56:50.315Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-26T01:56:50.834Z",
+          "sentAt": "2026-08-26T01:56:50.834Z",
           "error": ""
         }
       }
