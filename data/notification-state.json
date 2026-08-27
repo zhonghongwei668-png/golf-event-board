@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-26T07:07:07.478Z",
+  "updatedAt": "2026-08-27T09:43:39.536Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -496,34 +496,13 @@
     "external:dazheng:5176": "2026-08-26T01:56:48.797Z",
     "id:dazheng-5177": "2026-08-26T07:07:05.147Z",
     "identity:junior:2026fala长三角青少年高尔夫球员冠军赛": "2026-08-26T07:07:05.147Z",
-    "external:dazheng:5177": "2026-08-26T07:07:05.147Z"
+    "external:dazheng:5177": "2026-08-26T07:07:05.147Z",
+    "identity:junior:魅力江苏最美体育挥杆未来2026江苏省青少年高尔夫巡回赛盐城站": "2026-08-27T09:43:37.044Z",
+    "id:dazheng-5178": "2026-08-27T09:43:37.044Z",
+    "identity:junior:sunnyeagle2026北京市少年尔夫球系列赛东方天星站": "2026-08-27T09:43:37.044Z",
+    "external:dazheng:5178": "2026-08-27T09:43:37.044Z"
   },
   "messages": {
-    "08c5db78452489be78f8f3cfcb5b3c83a88d9244ad156ccd7b6e828add8c2635": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/27 16:40:39\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-12｜NSP-2026青少年高尔夫嘉年华挑战赛深圳赛区第四站-东莞凤凰山站（亲子/师徒/好朋友配对赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5060)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-27T08:40:40.748Z",
-      "updatedAt": "2026-07-27T08:40:42.806Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-27T08:40:42.188Z",
-          "sentAt": "2026-07-27T08:40:42.188Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-27T08:40:42.806Z",
-          "sentAt": "2026-07-27T08:40:42.806Z",
-          "error": ""
-        }
-      }
-    },
     "212d032d95b6749e10ebb2a0523ac5bbdcf70f699ae77a8462057ea92b44cf39": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -1995,6 +1974,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-26T07:07:07.478Z",
           "sentAt": "2026-08-26T07:07:07.478Z",
+          "error": ""
+        }
+      }
+    },
+    "b9033af1187b848c7567a882ef5139a43ede497782955ae34283505fad390b47": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/27 17:43:37\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-12｜“SUNNY EAGLE”2026北京市⻘少年⾼尔夫球系列赛-东方天星站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5178)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-27T09:43:38.149Z",
+      "updatedAt": "2026-08-27T09:43:39.536Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-27T09:43:39.027Z",
+          "sentAt": "2026-08-27T09:43:39.027Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-27T09:43:39.536Z",
+          "sentAt": "2026-08-27T09:43:39.536Z",
           "error": ""
         }
       }
