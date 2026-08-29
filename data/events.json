@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T21:31:03.680Z",
+  "generatedAt": "2026-08-29T07:01:48.259Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -8138,40 +8138,6 @@
       "notes": ""
     },
     {
-      "id": "2026风神-广东省青少年高尔夫球精英赛第四站-2026-07-27",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026风神·广东省青少年高尔夫球精英赛第四站",
-      "startDate": "2026-07-27",
-      "endDate": "2026-07-28",
-      "location": "广州风神高尔夫戴伊球场",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "6",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "江苏省高尔夫球巡回赛第二站-2026-07-27",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -11455,6 +11421,40 @@
       "notes": ""
     },
     {
+      "id": "2026风神-广东省青少年高尔夫球精英赛第四站-2026-08-22",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026风神·广东省青少年高尔夫球精英赛第四站",
+      "startDate": "2026-08-22",
+      "endDate": "2026-08-23",
+      "location": "广州风神高尔夫俱乐部-戴伊场",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "6",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "dazheng-5149",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -11933,7 +11933,7 @@
       "name": "第12届深圳青少年公开赛 第5站",
       "startDate": "2026-08-24",
       "endDate": "2026-08-25",
-      "location": "深圳·西丽",
+      "location": "广东·深圳",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
