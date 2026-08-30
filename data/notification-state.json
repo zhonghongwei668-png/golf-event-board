@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-28T21:31:08.316Z",
+  "updatedAt": "2026-08-30T05:21:06.405Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -527,31 +527,6 @@
     "external:dazheng:5181": "2026-08-28T21:31:03.680Z"
   },
   "messages": {
-    "2071d13fbbf51be65109a9b99c6430faee32a575f2b97f5055cab9f412f6a3b9": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/28 23:54:44\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-12 至 2026-09-13｜2026年海南省青少年高尔夫球巡回赛-第六站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5118)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-28T15:54:45.385Z",
-      "updatedAt": "2026-07-28T15:54:47.488Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-28T15:54:46.929Z",
-          "sentAt": "2026-07-28T15:54:46.929Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-28T15:54:47.488Z",
-          "sentAt": "2026-07-28T15:54:47.488Z",
-          "error": ""
-        }
-      }
-    },
     "a704fc516089a26ba122e1e9991d68d0372370ce47b8cf845c4535161a64301f": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2023,6 +1998,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-28T21:31:08.316Z",
           "sentAt": "2026-08-28T21:31:08.316Z",
+          "error": ""
+        }
+      }
+    },
+    "fae1439e0869c3a4e347f0343a600ba04d1ffbeb084c6f1f17bc498061fee51a": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/30 13:20:53\n\n**【报警】2 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list\n- 大正官方公告｜连续失败 1 次｜Dazheng announcement pages all failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-30T05:21:04.459Z",
+      "updatedAt": "2026-08-30T05:21:06.405Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-30T05:21:05.823Z",
+          "sentAt": "2026-08-30T05:21:05.823Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-30T05:21:06.405Z",
+          "sentAt": "2026-08-30T05:21:06.405Z",
           "error": ""
         }
       }
