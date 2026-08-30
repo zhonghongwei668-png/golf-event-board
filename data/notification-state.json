@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-30T05:21:06.405Z",
+  "updatedAt": "2026-08-30T14:59:20.385Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -527,31 +527,6 @@
     "external:dazheng:5181": "2026-08-28T21:31:03.680Z"
   },
   "messages": {
-    "a704fc516089a26ba122e1e9991d68d0372370ce47b8cf845c4535161a64301f": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/7/29 15:40:14\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜430 Unknown Status for https://www.cgagolf.org.cn/society/c-_detailId%3D19827639.html\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-29T07:40:38.374Z",
-      "updatedAt": "2026-07-29T07:40:40.620Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-29T07:40:40.112Z",
-          "sentAt": "2026-07-29T07:40:40.112Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-29T07:40:40.620Z",
-          "sentAt": "2026-07-29T07:40:40.620Z",
-          "error": ""
-        }
-      }
-    },
     "e8b838e6d6791ae6510ec7317a710ad9c46f34cdb7ccafe448bb191632d59022": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2023,6 +1998,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-30T05:21:06.405Z",
           "sentAt": "2026-08-30T05:21:06.405Z",
+          "error": ""
+        }
+      }
+    },
+    "ee97932eea29d7aabd05783844abd33c96c7137f7149c585ee43ff4c2338cb1d": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/30 22:59:06\n\n**【报警】2 个信息源更新异常**\n- 大正高尔夫｜连续失败 3 次｜403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_list\n- 大正官方公告｜连续失败 3 次｜Dazheng announcement pages all failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-30T14:59:18.695Z",
+      "updatedAt": "2026-08-30T14:59:20.385Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-30T14:59:19.871Z",
+          "sentAt": "2026-08-30T14:59:19.871Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-30T14:59:20.385Z",
+          "sentAt": "2026-08-30T14:59:20.385Z",
           "error": ""
         }
       }
