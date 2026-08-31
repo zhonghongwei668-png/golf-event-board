@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-08-31T05:30:02.729Z",
+  "updatedAt": "2026-08-31T11:50:24.894Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -530,34 +530,18 @@
     "external:dazheng:5187": "2026-08-31T05:29:59.178Z",
     "id:gcct青少年高尔夫球技能等级二级赛-山东第二站-2026-09-01": "2026-08-31T05:29:59.178Z",
     "identity:junior:gcct青少年高尔夫球技能等级二级赛山东第二站": "2026-08-31T05:29:59.178Z",
-    "external:dazheng:5188": "2026-08-31T05:29:59.178Z"
+    "external:dazheng:5188": "2026-08-31T05:29:59.178Z",
+    "id:dazheng-5190": "2026-08-31T11:50:21.922Z",
+    "identity:junior:2026江苏青少年高尔夫挑战赛第五站南京银杏湖站wagrjgs": "2026-08-31T11:50:21.922Z",
+    "external:dazheng:5190": "2026-08-31T11:50:21.922Z",
+    "id:dazheng-5191": "2026-08-31T11:50:21.922Z",
+    "identity:junior:岚图2026山河杯湖北省业余高尔夫球巡回赛暨青少年巡回赛": "2026-08-31T11:50:21.922Z",
+    "external:dazheng:5191": "2026-08-31T11:50:21.922Z",
+    "id:dazheng-5189": "2026-08-31T11:50:21.922Z",
+    "identity:junior:2026年广东省大学生高尔夫球锦标赛": "2026-08-31T11:50:21.922Z",
+    "external:dazheng:5189": "2026-08-31T11:50:21.922Z"
   },
   "messages": {
-    "c7c79706bc8284e475a04674b18bafad92d5a084586ac187b4b0e4ca4658b739": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/7/31 09:20:29\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-08-01 至 2026-08-02｜2026广东省青少年高尔夫挑战赛-佛山云东海站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5050)**\n- **【重点】新开放报名｜2026-09-18 至 2026-09-20｜太平松体育锦标赛暨AJGA IPS系列赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5110)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-07-31T01:20:30.534Z",
-      "updatedAt": "2026-07-31T01:20:32.649Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-31T01:20:32.125Z",
-          "sentAt": "2026-07-31T01:20:32.125Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-07-31T01:20:32.649Z",
-          "sentAt": "2026-07-31T01:20:32.649Z",
-          "error": ""
-        }
-      }
-    },
     "e393b227acdde6fe3c23f33cc3fa286a4a07c66b0e01dd028de53c4c86691efa": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2029,6 +2013,31 @@
           "status": "sent",
           "attemptedAt": "2026-08-31T05:30:02.729Z",
           "sentAt": "2026-08-31T05:30:02.729Z",
+          "error": ""
+        }
+      }
+    },
+    "34b77ca43c76595300051ee8b703710543a52c9a6953af72a54778654ea27c18": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/31 19:50:21\n\n**新开放报名 3 场**\n- **【重点】新开放报名｜2026-09-26 至 2026-09-27｜2026江苏青少年高尔夫挑战赛第五站-南京银杏湖站（WAGR+JGS），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5190)**\n- **【重点】新开放报名｜2026-09-26｜岚图·2026山河杯湖北省业余高尔夫球巡回赛暨青少年巡回赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5191)**\n- **【重点】新开放报名｜2026-10-20 至 2026-10-22｜2026年广东省大学生高尔夫球锦标赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5189)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-08-31T11:50:23.015Z",
+      "updatedAt": "2026-08-31T11:50:24.894Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-31T11:50:24.426Z",
+          "sentAt": "2026-08-31T11:50:24.426Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-08-31T11:50:24.894Z",
+          "sentAt": "2026-08-31T11:50:24.894Z",
           "error": ""
         }
       }
