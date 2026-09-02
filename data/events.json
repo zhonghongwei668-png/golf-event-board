@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T09:02:13.207Z",
+  "generatedAt": "2026-09-02T13:37:49.647Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -13,7 +13,7 @@
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
   "warnings": [
-    "大正高尔夫: 59 个详情页读取失败：5166: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5166；5164: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5164；5165: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5165",
+    "大正高尔夫: 59 个详情页读取失败：5164: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5164；5174: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5174；5163: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5163",
     "大正官方公告: Dazheng announcement pages all failed"
   ],
   "categories": {
@@ -12760,7 +12760,7 @@
       "name": "2026年四川青少年高尔夫巡回赛-第三站",
       "startDate": "2026-08-29",
       "endDate": "2026-08-30",
-      "location": "四川青城山高尔夫俱乐部",
+      "location": "成都保利球会",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {

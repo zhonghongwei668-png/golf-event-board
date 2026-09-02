@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-02T04:29:05.864Z",
+  "updatedAt": "2026-09-02T13:37:52.217Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -554,31 +554,6 @@
     "external:dazheng:5195": "2026-09-02T04:29:03.445Z"
   },
   "messages": {
-    "bf86dd8f36bf5cfb152df44a92a78153e5e4a02c8ece64a2cfc1f3c770b10aa2": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/3 08:41:00\n\n**【报警】1 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜6 个详情页读取失败：5056: The operation was aborted due to timeout；5055: The operation was aborted due to timeout；5046: The operation was aborted due to timeout\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-03T00:42:57.631Z",
-      "updatedAt": "2026-08-03T00:42:59.420Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-03T00:42:58.872Z",
-          "sentAt": "2026-08-03T00:42:58.872Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-03T00:42:59.420Z",
-          "sentAt": "2026-08-03T00:42:59.420Z",
-          "error": ""
-        }
-      }
-    },
     "3e1f91972898fc0dff95b52ce0d7b9143a92c38d95a918b221e19fecdbf08750": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2050,6 +2025,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-02T04:29:05.864Z",
           "sentAt": "2026-09-02T04:29:05.864Z",
+          "error": ""
+        }
+      }
+    },
+    "2b197173da082652197bf49340b85555854e00850f19c4cb746459364cec88bc": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/9/2 21:37:30\n\n**【报警】2 个信息源更新异常**\n- 大正高尔夫｜连续失败 12 次｜59 个详情页读取失败：5164: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5164；5174: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5174；5163: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5163\n- 大正官方公告｜连续失败 12 次｜Dazheng announcement pages all failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-02T13:37:50.316Z",
+      "updatedAt": "2026-09-02T13:37:52.217Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-02T13:37:51.655Z",
+          "sentAt": "2026-09-02T13:37:51.655Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-02T13:37:52.217Z",
+          "sentAt": "2026-09-02T13:37:52.217Z",
           "error": ""
         }
       }
