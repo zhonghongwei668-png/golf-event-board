@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-01T10:03:44.978Z",
+  "updatedAt": "2026-09-02T04:29:05.864Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -548,34 +548,12 @@
     "external:dazheng:5192": "2026-09-01T10:03:41.767Z",
     "id:dazheng-5194": "2026-09-01T10:03:41.767Z",
     "identity:junior:2026风神广东省青少年高尔夫球精英赛第六站": "2026-09-01T10:03:41.767Z",
-    "external:dazheng:5194": "2026-09-01T10:03:41.767Z"
+    "external:dazheng:5194": "2026-09-01T10:03:41.767Z",
+    "id:dazheng-5195": "2026-09-02T04:29:03.445Z",
+    "identity:junior:2026逐梦果岭少年尔夫球系列赛wagr积分赛开卡赛暨2026战马全能小将杯中国青少年高尔夫球锦标赛资格赛": "2026-09-02T04:29:03.445Z",
+    "external:dazheng:5195": "2026-09-02T04:29:03.445Z"
   },
   "messages": {
-    "4efaf95318610fb552ce94a085014aba678f3c004ccf7538189f4803a1171199": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/1 17:51:00\n\n**【恢复】1 个信息源已恢复**\n- 如歌官方赛事新闻｜本次抓取 1 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-01T09:51:24.934Z",
-      "updatedAt": "2026-08-01T09:51:26.458Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-01T09:51:25.974Z",
-          "sentAt": "2026-08-01T09:51:25.974Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-01T09:51:26.458Z",
-          "sentAt": "2026-08-01T09:51:26.458Z",
-          "error": ""
-        }
-      }
-    },
     "bf86dd8f36bf5cfb152df44a92a78153e5e4a02c8ece64a2cfc1f3c770b10aa2": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2047,6 +2025,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-01T10:03:44.978Z",
           "sentAt": "2026-09-01T10:03:44.978Z",
+          "error": ""
+        }
+      }
+    },
+    "51c821accf6a4cb065ea2c99085424e610951aed74ddbb2eada4ad3f4fda16b9": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/2 12:29:03\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-20 至 2026-09-22｜2026“逐梦果岭”⻘少年⾼尔夫球系列赛 WAGR积分赛（开卡赛）暨2026“战马全能小将杯”中国青少年高尔夫球锦标赛-资格赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5195)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-02T04:29:04.434Z",
+      "updatedAt": "2026-09-02T04:29:05.864Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-02T04:29:05.290Z",
+          "sentAt": "2026-09-02T04:29:05.290Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-02T04:29:05.864Z",
+          "sentAt": "2026-09-02T04:29:05.864Z",
           "error": ""
         }
       }
