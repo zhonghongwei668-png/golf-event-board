@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T04:29:03.445Z",
+  "generatedAt": "2026-09-02T09:02:13.207Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -13,7 +13,7 @@
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
   "warnings": [
-    "大正高尔夫: 59 个详情页读取失败：5166: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5166；5165: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5165；5164: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5164",
+    "大正高尔夫: 59 个详情页读取失败：5166: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5166；5164: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5164；5165: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5165",
     "大正官方公告: Dazheng announcement pages all failed"
   ],
   "categories": {
@@ -3215,7 +3215,7 @@
       "name": "2026年江苏省常州市青少年高尔夫球巡回赛第一站",
       "startDate": "2026-05-10",
       "endDate": "2026-05-10",
-      "location": "南京龙山湖高尔夫俱乐部",
+      "location": "江苏省南京市",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
