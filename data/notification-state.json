@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-03T17:13:49.471Z",
+  "updatedAt": "2026-09-04T04:28:07.047Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -554,34 +554,12 @@
     "external:dazheng:5195": "2026-09-02T04:29:03.445Z",
     "id:2026-战马全能小将杯-中国青少年高尔夫球锦标赛-2026-05-03": "2026-09-03T04:20:08.749Z",
     "identity:junior:2026战马全能小将杯中国青少年高尔夫球锦标赛": "2026-09-03T04:20:08.749Z",
-    "external:dazheng:5196": "2026-09-03T04:20:08.749Z"
+    "external:dazheng:5196": "2026-09-03T04:20:08.749Z",
+    "id:dazheng-5198": "2026-09-04T04:28:04.718Z",
+    "identity:junior:uswing果岭阅读魔镜2026全国青少年高尔夫球队际锦标赛总决赛": "2026-09-04T04:28:04.718Z",
+    "external:dazheng:5198": "2026-09-04T04:28:04.718Z"
   },
   "messages": {
-    "babf55200ac7152060f407499a5aade5cf3a6e9068e74473bb85396b5cef2734": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/4 17:51:36\n\n**新开放报名 4 场**\n- **【重点】新开放报名｜2026-08-25｜N.S.P2026青少年高尔夫嘉年华挑战赛云南赛区首站-昆明滇高站(亲子/师徒赛+个人赛+团队赛)，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5125)**\n- **【重点】新开放报名｜2026-08-28 至 2026-08-29｜2026年辽宁省青少年高尔夫球巡回赛-第四站 暨U系列梯队选拔赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5127)**\n- **【重点】新开放报名｜2026-08-30｜2026迈阅青少年高尔夫巡回赛·上海银涛站（第八站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5128)**\n- **【重点】新开放报名｜2026-09-05 至 2026-09-06｜2026CWJPGA嘉年华挑战赛WAGR开卡赛厦门第1站-东方站（WAGR+JGS），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5126)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-04T09:51:37.547Z",
-      "updatedAt": "2026-08-04T09:51:38.973Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-04T09:51:38.470Z",
-          "sentAt": "2026-08-04T09:51:38.470Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-04T09:51:38.973Z",
-          "sentAt": "2026-08-04T09:51:38.973Z",
-          "error": ""
-        }
-      }
-    },
     "ba56f589c0691e070a6e7b9b9f1581fca10b7e6652180e816d55c9c3af6b75b7": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2053,6 +2031,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-03T17:13:49.471Z",
           "sentAt": "2026-09-03T17:13:49.471Z",
+          "error": ""
+        }
+      }
+    },
+    "d5a21ebcabd1cba588dfc21a5475f4c5fdf244c468c47110ebe48865babed23e": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/4 12:28:04\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-10-04 至 2026-10-07｜Uswing果岭阅读魔镜2026全国青少年高尔夫球队际锦标赛-总决赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5198)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-04T04:28:05.812Z",
+      "updatedAt": "2026-09-04T04:28:07.047Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-04T04:28:06.558Z",
+          "sentAt": "2026-09-04T04:28:06.558Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-04T04:28:07.047Z",
+          "sentAt": "2026-09-04T04:28:07.047Z",
           "error": ""
         }
       }
