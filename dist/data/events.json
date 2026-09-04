@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T04:28:04.718Z",
+  "generatedAt": "2026-09-04T09:03:31.996Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -13,7 +13,7 @@
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
   "warnings": [
-    "大正高尔夫: 62 个详情页读取失败：5169: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5169；5168: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5168；5167: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5167",
+    "大正高尔夫: 62 个详情页读取失败：5168: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5168；5165: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5165；5167: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5167",
     "大正官方公告: Dazheng announcement pages all failed"
   ],
   "categories": {
@@ -21936,6 +21936,18 @@
     }
   ],
   "announcements": [
+    {
+      "id": "cga-announcement-2458",
+      "sourceId": "2458",
+      "title": "中国高尔夫球协会关于印发2026斐乐中国青少年高尔夫球精英赛竞赛规程的通知",
+      "publishedAt": "2026-09-04",
+      "kind": "regulation",
+      "source": "中国高尔夫球协会官方公告",
+      "url": "https://www.cgagolf.org.cn/xnews_details/2458.html",
+      "matchedEventIds": [
+        "2026斐乐中国青少年高尔夫球精英赛-2026-09-22"
+      ]
+    },
     {
       "id": "cga-announcement-2457",
       "sourceId": "2457",
