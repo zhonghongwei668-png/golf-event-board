@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-04T04:28:07.047Z",
+  "updatedAt": "2026-09-05T04:22:57.763Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -557,34 +557,12 @@
     "external:dazheng:5196": "2026-09-03T04:20:08.749Z",
     "id:dazheng-5198": "2026-09-04T04:28:04.718Z",
     "identity:junior:uswing果岭阅读魔镜2026全国青少年高尔夫球队际锦标赛总决赛": "2026-09-04T04:28:04.718Z",
-    "external:dazheng:5198": "2026-09-04T04:28:04.718Z"
+    "external:dazheng:5198": "2026-09-04T04:28:04.718Z",
+    "id:dazheng-5199": "2026-09-05T04:22:54.809Z",
+    "identity:junior:2026年云南省高尔夫学院青少年挑战赛第三站玉龙湾站": "2026-09-05T04:22:54.809Z",
+    "external:dazheng:5199": "2026-09-05T04:22:54.809Z"
   },
   "messages": {
-    "ba56f589c0691e070a6e7b9b9f1581fca10b7e6652180e816d55c9c3af6b75b7": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/5 09:21:08\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜CGA announcement page returned no actionable 2026 notices\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-05T01:21:23.243Z",
-      "updatedAt": "2026-08-05T01:21:25.300Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-05T01:21:24.747Z",
-          "sentAt": "2026-08-05T01:21:24.747Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-05T01:21:25.300Z",
-          "sentAt": "2026-08-05T01:21:25.300Z",
-          "error": ""
-        }
-      }
-    },
     "21278db2dac6c98e18ca588eb3825f620a506ab2e1db4c5508d2dd7edfcfa8cb": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2056,6 +2034,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-04T04:28:07.047Z",
           "sentAt": "2026-09-04T04:28:07.047Z",
+          "error": ""
+        }
+      }
+    },
+    "8191fc24d710ca796a12eb1761765486585b33c9b90d28a797b3f28fa091573f": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/5 12:22:54\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-19｜2026年云南省高尔夫学院青少年挑战赛 第三站（玉龙湾站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5199)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-05T04:22:55.926Z",
+      "updatedAt": "2026-09-05T04:22:57.763Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-05T04:22:57.241Z",
+          "sentAt": "2026-09-05T04:22:57.241Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-05T04:22:57.763Z",
+          "sentAt": "2026-09-05T04:22:57.763Z",
           "error": ""
         }
       }
