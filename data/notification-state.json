@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-05T04:22:57.763Z",
+  "updatedAt": "2026-09-05T12:04:06.049Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -563,31 +563,6 @@
     "external:dazheng:5199": "2026-09-05T04:22:54.809Z"
   },
   "messages": {
-    "21278db2dac6c98e18ca588eb3825f620a506ab2e1db4c5508d2dd7edfcfa8cb": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/5 09:31:01\n\n**【恢复】1 个信息源已恢复**\n- 中高协官方公告｜本次抓取 2 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-05T01:31:20.777Z",
-      "updatedAt": "2026-08-05T01:31:22.652Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-05T01:31:22.159Z",
-          "sentAt": "2026-08-05T01:31:22.159Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-05T01:31:22.652Z",
-          "sentAt": "2026-08-05T01:31:22.652Z",
-          "error": ""
-        }
-      }
-    },
     "39854ed9e7dd6aaf88cf6f6bac48259c9a6195cd81dab2d475d046eb5fe655ad": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2059,6 +2034,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-05T04:22:57.763Z",
           "sentAt": "2026-09-05T04:22:57.763Z",
+          "error": ""
+        }
+      }
+    },
+    "02d0c7dc1392232d21eebc91e6456a4a506814833d03ba3bdd30c45a5468f362": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/9/5 20:03:43\n\n**【报警】2 个信息源更新异常**\n- 大正高尔夫｜连续失败 24 次｜62 个详情页读取失败：5167: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5167；5165: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5165；5164: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5164\n- 大正官方公告｜连续失败 24 次｜Dazheng announcement pages all failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-05T12:04:04.450Z",
+      "updatedAt": "2026-09-05T12:04:06.049Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-05T12:04:05.553Z",
+          "sentAt": "2026-09-05T12:04:05.553Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-05T12:04:06.049Z",
+          "sentAt": "2026-09-05T12:04:06.049Z",
           "error": ""
         }
       }
