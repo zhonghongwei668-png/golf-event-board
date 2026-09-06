@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T15:10:58.195Z",
+  "generatedAt": "2026-09-06T04:34:34.967Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -13,7 +13,7 @@
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
   "warnings": [
-    "大正高尔夫: 63 个详情页读取失败：5168: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5168；5173: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5173；5167: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5167",
+    "大正高尔夫: 61 个详情页读取失败：5168: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5168；5169: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5169；5167: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5167",
     "大正官方公告: Dazheng announcement pages all failed"
   ],
   "categories": {
@@ -13651,8 +13651,8 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "running",
-      "statusLabel": "比赛中",
+      "statusCode": "past",
+      "statusLabel": "已结束",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -13688,8 +13688,8 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "closed",
-      "statusLabel": "报名截止",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "大正高尔夫 · 青少赛-迈阅巡回赛",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-迈阅巡回赛",
@@ -13724,8 +13724,8 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "10",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "中高协年历接口",
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
