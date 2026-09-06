@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-05T12:04:06.049Z",
+  "updatedAt": "2026-09-06T08:54:50.677Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -560,34 +560,15 @@
     "external:dazheng:5198": "2026-09-04T04:28:04.718Z",
     "id:dazheng-5199": "2026-09-05T04:22:54.809Z",
     "identity:junior:2026年云南省高尔夫学院青少年挑战赛第三站玉龙湾站": "2026-09-05T04:22:54.809Z",
-    "external:dazheng:5199": "2026-09-05T04:22:54.809Z"
+    "external:dazheng:5199": "2026-09-05T04:22:54.809Z",
+    "id:dazheng-5200": "2026-09-06T08:54:48.713Z",
+    "identity:junior:2026北京高协北京青少年高尔夫成长系列赛101拉斐特站": "2026-09-06T08:54:48.713Z",
+    "external:dazheng:5200": "2026-09-06T08:54:48.713Z",
+    "id:dazheng-5202": "2026-09-06T08:54:48.713Z",
+    "identity:junior:2026北京高协北京青少年高尔夫成长系列赛103东方明珠站": "2026-09-06T08:54:48.713Z",
+    "external:dazheng:5202": "2026-09-06T08:54:48.713Z"
   },
   "messages": {
-    "39854ed9e7dd6aaf88cf6f6bac48259c9a6195cd81dab2d475d046eb5fe655ad": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/5 13:30:29\n\n**【报警】3 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜fetch failed\n- 大正官方公告｜连续失败 1 次｜Dazheng announcement pages all failed\n- 中高协官方公告｜连续失败 1 次｜fetch failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-05T05:32:14.311Z",
-      "updatedAt": "2026-08-05T05:32:17.016Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-05T05:32:16.485Z",
-          "sentAt": "2026-08-05T05:32:16.485Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-05T05:32:17.016Z",
-          "sentAt": "2026-08-05T05:32:17.016Z",
-          "error": ""
-        }
-      }
-    },
     "a9b6a9136fffae013d17e08cfbe4c993c91551eb5b45babf40d7704a839019b5": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2059,6 +2040,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-05T12:04:06.049Z",
           "sentAt": "2026-09-05T12:04:06.049Z",
+          "error": ""
+        }
+      }
+    },
+    "d8ff158fa63ec4ba7606604fd20d99a590cd4045eada05f2aef41357eade8cc3": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/6 16:54:48\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-10-01｜2026 “北京高协”北京青少年高尔夫成长系列赛 （10.1拉斐特站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5200)**\n- **【重点】新开放报名｜2026-10-03｜2026 “北京高协”北京青少年高尔夫成长系列赛 （10.3东方明珠站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5202)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-06T08:54:49.497Z",
+      "updatedAt": "2026-09-06T08:54:50.677Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-06T08:54:50.182Z",
+          "sentAt": "2026-09-06T08:54:50.182Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-06T08:54:50.677Z",
+          "sentAt": "2026-09-06T08:54:50.677Z",
           "error": ""
         }
       }
