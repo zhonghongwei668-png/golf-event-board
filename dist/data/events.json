@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T16:14:32.175Z",
+  "generatedAt": "2026-09-07T04:35:58.691Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -13,7 +13,7 @@
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
   "warnings": [
-    "大正高尔夫: 58 个详情页读取失败：5171: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5171；5169: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5169；5168: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5168",
+    "大正高尔夫: 62 个详情页读取失败：5170: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5170；5176: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5176；5175: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5175",
     "大正官方公告: Dazheng announcement pages all failed"
   ],
   "categories": {
@@ -9473,7 +9473,7 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5150",
+      "id": "dazheng-5205",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
@@ -9481,8 +9481,16 @@
       "startDate": "2026-08-08",
       "endDate": "2026-08-08",
       "location": "天安假日高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5150",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5205",
       "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5205"
+        },
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5203"
+        },
         {
           "label": "大正赛事详情",
           "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5150"
@@ -9493,7 +9501,7 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5007",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-08-17 至 2026-09-04。",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-07 至 2026-10-17。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-06-09",
       "registrationEnd": "2026-08-07",
@@ -11178,7 +11186,7 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5149",
+      "id": "dazheng-5206",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
@@ -11186,8 +11194,12 @@
       "startDate": "2026-08-22",
       "endDate": "2026-08-22",
       "location": "北京东方天星高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5149",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5206",
       "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5206"
+        },
         {
           "label": "大正赛事详情",
           "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5149"
@@ -11198,7 +11210,7 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5092",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-08-17 至 2026-09-25。",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-07 至 2026-10-30。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-07-16",
       "registrationEnd": "2026-08-21",
@@ -16918,6 +16930,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5204",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "FVF-2026年青少年高尔夫嘉年华挑战赛川渝赛区第一站-重庆庆隆站 （亲子／师徒赛+个人赛+团队赛）",
+      "startDate": "2026-09-27",
+      "endDate": "2026-09-27",
+      "location": "重庆庆隆高尔夫球会",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5204",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5204"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5204",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-07 至 2026-09-26。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-09-07",
+      "registrationEnd": "2026-09-26",
+      "registrationText": "2026年09月07 ~ 26日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-嘉年华挑战赛",
+      "externalIds": {
+        "dazheng": "5204"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
