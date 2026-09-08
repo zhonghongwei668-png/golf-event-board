@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T04:31:18.511Z",
+  "generatedAt": "2026-09-08T09:06:02.760Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -13,7 +13,7 @@
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
   "warnings": [
-    "大正高尔夫: 65 个详情页读取失败：5190: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5190；5187: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5187；5178: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5178",
+    "大正高尔夫: 65 个详情页读取失败：5178: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5178；5170: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5170；5176: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5176",
     "大正官方公告: Dazheng announcement pages all failed"
   ],
   "categories": {
@@ -5524,40 +5524,6 @@
       "notes": ""
     },
     {
-      "id": "2026whs-中国区-青少年高尔夫差点巡回赛-北京赛-第三站-2026-06-20",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "《2026WHS（中国区）青少年高尔夫差点巡回赛•北京赛》 第三站",
-      "startDate": "2026-06-20",
-      "endDate": "2026-06-21",
-      "location": "北京大运河球会",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "2026-北京高协-北京青少年高尔夫球邀请赛-第二站-2026-06-20",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -6740,7 +6706,7 @@
       "name": "2026年辽宁省青少年高尔夫球巡回赛第四站",
       "startDate": "2026-07-15",
       "endDate": "2026-07-16",
-      "location": "辽宁辽阳市",
+      "location": "辽阳",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -11515,6 +11481,40 @@
       "notes": ""
     },
     {
+      "id": "2026whs-中国区-青少年高尔夫差点巡回赛-北京赛-第三站-2026-08-24",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "《2026WHS（中国区）青少年高尔夫差点巡回赛•北京赛》 第三站",
+      "startDate": "2026-08-24",
+      "endDate": "2026-08-25",
+      "location": "北京森林假日高尔夫球俱乐部",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "dazheng-5072",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -13398,7 +13398,7 @@
       "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第五站",
       "startDate": "2026-09-05",
       "endDate": "2026-09-06",
-      "location": "待定/年历未列",
+      "location": "北京",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
