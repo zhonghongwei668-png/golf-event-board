@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-08T17:30:31.431Z",
+  "updatedAt": "2026-09-09T09:11:14.191Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -579,34 +579,12 @@
     "external:dazheng:5208": "2026-09-08T04:31:18.511Z",
     "id:dazheng-5209": "2026-09-08T04:31:18.511Z",
     "identity:junior:魅力江苏最美体育挥杆未来2026江苏省青少年高尔夫巡回赛宿迁站": "2026-09-08T04:31:18.511Z",
-    "external:dazheng:5209": "2026-09-08T04:31:18.511Z"
+    "external:dazheng:5209": "2026-09-08T04:31:18.511Z",
+    "id:dazheng-5211": "2026-09-09T09:11:11.878Z",
+    "identity:junior:2026保利青少年高尔夫球巡回赛秦皇岛站": "2026-09-09T09:11:11.878Z",
+    "external:dazheng:5211": "2026-09-09T09:11:11.878Z"
   },
   "messages": {
-    "1106d8a5cee14ccf2021fd1dc9238bb0bff511e487f45bffa9095bd85ebabc16": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/7 11:13:45\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-08-26｜2026青少年高尔夫嘉年华挑战赛上海赛区第十一站-上海银涛 （个人赛、亲子赛、团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5134)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-07T03:13:46.596Z",
-      "updatedAt": "2026-08-07T03:13:49.466Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-07T03:13:48.950Z",
-          "sentAt": "2026-08-07T03:13:48.950Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-07T03:13:49.466Z",
-          "sentAt": "2026-08-07T03:13:49.466Z",
-          "error": ""
-        }
-      }
-    },
     "284e6c33a06e7b85c3c76db7687dc06ea28522fc6c36f2f5e1bb747f5087d240": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2078,6 +2056,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-08T17:30:31.431Z",
           "sentAt": "2026-09-08T17:30:31.431Z",
+          "error": ""
+        }
+      }
+    },
+    "db9e7be363de60446e57126adaeb938b10bffd184badd3f6f20c34a103ec9c0c": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/9 17:11:11\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-10-17 至 2026-10-18｜2026保利青少年高尔夫球巡回赛（秦皇岛站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5211)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-09T09:11:13.001Z",
+      "updatedAt": "2026-09-09T09:11:14.191Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-09T09:11:13.703Z",
+          "sentAt": "2026-09-09T09:11:13.703Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-09T09:11:14.191Z",
+          "sentAt": "2026-09-09T09:11:14.191Z",
           "error": ""
         }
       }
