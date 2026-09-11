@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-11T04:35:52.454Z",
+  "updatedAt": "2026-09-11T09:09:06.937Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -594,34 +594,12 @@
     "external:dazheng:5212": "2026-09-10T09:11:05.849Z",
     "id:dazheng-5214": "2026-09-11T04:35:49.905Z",
     "identity:junior:2026年南京市青少年高尔夫球巡回赛第一站南京银杏湖站": "2026-09-11T04:35:49.905Z",
-    "external:dazheng:5214": "2026-09-11T04:35:49.905Z"
+    "external:dazheng:5214": "2026-09-11T04:35:49.905Z",
+    "id:dazheng-5215": "2026-09-11T09:09:04.959Z",
+    "identity:junior:cjgachinatour加拿大青少年高尔夫协会中国系列赛年度总决赛暨第一届国际邀请赛": "2026-09-11T09:09:04.959Z",
+    "external:dazheng:5215": "2026-09-11T09:09:04.959Z"
   },
   "messages": {
-    "f5c451073aaea2bb0eef23b1143c9d90f83d386c698b414f9753384206a6f13c": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/10 10:31:55\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-12 至 2026-09-13｜2026 SLGS FCG中国区青少年系列赛-广东第7站 （WAGR+JGS积分），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5136)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-10T02:31:56.699Z",
-      "updatedAt": "2026-08-10T02:31:58.084Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-10T02:31:57.525Z",
-          "sentAt": "2026-08-10T02:31:57.525Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-10T02:31:58.084Z",
-          "sentAt": "2026-08-10T02:31:58.084Z",
-          "error": ""
-        }
-      }
-    },
     "341155cf8978c639f54e09fe8ee818625ce55f661b564ba91f6a8b44e0ba8204": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2093,6 +2071,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-11T04:35:52.454Z",
           "sentAt": "2026-09-11T04:35:52.454Z",
+          "error": ""
+        }
+      }
+    },
+    "ac9cc7eb5cf25ba0b52f77e6dad03a1e5b19d9232696bf9c4cf811ec4451c3d3": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/11 17:09:04\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-10-29 至 2026-11-01｜CJGA China Tour加拿大青少年高尔夫协会中国系列赛年度总决赛暨第一届国际邀请赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5215)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-11T09:09:05.829Z",
+      "updatedAt": "2026-09-11T09:09:06.937Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-11T09:09:06.463Z",
+          "sentAt": "2026-09-11T09:09:06.463Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-11T09:09:06.937Z",
+          "sentAt": "2026-09-11T09:09:06.937Z",
           "error": ""
         }
       }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T04:35:49.905Z",
+  "generatedAt": "2026-09-11T09:09:04.959Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -13,7 +13,7 @@
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
   "warnings": [
-    "大正高尔夫: 69 个详情页读取失败：5183: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5183；5182: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5182；5181: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5181",
+    "大正高尔夫: 70 个详情页读取失败：5184: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5184；5183: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5183；5182: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5182",
     "大正官方公告: Dazheng announcement pages all failed"
   ],
   "categories": {
@@ -18125,11 +18125,11 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5198",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-04 至 2026-09-30。",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-04 至 2026-09-11。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-09-04",
-      "registrationEnd": "2026-09-30",
-      "registrationText": "2026年09月04 ~ 30日",
+      "registrationEnd": "2026-09-11",
+      "registrationText": "2026年09月04 ~ 11日",
       "registrationOpen": true,
       "registrationClosed": false,
       "registrationStatusAuthoritative": true,
@@ -19957,6 +19957,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5215",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "CJGA China Tour加拿大青少年高尔夫协会中国系列赛年度总决赛暨第一届国际邀请赛",
+      "startDate": "2026-10-29",
+      "endDate": "2026-11-01",
+      "location": "东莞观澜湖-利百特球场",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5215",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5215"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5215",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-11 至 2026-10-28。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-09-11",
+      "registrationEnd": "2026-10-28",
+      "registrationText": "2026年09月11日 ~ 10月28日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5215"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
