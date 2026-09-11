@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-11T09:09:06.937Z",
+  "updatedAt": "2026-09-11T13:33:06.473Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -597,34 +597,20 @@
     "external:dazheng:5214": "2026-09-11T04:35:49.905Z",
     "id:dazheng-5215": "2026-09-11T09:09:04.959Z",
     "identity:junior:cjgachinatour加拿大青少年高尔夫协会中国系列赛年度总决赛暨第一届国际邀请赛": "2026-09-11T09:09:04.959Z",
-    "external:dazheng:5215": "2026-09-11T09:09:04.959Z"
+    "external:dazheng:5215": "2026-09-11T09:09:04.959Z",
+    "id:dazheng-5218": "2026-09-11T13:33:03.031Z",
+    "identity:junior:2026fvfwjgr嘉年华国际青少年高尔夫排名认证赛云南赛区昆明春城站亲子师徒赛个人赛团队赛": "2026-09-11T13:33:03.031Z",
+    "external:dazheng:5218": "2026-09-11T13:33:03.031Z",
+    "id:clpga-8115": "2026-09-11T13:33:03.031Z",
+    "identity:women:中国女子公开赛": "2026-09-11T13:33:03.031Z",
+    "id:dazheng-5217": "2026-09-11T13:33:03.031Z",
+    "identity:junior:2026迈阅青少年高尔夫巡回赛北京总决赛": "2026-09-11T13:33:03.031Z",
+    "external:dazheng:5217": "2026-09-11T13:33:03.031Z",
+    "id:dazheng-5216": "2026-09-11T13:33:03.031Z",
+    "identity:junior:2026迈阅青少年高尔夫巡回赛天津总决赛": "2026-09-11T13:33:03.031Z",
+    "external:dazheng:5216": "2026-09-11T13:33:03.031Z"
   },
   "messages": {
-    "341155cf8978c639f54e09fe8ee818625ce55f661b564ba91f6a8b44e0ba8204": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/10 12:17:32\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-12 至 2026-09-13｜2026CWJPGA嘉年华挑战赛WAGR开卡赛珠海第6站-国际站（WAGR+JGS），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5137)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-10T04:17:34.153Z",
-      "updatedAt": "2026-08-10T04:17:36.045Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-10T04:17:35.470Z",
-          "sentAt": "2026-08-10T04:17:35.470Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-10T04:17:36.045Z",
-          "sentAt": "2026-08-10T04:17:36.045Z",
-          "error": ""
-        }
-      }
-    },
     "c5189c589c1be987f6e7c380782e8434bdb9ca4742871151c74b0ecd018eed59": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2096,6 +2082,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-11T09:09:06.937Z",
           "sentAt": "2026-09-11T09:09:06.937Z",
+          "error": ""
+        }
+      }
+    },
+    "5fd997172839fe28785670f51803a643c457c52b58390974f8b5fc1a32f3266b": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/11 21:33:03\n\n**新开放报名 4 场**\n- **【重点】新开放报名｜2026-10-06 至 2026-10-07｜2026 FVF-WJGR嘉年华国际青少年高尔夫排名认证赛云南赛区-昆明春城站 （亲子／师徒赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5218)**\n- **【重点】新开放报名｜2026-10-09 至 2026-10-11｜中国女子公开赛，[报名入口](https://www.clpga.org/SignUp?lang=cn&mt_id=8115)**\n- **【重点】新开放报名｜2026-10-18｜2026迈阅青少年高尔夫巡回赛·北京总决赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5217)**\n- **【重点】新开放报名｜2026-10-24 至 2026-10-25｜2026迈阅青少年高尔夫巡回赛·天津总决赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5216)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-11T13:33:04.580Z",
+      "updatedAt": "2026-09-11T13:33:06.473Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-11T13:33:05.930Z",
+          "sentAt": "2026-09-11T13:33:05.930Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-11T13:33:06.473Z",
+          "sentAt": "2026-09-11T13:33:06.473Z",
           "error": ""
         }
       }
