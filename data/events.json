@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T08:50:25.957Z",
+  "generatedAt": "2026-09-12T12:50:12.562Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -13,7 +13,7 @@
     "dazhengAnnouncements": "https://www.bwvip.com/default.php?g=m&m=arc&a=arc_list"
   },
   "warnings": [
-    "大正高尔夫: 73 个详情页读取失败：5185: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5185；5184: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5184；5183: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5183",
+    "大正高尔夫: 74 个详情页读取失败：5186: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5186；5187: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5187；5185: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5185",
     "大正官方公告: Dazheng announcement pages all failed"
   ],
   "categories": {
@@ -13926,7 +13926,7 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5178",
+      "id": "dazheng-5219",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
@@ -13934,15 +13934,19 @@
       "startDate": "2026-09-12",
       "endDate": "2026-09-12",
       "location": "北京东方天星高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5178",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5219",
       "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5219"
+        },
         {
           "label": "大正赛事详情",
           "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5178"
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5178",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-08-27 至 2026-09-11。",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-12 至 2026-10-24。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-08-27",
       "registrationEnd": "2026-09-11",
