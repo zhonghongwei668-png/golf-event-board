@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T04:30:59.343Z",
+  "generatedAt": "2026-09-12T08:50:25.957Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -22540,6 +22540,16 @@
     }
   ],
   "announcements": [
+    {
+      "id": "cga-announcement-2465",
+      "sourceId": "2465",
+      "title": "中国高尔夫球协会关于发布2026海南高尔夫球公开赛参赛资格的通知",
+      "publishedAt": "2026-09-12",
+      "kind": "regulation",
+      "source": "中国高尔夫球协会官方公告",
+      "url": "https://www.cgagolf.org.cn/xnews_details/2465.html",
+      "matchedEventIds": []
+    },
     {
       "id": "cga-announcement-2458",
       "sourceId": "2458",
