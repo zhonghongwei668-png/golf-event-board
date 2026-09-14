@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-14T04:51:37.543Z",
+  "updatedAt": "2026-09-14T10:36:19.149Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -621,34 +621,12 @@
     "external:dazheng:5222": "2026-09-14T04:51:33.242Z",
     "id:dazheng-5221": "2026-09-14T04:51:33.242Z",
     "identity:junior:2026年江苏省常州市青少年高尔夫球巡回赛第三站": "2026-09-14T04:51:33.242Z",
-    "external:dazheng:5221": "2026-09-14T04:51:33.242Z"
+    "external:dazheng:5221": "2026-09-14T04:51:33.242Z",
+    "id:dazheng-5223": "2026-09-14T10:36:16.598Z",
+    "identity:junior:2026slgsfcg中国区青少年系列赛武汉站wagrjgs积分": "2026-09-14T10:36:16.598Z",
+    "external:dazheng:5223": "2026-09-14T10:36:16.598Z"
   },
   "messages": {
-    "6e9cf7268e92a5891f30e642e58b83e2d40837b4ac070d13d4708aadfcaf8ce0": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/12 10:01:11\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜CGA announcement page returned no actionable 2026 notices\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-12T02:01:36.598Z",
-      "updatedAt": "2026-08-12T02:01:38.227Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-12T02:01:37.738Z",
-          "sentAt": "2026-08-12T02:01:37.738Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-12T02:01:38.227Z",
-          "sentAt": "2026-08-12T02:01:38.227Z",
-          "error": ""
-        }
-      }
-    },
     "a7053ad6d5c48d05afa3c72ab306807c6e1d9e66050d4f546b2aba6cc615f4ae": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2120,6 +2098,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-14T04:51:37.543Z",
           "sentAt": "2026-09-14T04:51:37.543Z",
+          "error": ""
+        }
+      }
+    },
+    "502a327babdbadaa04c18f71cd2f54212cf6dc5e400c5f105d4c86e37faf9e56": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/14 18:36:16\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-10-17 至 2026-10-18｜2026 SLGS FCG中国区青少年系列赛-武汉站 （WAGR+JGS积分），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5223)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-14T10:36:17.467Z",
+      "updatedAt": "2026-09-14T10:36:19.149Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-14T10:36:18.631Z",
+          "sentAt": "2026-09-14T10:36:18.631Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-14T10:36:19.149Z",
+          "sentAt": "2026-09-14T10:36:19.149Z",
           "error": ""
         }
       }
