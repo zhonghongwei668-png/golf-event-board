@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-14T10:36:19.149Z",
+  "updatedAt": "2026-09-15T10:02:57.438Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -624,34 +624,21 @@
     "external:dazheng:5221": "2026-09-14T04:51:33.242Z",
     "id:dazheng-5223": "2026-09-14T10:36:16.598Z",
     "identity:junior:2026slgsfcg中国区青少年系列赛武汉站wagrjgs积分": "2026-09-14T10:36:16.598Z",
-    "external:dazheng:5223": "2026-09-14T10:36:16.598Z"
+    "external:dazheng:5223": "2026-09-14T10:36:16.598Z",
+    "id:dazheng-5226": "2026-09-15T10:02:55.340Z",
+    "identity:junior:2026九鹤岩茶杯福建省武夷山青少年高尔夫球系列赛第三站": "2026-09-15T10:02:55.340Z",
+    "external:dazheng:5226": "2026-09-15T10:02:55.340Z",
+    "id:dazheng-5225": "2026-09-15T10:02:55.340Z",
+    "identity:junior:2026fvfwjgr嘉年华国际青少年高尔夫排名认证赛上海赛区第十六站银涛站个人赛亲子赛团队赛": "2026-09-15T10:02:55.340Z",
+    "external:dazheng:5225": "2026-09-15T10:02:55.340Z",
+    "id:dazheng-5227": "2026-09-15T10:02:55.340Z",
+    "identity:junior:2026fvf嘉年华国际青少年高尔夫排名认证赛浙江赛区第九站浙江龙山湖站wagrtugrjgswjgr": "2026-09-15T10:02:55.340Z",
+    "external:dazheng:5227": "2026-09-15T10:02:55.340Z",
+    "id:dazheng-5228": "2026-09-15T10:02:55.340Z",
+    "identity:junior:2026cwjpga嘉年华挑战赛wagr开卡赛珠海第7站国际站wagrjgstugr": "2026-09-15T10:02:55.340Z",
+    "external:dazheng:5228": "2026-09-15T10:02:55.340Z"
   },
   "messages": {
-    "a7053ad6d5c48d05afa3c72ab306807c6e1d9e66050d4f546b2aba6cc615f4ae": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/12 10:11:10\n\n**【恢复】1 个信息源已恢复**\n- 中高协官方公告｜本次抓取 2 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-12T02:11:33.768Z",
-      "updatedAt": "2026-08-12T02:11:35.871Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-12T02:11:35.407Z",
-          "sentAt": "2026-08-12T02:11:35.407Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-12T02:11:35.871Z",
-          "sentAt": "2026-08-12T02:11:35.871Z",
-          "error": ""
-        }
-      }
-    },
     "c8f33225c9df95372f31543f8d2c46830d1228a9a3f171ac11e85222523e9107": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2123,6 +2110,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-14T10:36:19.149Z",
           "sentAt": "2026-09-14T10:36:19.149Z",
+          "error": ""
+        }
+      }
+    },
+    "5750ca3c102883f8fd2e382dd87af940ebad67a2873ddaf5673e84e3a4afb920": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/15 18:02:55\n\n**新开放报名 4 场**\n- **【重点】新开放报名｜2026-10-02 至 2026-10-03｜2026“九鹤岩茶杯”福建省武夷山青少年高尔夫球系列赛·第三站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5226)**\n- **【重点】新开放报名｜2026-10-11｜2026 FVF‑WJGR嘉年华国际青少年高尔夫排名认证赛上海赛区第十六站-银涛站（个人赛、亲子赛、团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5225)**\n- **【重点】新开放报名｜2026-10-17 至 2026-10-18｜2026 FVF-嘉年华国际青少年高尔夫排名认证赛浙江赛区第九站 -浙江龙山湖站（WAGR/TUGR/JGS/WJGR），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5227)**\n- **【重点】新开放报名｜2026-10-24 至 2026-10-25｜2026CWJPGA嘉年华挑战赛WAGR开卡赛珠海第7站-国际站（WAGR+JGS+TUGR），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5228)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-15T10:02:56.238Z",
+      "updatedAt": "2026-09-15T10:02:57.438Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-15T10:02:56.924Z",
+          "sentAt": "2026-09-15T10:02:56.924Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-15T10:02:57.438Z",
+          "sentAt": "2026-09-15T10:02:57.438Z",
           "error": ""
         }
       }
