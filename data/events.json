@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T04:49:09.310Z",
+  "generatedAt": "2026-09-17T09:58:09.442Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -10003,7 +10003,7 @@
       "name": "《2026WHS（中国区）青少年高尔夫差点巡回赛 ·广西赛》 第五站",
       "startDate": "2026-08-15",
       "endDate": "2026-08-16",
-      "location": "广西嘉和城球会",
+      "location": "嘉和城温泉高尔夫球会",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -15088,17 +15088,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5208",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-08 至 2026-09-17。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-09-08 至 2026-09-17。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-09-08",
       "registrationEnd": "2026-09-17",
       "registrationText": "2026年09月08 ~ 17日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -19363,6 +19363,43 @@
       "notes": ""
     },
     {
+      "id": "dazheng-5238",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026年辽宁省青少年高尔夫球巡回赛-第六站 暨U系列梯队选拔赛",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-18",
+      "location": "辽宁大连红旗谷高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5238",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5238"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5238",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-17 至 2026-10-16。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-09-17",
+      "registrationEnd": "2026-10-16",
+      "registrationText": "2026年09月17日 ~ 10月16日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5238"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026年辽宁省青少年高尔夫球巡回赛第八站-2026-10-17",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -20399,6 +20436,43 @@
       "seriesLabel": "青少赛-GCCT",
       "externalIds": {
         "dazheng": "5188"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5237",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "S10 东青巡 ·星启航积分巡回赛 ·STATION 7",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "location": "广东东莞峰景高尔夫球会",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5237",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5237"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5237",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-17 至 2026-10-23。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-09-17",
+      "registrationEnd": "2026-10-23",
+      "registrationText": "2026年09月17日 ~ 10月23日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5237"
       },
       "updatedFromOfficial": true,
       "notes": ""
@@ -23089,6 +23163,18 @@
     }
   ],
   "announcements": [
+    {
+      "id": "cga-announcement-2468",
+      "sourceId": "2468",
+      "title": "中国高尔夫球协会关于印发2026年汇丰全国青少年高尔夫球冠军锦标赛竞赛规程的通知",
+      "publishedAt": "2026-09-17",
+      "kind": "regulation",
+      "source": "中国高尔夫球协会官方公告",
+      "url": "https://www.cgagolf.org.cn/xnews_details/2468.html",
+      "matchedEventIds": [
+        "汇丰全国青少年高尔夫球冠军锦标赛-2026-07-13"
+      ]
+    },
     {
       "id": "cga-announcement-2465",
       "sourceId": "2465",
