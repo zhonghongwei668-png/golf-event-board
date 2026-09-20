@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T09:47:39.658Z",
+  "generatedAt": "2026-09-20T14:13:20.957Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -14075,7 +14075,7 @@
       "name": "2026福建省青少年高尔夫球公开赛-第三站",
       "startDate": "2026-09-12",
       "endDate": "2026-09-13",
-      "location": "泉州高尔夫俱乐部",
+      "location": "东方（厦门）高尔夫乡村俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -16334,17 +16334,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5073",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-07-12 至 2026-09-25。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-07-12 至 2026-09-25。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-07-12",
       "registrationEnd": "2026-09-25",
       "registrationText": "2026年07月12日 ~ 09月25日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-迈阅巡回赛",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-迈阅巡回赛",
