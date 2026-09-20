@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T16:28:34.246Z",
+  "generatedAt": "2026-09-20T04:50:49.638Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -18575,6 +18575,43 @@
       "notes": ""
     },
     {
+      "id": "dazheng-5243",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "“SUNNY EAGLE”2026北京市⻘少年⾼尔夫球系列赛 拉斐特站",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "location": "北京拉斐特国际高尔夫球俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5243",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5243"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5243",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-20 至 2026-10-10。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-09-20",
+      "registrationEnd": "2026-10-10",
+      "registrationText": "2026年09月20日 ~ 10月10日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5243"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "dazheng-5225",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -19084,7 +19121,7 @@
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
-      "name": "2026 SLGS FCG中国区青少年系列赛-广东第8站 （WAGR+JGS积分）",
+      "name": "2026 SLGS FCG中国区青少年系列赛-广东第8站 （WAGR积分）",
       "startDate": "2026-10-17",
       "endDate": "2026-10-18",
       "location": "广东臻湖高尔夫俱乐部",
@@ -19689,6 +19726,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5242",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026 FVF-WJGR嘉年华国际青少年高尔夫排名认证赛 山东赛区第七站-青岛华山站(亲子/师徒赛+个人赛+团队赛)",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "location": "山东青岛华山国际高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5242",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5242"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5242",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-20 至 2026-10-17。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-09-20",
+      "registrationEnd": "2026-10-17",
+      "registrationText": "2026年09月20日 ~ 10月17日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-嘉年华挑战赛",
+      "externalIds": {
+        "dazheng": "5242"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -20913,7 +20987,7 @@
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
-      "name": "2026九利佳青少年高尔夫WAGR世界业余积分赛重庆第三站",
+      "name": "2026九利佳青少年高尔夫WAGR世界业余积分赛重庆总决赛",
       "startDate": "2026-10-31",
       "endDate": "2026-11-01",
       "location": "重庆上邦高尔夫球场",
