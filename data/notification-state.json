@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-22T04:50:55.314Z",
+  "updatedAt": "2026-09-23T09:32:33.045Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -690,34 +690,21 @@
     "id:dazheng-5246": "2026-09-21T10:40:36.740Z",
     "identity:junior:ajes亚洲青少年精英系列赛北京精英赛": "2026-09-21T10:40:36.740Z",
     "external:dazheng:5246": "2026-09-21T10:40:36.740Z",
-    "identity:junior:2026internationaljuniorgulf嘉年华国际青少年高尔夫积分排名认证奏北京赛区第四站": "2026-09-22T04:50:55.314Z"
+    "identity:junior:2026internationaljuniorgulf嘉年华国际青少年高尔夫积分排名认证奏北京赛区第四站": "2026-09-22T04:50:55.314Z",
+    "id:dazheng-5249": "2026-09-23T09:32:30.086Z",
+    "identity:junior:2026北京高协北京青少年高尔夫成长系列赛1011东方天星站": "2026-09-23T09:32:30.086Z",
+    "external:dazheng:5249": "2026-09-23T09:32:30.086Z",
+    "id:dazheng-5251": "2026-09-23T09:32:30.086Z",
+    "identity:junior:鲲鹏2026湖南省青少年高尔夫球公开赛u系列赛第四站暨奔跑吧少年2026湖南省校际俱乐部联赛": "2026-09-23T09:32:30.086Z",
+    "external:dazheng:5251": "2026-09-23T09:32:30.086Z",
+    "id:dazheng-5250": "2026-09-23T09:32:30.086Z",
+    "identity:junior:2026pga中国校际高尔夫球锦标赛上海站": "2026-09-23T09:32:30.086Z",
+    "external:dazheng:5250": "2026-09-23T09:32:30.086Z",
+    "id:dazheng-5253": "2026-09-23T09:32:30.086Z",
+    "identity:junior:uswing果岭阅读魔镜第12届深圳青少年公开赛成长系列赛第2站光明站": "2026-09-23T09:32:30.086Z",
+    "external:dazheng:5253": "2026-09-23T09:32:30.086Z"
   },
   "messages": {
-    "0c53aabed201f00d5853e465483a3a9401a9ff3f1f8553d367dff9e23bc6065e": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/18 14:00:54\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-19｜2026FALA启梦之路·U12高尔夫球（北方区）挑战赛辽阳太子河站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5153)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-18T06:00:55.333Z",
-      "updatedAt": "2026-08-18T06:00:57.007Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-18T06:00:56.493Z",
-          "sentAt": "2026-08-18T06:00:56.493Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-18T06:00:57.007Z",
-          "sentAt": "2026-08-18T06:00:57.007Z",
-          "error": ""
-        }
-      }
-    },
     "215ba4433e0917b7fc9cf6b46a9a3094173e8c5b846c33164e96f3aaa12962e1": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2189,6 +2176,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-21T10:40:39.382Z",
           "sentAt": "2026-09-21T10:40:39.382Z",
+          "error": ""
+        }
+      }
+    },
+    "ab7b0b12afe658f4d7cf945dfbdbd37eebd5186dc70949e209978c81a11e46b6": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/23 17:32:30\n\n**新开放报名 4 场**\n- **【重点】新开放报名｜2026-10-11｜2026 “北京高协”北京青少年高尔夫成长系列赛 （10.11东方天星站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5249)**\n- **【重点】新开放报名｜2026-10-17 至 2026-10-18｜鲲鹏·2026湖南省青少年高尔夫球公开赛（U系列赛）第四站暨“奔跑吧·少年”2026湖南省校际俱乐部联赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5251)**\n- **【重点】新开放报名｜2026-10-18｜2026 PGA 中国校际高尔夫球锦标赛-上海站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5250)**\n- **【重点】新开放报名｜2026-10-25｜“Uswing果岭阅读魔镜”第12届深圳青少年公开赛 成长系列赛-第2站（光明站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5253)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-23T09:32:31.371Z",
+      "updatedAt": "2026-09-23T09:32:33.045Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-23T09:32:32.561Z",
+          "sentAt": "2026-09-23T09:32:32.561Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-23T09:32:33.045Z",
+          "sentAt": "2026-09-23T09:32:33.045Z",
           "error": ""
         }
       }
