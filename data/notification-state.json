@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-25T04:53:52.026Z",
+  "updatedAt": "2026-09-25T10:10:37.115Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -703,34 +703,11 @@
     "id:dazheng-5253": "2026-09-23T09:32:30.086Z",
     "identity:junior:uswing果岭阅读魔镜第12届深圳青少年公开赛成长系列赛第2站光明站": "2026-09-23T09:32:30.086Z",
     "external:dazheng:5253": "2026-09-23T09:32:30.086Z",
-    "identity:junior:sportsjourneyroadtocollegechampionshipqualifierwagrjgstugrwjgr江西南昌保利站": "2026-09-25T04:53:52.026Z"
+    "identity:junior:sportsjourneyroadtocollegechampionshipqualifierwagrjgstugrwjgr江西南昌保利站": "2026-09-25T04:53:52.026Z",
+    "id:clpga-8117": "2026-09-25T10:10:34.061Z",
+    "identity:women:阿美中国锦标赛": "2026-09-25T10:10:34.061Z"
   },
   "messages": {
-    "215ba4433e0917b7fc9cf6b46a9a3094173e8c5b846c33164e96f3aaa12962e1": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/18 14:41:01\n\n**新开放报名 4 场**\n- **【重点】新开放报名｜2026-08-27 至 2026-08-28｜“魅力江苏 最美体育”-“挥杆未来” 2026江苏省青少年高尔夫巡回赛-镇江站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5154)**\n- **【重点】新开放报名｜2026-09-13｜2026青少年高尔夫嘉年华挑战赛上海赛区第十三站-上海银涛站（个人赛、亲子赛、团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5156)**\n- **【重点】新开放报名｜2026-09-13｜FVF-2026青少年高尔夫嘉年华挑战赛浙江赛区第九站-宁波东方站（个人赛&亲子赛&团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5157)**\n- **【重点】新开放报名｜2026-09-27｜FVF-2026青少年高尔夫嘉年华挑战赛上海赛区第十五站（个人赛&亲子赛&团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5155)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-18T06:41:02.251Z",
-      "updatedAt": "2026-08-18T06:41:03.935Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-18T06:41:03.437Z",
-          "sentAt": "2026-08-18T06:41:03.437Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-18T06:41:03.935Z",
-          "sentAt": "2026-08-18T06:41:03.935Z",
-          "error": ""
-        }
-      }
-    },
     "d68578a1144620784648bc50f6bf4bda8a8d11625afa4ebeae9c57901f328124": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2202,6 +2179,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-23T09:32:33.045Z",
           "sentAt": "2026-09-23T09:32:33.045Z",
+          "error": ""
+        }
+      }
+    },
+    "273a80d5d4613e35d4827ffb96e61adabd992b9132e68b531bf36b13b4f2cfdc": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/25 18:10:34\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-11-05 至 2026-11-08｜阿美中国锦标赛，[报名入口](https://www.clpga.org/SignUp?lang=cn&mt_id=8117)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-25T10:10:35.879Z",
+      "updatedAt": "2026-09-25T10:10:37.115Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-25T10:10:36.610Z",
+          "sentAt": "2026-09-25T10:10:36.610Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-25T10:10:37.115Z",
+          "sentAt": "2026-09-25T10:10:37.115Z",
           "error": ""
         }
       }
