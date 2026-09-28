@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-28T05:19:21.358Z",
+  "updatedAt": "2026-09-28T11:59:20.466Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -708,34 +708,18 @@
     "identity:women:阿美中国锦标赛": "2026-09-25T10:10:34.061Z",
     "id:dazheng-5252": "2026-09-28T05:19:18.723Z",
     "identity:junior:2026中国海南国际青少年高尔夫球巡回赛总决赛": "2026-09-28T05:19:18.723Z",
-    "external:dazheng:5252": "2026-09-28T05:19:18.723Z"
+    "external:dazheng:5252": "2026-09-28T05:19:18.723Z",
+    "id:dazheng-5256": "2026-09-28T11:59:18.455Z",
+    "identity:junior:2026pga中国校际高尔夫球锦标赛大湾区": "2026-09-28T11:59:18.455Z",
+    "external:dazheng:5256": "2026-09-28T11:59:18.455Z",
+    "id:dazheng-5254": "2026-09-28T11:59:18.455Z",
+    "identity:junior:2026福建省青少年高尔夫球公开赛泉州站": "2026-09-28T11:59:18.455Z",
+    "external:dazheng:5254": "2026-09-28T11:59:18.455Z",
+    "id:dazheng-5255": "2026-09-28T11:59:18.455Z",
+    "identity:junior:gcct青少年高尔夫球技能等级一级赛": "2026-09-28T11:59:18.455Z",
+    "external:dazheng:5255": "2026-09-28T11:59:18.455Z"
   },
   "messages": {
-    "20bcf9e5dcd3de24620475415519e658ce0793e3fca98b46a9a5b0075d92af8f": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/18 19:02:19\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜CGA announcement page returned no actionable 2026 notices\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-18T11:02:38.509Z",
-      "updatedAt": "2026-08-18T11:02:40.273Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-18T11:02:39.735Z",
-          "sentAt": "2026-08-18T11:02:39.735Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-18T11:02:40.273Z",
-          "sentAt": "2026-08-18T11:02:40.273Z",
-          "error": ""
-        }
-      }
-    },
     "632488239e03328ca99316227493d14ee81ced53491fde43387a18a5599be63f": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2207,6 +2191,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-28T05:19:21.358Z",
           "sentAt": "2026-09-28T05:19:21.358Z",
+          "error": ""
+        }
+      }
+    },
+    "e3b842a036583b3541d48ff35d992aacefad2996e80c1ccc9f7beafdd8fbedbc": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/28 19:59:18\n\n**新开放报名 3 场**\n- **【重点】新开放报名｜2026-10-24 至 2026-10-25｜2026 PGA 中国校际高尔夫球锦标赛-大湾区，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5256)**\n- **【重点】新开放报名｜2026-10-24 至 2026-10-25｜2026福建省青少年高尔夫球公开赛·泉州站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5254)**\n- **【重点】新开放报名｜2026-11-06 至 2026-11-09｜GCCT青少年高尔夫球技能等级一级赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5255)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-09-28T11:59:19.125Z",
+      "updatedAt": "2026-09-28T11:59:20.466Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-28T11:59:19.926Z",
+          "sentAt": "2026-09-28T11:59:19.926Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-09-28T11:59:20.466Z",
+          "sentAt": "2026-09-28T11:59:20.466Z",
           "error": ""
         }
       }
