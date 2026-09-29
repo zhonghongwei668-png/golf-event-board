@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T11:59:18.455Z",
+  "generatedAt": "2026-09-29T05:40:36.979Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -5343,40 +5343,6 @@
       "notes": ""
     },
     {
-      "id": "2026格林青少年高尔夫球系列赛-挑战赛-2026-06-19",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026格林青少年高尔夫球系列赛–挑战赛",
-      "startDate": "2026-06-19",
-      "endDate": "2026-06-20",
-      "location": "清远狮子湖乡村俱乐部",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "尤尼克斯第二十六届张连伟杯国际青少年高尔夫邀请赛预选赛-昆明站-2026-06-19",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -5763,7 +5729,7 @@
       "name": "“京津冀鲁辽”青少年高尔夫球巡回赛",
       "startDate": "2026-07-01",
       "endDate": "2026-07-31",
-      "location": "艾力枫社高尔夫俱乐部AB场",
+      "location": "河北",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -15913,6 +15879,40 @@
       "notes": ""
     },
     {
+      "id": "2026-北京高协-北京青少年高尔夫球邀请赛-第六站-2026-09-25",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第六站",
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-26",
+      "location": "北京",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026广东省青少年高尔夫球冠军巡回赛-第五站-2026-09-25",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -16247,7 +16247,7 @@
       "name": "2026格林青少年高尔夫球系列赛–第三站",
       "startDate": "2026-09-26",
       "endDate": "2026-09-27",
-      "location": "广州南沙高尔夫球会",
+      "location": "广东·广州",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -16642,7 +16642,7 @@
       "name": "2026上海市青少年高尔夫球挑战赛 暨 上海平安人寿杯 第四站",
       "startDate": "2026-09-27",
       "endDate": "2026-09-27",
-      "location": "PGA安灜（森林）",
+      "location": "上海PGA安瀛高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -19292,40 +19292,6 @@
       "notes": ""
     },
     {
-      "id": "2026-北京高协-北京青少年高尔夫球邀请赛-第六站-2026-10-17",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026“北京高协” 北京青少年高尔夫球邀请赛 第六站",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-18",
-      "location": "待定/年历未列",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "dazheng-5144",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -19439,6 +19405,40 @@
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
       "name": "2026格林青少年高尔夫球系列赛–第四站",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-18",
+      "location": "东莞观澜湖高尔夫球会·罗保球场",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
+      "statusCode": "watch",
+      "statusLabel": "关注公告",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "2026格林青少年高尔夫球系列赛-挑战赛-2026-10-17",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026格林青少年高尔夫球系列赛–挑战赛",
       "startDate": "2026-10-17",
       "endDate": "2026-10-18",
       "location": "东莞观澜湖高尔夫球会·罗保球场",
