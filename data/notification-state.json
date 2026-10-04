@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-09-30T11:21:27.259Z",
+  "updatedAt": "2026-10-04T05:48:10.410Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -729,34 +729,21 @@
     "external:dazheng:5259": "2026-09-30T11:21:24.779Z",
     "id:dazheng-5257": "2026-09-30T11:21:24.779Z",
     "identity:amateur:2026年比音勒芬全国业余高尔夫球巡回赛总决赛": "2026-09-30T11:21:24.779Z",
-    "external:dazheng:5257": "2026-09-30T11:21:24.779Z"
+    "external:dazheng:5257": "2026-09-30T11:21:24.779Z",
+    "id:dazheng-5261": "2026-10-04T05:48:08.421Z",
+    "identity:junior:2026njdpcwjpgainvitationaljuniormasters华东资格赛暨2026青少年高尔夫嘉年华挑战赛wagr积分赛": "2026-10-04T05:48:08.421Z",
+    "external:dazheng:5261": "2026-10-04T05:48:08.421Z",
+    "id:dazheng-5262": "2026-10-04T05:48:08.421Z",
+    "identity:junior:2026fvfwjgr嘉年华国际青少年高尔夫排名认证赛浙江赛区第十站横店禹山站个人比杆赛亲子赛团队赛": "2026-10-04T05:48:08.421Z",
+    "external:dazheng:5262": "2026-10-04T05:48:08.421Z",
+    "id:dazheng-5263": "2026-10-04T05:48:08.421Z",
+    "identity:junior:2026fvfwjgr嘉年华国际青少年高尔夫排名认证赛浙江赛区第十一站浙江龙山湖站": "2026-10-04T05:48:08.421Z",
+    "external:dazheng:5263": "2026-10-04T05:48:08.421Z",
+    "id:dazheng-5264": "2026-10-04T05:48:08.421Z",
+    "identity:junior:2026fvfwjgr嘉年华国际青少年高尔夫排名认证赛上海赛区第十七站个人赛亲子赛团队赛": "2026-10-04T05:48:08.421Z",
+    "external:dazheng:5264": "2026-10-04T05:48:08.421Z"
   },
   "messages": {
-    "9033df664541db236e2c59842706ff3db954dea566ef9cdd2983871ad667525a": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/8/19 15:40:58\n\n**【报警】3 个信息源更新异常**\n- 大正高尔夫｜连续失败 1 次｜fetch failed\n- 大正官方公告｜连续失败 1 次｜Dazheng announcement pages all failed\n- 中高协官方公告｜连续失败 1 次｜fetch failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-19T07:42:43.293Z",
-      "updatedAt": "2026-08-19T07:42:44.993Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-19T07:42:44.494Z",
-          "sentAt": "2026-08-19T07:42:44.494Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-19T07:42:44.993Z",
-          "sentAt": "2026-08-19T07:42:44.993Z",
-          "error": ""
-        }
-      }
-    },
     "de80c3015d0b32f6636badb65ee9f9f82dde319c5c0ebacc0925ae8798775d83": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2228,6 +2215,31 @@
           "status": "sent",
           "attemptedAt": "2026-09-30T11:21:27.259Z",
           "sentAt": "2026-09-30T11:21:27.259Z",
+          "error": ""
+        }
+      }
+    },
+    "0ec0beed22e114ea96dcd7a2ff9b8bd4a8770d754fd750c9f695de6a34e583cb": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/10/4 13:48:08\n\n**新开放报名 4 场**\n- **【重点】新开放报名｜2026-11-07 至 2026-11-08｜2026NJDP-CWJPGA INVITATIONAL JUNIOR MASTERS -华东资格赛暨2026青少年高尔夫嘉年华挑战赛WAGR积分赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5261)**\n- **【重点】新开放报名｜2026-11-08｜2026 FVF-WJGR嘉年华国际青少年高尔夫排名认证赛浙江赛区第十站 - 横店禹山站（个人比杆赛+亲子赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5262)**\n- **【重点】新开放报名｜2026-11-15｜2026 FVF-WJGR嘉年华国际青少年高尔夫排名认证赛浙江赛区第十一站-浙江龙山湖站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5263)**\n- **【重点】新开放报名｜2026-11-22｜2026 FVF‑WJGR嘉年华国际青少年高尔夫排名认证赛上海赛区第十七站（个人赛、亲子赛、团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5264)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-10-04T05:48:09.230Z",
+      "updatedAt": "2026-10-04T05:48:10.410Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-04T05:48:09.920Z",
+          "sentAt": "2026-10-04T05:48:09.920Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-04T05:48:10.410Z",
+          "sentAt": "2026-10-04T05:48:10.410Z",
           "error": ""
         }
       }
