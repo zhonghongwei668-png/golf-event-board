@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T19:04:10.033Z",
+  "generatedAt": "2026-10-07T13:17:22.510Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12542,40 +12542,6 @@
       "notes": ""
     },
     {
-      "id": "2026浙江省青少年高尔夫球巡回赛第五站-2026-08-30",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026浙江省青少年高尔夫球巡回赛第五站",
-      "startDate": "2026-08-30",
-      "endDate": "2026-08-31",
-      "location": "金华横店禹山高尔夫球场",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "2026年沃尔沃全国青少年比洞锦标赛选拔赛第一站-2026-08-31",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -16345,14 +16311,14 @@
       "notes": ""
     },
     {
-      "id": "2026浙江省青少年高尔夫球巡回赛第六站-2026-09-26",
+      "id": "2026浙江省青少年高尔夫球巡回赛第五站-2026-09-26",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
-      "name": "2026浙江省青少年高尔夫球巡回赛第六站",
+      "name": "2026浙江省青少年高尔夫球巡回赛第五站",
       "startDate": "2026-09-26",
       "endDate": "2026-09-27",
-      "location": "嘉兴海宁尖山高尔夫球场",
+      "location": "安吉龙王溪高尔夫球场",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -20767,6 +20733,40 @@
       "externalIds": {
         "dazheng": "5258"
       },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "2026浙江省青少年高尔夫球巡回赛第六站-2026-10-24",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026浙江省青少年高尔夫球巡回赛第六站",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-25",
+      "location": "湖州德清龙山湖高尔夫球场",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
+      "statusCode": "watch",
+      "statusLabel": "关注公告",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
       "updatedFromOfficial": true,
       "notes": ""
     },
