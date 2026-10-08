@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T13:23:56.893Z",
+  "generatedAt": "2026-10-08T19:26:01.824Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -18265,8 +18265,8 @@
       "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "running",
-      "statusLabel": "比赛中",
+      "statusCode": "past",
+      "statusLabel": "已结束",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -18343,8 +18343,8 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "",
-      "statusCode": "pending",
-      "statusLabel": "待开放",
+      "statusCode": "running",
+      "statusLabel": "比赛中",
       "sourceSystem": "CLPGA官网/人工核实 + CLPGA官网接口",
       "scheduleAuthority": "official_api",
       "seriesLabel": "",
@@ -24609,26 +24609,6 @@
       "matchedEventIds": [
         "2026-战马全能小将杯-中国青少年高尔夫球锦标赛-2026-05-03"
       ]
-    },
-    {
-      "id": "cga-announcement-2449",
-      "sourceId": "2449",
-      "title": "中国高尔夫球协会关于印发《2026年全国业余常青高尔夫球公开赛竞赛规程》的通知",
-      "publishedAt": "2026-08-24",
-      "kind": "regulation",
-      "source": "中国高尔夫球协会官方公告",
-      "url": "https://www.cgagolf.org.cn/xnews_details/2449.html",
-      "matchedEventIds": []
-    },
-    {
-      "id": "cga-announcement-2448",
-      "sourceId": "2448",
-      "title": "中国高尔夫球协会关于印发2026年比音勒芬全国业余高尔夫球精英赛竞赛总规程的通知",
-      "publishedAt": "2026-08-24",
-      "kind": "regulation",
-      "source": "中国高尔夫球协会官方公告",
-      "url": "https://www.cgagolf.org.cn/xnews_details/2448.html",
-      "matchedEventIds": []
     },
     {
       "id": "rungolf-announcement-2603",
