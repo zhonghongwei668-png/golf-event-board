@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-08T05:58:48.053Z",
+  "updatedAt": "2026-10-08T13:24:01.021Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -760,59 +760,20 @@
     "external:dazheng:5269": "2026-10-08T05:58:43.940Z",
     "id:dazheng-5270": "2026-10-08T05:58:43.940Z",
     "identity:junior:第16届校园高尔夫球竞赛": "2026-10-08T05:58:43.940Z",
-    "external:dazheng:5270": "2026-10-08T05:58:43.940Z"
+    "external:dazheng:5270": "2026-10-08T05:58:43.940Z",
+    "id:dazheng-5272": "2026-10-08T13:23:56.893Z",
+    "external:dazheng:5272": "2026-10-08T13:23:56.893Z",
+    "id:dazheng-5273": "2026-10-08T13:23:56.893Z",
+    "identity:junior:2026njdpcwjpgainvitationaljuniormasters厦门资格赛暨wagr开卡赛东方站第2站wagrjgstugr": "2026-10-08T13:23:56.893Z",
+    "external:dazheng:5273": "2026-10-08T13:23:56.893Z",
+    "id:dazheng-5271": "2026-10-08T13:23:56.893Z",
+    "identity:junior:润华杯2026第十一届南京市校园体育俱乐部高尔夫球联赛系列赛第四站": "2026-10-08T13:23:56.893Z",
+    "external:dazheng:5271": "2026-10-08T13:23:56.893Z",
+    "id:dazheng-5274": "2026-10-08T13:23:56.893Z",
+    "identity:junior:fvf2026青少年高尔夫嘉年华挑战赛深圳赛区第五站东莞凤凰山站亲子师徒好朋友配对赛个人赛团队赛": "2026-10-08T13:23:56.893Z",
+    "external:dazheng:5274": "2026-10-08T13:23:56.893Z"
   },
   "messages": {
-    "114cade0da798336f919b5ef12a64f7648a1e87278f0a82cf5fc322c4dbbfdce": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/24 15:18:46\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-09-26 至 2026-09-27｜2026“少青杯”广州市青少年高尔夫球积分巡回赛-总决赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5169)**\n- **【重点】新开放报名｜2026-09-26｜2026FALA·启梦之路UI2高尔夫球（北方区）挑战赛北京明珠站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5170)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-24T07:18:47.547Z",
-      "updatedAt": "2026-08-24T07:18:49.802Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-24T07:18:49.329Z",
-          "sentAt": "2026-08-24T07:18:49.329Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-24T07:18:49.802Z",
-          "sentAt": "2026-08-24T07:18:49.802Z",
-          "error": ""
-        }
-      }
-    },
-    "6475e19a76c15a49d1e888f231a0aa82426049f09e9402d4aba96b6d887cbf1f": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/24 16:25:24\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-09-19｜NSP-2026青少年高尔夫嘉年华挑战赛广州赛区第十站-清远假日半岛站（亲子/师徒/好朋友配对赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5171)**\n- **【重点】新开放报名｜2026-10-24 至 2026-10-25｜2026年广东省中小学生高尔夫球锦标赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5172)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-24T08:25:25.763Z",
-      "updatedAt": "2026-08-24T08:25:27.480Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-24T08:25:26.986Z",
-          "sentAt": "2026-08-24T08:25:26.986Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-24T08:25:27.480Z",
-          "sentAt": "2026-08-24T08:25:27.480Z",
-          "error": ""
-        }
-      }
-    },
     "20137f52117cfb1aa7754d37bb30a2678eb6addc1d1d0936854d488ac320a5ae": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2259,6 +2220,56 @@
           "status": "sent",
           "attemptedAt": "2026-10-08T05:58:48.053Z",
           "sentAt": "2026-10-08T05:58:48.053Z",
+          "error": ""
+        }
+      }
+    },
+    "5b89b57c4d1db5fe233855a9e4e7b25e94abffe8e2d0e677f7bc5befcb5484f0": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/10/8 21:23:37\n\n**【恢复】1 个信息源已恢复**\n- 中高协官方公告｜本次抓取 3 条\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-10-08T13:23:57.722Z",
+      "updatedAt": "2026-10-08T13:23:59.442Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-08T13:23:58.986Z",
+          "sentAt": "2026-10-08T13:23:58.986Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-08T13:23:59.442Z",
+          "sentAt": "2026-10-08T13:23:59.442Z",
+          "error": ""
+        }
+      }
+    },
+    "a1f9ec73e6c08ee9b66bd743cceeb45fc2fd0b1a6b1b3ce7b109d58f722bfed2": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/10/8 21:23:56\n\n**新开放报名 3 场**\n- **【重点】新开放报名｜2026-10-31 至 2026-11-01｜2026 NJDP-CWJPGA Invitational Junior Masters-厦门资格赛暨WAGR开卡赛-东方站第2站（WAGR+JGS+TUGR），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5273)**\n- **【重点】新开放报名｜2026-11-08｜“润华杯”•2026第十一届南京市校园体育俱乐部高尔夫球联赛系列赛第四站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5271)**\n- **【重点】新开放报名｜2026-11-14｜FVF-2026青少年高尔夫嘉年华挑战赛深圳赛区第五站-东莞凤凰山站（亲子/师徒/好朋友配对赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5274)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-10-08T13:23:59.943Z",
+      "updatedAt": "2026-10-08T13:24:01.021Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-08T13:24:00.538Z",
+          "sentAt": "2026-10-08T13:24:00.538Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-08T13:24:01.021Z",
+          "sentAt": "2026-10-08T13:24:01.021Z",
           "error": ""
         }
       }
