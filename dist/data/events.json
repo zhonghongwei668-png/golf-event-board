@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T06:04:35.970Z",
+  "generatedAt": "2026-10-09T13:12:11.852Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -12818,40 +12818,6 @@
       "notes": ""
     },
     {
-      "id": "盐城市青少年高尔夫球精英赛-第三站-2026-09-01",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "盐城市青少年高尔夫球精英赛-第三站",
-      "startDate": "2026-09-01",
-      "endDate": "2026-10-01",
-      "location": "江苏省高尔夫球场",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "7",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "逐梦果岭青少年高尔夫系列赛-第一站-2026-06-01",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -16423,40 +16389,6 @@
       "notes": ""
     },
     {
-      "id": "江苏省高尔夫球巡回赛第六站-2026-09-26",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "江苏省高尔夫球巡回赛第六站",
-      "startDate": "2026-09-26",
-      "endDate": "2026-09-27",
-      "location": "南通或者宿迁",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "5",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "dazheng-5191",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -17449,6 +17381,40 @@
       "notes": ""
     },
     {
+      "id": "盐城市青少年高尔夫球精英赛-第三站-2026-10-02",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "盐城市青少年高尔夫球精英赛-第三站",
+      "startDate": "2026-10-02",
+      "endDate": "2026-10-02",
+      "location": "江苏省盐城市",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "7",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "dazheng-5062",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -17709,7 +17675,7 @@
       "name": "2026全国青少年高尔夫球队际锦标赛总决赛",
       "startDate": "2026-10-04",
       "endDate": "2026-10-07",
-      "location": "待定/年历未列",
+      "location": "大师高尔夫·森林假日俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -17953,6 +17919,40 @@
       "notes": ""
     },
     {
+      "id": "江苏省高尔夫球巡回赛第六站-2026-10-05",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "江苏省高尔夫球巡回赛第六站",
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-06",
+      "location": "江苏省宿迁市",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "5",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "dazheng-5151",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -18071,7 +18071,7 @@
       "name": "2026 “北京高协”北京青少年高尔夫成长系列赛 第十五站",
       "startDate": "2026-10-06",
       "endDate": "2026-10-06",
-      "location": "待定/年历未列",
+      "location": "北京东方天星高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -19938,43 +19938,6 @@
       "seriesLabel": "青少赛-大正高尔夫",
       "externalIds": {
         "dazheng": "5241"
-      },
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "dazheng-5217",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026迈阅青少年高尔夫巡回赛·北京总决赛",
-      "startDate": "2026-10-18",
-      "endDate": "2026-10-18",
-      "location": "北京东方天星高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5217",
-      "sourceLinks": [
-        {
-          "label": "大正赛事详情",
-          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5217"
-        }
-      ],
-      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5217",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-11 至 2026-10-16。",
-      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
-      "registrationStart": "2026-09-11",
-      "registrationEnd": "2026-10-16",
-      "registrationText": "2026年09月11日 ~ 10月16日",
-      "registrationOpen": true,
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": true,
-      "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
-      "sourceSystem": "大正高尔夫 · 青少赛-迈阅巡回赛",
-      "scheduleAuthority": "signup_detail",
-      "seriesLabel": "青少赛-迈阅巡回赛",
-      "externalIds": {
-        "dazheng": "5217"
       },
       "updatedFromOfficial": true,
       "notes": ""
@@ -21992,6 +21955,43 @@
       "notes": ""
     },
     {
+      "id": "dazheng-5278",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "FVF-2026青少年高尔夫嘉年华挑战赛-湖北赛区第四站 -武汉东方站（亲子/配对赛+个人赛+团队赛）",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "location": "武汉东方国际高尔夫乡村俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5278",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5278"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5278",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-09 至 2026-10-30。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-10-09",
+      "registrationEnd": "2026-10-30",
+      "registrationText": "2026年10月09 ~ 30日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-嘉年华挑战赛",
+      "externalIds": {
+        "dazheng": "5278"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026保利全国青少年高尔夫球公开赛-2026-11-03",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -22026,6 +22026,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5276",
+      "category": "amateur",
+      "categoryLabel": "业余赛",
+      "color": "#167e75",
+      "name": "2026超级荔枝全国业余高尔夫球希望赛-海南站",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-08",
+      "location": "海口观澜湖高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5276",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5276"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5276",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-09 至 2026-11-04。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-10-09",
+      "registrationEnd": "2026-11-04",
+      "registrationText": "2026年10月09日 ~ 11月04日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-超级荔枝",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-超级荔枝",
+      "externalIds": {
+        "dazheng": "5276"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -22140,6 +22177,43 @@
       "notes": ""
     },
     {
+      "id": "dazheng-5261",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026-CWJPGA青少年高尔夫嘉年华挑战赛WAGR积分邀请赛-上海协和站（WAGR+JGS+TUGR+WJGR）",
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-08",
+      "location": "上海协和高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5261",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5261"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5261",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-04 至 2026-11-06。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-10-04",
+      "registrationEnd": "2026-11-06",
+      "registrationText": "2026年10月04日 ~ 11月06日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-嘉年华挑战赛",
+      "externalIds": {
+        "dazheng": "5261"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026福建省青少年高尔夫球公开赛-第四站-2026-11-07",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -22174,38 +22248,38 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5261",
+      "id": "dazheng-5217",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
-      "name": "2026NJDP-CWJPGA INVITATIONAL JUNIOR MASTERS -华东资格赛暨2026青少年高尔夫嘉年华挑战赛WAGR积分赛",
+      "name": "2026迈阅青少年高尔夫巡回赛·北京总决赛",
       "startDate": "2026-11-07",
-      "endDate": "2026-11-08",
-      "location": "上海协和高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5261",
+      "endDate": "2026-11-07",
+      "location": "北京东方天星高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5217",
       "sourceLinks": [
         {
           "label": "大正赛事详情",
-          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5261"
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5217"
         }
       ],
-      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5261",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-04 至 2026-11-06。",
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5217",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-11 至 2026-11-06。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
-      "registrationStart": "2026-10-04",
+      "registrationStart": "2026-09-11",
       "registrationEnd": "2026-11-06",
-      "registrationText": "2026年10月04日 ~ 11月06日",
+      "registrationText": "2026年09月11日 ~ 11月06日",
       "registrationOpen": true,
       "registrationClosed": false,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
       "statusCode": "open",
       "statusLabel": "可报名",
-      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
+      "sourceSystem": "大正高尔夫 · 青少赛-迈阅巡回赛",
       "scheduleAuthority": "signup_detail",
-      "seriesLabel": "青少赛-嘉年华挑战赛",
+      "seriesLabel": "青少赛-迈阅巡回赛",
       "externalIds": {
-        "dazheng": "5261"
+        "dazheng": "5217"
       },
       "updatedFromOfficial": true,
       "notes": ""
@@ -22352,6 +22426,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5277",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "FVF-2026青少年高尔夫嘉年华挑战赛广州赛区第十二站-佛山云东海站（亲子/师徒/好朋友配对赛+个人赛+团队赛）",
+      "startDate": "2026-11-08",
+      "endDate": "2026-11-09",
+      "location": "保利佛山云东海高尔夫球会",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5277",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5277"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5277",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-09 至 2026-11-06。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-10-09",
+      "registrationEnd": "2026-11-06",
+      "registrationText": "2026年10月09日 ~ 11月06日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-嘉年华挑战赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-嘉年华挑战赛",
+      "externalIds": {
+        "dazheng": "5277"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },

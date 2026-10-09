@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-08T13:24:01.021Z",
+  "updatedAt": "2026-10-09T13:12:14.240Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -771,34 +771,19 @@
     "external:dazheng:5271": "2026-10-08T13:23:56.893Z",
     "id:dazheng-5274": "2026-10-08T13:23:56.893Z",
     "identity:junior:fvf2026青少年高尔夫嘉年华挑战赛深圳赛区第五站东莞凤凰山站亲子师徒好朋友配对赛个人赛团队赛": "2026-10-08T13:23:56.893Z",
-    "external:dazheng:5274": "2026-10-08T13:23:56.893Z"
+    "external:dazheng:5274": "2026-10-08T13:23:56.893Z",
+    "id:dazheng-5278": "2026-10-09T13:12:11.852Z",
+    "identity:junior:fvf2026青少年高尔夫嘉年华挑战赛湖北赛区第四站武汉东方站亲子配对赛个人赛团队赛": "2026-10-09T13:12:11.852Z",
+    "external:dazheng:5278": "2026-10-09T13:12:11.852Z",
+    "id:dazheng-5276": "2026-10-09T13:12:11.852Z",
+    "identity:amateur:2026超级荔枝全国业余高尔夫球希望赛海南站": "2026-10-09T13:12:11.852Z",
+    "external:dazheng:5276": "2026-10-09T13:12:11.852Z",
+    "identity:junior:2026cwjpga青少年高尔夫嘉年华挑战赛wagr积分邀请赛上海协和站wagrjgstugrwjgr": "2026-10-09T13:12:11.852Z",
+    "id:dazheng-5277": "2026-10-09T13:12:11.852Z",
+    "identity:junior:fvf2026青少年高尔夫嘉年华挑战赛广州赛区第十二站佛山云东海站亲子师徒好朋友配对赛个人赛团队赛": "2026-10-09T13:12:11.852Z",
+    "external:dazheng:5277": "2026-10-09T13:12:11.852Z"
   },
   "messages": {
-    "20137f52117cfb1aa7754d37bb30a2678eb6addc1d1d0936854d488ac320a5ae": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/8/24 17:28:52\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-30 至 2026-10-03｜2026 费度杯 · 深圳锦标赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5173)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-24T09:28:53.898Z",
-      "updatedAt": "2026-08-24T09:28:56.225Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-24T09:28:55.700Z",
-          "sentAt": "2026-08-24T09:28:55.700Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-24T09:28:56.225Z",
-          "sentAt": "2026-08-24T09:28:56.225Z",
-          "error": ""
-        }
-      }
-    },
     "5f76d78b519d1b9f155e027228e6547ee481ac51bd2e656514c3311a3be2d383": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2270,6 +2255,31 @@
           "status": "sent",
           "attemptedAt": "2026-10-08T13:24:01.021Z",
           "sentAt": "2026-10-08T13:24:01.021Z",
+          "error": ""
+        }
+      }
+    },
+    "65e248ea4be674471d41387b00a04e05126cea5cb97df77c8869983daf3cbaba": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/10/9 21:12:11\n\n**新开放报名 3 场**\n- **【重点】新开放报名｜2026-11-01｜FVF-2026青少年高尔夫嘉年华挑战赛-湖北赛区第四站 -武汉东方站（亲子/配对赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5278)**\n- **【重点】新开放报名｜2026-11-05 至 2026-11-08｜2026超级荔枝全国业余高尔夫球希望赛-海南站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5276)**\n- **【重点】新开放报名｜2026-11-08 至 2026-11-09｜FVF-2026青少年高尔夫嘉年华挑战赛广州赛区第十二站-佛山云东海站（亲子/师徒/好朋友配对赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5277)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-10-09T13:12:12.955Z",
+      "updatedAt": "2026-10-09T13:12:14.240Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-09T13:12:13.767Z",
+          "sentAt": "2026-10-09T13:12:13.767Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-09T13:12:14.240Z",
+          "sentAt": "2026-10-09T13:12:14.240Z",
           "error": ""
         }
       }
