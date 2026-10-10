@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T05:47:55.909Z",
+  "generatedAt": "2026-10-10T12:27:15.303Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -22184,34 +22184,42 @@
       "notes": ""
     },
     {
-      "id": "dazheng-5255",
+      "id": "gcct全国青少年高尔夫球技能等级一级赛-2026-11-09",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
-      "name": "GCCT青少年高尔夫球技能等级一级赛",
+      "name": "GCCT全国青少年高尔夫球技能等级一级赛",
       "startDate": "2026-11-06",
       "endDate": "2026-11-09",
       "location": "河北廊坊艾力枫社高尔夫俱乐部",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5255",
+      "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
+        {
+          "label": "www.cgagolf.org.cn/xnews_details/2253.html",
+          "url": "https://www.cgagolf.org.cn/xnews_details/2253.html"
+        },
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        },
         {
           "label": "大正赛事详情",
           "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5255"
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5255",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-28 至 2026-11-05。",
-      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
-      "registrationStart": "2026-09-28",
+      "signupMethod": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "requirement": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "registrationStart": "2026-10-10",
       "registrationEnd": "2026-11-05",
-      "registrationText": "2026年09月28日 ~ 11月05日",
+      "registrationText": "2026年10月10日 ~ 11月05日",
       "registrationOpen": true,
       "registrationClosed": false,
       "registrationStatusAuthoritative": true,
-      "competitionGrade": "",
+      "competitionGrade": "3",
       "statusCode": "open",
       "statusLabel": "可报名",
-      "sourceSystem": "大正高尔夫 · 青少赛-GCCT",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口 + 大正高尔夫 · 青少赛-GCCT",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-GCCT",
       "externalIds": {
@@ -22535,44 +22543,6 @@
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
       "competitionGrade": "4",
-      "statusCode": "watch",
-      "statusLabel": "关注公告",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "gcct全国青少年高尔夫球技能等级一级赛-2026-11-09",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "GCCT全国青少年高尔夫球技能等级一级赛",
-      "startDate": "2026-11-09",
-      "endDate": "2026-11-15",
-      "location": "待定/年历未列",
-      "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
-      "sourceLinks": [
-        {
-          "label": "www.cgagolf.org.cn/xnews_details/2253.html",
-          "url": "https://www.cgagolf.org.cn/xnews_details/2253.html"
-        },
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "requirement": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "3",
       "statusCode": "watch",
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -24719,6 +24689,18 @@
     }
   ],
   "announcements": [
+    {
+      "id": "cga-announcement-2474",
+      "sourceId": "2474",
+      "title": "中国高尔夫球协会关于印发GCCT全国青少年高尔夫球技能等级一级赛（2026）竞赛规程的通知",
+      "publishedAt": "2026-10-10",
+      "kind": "regulation",
+      "source": "中国高尔夫球协会官方公告",
+      "url": "https://www.cgagolf.org.cn/xnews_details/2474.html",
+      "matchedEventIds": [
+        "gcct全国青少年高尔夫球技能等级一级赛-2026-11-09"
+      ]
+    },
     {
       "id": "cga-announcement-2468",
       "sourceId": "2468",
