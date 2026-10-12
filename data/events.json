@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T05:51:49.600Z",
+  "generatedAt": "2026-10-12T15:16:55.407Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -18579,7 +18579,7 @@
       "name": "2026迈阅青少年高尔夫巡回赛（浙江第三站）",
       "startDate": "2026-10-11",
       "endDate": "2026-10-11",
-      "location": "宁波启新高尔夫球场",
+      "location": "浙江",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -21670,6 +21670,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5283",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026江苏省青少年高尔夫球冠军赛",
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-01",
+      "location": "南京苏宁钟山国际高尔夫球俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5283",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5283"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5283",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-12 至 2026-10-30。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-10-12",
+      "registrationEnd": "2026-10-30",
+      "registrationText": "2026年10月12 ~ 30日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5283"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
