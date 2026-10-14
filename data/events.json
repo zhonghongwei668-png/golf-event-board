@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T14:35:31.064Z",
+  "generatedAt": "2026-10-14T04:48:42.042Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -11087,14 +11087,14 @@
       "notes": ""
     },
     {
-      "id": "东方精英少年赛第四站-2026-08-23",
+      "id": "东方精英少年赛第三站-2026-08-23",
       "category": "junior",
       "categoryLabel": "青少年赛",
       "color": "#c66a1f",
-      "name": "东方精英少年赛第四站",
+      "name": "东方精英少年赛第三站",
       "startDate": "2026-08-23",
       "endDate": "2026-08-23",
-      "location": "福建厦门",
+      "location": "东方（厦门）高尔夫乡村俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
       "sourceLinks": [
         {
@@ -11796,40 +11796,6 @@
       "externalIds": {
         "dazheng": "5067"
       },
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "东方精英少年赛第三站-2026-08-26",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "东方精英少年赛第三站",
-      "startDate": "2026-08-26",
-      "endDate": "2026-08-26",
-      "location": "东方（厦门）高尔夫乡村俱乐部",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "7",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -18314,6 +18280,40 @@
       "notes": ""
     },
     {
+      "id": "东方精英少年赛第四站-2026-10-07",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "东方精英少年赛第四站",
+      "startDate": "2026-10-07",
+      "endDate": "2026-10-07",
+      "location": "东方（厦门）高尔夫俱乐部BC场",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "7",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "clpga-8115",
       "category": "women",
       "categoryLabel": "女子赛",
@@ -22737,6 +22737,43 @@
       "scheduleAuthority": "official_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5285",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026 SLGS FCG中国区青少年系列赛-广东第9站（WAGR+JGS积分）",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-15",
+      "location": "珠海东方高尔夫球会",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5285",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5285"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5285",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-14 至 2026-11-13。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-10-14",
+      "registrationEnd": "2026-11-13",
+      "registrationText": "2026年10月14日 ~ 11月13日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-超级荔枝",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-超级荔枝",
+      "externalIds": {
+        "dazheng": "5285"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
