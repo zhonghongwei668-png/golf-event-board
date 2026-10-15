@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T09:25:38.962Z",
+  "generatedAt": "2026-10-15T14:24:47.037Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -19454,17 +19454,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5238",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-17 至 2026-10-16。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-09-17 至 2026-10-16。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-09-17",
       "registrationEnd": "2026-10-16",
       "registrationText": "2026年09月17日 ~ 10月16日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -20267,43 +20267,6 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "dazheng-5256",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026 PGA 中国校际高尔夫球锦标赛-大湾区",
-      "startDate": "2026-10-24",
-      "endDate": "2026-10-25",
-      "location": "东莞观澜湖-利百特球场",
-      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5256",
-      "sourceLinks": [
-        {
-          "label": "大正赛事详情",
-          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5256"
-        }
-      ],
-      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5256",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-28 至 2026-10-22。",
-      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
-      "registrationStart": "2026-09-28",
-      "registrationEnd": "2026-10-22",
-      "registrationText": "2026年09月28日 ~ 10月22日",
-      "registrationOpen": true,
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": true,
-      "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
-      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
-      "scheduleAuthority": "signup_detail",
-      "seriesLabel": "青少赛-大正高尔夫",
-      "externalIds": {
-        "dazheng": "5256"
-      },
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -23094,6 +23057,43 @@
       "seriesLabel": "青少赛-嘉年华挑战赛",
       "externalIds": {
         "dazheng": "5263"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5256",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026 PGA 中国校际高尔夫球锦标赛-大湾区",
+      "startDate": "2026-11-15",
+      "endDate": "2026-11-15",
+      "location": "广州南沙高尔夫球会",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5256",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5256"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5256",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-09-28 至 2026-11-14。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-09-28",
+      "registrationEnd": "2026-11-14",
+      "registrationText": "2026年09月28日 ~ 11月14日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5256"
       },
       "updatedFromOfficial": true,
       "notes": ""
