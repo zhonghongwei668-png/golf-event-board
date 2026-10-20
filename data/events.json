@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T09:38:49.542Z",
+  "generatedAt": "2026-10-20T14:29:07.481Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -22642,45 +22642,6 @@
       "notes": ""
     },
     {
-      "id": "clpga-8118",
-      "category": "women",
-      "categoryLabel": "女子赛",
-      "color": "#b8325f",
-      "name": "中国女子精英赛",
-      "startDate": "2026-11-12",
-      "endDate": "2026-11-14",
-      "location": "广州华美麓湖高尔夫俱乐部，广东",
-      "sourceUrl": "https://www.clpga.org/Match?lang=cn&id=8118",
-      "sourceLinks": [
-        {
-          "label": "赛程/详情",
-          "url": "https://www.clpga.org/Match?lang=cn&id=8118"
-        },
-        {
-          "label": "报名页",
-          "url": "https://www.clpga.org/SignUp?lang=cn&mt_id=8118"
-        }
-      ],
-      "signupUrl": "https://www.clpga.org/SignUp?lang=cn&mt_id=8118",
-      "signupMethod": "报名未公开/未开放",
-      "requirement": "以CLPGA/赛事官方资格排序、会员体系、外卡及单站通知为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "报名未公开/未开放",
-      "registrationOpen": false,
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "",
-      "statusCode": "pending",
-      "statusLabel": "待开放",
-      "sourceSystem": "CLPGA官网/人工核实 + CLPGA官网接口",
-      "scheduleAuthority": "official_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "2026浙江省青少年高尔夫球巡回赛第七站-2026-11-13",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -22712,6 +22673,45 @@
       "seriesLabel": "",
       "externalIds": {},
       "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "clpga-8118",
+      "category": "women",
+      "categoryLabel": "女子赛",
+      "color": "#b8325f",
+      "name": "中国女子精英赛",
+      "startDate": "2026-11-13",
+      "endDate": "2026-11-15",
+      "location": "广州华美麓湖高尔夫俱乐部，广东",
+      "sourceUrl": "https://www.clpga.org/Match?lang=cn&id=8118",
+      "sourceLinks": [
+        {
+          "label": "赛程/详情",
+          "url": "https://www.clpga.org/Match?lang=cn&id=8118"
+        },
+        {
+          "label": "报名页",
+          "url": "https://www.clpga.org/SignUp?lang=cn&mt_id=8118"
+        }
+      ],
+      "signupUrl": "https://www.clpga.org/SignUp?lang=cn&mt_id=8118",
+      "signupMethod": "报名未公开/未开放",
+      "requirement": "以CLPGA/赛事官方资格排序、会员体系、外卡及单站通知为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "报名未公开/未开放",
+      "registrationOpen": false,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "",
+      "statusCode": "pending",
+      "statusLabel": "待开放",
+      "sourceSystem": "CLPGA官网/人工核实",
+      "scheduleAuthority": "manual",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": false,
       "notes": ""
     },
     {
