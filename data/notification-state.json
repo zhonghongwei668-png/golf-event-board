@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-22T09:38:02.086Z",
+  "updatedAt": "2026-10-23T09:35:41.047Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -850,34 +850,12 @@
     "external:dazheng:5302": "2026-10-22T09:37:58.971Z",
     "id:dazheng-5301": "2026-10-22T09:37:58.971Z",
     "identity:junior:2026fala长三角青少年高尔夫球员精英赛第八站": "2026-10-22T09:37:58.971Z",
-    "external:dazheng:5301": "2026-10-22T09:37:58.971Z"
+    "external:dazheng:5301": "2026-10-22T09:37:58.971Z",
+    "id:dazheng-5303": "2026-10-23T09:35:38.493Z",
+    "identity:junior:fvf2026青少年高尔夫嘉年华挑战赛广西赛区年终赛南宁青秀山站亲子师徒好朋友配对赛个人赛团队赛": "2026-10-23T09:35:38.493Z",
+    "external:dazheng:5303": "2026-10-23T09:35:38.493Z"
   },
   "messages": {
-    "13fc0417dd8d3344ca1becff1884eab1366f54367bbab0c7d596a9a2880d21b3": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/9/1 03:07:17\n\n**【报警】2 个信息源更新异常**\n- 大正高尔夫｜连续失败 6 次｜56 个详情页读取失败：5164: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5164；5162: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5162；5153: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5153\n- 大正官方公告｜连续失败 6 次｜Dazheng announcement pages all failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-08-31T19:07:32.356Z",
-      "updatedAt": "2026-08-31T19:07:33.835Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-31T19:07:33.308Z",
-          "sentAt": "2026-08-31T19:07:33.308Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-08-31T19:07:33.835Z",
-          "sentAt": "2026-08-31T19:07:33.835Z",
-          "error": ""
-        }
-      }
-    },
     "20a438ff06ac2aaa6cb655f15094189552e30cbc22bbc94144d95cfd21a4b031": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2349,6 +2327,31 @@
           "status": "sent",
           "attemptedAt": "2026-10-22T09:38:02.086Z",
           "sentAt": "2026-10-22T09:38:02.086Z",
+          "error": ""
+        }
+      }
+    },
+    "f7a6164141b9113f9f17518c6bfe22a8fd88d0d6c2a998dd88846a6454a49272": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/10/23 17:35:38\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-11-28｜FVF-2026青少年高尔夫嘉年华挑战赛广西赛区年终赛-南宁青秀山站（亲子/师徒/好朋友配对赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5303)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-10-23T09:35:39.457Z",
+      "updatedAt": "2026-10-23T09:35:41.047Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-23T09:35:40.516Z",
+          "sentAt": "2026-10-23T09:35:40.516Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-23T09:35:41.047Z",
+          "sentAt": "2026-10-23T09:35:41.047Z",
           "error": ""
         }
       }
