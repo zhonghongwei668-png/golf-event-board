@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-10-25T04:36:21.741Z",
+  "updatedAt": "2026-10-26T04:41:26.294Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -857,34 +857,16 @@
     "id:dazheng-5304": "2026-10-24T16:58:01.403Z",
     "identity:junior:2026珠海横琴parteen标杆少年高尔夫球系列赛第五站": "2026-10-24T16:58:01.403Z",
     "external:dazheng:5304": "2026-10-24T16:58:01.403Z",
-    "identity:junior:2026珠海横琴parteen标杆少年高尔夫球系列赛第五站wagr积分赛": "2026-10-25T04:36:21.741Z"
+    "identity:junior:2026珠海横琴parteen标杆少年高尔夫球系列赛第五站wagr积分赛": "2026-10-25T04:36:21.741Z",
+    "id:dazheng-5305": "2026-10-26T04:41:24.156Z",
+    "identity:junior:2026年苏北青少年高尔夫球精英赛总决赛": "2026-10-26T04:41:24.156Z",
+    "external:dazheng:5305": "2026-10-26T04:41:24.156Z",
+    "id:dazheng-5306": "2026-10-26T04:41:24.156Z",
+    "identity:junior:第四届观澜湖全国青少年高尔夫球邀请赛暨2026观澜湖青少年系列赛总决赛": "2026-10-26T04:41:24.156Z",
+    "external:dazheng:5306": "2026-10-26T04:41:24.156Z",
+    "identity:junior:2026年辽宁省青少年高尔夫球巡回赛广东第一站wagr积分赛": "2026-10-26T04:41:24.156Z"
   },
   "messages": {
-    "51c821accf6a4cb065ea2c99085424e610951aed74ddbb2eada4ad3f4fda16b9": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/2 12:29:03\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-09-20 至 2026-09-22｜2026“逐梦果岭”⻘少年⾼尔夫球系列赛 WAGR积分赛（开卡赛）暨2026“战马全能小将杯”中国青少年高尔夫球锦标赛-资格赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5195)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-09-02T04:29:04.434Z",
-      "updatedAt": "2026-09-02T04:29:05.864Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-02T04:29:05.290Z",
-          "sentAt": "2026-09-02T04:29:05.290Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-02T04:29:05.864Z",
-          "sentAt": "2026-09-02T04:29:05.864Z",
-          "error": ""
-        }
-      }
-    },
     "2b197173da082652197bf49340b85555854e00850f19c4cb746459364cec88bc": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2356,6 +2338,31 @@
           "status": "sent",
           "attemptedAt": "2026-10-24T16:58:04.364Z",
           "sentAt": "2026-10-24T16:58:04.364Z",
+          "error": ""
+        }
+      }
+    },
+    "d02ea90189b76a079f892799208f6d7baa8291b90814fcbfa570d67375f86ce4": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/10/26 12:41:24\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-11-07｜2026年苏北青少年高尔夫球精英赛-总决赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5305)**\n- **【重点】新开放报名｜2026-11-19 至 2026-11-22｜第四届观澜湖全国青少年高尔夫球邀请赛暨2026观澜湖青少年系列赛-总决赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5306)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-10-26T04:41:24.949Z",
+      "updatedAt": "2026-10-26T04:41:26.294Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-26T04:41:25.797Z",
+          "sentAt": "2026-10-26T04:41:25.797Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-10-26T04:41:26.294Z",
+          "sentAt": "2026-10-26T04:41:26.294Z",
           "error": ""
         }
       }
