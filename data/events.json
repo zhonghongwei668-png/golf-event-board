@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T10:30:31.240Z",
+  "generatedAt": "2026-10-27T16:00:59.348Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -25701,16 +25701,6 @@
       "matchedEventIds": [
         "汇丰全国青少年高尔夫球冠军锦标赛-2026-07-13"
       ]
-    },
-    {
-      "id": "cga-announcement-2465",
-      "sourceId": "2465",
-      "title": "中国高尔夫球协会关于发布2026海南高尔夫球公开赛参赛资格的通知",
-      "publishedAt": "2026-09-12",
-      "kind": "regulation",
-      "source": "中国高尔夫球协会官方公告",
-      "url": "https://www.cgagolf.org.cn/xnews_details/2465.html",
-      "matchedEventIds": []
     },
     {
       "id": "rungolf-announcement-2603",
