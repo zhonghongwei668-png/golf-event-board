@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T20:56:02.069Z",
+  "generatedAt": "2026-11-05T06:39:58.759Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -19726,7 +19726,7 @@
       "name": "2026年BMW青少年高尔夫中国青少年高尔夫球大师赛",
       "startDate": "2026-10-20",
       "endDate": "2026-10-24",
-      "location": "待定/年历未列",
+      "location": "海南海口",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -20769,7 +20769,7 @@
       "name": "汇丰全国青少年高尔夫球冠军赛总决赛",
       "startDate": "2026-10-27",
       "endDate": "2026-10-30",
-      "location": "待定/年历未列",
+      "location": "苏宁钟山国际高尔夫俱乐部",
       "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
       "sourceLinks": [
         {
@@ -20789,7 +20789,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
-      "competitionGrade": "1",
+      "competitionGrade": "2",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -22115,17 +22115,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5305",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-26 至 2026-11-06。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-10-26 至 2026-11-06。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-10-26",
       "registrationEnd": "2026-11-06",
       "registrationText": "2026年10月26日 ~ 11月06日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -22263,11 +22263,11 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5271",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-08 至 2026-11-08。",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-08 至 2026-11-05。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-10-08",
-      "registrationEnd": "2026-11-08",
-      "registrationText": "2026年10月08日 ~ 11月08日",
+      "registrationEnd": "2026-11-05",
+      "registrationText": "2026年10月08日 ~ 11月05日",
       "registrationOpen": true,
       "registrationClosed": false,
       "registrationStatusAuthoritative": true,
@@ -23170,17 +23170,17 @@
         }
       ],
       "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5299",
-      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-10-20 至 2026-11-15。",
+      "signupMethod": "大正高尔夫赛事详情显示报名已结束；平台展示报名期 2026-10-20 至 2026-11-15。",
       "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
       "registrationStart": "2026-10-20",
       "registrationEnd": "2026-11-15",
       "registrationText": "2026年10月20日 ~ 11月15日",
-      "registrationOpen": true,
-      "registrationClosed": false,
+      "registrationOpen": false,
+      "registrationClosed": true,
       "registrationStatusAuthoritative": true,
       "competitionGrade": "",
-      "statusCode": "open",
-      "statusLabel": "可报名",
+      "statusCode": "closed",
+      "statusLabel": "报名截止",
       "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
       "scheduleAuthority": "signup_detail",
       "seriesLabel": "青少赛-大正高尔夫",
@@ -23813,6 +23813,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5325",
+      "category": "amateur",
+      "categoryLabel": "业余赛",
+      "color": "#167e75",
+      "name": "2026超级荔枝全国业余高尔夫球希望赛-总决赛",
+      "startDate": "2026-11-26",
+      "endDate": "2026-11-29",
+      "location": "阳江市涛景高尔夫俱乐部CD场",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5325",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5325"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5325",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-11-05 至 2026-11-20。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-11-05",
+      "registrationEnd": "2026-11-20",
+      "registrationText": "2026年11月05 ~ 20日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-超级荔枝",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-超级荔枝",
+      "externalIds": {
+        "dazheng": "5325"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -25102,6 +25139,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5326",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026 PGA中国校际高尔夫球锦标赛–总决赛",
+      "startDate": "2026-12-12",
+      "endDate": "2026-12-13",
+      "location": "PGA安瀛高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5326",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5326"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5326",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-11-05 至 2026-12-10。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-11-05",
+      "registrationEnd": "2026-12-10",
+      "registrationText": "2026年11月05日 ~ 12月10日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5326"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
