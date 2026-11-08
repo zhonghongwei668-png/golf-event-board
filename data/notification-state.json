@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-06T14:36:41.935Z",
+  "updatedAt": "2026-11-08T05:56:40.716Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -935,31 +935,6 @@
     "external:dazheng:5328": "2026-11-06T14:36:39.069Z"
   },
   "messages": {
-    "6eab6ca54edfb80d44f60272898ab0e952d0859248104ca98e5891a65b828fe5": {
-      "kind": "source-health",
-      "title": "高尔夫赛历信息源健康提醒",
-      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/9/9 01:30:03\n\n**【报警】2 个信息源更新异常**\n- 大正高尔夫｜连续失败 36 次｜65 个详情页读取失败：5180: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5180；5178: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5178；5170: 403 Forbidden for https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5170\n- 大正官方公告｜连续失败 36 次｜Dazheng announcement pages all failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-09-08T17:30:29.446Z",
-      "updatedAt": "2026-09-08T17:30:31.431Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-08T17:30:30.902Z",
-          "sentAt": "2026-09-08T17:30:30.902Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-08T17:30:31.431Z",
-          "sentAt": "2026-09-08T17:30:31.431Z",
-          "error": ""
-        }
-      }
-    },
     "db9e7be363de60446e57126adaeb938b10bffd184badd3f6f20c34a103ec9c0c": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2431,6 +2406,31 @@
           "status": "sent",
           "attemptedAt": "2026-11-06T14:36:41.935Z",
           "sentAt": "2026-11-06T14:36:41.935Z",
+          "error": ""
+        }
+      }
+    },
+    "ad4623d77a5abd8d2ad012bccf7774841d8cacbbe6e15e15aea25ea4ab2fe0b5": {
+      "kind": "source-health",
+      "title": "高尔夫赛历信息源健康提醒",
+      "markdown": "### 高尔夫赛历信息源健康提醒\n检测时间：2026/11/8 13:55:52\n\n**【报警】1 个信息源更新异常**\n- 中高协官方公告｜连续失败 1 次｜fetch failed\n\n[查看自动任务](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-11-08T05:56:39.461Z",
+      "updatedAt": "2026-11-08T05:56:40.716Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-08T05:56:40.213Z",
+          "sentAt": "2026-11-08T05:56:40.213Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-08T05:56:40.716Z",
+          "sentAt": "2026-11-08T05:56:40.716Z",
           "error": ""
         }
       }
