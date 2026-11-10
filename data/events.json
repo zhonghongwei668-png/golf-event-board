@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:12:10.356Z",
+  "generatedAt": "2026-11-10T15:33:33.172Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -19651,44 +19651,6 @@
       "notes": ""
     },
     {
-      "id": "2026年bmw青少年高尔夫中国青少年高尔夫球大师赛-2026-10-20",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026年BMW青少年高尔夫中国青少年高尔夫球大师赛",
-      "startDate": "2026-10-20",
-      "endDate": "2026-10-24",
-      "location": "海南海口",
-      "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
-      "sourceLinks": [
-        {
-          "label": "www.cgagolf.org.cn/xnews_details/2253.html",
-          "url": "https://www.cgagolf.org.cn/xnews_details/2253.html"
-        },
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "requirement": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "1",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
       "id": "dazheng-5252",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -20864,6 +20826,44 @@
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "2026年bmw青少年高尔夫中国青少年高尔夫球大师赛-2026-10-20",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026年BMW青少年高尔夫中国青少年高尔夫球大师赛",
+      "startDate": "2026-10-30",
+      "endDate": "2026-11-03",
+      "location": "海南海口",
+      "sourceUrl": "https://www.cgagolf.org.cn/xnews_details/2253.html",
+      "sourceLinks": [
+        {
+          "label": "www.cgagolf.org.cn/xnews_details/2253.html",
+          "url": "https://www.cgagolf.org.cn/xnews_details/2253.html"
+        },
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "requirement": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "入口/截止：以中高协单项规程、赛事公众号或指定App/小程序为准；年历仅公开比赛时间。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "1",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
