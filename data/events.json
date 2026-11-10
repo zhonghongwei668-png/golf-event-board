@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T16:51:14.829Z",
+  "generatedAt": "2026-11-10T07:12:10.356Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -25143,6 +25143,45 @@
       "statusLabel": "关注公告",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
       "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "clpga-8167",
+      "category": "women",
+      "categoryLabel": "女子赛",
+      "color": "#b8325f",
+      "name": "广东女子公开赛",
+      "startDate": "2026-12-09",
+      "endDate": "2026-12-11",
+      "location": "翠湖高尔夫球会，珠海，广东",
+      "sourceUrl": "https://www.clpga.org/Match?lang=cn&id=8167",
+      "sourceLinks": [
+        {
+          "label": "赛程/详情",
+          "url": "https://www.clpga.org/Match?lang=cn&id=8167"
+        },
+        {
+          "label": "报名页",
+          "url": "https://www.clpga.org/SignUp?lang=cn&mt_id=8167"
+        }
+      ],
+      "signupUrl": "https://www.clpga.org/SignUp?lang=cn&mt_id=8167",
+      "signupMethod": "报名未公开/未开放，以CLPGA官网为准。",
+      "requirement": "以CLPGA/赛事官方资格排序、会员体系、外卡及单站通知为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "报名未公开/未开放，以CLPGA官网为准。",
+      "registrationOpen": false,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "",
+      "statusCode": "pending",
+      "statusLabel": "待开放",
+      "sourceSystem": "CLPGA官网接口",
+      "scheduleAuthority": "official_api",
       "seriesLabel": "",
       "externalIds": {},
       "updatedFromOfficial": true,
