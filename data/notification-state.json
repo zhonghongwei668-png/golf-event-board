@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-12T15:57:18.690Z",
+  "updatedAt": "2026-11-13T06:37:09.647Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -957,34 +957,15 @@
     "external:dazheng:5336": "2026-11-12T07:05:39.082Z",
     "id:dazheng-5337": "2026-11-12T15:57:14.895Z",
     "identity:junior:2026slgsfcg中国区青少年系列赛广东第10站wagr积分": "2026-11-12T15:57:14.895Z",
-    "external:dazheng:5337": "2026-11-12T15:57:14.895Z"
+    "external:dazheng:5337": "2026-11-12T15:57:14.895Z",
+    "id:dazheng-5340": "2026-11-13T06:37:07.410Z",
+    "identity:junior:fvfwjgr2026嘉年华国际青少年高尔夫排名认证赛广州赛区总决赛金立肇庆站亲子师徒好朋友配对赛个人赛团队赛": "2026-11-13T06:37:07.410Z",
+    "external:dazheng:5340": "2026-11-13T06:37:07.410Z",
+    "id:dazheng-5339": "2026-11-13T06:37:07.410Z",
+    "identity:junior:2026青少年高尔夫嘉年华挑战赛浙江赛区年终巅峰争霸赛安吉龙王溪个人赛团队赛亲子赛": "2026-11-13T06:37:07.410Z",
+    "external:dazheng:5339": "2026-11-13T06:37:07.410Z"
   },
   "messages": {
-    "5fd997172839fe28785670f51803a643c457c52b58390974f8b5fc1a32f3266b": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/11 21:33:03\n\n**新开放报名 4 场**\n- **【重点】新开放报名｜2026-10-06 至 2026-10-07｜2026 FVF-WJGR嘉年华国际青少年高尔夫排名认证赛云南赛区-昆明春城站 （亲子／师徒赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5218)**\n- **【重点】新开放报名｜2026-10-09 至 2026-10-11｜中国女子公开赛，[报名入口](https://www.clpga.org/SignUp?lang=cn&mt_id=8115)**\n- **【重点】新开放报名｜2026-10-18｜2026迈阅青少年高尔夫巡回赛·北京总决赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5217)**\n- **【重点】新开放报名｜2026-10-24 至 2026-10-25｜2026迈阅青少年高尔夫巡回赛·天津总决赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5216)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-09-11T13:33:04.580Z",
-      "updatedAt": "2026-09-11T13:33:06.473Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-11T13:33:05.930Z",
-          "sentAt": "2026-09-11T13:33:05.930Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-11T13:33:06.473Z",
-          "sentAt": "2026-09-11T13:33:06.473Z",
-          "error": ""
-        }
-      }
-    },
     "73790a9ba80cd20133e50adc9053b78c1c5ee67756513a48b6ca654ad815780f": {
       "kind": "source-health",
       "title": "高尔夫赛历信息源健康提醒",
@@ -2456,6 +2437,31 @@
           "status": "sent",
           "attemptedAt": "2026-11-12T15:57:18.690Z",
           "sentAt": "2026-11-12T15:57:18.690Z",
+          "error": ""
+        }
+      }
+    },
+    "1e35db4de3057b2ad9402547bb935e9b6022689b6eb91fb6642c8a623a9fa481": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/11/13 14:37:07\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-12-26 至 2026-12-27｜FVF-WJGR 2026 嘉年华国际青少年高尔夫排名认证赛广州赛区总决赛-金立肇庆站（亲子/师徒/好朋友配对赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5340)**\n- **【重点】新开放报名｜2026-12-27｜2026 青少年高尔夫嘉年华挑战赛・浙江赛区年终巅峰争霸赛-安吉龙王溪（个人赛/团队赛/亲子赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5339)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-11-13T06:37:08.327Z",
+      "updatedAt": "2026-11-13T06:37:09.647Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-13T06:37:09.135Z",
+          "sentAt": "2026-11-13T06:37:09.135Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-13T06:37:09.647Z",
+          "sentAt": "2026-11-13T06:37:09.647Z",
           "error": ""
         }
       }
