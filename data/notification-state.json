@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-14T18:51:00.032Z",
+  "updatedAt": "2026-11-16T06:21:04.852Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -969,34 +969,18 @@
     "external:dazheng:5341": "2026-11-13T14:54:32.806Z",
     "id:dazheng-5342": "2026-11-14T06:14:34.633Z",
     "identity:junior:2026冯珊珊杯国际青少年高尔夫球锦标赛": "2026-11-14T06:14:34.633Z",
-    "external:dazheng:5342": "2026-11-14T06:14:34.633Z"
+    "external:dazheng:5342": "2026-11-14T06:14:34.633Z",
+    "id:dazheng-5345": "2026-11-16T06:21:02.820Z",
+    "identity:junior:2026迈阅青少年高尔夫巡回赛广东总决赛": "2026-11-16T06:21:02.820Z",
+    "external:dazheng:5345": "2026-11-16T06:21:02.820Z",
+    "id:dazheng-5344": "2026-11-16T06:21:02.820Z",
+    "identity:amateur:2026年比音勒芬全国业余高尔夫球精英赛": "2026-11-16T06:21:02.820Z",
+    "external:dazheng:5344": "2026-11-16T06:21:02.820Z",
+    "id:dazheng-5346": "2026-11-16T06:21:02.820Z",
+    "identity:junior:2026迈阅青少年高尔夫巡回赛海口观澜湖站wagr积分赛": "2026-11-16T06:21:02.820Z",
+    "external:dazheng:5346": "2026-11-16T06:21:02.820Z"
   },
   "messages": {
-    "5750ca3c102883f8fd2e382dd87af940ebad67a2873ddaf5673e84e3a4afb920": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/15 18:02:55\n\n**新开放报名 4 场**\n- **【重点】新开放报名｜2026-10-02 至 2026-10-03｜2026“九鹤岩茶杯”福建省武夷山青少年高尔夫球系列赛·第三站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5226)**\n- **【重点】新开放报名｜2026-10-11｜2026 FVF‑WJGR嘉年华国际青少年高尔夫排名认证赛上海赛区第十六站-银涛站（个人赛、亲子赛、团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5225)**\n- **【重点】新开放报名｜2026-10-17 至 2026-10-18｜2026 FVF-嘉年华国际青少年高尔夫排名认证赛浙江赛区第九站 -浙江龙山湖站（WAGR/TUGR/JGS/WJGR），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5227)**\n- **【重点】新开放报名｜2026-10-24 至 2026-10-25｜2026CWJPGA嘉年华挑战赛WAGR开卡赛珠海第7站-国际站（WAGR+JGS+TUGR），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5228)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-09-15T10:02:56.238Z",
-      "updatedAt": "2026-09-15T10:02:57.438Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-15T10:02:56.924Z",
-          "sentAt": "2026-09-15T10:02:56.924Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-15T10:02:57.438Z",
-          "sentAt": "2026-09-15T10:02:57.438Z",
-          "error": ""
-        }
-      }
-    },
     "ee156a3f1350eecf99c109f170cde204cbe00038930a1f3aaf41550b799f96b1": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2468,6 +2452,31 @@
           "status": "sent",
           "attemptedAt": "2026-11-14T18:51:00.032Z",
           "sentAt": "2026-11-14T18:51:00.032Z",
+          "error": ""
+        }
+      }
+    },
+    "b8d0c862833bce54a8215fb8c1256537726630683d485569ce7e915d3a713ce2": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/11/16 14:21:02\n\n**新开放报名 3 场**\n- **【重点】新开放报名｜2026-12-12 至 2026-12-13｜2026迈阅青少年高尔夫巡回赛·广东总决赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5345)**\n- **【重点】新开放报名｜2026-12-21 至 2026-12-26｜2026年比音勒芬全国业余高尔夫球精英赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5344)**\n- **【重点】新开放报名｜2026-12-26 至 2026-12-27｜2026迈阅青少年高尔夫巡回赛·海口观澜湖站（WAGR积分赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5346)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-11-16T06:21:03.630Z",
+      "updatedAt": "2026-11-16T06:21:04.852Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-16T06:21:04.314Z",
+          "sentAt": "2026-11-16T06:21:04.314Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-16T06:21:04.852Z",
+          "sentAt": "2026-11-16T06:21:04.852Z",
           "error": ""
         }
       }

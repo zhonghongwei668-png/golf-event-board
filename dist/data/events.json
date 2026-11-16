@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T19:56:47.405Z",
+  "generatedAt": "2026-11-16T06:21:02.820Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -20685,7 +20685,7 @@
       "registrationText": "入口：汇丰/中高协青少年体系，报名通常在官方通知/指定平台开放；年历未列固定截止。",
       "registrationClosed": false,
       "registrationStatusAuthoritative": false,
-      "competitionGrade": "2",
+      "competitionGrade": "1",
       "statusCode": "past",
       "statusLabel": "已结束",
       "sourceSystem": "中高协年历/规程 + 中高协年历接口",
@@ -22498,6 +22498,40 @@
       "externalIds": {
         "dazheng": "5288"
       },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "2026年汇丰中国青少年高尔夫球全明星冠军赛-2026-11-11",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026年汇丰中国青少年高尔夫球全明星冠军赛",
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-13",
+      "location": "上海宝山",
+      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
+      "sourceLinks": [
+        {
+          "label": "官方信息源",
+          "url": "https://www.cgagolf.org.cn/game_young.html"
+        }
+      ],
+      "signupUrl": "",
+      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationStart": "",
+      "registrationEnd": "",
+      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": false,
+      "competitionGrade": "1",
+      "statusCode": "past",
+      "statusLabel": "已结束",
+      "sourceSystem": "中高协年历接口",
+      "scheduleAuthority": "calendar_api",
+      "seriesLabel": "",
+      "externalIds": {},
       "updatedFromOfficial": true,
       "notes": ""
     },
@@ -25585,6 +25619,43 @@
       "notes": ""
     },
     {
+      "id": "dazheng-5345",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026迈阅青少年高尔夫巡回赛·广东总决赛",
+      "startDate": "2026-12-12",
+      "endDate": "2026-12-13",
+      "location": "广州南沙高尔夫球会",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5345",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5345"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5345",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-11-16 至 2026-12-11。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-11-16",
+      "registrationEnd": "2026-12-11",
+      "registrationText": "2026年11月16日 ~ 12月11日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-迈阅巡回赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-迈阅巡回赛",
+      "externalIds": {
+        "dazheng": "5345"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026迈阅青少年高尔夫巡回赛-海南站-2026-12-12",
       "category": "junior",
       "categoryLabel": "青少年赛",
@@ -26122,6 +26193,43 @@
       "notes": ""
     },
     {
+      "id": "dazheng-5344",
+      "category": "amateur",
+      "categoryLabel": "业余赛",
+      "color": "#167e75",
+      "name": "2026年比音勒芬全国业余高尔夫球精英赛",
+      "startDate": "2026-12-21",
+      "endDate": "2026-12-26",
+      "location": "广东省中山雅居乐长江高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5344",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5344"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5344",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-11-16 至 2026-12-04。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-11-16",
+      "registrationEnd": "2026-12-04",
+      "registrationText": "2026年11月16日 ~ 12月04日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 业余赛-大正高尔夫",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "业余赛-大正高尔夫",
+      "externalIds": {
+        "dazheng": "5344"
+      },
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
       "id": "2026年全国业余高尔夫球精英赛-2026-12-21",
       "category": "amateur",
       "categoryLabel": "业余赛",
@@ -26362,6 +26470,43 @@
       "scheduleAuthority": "calendar_api",
       "seriesLabel": "",
       "externalIds": {},
+      "updatedFromOfficial": true,
+      "notes": ""
+    },
+    {
+      "id": "dazheng-5346",
+      "category": "junior",
+      "categoryLabel": "青少年赛",
+      "color": "#c66a1f",
+      "name": "2026迈阅青少年高尔夫巡回赛·海口观澜湖站（WAGR积分赛）",
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-27",
+      "location": "海口观澜湖高尔夫俱乐部",
+      "sourceUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5346",
+      "sourceLinks": [
+        {
+          "label": "大正赛事详情",
+          "url": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5346"
+        }
+      ],
+      "signupUrl": "https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5346",
+      "signupMethod": "大正高尔夫公开报名页当前显示可报名；平台展示报名期 2026-11-16 至 2026-12-25。",
+      "requirement": "年龄、组别、差点、会员资格和费用以大正赛事详情及主办方最新通知为准。",
+      "registrationStart": "2026-11-16",
+      "registrationEnd": "2026-12-25",
+      "registrationText": "2026年11月16日 ~ 12月25日",
+      "registrationOpen": true,
+      "registrationClosed": false,
+      "registrationStatusAuthoritative": true,
+      "competitionGrade": "",
+      "statusCode": "open",
+      "statusLabel": "可报名",
+      "sourceSystem": "大正高尔夫 · 青少赛-迈阅巡回赛",
+      "scheduleAuthority": "signup_detail",
+      "seriesLabel": "青少赛-迈阅巡回赛",
+      "externalIds": {
+        "dazheng": "5346"
+      },
       "updatedFromOfficial": true,
       "notes": ""
     },
