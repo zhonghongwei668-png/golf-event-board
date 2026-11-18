@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-17T07:50:33.213Z",
+  "updatedAt": "2026-11-18T07:21:12.459Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -990,34 +990,12 @@
     "identity:junior:uswing果岭阅读魔镜2026广东省青少年巡回赛总决赛": "2026-11-16T16:25:06.957Z",
     "external:dazheng:5347": "2026-11-16T16:25:06.957Z",
     "id:clpga-8167": "2026-11-17T07:50:29.549Z",
-    "identity:women:广东女子公开赛": "2026-11-17T07:50:29.549Z"
+    "identity:women:广东女子公开赛": "2026-11-17T07:50:29.549Z",
+    "id:dazheng-5352": "2026-11-18T07:21:09.941Z",
+    "identity:junior:fvfwjgr2026嘉年华国际青少年高尔夫排名认证赛深圳赛区总决赛东莞凤凰山站亲子师徒好朋友配对赛个人赛团队赛": "2026-11-18T07:21:09.941Z",
+    "external:dazheng:5352": "2026-11-18T07:21:09.941Z"
   },
   "messages": {
-    "1d4c41ea4623e7bb9d426d1a26b4469f7ab55daf1e58172f4656c0ffb3199541": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/18 17:12:06\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-10-17 至 2026-10-18｜“Number GOLF杯” 2026格林青少年高尔夫球系列赛-挑战赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5240)**\n- **【重点】新开放报名｜2026-10-18｜2026-无锡市青少年高尔夫球交流赛暨无锡市校园高尔夫球队际赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5241)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-09-18T09:12:08.086Z",
-      "updatedAt": "2026-09-18T09:12:10.268Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-18T09:12:09.780Z",
-          "sentAt": "2026-09-18T09:12:09.780Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-18T09:12:10.268Z",
-          "sentAt": "2026-09-18T09:12:10.268Z",
-          "error": ""
-        }
-      }
-    },
     "f151149751d9ee7e991ea98b7943ca364e66b817d35d56743b108c822f9c588a": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2489,6 +2467,31 @@
           "status": "sent",
           "attemptedAt": "2026-11-17T07:50:33.213Z",
           "sentAt": "2026-11-17T07:50:33.213Z",
+          "error": ""
+        }
+      }
+    },
+    "cad20a6b3dd61bce7638bc34687b193107d0274526b40aa3cb06551ac055aef9": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/11/18 15:21:09\n\n**新开放报名 1 场**\n- **【重点】新开放报名｜2026-12-19｜FVF-WJGR 2026 嘉年华国际青少年高尔夫排名认证赛深圳赛区总决赛-东莞凤凰山站（亲子/师徒/好朋友配对赛+个人赛+团队赛），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5352)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-11-18T07:21:11.177Z",
+      "updatedAt": "2026-11-18T07:21:12.459Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-18T07:21:11.952Z",
+          "sentAt": "2026-11-18T07:21:11.952Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-18T07:21:12.459Z",
+          "sentAt": "2026-11-18T07:21:12.459Z",
           "error": ""
         }
       }
