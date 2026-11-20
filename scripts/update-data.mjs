@@ -36,12 +36,15 @@ import { mergeAnnouncementHistory } from "./lib/announcement-history.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
-const reportPath = path.join(rootDir, "2026国内女子青少年业余高尔夫赛事报名入口汇总.md");
+
+/** 当前赛季年份（避免硬编码 2026 在跨年后静默查询/过滤掉新赛季赛事，与 dazheng-source.mjs 的 CURRENT_YEAR 一致）。 */
+const YEAR = new Date().getFullYear();
+
+const reportPath = path.join(rootDir, `${YEAR}国内女子青少年业余高尔夫赛事报名入口汇总.md`);
 const dataDir = path.join(rootDir, "data");
 const outPath = path.join(dataDir, "events.json");
 const healthPath = path.join(dataDir, "source-health.json");
 
-const YEAR = 2026;
 const CGA_API = "https://ranking.cgagolf.org.cn/api/game/match/events";
 const CLPGA_API = `https://www.clpga.org/public/index.php/core/zh-cn/matchs/match/list.json?year=${YEAR}`;
 
@@ -251,7 +254,7 @@ function parseMarkdownEvents(markdown) {
       const links = allLinks(cells[1]);
       const window = parseRegistrationWindow(cells[2]);
       events.push(normalizeEvent({
-        id: "clpgq-2026",
+        id: `clpgq-${YEAR}`,
         category: "women_development",
         name: cells[0],
         sourceUrl: links[0]?.url || CATEGORY_META.women_development.defaultSource,
