@@ -61,6 +61,18 @@ test("parses competition dates, location, and live signup button from detail", (
   assert.equal(event.location, "天津27人高尔夫俱乐部");
 });
 
+test("carries the year forward for a cross-year competition description", () => {
+  // 右端 "01月01日" 未写年份且跨年，需补年进位为次年，避免 end < start 的脏数据。
+  const event = parseDazhengDetail(`
+    <div class="activity_title">2026海口观澜湖跨年赛事</div>
+    <input name="button2" value="报 名">
+    <script>const share = { desc: '2026年12月31日～01月01日 海口观澜湖高尔夫俱乐部' };</script>`);
+
+  assert.equal(event.startDate, "2026-12-31");
+  assert.equal(event.endDate, "2027-01-01");
+  assert.equal(event.location, "海口观澜湖高尔夫俱乐部");
+});
+
 test("distinguishes a pending Dazheng detail from an open registration", () => {
   const event = parseDazhengDetail(`
     <div class="activity_title">2026测试青少年系列赛</div>

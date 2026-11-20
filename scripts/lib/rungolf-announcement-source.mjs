@@ -53,7 +53,7 @@ export function parseRungolfAnnouncements(html = "", events = []) {
     const title = clean(body.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i)?.[1]);
     const publishedAt = clean(body.match(/<span[^>]*class=["']tiem["'][^>]*>([^<]+)<\/span>/i)?.[1]);
     const summary = clean(body.match(/<p[^>]*>[\s\S]*?<span[^>]*>([\s\S]*?)<\/span>/i)?.[1]);
-    if (!title || !/^2026-\d{2}-\d{2}$/.test(publishedAt) || !relevantAnnouncement(title, summary)) continue;
+    if (!title || !/^\d{4}-\d{2}-\d{2}$/.test(publishedAt) || !relevantAnnouncement(title, summary)) continue;
     announcements.push({
       id: `rungolf-announcement-${match[1]}`,
       sourceId: match[1],
@@ -80,7 +80,7 @@ export async function fetchRungolfAnnouncements(events = [], options = {}) {
     attempts: 2
   });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${RUNGOLF_ANNOUNCEMENT_URL}`);
-  const announcements = parseRungolfAnnouncements(await response.text(), events);
-  if (!announcements.length) throw new Error("Rungolf event news returned no actionable 2026 notices");
-  return announcements;
+  // 空结果（页面正常加载但暂无可行动公告）属正常状态，不应判为故障；
+  // 与 dazheng 公告源一致：返回 [] 由调用方按 healthy 处理。
+  return parseRungolfAnnouncements(await response.text(), events);
 }

@@ -45,7 +45,7 @@ export function parseCgaAnnouncements(html = "", events = []) {
   for (const match of html.matchAll(pattern)) {
     const title = clean(match[3]);
     const publishedAt = clean(match[4]);
-    if (!relevantAnnouncement(title) || !/^2026-\d{2}-\d{2}$/.test(publishedAt)) continue;
+    if (!relevantAnnouncement(title) || !/^\d{4}-\d{2}-\d{2}$/.test(publishedAt)) continue;
     announcements.push({
       id: `cga-announcement-${match[2]}`,
       sourceId: match[2],
@@ -72,7 +72,6 @@ export async function fetchCgaAnnouncements(events = [], options = {}) {
     attempts: 3
   });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${CGA_ANNOUNCEMENT_URL}`);
-  const announcements = parseCgaAnnouncements(await response.text(), events);
-  if (!announcements.length) throw new Error("CGA announcement page returned no actionable 2026 notices");
-  return announcements;
+  // 空结果（页面正常加载但暂无可行动公告）属正常状态，不应判为故障；返回 [] 由调用方按 healthy 处理。
+  return parseCgaAnnouncements(await response.text(), events);
 }

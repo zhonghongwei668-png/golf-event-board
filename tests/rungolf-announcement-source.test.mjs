@@ -31,3 +31,25 @@ test("fetches the official Rungolf event-news page", async () => {
   });
   assert.equal(announcements[0].url, "https://www.rungolf.com/news/info/2586");
 });
+
+test("empty actionable result is non-fatal and returns an empty list", async () => {
+  const onlyReports = `
+  <a href="/news/info/2585" class="news-list"><div class="news-item">
+    <h3>如歌室内高尔夫超级贺岁杯圆满收官</h3><p><span>赛事结束。</span><span class="tiem">2026-06-08</span></p>
+  </div></a>`;
+  const announcements = await fetchRungolfAnnouncements([], {
+    fetchImpl: async () => new Response(onlyReports, { status: 200 })
+  });
+  assert.deepEqual(announcements, []);
+});
+
+test("parses notices without a hardcoded 2026 year filter", () => {
+  const nextYear = `
+  <a href="/news/info/3001" class="news-list"><div class="news-item">
+    <h3>2027 FILA KIDS 如歌高尔夫U系列邀请赛线上赛报名开启</h3>
+    <p><span>资格赛报名开启。</span><span class="tiem">2027-01-05</span></p>
+  </div></a>`;
+  const announcements = parseRungolfAnnouncements(nextYear, []);
+  assert.equal(announcements.length, 1);
+  assert.equal(announcements[0].publishedAt, "2027-01-05");
+});

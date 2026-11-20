@@ -82,9 +82,12 @@ function parseCompetitionDescription(value = "") {
   const startYear = Number(match[1]);
   const startMonth = Number(match[2]);
   const startDay = Number(match[3]);
-  const endYear = Number(match[4] || startYear);
+  let endYear = Number(match[4] || startYear);
   const endMonth = Number(match[5] || startMonth);
   const endDay = Number(match[6] || startDay);
+  // 右侧日期未写年份且月份小于左侧（如 "2026年12月31日～01月01日" 跨年）时补年进位，
+  // 否则会得到 end < start 的错误区间（与 parseDazhengRegistrationWindow 的跨年处理一致）。
+  if (!match[4] && endMonth < startMonth) endYear += 1;
   return {
     startDate: isoDate(startYear, startMonth, startDay),
     endDate: isoDate(endYear, endMonth, endDay),
