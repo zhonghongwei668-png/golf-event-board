@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-20T16:06:02.411Z",
+  "updatedAt": "2026-11-23T07:29:28.137Z",
   "seenOpenEventKeys": {
     "external:dazheng:4833": "2026-07-10T07:52:02.900Z",
     "external:dazheng:4866": "2026-07-10T07:52:02.900Z",
@@ -1013,34 +1013,18 @@
     "external:dazheng:5353": "2026-11-20T09:40:56.818Z",
     "id:dazheng-5359": "2026-11-20T16:05:59.625Z",
     "identity:junior:2026迈阅青少年高尔夫巡回赛上海总决赛": "2026-11-20T16:05:59.625Z",
-    "external:dazheng:5359": "2026-11-20T16:05:59.625Z"
+    "external:dazheng:5359": "2026-11-20T16:05:59.625Z",
+    "id:dazheng-5360": "2026-11-23T07:29:25.596Z",
+    "identity:junior:2026东西部青少年高尔夫球公开赛海口第一站": "2026-11-23T07:29:25.596Z",
+    "external:dazheng:5360": "2026-11-23T07:29:25.596Z",
+    "id:dazheng-5361": "2026-11-23T07:29:25.596Z",
+    "identity:junior:2026东西部青少年高尔夫球公开赛海口第二站": "2026-11-23T07:29:25.596Z",
+    "external:dazheng:5361": "2026-11-23T07:29:25.596Z",
+    "id:dazheng-5362": "2026-11-23T07:29:25.596Z",
+    "identity:junior:2026cwjpga嘉年华挑战赛wagr积分赛珠海总决赛国际站wagrjgstugr": "2026-11-23T07:29:25.596Z",
+    "external:dazheng:5362": "2026-11-23T07:29:25.596Z"
   },
   "messages": {
-    "1f4516dea21062557a9ed757450bd8c0a4c2901363a597e59c868db3d6b9766f": {
-      "kind": "event-change",
-      "title": "高尔夫赛事报名开始提醒",
-      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/9/21 18:40:36\n\n**新开放报名 2 场**\n- **【重点】新开放报名｜2026-10-31 至 2026-11-01｜2026WHS（中国区）青少年高尔夫差点巡回赛·北京总决赛 暨星途逐梦青少年高尔夫系列赛（华彬站），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5247)**\n- **【重点】新开放报名｜2026-11-18 至 2026-11-20｜AJES亚洲青少年精英系列赛·北京精英赛，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5246)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
-      "createdAt": "2026-09-21T10:40:37.913Z",
-      "updatedAt": "2026-09-21T10:40:39.382Z",
-      "expectedTargetIds": [
-        "dingtalk-primary",
-        "dingtalk-secondary"
-      ],
-      "targets": {
-        "dingtalk-primary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-21T10:40:38.856Z",
-          "sentAt": "2026-09-21T10:40:38.856Z",
-          "error": ""
-        },
-        "dingtalk-secondary": {
-          "status": "sent",
-          "attemptedAt": "2026-09-21T10:40:39.382Z",
-          "sentAt": "2026-09-21T10:40:39.382Z",
-          "error": ""
-        }
-      }
-    },
     "ab7b0b12afe658f4d7cf945dfbdbd37eebd5186dc70949e209978c81a11e46b6": {
       "kind": "event-change",
       "title": "高尔夫赛事报名开始提醒",
@@ -2512,6 +2496,31 @@
           "status": "sent",
           "attemptedAt": "2026-11-20T16:06:02.411Z",
           "sentAt": "2026-11-20T16:06:02.411Z",
+          "error": ""
+        }
+      }
+    },
+    "b32939ae9c11e8a17198ff290d2e36ba821b9828eeecf5478488f8ada0fe4765": {
+      "kind": "event-change",
+      "title": "高尔夫赛事报名开始提醒",
+      "markdown": "### 高尔夫赛事报名开始提醒\n更新时间：2026/11/23 15:29:25\n\n**新开放报名 3 场**\n- **【重点】新开放报名｜2026-12-19 至 2026-12-20｜2026东西部青少年高尔夫球公开赛-海口第一站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5360)**\n- **【重点】新开放报名｜2026-12-26 至 2026-12-27｜2026东西部青少年高尔夫球公开赛-海口第二站，[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5361)**\n- **【重点】新开放报名｜2026-12-26 至 2026-12-27｜2026CWJPGA嘉年华挑战赛WAGR积分赛珠海总决赛-国际站（WAGR+JGS+TUGR），[报名入口](https://www.bwvip.com/default.php?g=m&m=baoming&a=baoming_detail&event_id=5362)**\n\n[打开赛事日历](https://zhonghongwei668-png.github.io/golf-event-board/)",
+      "createdAt": "2026-11-23T07:29:26.561Z",
+      "updatedAt": "2026-11-23T07:29:28.137Z",
+      "expectedTargetIds": [
+        "dingtalk-primary",
+        "dingtalk-secondary"
+      ],
+      "targets": {
+        "dingtalk-primary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-23T07:29:27.677Z",
+          "sentAt": "2026-11-23T07:29:27.677Z",
+          "error": ""
+        },
+        "dingtalk-secondary": {
+          "status": "sent",
+          "attemptedAt": "2026-11-23T07:29:28.137Z",
+          "sentAt": "2026-11-23T07:29:28.137Z",
           "error": ""
         }
       }
