@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T09:49:25.645Z",
+  "generatedAt": "2026-11-24T20:38:32.816Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -27406,18 +27406,6 @@
       "url": "https://www.cgagolf.org.cn/xnews_details/2475.html",
       "matchedEventIds": [
         "dazheng-5281"
-      ]
-    },
-    {
-      "id": "cga-announcement-2474",
-      "sourceId": "2474",
-      "title": "中国高尔夫球协会关于印发GCCT全国青少年高尔夫球技能等级一级赛（2026）竞赛规程的通知",
-      "publishedAt": "2026-10-10",
-      "kind": "regulation",
-      "source": "中国高尔夫球协会官方公告",
-      "url": "https://www.cgagolf.org.cn/xnews_details/2474.html",
-      "matchedEventIds": [
-        "gcct全国青少年高尔夫球技能等级一级赛-2026-11-09"
       ]
     }
   ]
