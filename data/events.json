@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T18:49:54.426Z",
+  "generatedAt": "2026-11-26T08:09:58.856Z",
   "year": 2026,
   "sources": {
     "clpga": "https://www.clpga.org/MatchList?lang=cn",
@@ -20981,40 +20981,6 @@
       "externalIds": {
         "dazheng": "5194"
       },
-      "updatedFromOfficial": true,
-      "notes": ""
-    },
-    {
-      "id": "2026风神-广东省青少年高尔夫球精英赛第六站-2026-10-31",
-      "category": "junior",
-      "categoryLabel": "青少年赛",
-      "color": "#c66a1f",
-      "name": "2026风神·广东省青少年高尔夫球精英赛第六站",
-      "startDate": "2026-10-31",
-      "endDate": "2026-11-01",
-      "location": "广州风神高尔夫俱乐部-戴伊场",
-      "sourceUrl": "https://www.cgagolf.org.cn/game_young.html",
-      "sourceLinks": [
-        {
-          "label": "官方信息源",
-          "url": "https://www.cgagolf.org.cn/game_young.html"
-        }
-      ],
-      "signupUrl": "",
-      "signupMethod": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "requirement": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationStart": "",
-      "registrationEnd": "",
-      "registrationText": "通常要求6-18岁、业余身份、有效中高协电子会员卡/身份证明；以单项规程为准。",
-      "registrationClosed": false,
-      "registrationStatusAuthoritative": false,
-      "competitionGrade": "4",
-      "statusCode": "past",
-      "statusLabel": "已结束",
-      "sourceSystem": "中高协年历接口",
-      "scheduleAuthority": "calendar_api",
-      "seriesLabel": "",
-      "externalIds": {},
       "updatedFromOfficial": true,
       "notes": ""
     },
